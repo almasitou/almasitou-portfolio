@@ -46,7 +46,7 @@ export default function Navbar({ t, lang }) {
         <div className="flex items-center gap-2 md:gap-4">
           <LanguageSwitcher currentLang={lang} />
           <a 
-            href="/resume.pdf" 
+            href={`/resume_${lang}.pdf`}
             target="_blank" 
             className="px-3 py-1.5 text-xs md:text-sm md:px-4 md:py-2 rounded-full border border-zinc-700/50 hover:bg-zinc-800/50 transition-colors flex items-center gap-1 md:gap-2 text-zinc-300 hover:text-white whitespace-nowrap"
           >
