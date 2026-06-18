@@ -268,7 +268,7 @@ export default async function Home({ params }) {
                       top: '-54px',
                       left: '-2px',
                       width: 'calc(100% + 4px)',
-                      height: 'calc(100% + 300px)'
+                      height: 'calc(100% + 98px)'
                     }}
                     scrolling="no" 
                     allowtransparency="true"
@@ -310,8 +310,8 @@ export default async function Home({ params }) {
           </div>
         </section>
 
-        <footer id="contact" className="py-24 mt-24 border-t border-zinc-800 flex flex-col items-center text-center">
-          <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter mb-12">{t.contact.title}</h2>
+        <footer id="contact" className="py-24 mt-24 border-t border-zinc-800 flex flex-col items-center text-center overflow-hidden w-full px-4">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tighter mb-12 whitespace-nowrap">{t.contact.title}</h2>
           
           <a 
             href="https://t.me/almasitou" 

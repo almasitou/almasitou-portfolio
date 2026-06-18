@@ -24,7 +24,7 @@ export const dictionaries = {
       title: 'Recommendations'
     },
     contact: {
-      title: "Let's create something extraordinary.",
+      title: "Let's create something extraordinary",
       telegram: 'Message me on Telegram',
       email: 'or email at',
       resume: 'Download CV'
@@ -65,7 +65,7 @@ export const dictionaries = {
       title: 'Отзывы'
     },
     contact: {
-      title: 'Давайте создадим нечто выдающееся.',
+      title: 'Давайте создадим нечто выдающееся',
       telegram: 'Написать в Telegram',
       email: 'или на почту',
       resume: 'Скачать резюме'
