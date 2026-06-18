@@ -253,14 +253,25 @@ export default async function Home({ params }) {
               { url: 'https://www.instagram.com/reel/DE-R6IttzVb/' },
               { url: 'https://www.instagram.com/reel/DFsH3JBNnN7/' },
               { url: 'https://www.instagram.com/p/DFc6H4_tJ8d/' }
-            ]).map((reel, i) => (
-              <div key={i} className={`w-full max-w-[350px] bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl relative min-h-[500px] ${i === 2 ? 'hidden lg:block' : ''}`}>
-                <blockquote className="instagram-media w-full" data-instgrm-permalink={reel.url} data-instgrm-version="14" style={{ background: '#000', border: '0', borderRadius: '24px', margin: '0', padding: '0', width: '100%' }}></blockquote>
-              </div>
-            ))}
+            ]).map((reel, i) => {
+              // Ensure URL is clean and append /embed
+              let embedUrl = reel.url.split('?')[0];
+              if (!embedUrl.endsWith('/')) embedUrl += '/';
+              embedUrl += 'embed/captioned';
+
+              return (
+                <div key={i} className={`w-full max-w-[350px] bg-zinc-900 rounded-[24px] overflow-hidden shadow-2xl relative min-h-[500px] h-[580px] ${i === 2 ? 'hidden lg:block' : ''}`}>
+                  <iframe 
+                    src={embedUrl} 
+                    className="w-full h-full border-0" 
+                    scrolling="no" 
+                    allowTransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
+                </div>
+              );
+            })}
           </div>
-          
-          <script async src="//www.instagram.com/embed.js"></script>
         </section>
 
         <section id="recommendations" className="py-24 border-t border-zinc-900">
