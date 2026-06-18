@@ -70,7 +70,7 @@ export default async function Home({ params }) {
               <div className="absolute -inset-6 bg-gradient-to-tr from-blue-500/20 via-indigo-500/15 to-purple-500/20 rounded-[3.5rem] blur-3xl opacity-60 group-hover:opacity-85 transition-opacity duration-700 -z-10 animate-pulse" style={{ animationDuration: '6s' }}></div>
               
               {/* Premium Glass Frame */}
-              <div className="p-3 rounded-[2.8rem] md:rounded-[3.2rem] bg-zinc-950/40 border border-zinc-800/50 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:border-blue-500/30 group-hover:bg-zinc-950/60">
+              <div className="p-3 rounded-[2.8rem] md:rounded-[3.2rem] bg-zinc-950/40 border border-zinc-800/50 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:border-blue-500/30 group-hover:bg-zinc-950/60 animate-float">
                 
                 {/* Photo Container with overflow-hidden for zoom effect */}
                 <div className="relative w-full aspect-[4/5] md:aspect-[3/4] rounded-[2.2rem] md:rounded-[2.5rem] overflow-hidden">
@@ -78,7 +78,7 @@ export default async function Home({ params }) {
                   <img 
                     src="/profile.jpg" 
                     alt="Almas Qajymuratuly" 
-                    className="w-full h-full object-cover object-center grayscale opacity-85 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                    className="w-full h-full object-cover object-center opacity-90 transition-all duration-700 group-hover:opacity-100 group-hover:scale-105"
                   />
                 </div>
               </div>
