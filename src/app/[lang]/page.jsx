@@ -83,15 +83,15 @@ export default async function Home({ params }) {
                 </div>
               </div>
               
-              <div className="absolute -bottom-6 left-4 right-4 lg:right-auto lg:-left-12 lg:bottom-10 z-20 glass px-6 py-5 rounded-3xl shadow-2xl flex justify-around lg:justify-start lg:gap-8 transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:border-blue-500/30">
-                <div className="text-center md:text-left">
-                  <div className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">6+</div>
-                  <div className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.yearsExp}</div>
+              <div className="absolute -bottom-8 lg:-bottom-10 left-1/2 -translate-x-1/2 z-20 bg-black/70 backdrop-blur-xl border border-zinc-700/60 px-8 py-6 lg:px-12 lg:py-8 rounded-[2rem] shadow-2xl flex justify-center items-center gap-8 lg:gap-12 w-max transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:-translate-x-1/2 group-hover:border-blue-500/40 group-hover:bg-black/80">
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">6+</div>
+                  <div className="text-xs md:text-sm text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.yearsExp}</div>
                 </div>
-                <div className="w-px bg-zinc-800"></div>
-                <div className="text-center md:text-left">
-                  <div className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">20+</div>
-                  <div className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.projects || 'Projects'}</div>
+                <div className="w-px h-16 bg-zinc-800"></div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">20+</div>
+                  <div className="text-xs md:text-sm text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.projects || 'Projects'}</div>
                 </div>
               </div>
             </div>
