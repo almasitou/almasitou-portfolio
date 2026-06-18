@@ -131,10 +131,11 @@ export default async function Home({ params }) {
                   <div className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">7</div>
                   <div className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.companies}</div>
                 </div>
+              </div>
             </div>
           </div>
 
-          {/* Tech Stack Marquee for HRs */}
+        {/* Tech Stack Marquee for HRs */}
           <div className="w-full mt-24 pt-12 border-t border-zinc-900 overflow-hidden relative">
             <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
             <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
