@@ -27,6 +27,10 @@ export const dictionaries = {
       telegram: 'Message me on Telegram',
       email: 'or email at',
       resume: 'Download CV'
+    },
+    content: {
+      title: 'Follow on Instagram',
+      subtitle: 'Check out my Instagram account where I share my design work, creative process, and daily design updates. Follow along!'
     }
   },
   ru: {
@@ -63,6 +67,10 @@ export const dictionaries = {
       telegram: 'Написать в Telegram',
       email: 'или на почту',
       resume: 'Скачать резюме'
+    },
+    content: {
+      title: 'Мой Instagram',
+      subtitle: 'Я активно веду свой аккаунт — заглядывайте туда, чтобы посмотреть на мои работы, дизайн-процессы и следить за моим творчеством!'
     }
   }
 };
