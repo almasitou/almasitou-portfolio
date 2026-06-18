@@ -62,10 +62,10 @@ export default async function Home({ params }) {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-24">
         
-        <section className="min-h-[80vh] flex flex-col lg:flex-row justify-center items-center lg:items-start pt-12 md:pt-16 pb-12 gap-12 lg:gap-8">
+        <section className="min-h-[80vh] flex flex-col lg:flex-row justify-center items-center lg:items-start pt-12 md:pt-16 pb-16 gap-16 lg:gap-8">
           
           {/* Left Column (Text Content) */}
-          <div className="flex-1 flex flex-col items-start w-full order-2 lg:order-1">
+          <div className="w-full lg:w-1/2 flex flex-col items-start">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-zinc-700/50 text-xs font-medium text-zinc-300 mb-8">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               {t.hero.available}
@@ -100,7 +100,7 @@ export default async function Home({ params }) {
           </div>
 
           {/* Right Column (Photo & Floating Stats) */}
-          <div className="flex-1 w-full relative order-1 lg:order-2">
+          <div className="w-full lg:w-1/2 relative">
             <div className="relative w-full max-w-[300px] md:max-w-[360px] group mt-4 lg:mt-0 mx-auto lg:ml-auto lg:mr-0">
               
               {/* Decorative Background Glow for AI Integration */}
@@ -131,7 +131,6 @@ export default async function Home({ params }) {
                   <div className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">7</div>
                   <div className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.companies}</div>
                 </div>
-              </div>
             </div>
           </div>
 
