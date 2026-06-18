@@ -62,7 +62,7 @@ export default async function Home({ params }) {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-24">
         
-        <section className="min-h-[85vh] flex flex-col lg:flex-row justify-center items-center lg:items-start pt-32 pb-12 gap-12 lg:gap-8">
+        <section className="min-h-[80vh] flex flex-col lg:flex-row justify-center items-center lg:items-start pt-12 md:pt-16 pb-12 gap-12 lg:gap-8">
           
           {/* Left Column (Text Content) */}
           <div className="flex-1 flex flex-col items-start w-full order-2 lg:order-1">
@@ -100,17 +100,28 @@ export default async function Home({ params }) {
           </div>
 
           {/* Right Column (Photo & Floating Stats) */}
-          <div className="flex-1 w-full relative order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[320px] md:max-w-md aspect-[4/5] md:aspect-[3/4] rounded-[2.5rem] md:rounded-[3rem] overflow-visible md:overflow-hidden group mt-4 md:mt-0">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 transition-opacity duration-700 group-hover:opacity-40 rounded-[2.5rem] md:rounded-[3rem]"></div>
-              <img 
-                src="/profile.jpg" 
-                alt="Almas Qajymuratuly" 
-                className="w-full h-full object-cover object-center grayscale opacity-80 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 rounded-[2.5rem] md:rounded-[3rem]"
-              />
+          <div className="flex-1 w-full relative order-1 lg:order-2">
+            <div className="relative w-full max-w-[300px] md:max-w-[360px] group mt-4 lg:mt-0 mx-auto lg:ml-auto lg:mr-0">
+              
+              {/* Decorative Background Glow for AI Integration */}
+              <div className="absolute -inset-6 bg-gradient-to-tr from-blue-500/20 via-indigo-500/15 to-purple-500/20 rounded-[3.5rem] blur-3xl opacity-60 group-hover:opacity-85 transition-opacity duration-700 -z-10 animate-pulse" style={{ animationDuration: '6s' }}></div>
+              
+              {/* Premium Glass Frame */}
+              <div className="p-3 rounded-[2.8rem] md:rounded-[3.2rem] bg-zinc-900/30 border border-zinc-800/60 backdrop-blur-md shadow-2xl transition-all duration-500 group-hover:border-zinc-700/50 group-hover:bg-zinc-900/40">
+                
+                {/* Photo Container with overflow-hidden for zoom effect */}
+                <div className="relative w-full aspect-[4/5] md:aspect-[3/4] rounded-[2.2rem] md:rounded-[2.5rem] overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-10 transition-opacity duration-700 group-hover:opacity-30"></div>
+                  <img 
+                    src="/profile.jpg" 
+                    alt="Almas Qajymuratuly" 
+                    className="w-full h-full object-cover object-center grayscale opacity-85 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                  />
+                </div>
+              </div>
               
               {/* Floating Glass Stats - Breaks grid */}
-              <div className="absolute -bottom-6 left-4 right-4 md:right-auto md:-left-8 z-20 glass px-6 py-5 rounded-3xl shadow-2xl flex justify-around md:justify-start md:gap-8 transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:border-blue-500/30">
+              <div className="absolute -bottom-6 left-4 right-4 md:right-auto md:-left-8 md:bottom-12 z-20 glass px-6 py-5 rounded-3xl shadow-2xl flex justify-around md:justify-start md:gap-8 transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:border-blue-500/30">
                 <div className="text-center md:text-left">
                   <div className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">6+</div>
                   <div className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.yearsExp}</div>
