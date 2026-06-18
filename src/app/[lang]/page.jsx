@@ -259,8 +259,8 @@ export default async function Home({ params }) {
               embedUrl += 'embed/'; // No caption to minimize white space
 
               return (
-                <div key={i} className={`w-full max-w-[350px] bg-black rounded-[24px] overflow-hidden shadow-2xl relative h-[580px] ${i === 2 ? 'hidden lg:block' : ''}`}>
-                  {/* Clip top (54px) and bottom (44px) white headers/footers */}
+                <div key={i} className={`w-full max-w-[350px] bg-black rounded-[24px] overflow-hidden shadow-2xl relative aspect-[9/16] ${i === 2 ? 'hidden lg:block' : ''}`}>
+                  {/* Clip top (54px) and massive bottom footer */}
                   <iframe 
                     src={embedUrl} 
                     className="absolute border-0" 
@@ -268,7 +268,7 @@ export default async function Home({ params }) {
                       top: '-54px',
                       left: '-2px',
                       width: 'calc(100% + 4px)',
-                      height: 'calc(100% + 98px)'
+                      height: 'calc(100% + 300px)'
                     }}
                     scrolling="no" 
                     allowtransparency="true"
