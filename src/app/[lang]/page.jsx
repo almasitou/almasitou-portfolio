@@ -97,8 +97,10 @@ export default async function Home({ params }) {
             </div>
           </div>
 
+        </section>
+
         {/* Tech Stack Marquee for HRs */}
-          <div className="w-full mt-24 pt-12 border-t border-zinc-900 overflow-hidden relative">
+          <div className="w-full mt-24 mb-12 pt-12 border-t border-zinc-900 overflow-hidden relative">
             <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
             <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
             <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
@@ -121,7 +123,6 @@ export default async function Home({ params }) {
               ))}
             </div>
           </div>
-        </section>
 
         <section id="work" className="py-24">
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-16 tracking-tight">{t.work.title}</h2>
