@@ -14,6 +14,7 @@ export default async function Home({ params }) {
   const skills = await prisma.skillCategory.findMany({ orderBy: { orderIndex: 'asc' } });
   const projects = await prisma.project.findMany({ orderBy: { orderIndex: 'asc' } });
   const recommendations = await prisma.recommendation.findMany({ orderBy: { orderIndex: 'asc' } });
+  const instagramReels = await prisma.instagramReel.findMany({ orderBy: { orderIndex: 'asc' } });
 
   // Translation helpers
   const getS = (obj, field) => obj[`${field}Ru`] && lang === 'ru' ? obj[`${field}Ru`] : obj[field];
@@ -22,22 +23,38 @@ export default async function Home({ params }) {
     <main className="relative min-h-screen">
       <div className="fixed inset-0 bg-grid pointer-events-none z-0" />
       
-      <nav className="fixed top-0 left-0 right-0 z-50 glass border-b-0 border-zinc-800/50">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-xl border-b border-zinc-800/50 saturate-150">
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="font-heading font-bold text-xl tracking-tighter">
             AQ<span className="text-blue-500">.</span>
           </div>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+          <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-400 mr-8">
             <a href="#work" className="hover:text-white transition-colors">{t.nav.work}</a>
             <a href="#experience" className="hover:text-white transition-colors">{t.nav.experience}</a>
             <a href="#contact" className="hover:text-white transition-colors">{t.nav.contact}</a>
+          </div>
+
+          <div className="flex items-center gap-2 md:gap-4">
             <LanguageSwitcher currentLang={lang} />
             <a 
-              href={settings.linkedinUrl} 
+              href="/resume.pdf" 
               target="_blank" 
-              className="bg-white text-black px-5 py-2 rounded-full hover:scale-105 transition-transform"
+              className="px-3 py-1.5 text-xs md:text-sm md:px-4 md:py-2 rounded-full border border-zinc-700/50 hover:bg-zinc-800/50 transition-colors flex items-center gap-1 md:gap-2 text-zinc-300 hover:text-white whitespace-nowrap"
             >
-              {t.nav.hireMe}
+              <svg className="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+              <span className="hidden sm:inline">{t.contact.resume}</span>
+              <span className="sm:hidden">CV</span>
+            </a>
+            <a 
+              href="https://t.me/almasitou" 
+              target="_blank" 
+              className="bg-blue-600 text-white px-3 py-1.5 text-xs md:text-sm md:px-5 md:py-2 rounded-full hover:bg-blue-500 hover:scale-105 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] transition-all duration-300 flex items-center gap-1 md:gap-2 whitespace-nowrap"
+            >
+              <svg className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.94z"/>
+              </svg>
+              <span className="hidden sm:inline">{t.nav.hireMe}</span>
+              <span className="sm:hidden">{lang === 'ru' ? 'Написать' : 'Hire'}</span>
             </a>
           </div>
         </div>
@@ -45,29 +62,90 @@ export default async function Home({ params }) {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-24">
         
-        <section className="min-h-[80vh] flex flex-col justify-center items-start pt-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-zinc-700/50 text-xs font-medium text-zinc-300 mb-8">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            {t.hero.available}
-          </div>
+        <section className="min-h-[85vh] flex flex-col lg:flex-row justify-center items-center lg:items-start pt-32 pb-12 gap-12 lg:gap-8">
           
-          <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-6">
-            <span className="text-gradient">{settings.title?.split(' ')[0]}</span><br/>
-            {settings.title?.split(' ').slice(1).join(' ')}
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl leading-relaxed mb-12">
-            {getS(settings, 'bio')}
-          </p>
-          
-          <div className="flex gap-12 border-t border-zinc-800 pt-8 mt-auto w-full">
-            <div>
-              <div className="text-4xl font-heading font-bold text-white mb-1">6+</div>
-              <div className="text-sm text-zinc-500 uppercase tracking-widest font-medium">{t.hero.yearsExp}</div>
+          {/* Left Column (Text Content) */}
+          <div className="flex-1 flex flex-col items-start w-full order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-zinc-700/50 text-xs font-medium text-zinc-300 mb-8">
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              {t.hero.available}
             </div>
-            <div>
-              <div className="text-4xl font-heading font-bold text-white mb-1">7</div>
-              <div className="text-sm text-zinc-500 uppercase tracking-widest font-medium">{t.hero.companies}</div>
+            
+            <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tighter leading-[0.9] mb-6">
+              <span className="text-gradient">{settings.title?.split(' ')[0]}</span><br/>
+              {settings.title?.split(' ').slice(1).join(' ')}
+            </h1>
+            
+            <div className="glass inline-flex flex-wrap items-center gap-3 md:gap-6 px-5 py-3 md:px-8 md:py-5 rounded-3xl border border-zinc-800/60 mb-8 shadow-xl relative overflow-hidden group hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] hover:-translate-y-1 active:scale-95 active:border-blue-500/50 transition-all duration-500 cursor-default">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {[
+                t.hero?.skills?.strategy || 'Product Strategy',
+                t.hero?.skills?.ux || 'UX / UI Design',
+                t.hero?.skills?.systems || 'Design Systems',
+                t.hero?.skills?.apps || 'Web & Mobile Apps'
+              ].map((item, i) => (
+                <div key={i} className="flex items-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 md:mr-3 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
+                  <span className="text-[10px] md:text-sm font-medium tracking-wide uppercase text-zinc-200">{item}</span>
+                  {i !== 3 && <div className="hidden lg:block w-px h-4 bg-zinc-700 ml-4 md:ml-6"></div>}
+                </div>
+              ))}
+            </div>
+
+            <div className="max-w-2xl mb-8">
+              <p className="text-lg md:text-xl text-zinc-400/90 font-medium leading-relaxed">
+                {getS(settings, 'bio')}
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column (Photo & Floating Stats) */}
+          <div className="flex-1 w-full relative order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[320px] md:max-w-md aspect-[4/5] md:aspect-[3/4] rounded-[2.5rem] md:rounded-[3rem] overflow-visible md:overflow-hidden group mt-4 md:mt-0">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 transition-opacity duration-700 group-hover:opacity-40 rounded-[2.5rem] md:rounded-[3rem]"></div>
+              <img 
+                src="/profile.jpg" 
+                alt="Almas Qajymuratuly" 
+                className="w-full h-full object-cover object-center grayscale opacity-80 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 rounded-[2.5rem] md:rounded-[3rem]"
+              />
+              
+              {/* Floating Glass Stats - Breaks grid */}
+              <div className="absolute -bottom-6 left-4 right-4 md:right-auto md:-left-8 z-20 glass px-6 py-5 rounded-3xl shadow-2xl flex justify-around md:justify-start md:gap-8 transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:border-blue-500/30">
+                <div className="text-center md:text-left">
+                  <div className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">6+</div>
+                  <div className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.yearsExp}</div>
+                </div>
+                <div className="w-px bg-zinc-800"></div>
+                <div className="text-center md:text-left">
+                  <div className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">7</div>
+                  <div className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.companies}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tech Stack Marquee for HRs */}
+          <div className="w-full mt-24 pt-12 border-t border-zinc-900 overflow-hidden relative">
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
+            <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="flex items-center gap-16 px-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-300">
+                  <span className="text-xl font-bold font-heading">Figma</span>
+                  <span className="text-xl font-bold font-heading text-zinc-400">FigJam</span>
+                  <span className="text-xl font-bold font-heading">Miro</span>
+                  <span className="text-xl font-bold font-heading text-zinc-400">Tilda</span>
+                  <span className="text-xl font-bold font-heading">HTML/CSS</span>
+                  <span className="text-xl font-bold font-heading text-zinc-400">JavaScript</span>
+                  <span className="text-xl font-bold font-heading">Jira</span>
+                  <span className="text-xl font-bold font-heading text-zinc-400">Trello</span>
+                  <span className="text-xl font-bold font-heading">Confluence</span>
+                  <span className="text-xl font-bold font-heading text-zinc-400">Notion</span>
+                  <span className="text-xl font-bold font-heading">Slack</span>
+                  <span className="text-xl font-bold font-heading text-zinc-400">Photoshop</span>
+                  <span className="text-xl font-bold font-heading">CapCut</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -80,7 +158,7 @@ export default async function Home({ params }) {
               <Link 
                 key={proj.id} 
                 href={`/${lang}/project/${proj.id}`}
-                className="group block relative rounded-3xl overflow-hidden glass glass-hover aspect-[4/3]"
+                className="group block relative rounded-3xl overflow-hidden glass glass-hover aspect-[4/3] hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:border-blue-500/30 active:scale-95 transition-all duration-500"
               >
                 {proj.coverImage ? (
                   <img 
@@ -96,13 +174,13 @@ export default async function Home({ params }) {
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
                 
-                <div className="absolute bottom-0 left-0 p-8 w-full">
+                <div className="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <div className="flex items-end justify-between">
                     <div>
                       <h3 className="font-heading text-2xl font-bold text-white mb-2">{getS(proj, 'title')}</h3>
-                      <p className="text-zinc-400 text-sm">{proj.tags}</p>
+                      <p className="text-zinc-400 text-sm group-hover:text-blue-300 transition-colors duration-300">{proj.tags}</p>
                     </div>
-                    <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">
                       ↗
                     </div>
                   </div>
@@ -124,7 +202,7 @@ export default async function Home({ params }) {
               </h2>
             </div>
             
-            <div className="lg:col-span-2 space-y-12">
+            <div className="lg:col-span-2 space-y-2 md:space-y-4 group/list">
               {experiences.map((exp, i) => {
                 const rawAchievements = getS(exp, 'achievements');
                 let achievements = [];
@@ -133,9 +211,9 @@ export default async function Home({ params }) {
                 } catch(e) {}
 
                 return (
-                  <div key={exp.id} className="group relative pl-8 md:pl-0">
-                    <div className="absolute left-0 top-2 bottom-0 w-px bg-zinc-800 md:hidden" />
-                    <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-blue-500 md:hidden" />
+                  <div key={exp.id} className="group/item relative pl-8 pr-4 md:px-8 py-6 transition-all duration-500 md:group-hover/list:opacity-20 md:hover:!opacity-100 md:hover:scale-[1.02] md:hover:bg-zinc-900/40 rounded-3xl border border-transparent md:hover:border-zinc-800/60 md:hover:shadow-2xl active:bg-zinc-900/40 active:scale-[0.98]">
+                    <div className="absolute left-0 top-8 bottom-0 w-px bg-zinc-800 md:hidden" />
+                    <div className="absolute left-[-4px] top-8 w-2 h-2 rounded-full bg-blue-500 md:hidden" />
 
                     <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
                       <div>
@@ -162,7 +240,7 @@ export default async function Home({ params }) {
         <section className="py-24 border-t border-zinc-900">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {skills.map(skill => (
-              <div key={skill.id} className="glass p-8 rounded-3xl">
+              <div key={skill.id} className="glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] hover:border-blue-500/20 active:scale-95 transition-all duration-500">
                 <h3 className="text-zinc-400 font-medium text-sm tracking-widest uppercase mb-6">{getS(skill, 'name')}</h3>
                 <div className="flex flex-wrap gap-2">
                   {(getS(skill, 'tags') || '').split(',').map(tag => (
@@ -176,11 +254,46 @@ export default async function Home({ params }) {
           </div>
         </section>
 
+        {/* Instagram Reels Section */}
+        <section id="content" className="py-24 border-t border-zinc-900 overflow-hidden">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div>
+              <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tight mb-4">{t.content?.title || "Design Content"}</h2>
+              <p className="text-zinc-400 text-lg max-w-xl">
+                {t.content?.subtitle || "Sharing design tips, process, and case studies on Instagram."}
+              </p>
+            </div>
+            <a 
+              href={settings.instagramUrl || "https://instagram.com/almasitou.design"} 
+              target="_blank"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-medium hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_0_20px_rgba(217,70,239,0.3)] hover:shadow-[0_0_30px_rgba(217,70,239,0.5)] whitespace-nowrap"
+            >
+              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              @almasitou.design
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            {/* Real Instagram Embeds */}
+            {(instagramReels.length > 0 ? instagramReels : [
+              { url: 'https://www.instagram.com/reel/DE-R6IttzVb/' },
+              { url: 'https://www.instagram.com/reel/DFsH3JBNnN7/' },
+              { url: 'https://www.instagram.com/p/DFc6H4_tJ8d/' }
+            ]).map((reel, i) => (
+              <div key={i} className={`w-full max-w-[350px] bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl relative min-h-[500px] ${i === 2 ? 'hidden lg:block' : ''}`}>
+                <blockquote className="instagram-media w-full" data-instgrm-permalink={reel.url} data-instgrm-version="14" style={{ background: '#000', border: '0', borderRadius: '24px', margin: '0', padding: '0', width: '100%' }}></blockquote>
+              </div>
+            ))}
+          </div>
+          
+          <script async src="//www.instagram.com/embed.js"></script>
+        </section>
+
         <section id="recommendations" className="py-24 border-t border-zinc-900">
           <h2 className="font-heading text-4xl font-bold tracking-tight mb-16">{t.recommendations?.title || "Recommendations"}</h2>
           <div className="flex flex-col gap-8 max-w-3xl mx-auto">
             {recommendations.map((rec) => (
-              <div key={rec.id} className="glass p-8 md:p-10 rounded-3xl relative overflow-hidden group flex flex-col h-full">
+              <div key={rec.id} className="glass p-8 md:p-10 rounded-3xl relative overflow-hidden group flex flex-col h-full hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] hover:border-blue-500/20 active:scale-95 transition-all duration-500">
                 <div className="absolute top-0 right-0 p-6 opacity-10">
                   <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                 </div>

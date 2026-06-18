@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
 // Modules are now fetched during sync and stored in project.content
+export const dynamic = 'force-dynamic';
 
 export default async function ProjectPage({ params }) {
   const { lang, id } = await params;

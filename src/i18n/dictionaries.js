@@ -25,7 +25,8 @@ export const dictionaries = {
     contact: {
       title: "Let's build together",
       telegram: 'Message me on Telegram',
-      email: 'or email at'
+      email: 'or email at',
+      resume: 'Download CV'
     }
   },
   ru: {
@@ -38,7 +39,13 @@ export const dictionaries = {
     hero: {
       available: 'Открыт к новым предложениям',
       yearsExp: 'Лет опыта',
-      companies: 'Компаний'
+      companies: 'Компаний',
+      skills: {
+        strategy: 'Продуктовая стратегия',
+        ux: 'UX / UI Дизайн',
+        systems: 'Дизайн-системы',
+        apps: 'Веб и Мобайл'
+      }
     },
     work: {
       title: 'Избранные работы',
@@ -54,7 +61,8 @@ export const dictionaries = {
     contact: {
       title: 'Давайте создавать вместе',
       telegram: 'Написать в Telegram',
-      email: 'или на почту'
+      email: 'или на почту',
+      resume: 'Скачать резюме'
     }
   }
 };

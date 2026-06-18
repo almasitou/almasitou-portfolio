@@ -1,8 +1,8 @@
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
-export default function AdminLayout({ children }) {
-  const cookieStore = cookies();
+export default async function AdminLayout({ children }) {
+  const cookieStore = await cookies();
   const auth = cookieStore.get('admin_token');
   
   if (!auth || auth.value !== 'authenticated') {
@@ -20,9 +20,14 @@ export default function AdminLayout({ children }) {
               </div>
               <span className="text-white font-semibold">Admin Panel</span>
             </div>
-            <a href="/" className="text-sm text-zinc-400 hover:text-white transition-colors" target="_blank">
-              View Site ↗
-            </a>
+            <div className="flex items-center gap-6">
+              <a href="/admin/instagram" className="text-sm text-pink-400 hover:text-pink-300 transition-colors font-medium">
+                Instagram Reels
+              </a>
+              <a href="/" className="text-sm text-zinc-400 hover:text-white transition-colors" target="_blank">
+                View Site ↗
+              </a>
+            </div>
           </div>
         </div>
       </nav>

@@ -44,3 +44,11 @@ next-env.d.ts
 
 .vercel
 .env*
+
+# databases
+*.db
+
+# root-level scratch files and scripts
+/*.js
+/*.mjs
+/*.html

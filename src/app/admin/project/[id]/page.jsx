@@ -3,25 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import ImageToggle from './ImageToggle';
 
-// Helper to fetch Behance modules
-async function getBehanceModules(behanceUrl) {
-  try {
-    const response = await fetch(behanceUrl, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-      },
-      next: { revalidate: 60 }
-    });
-    if (!response.ok) return [];
-    const html = await response.text();
-    const scriptMatch = html.match(/<script type="application\/json" id="beconfig-store_state">(.*?)<\/script>/s);
-    if (!scriptMatch) return [];
-    const data = JSON.parse(scriptMatch[1]);
-    return data.project?.project?.modules || data.project?.modules || [];
-  } catch (error) {
-    return [];
-  }
-}
+export const dynamic = 'force-dynamic';
 
 export default async function AdminProjectImages({ params }) {
   const { id } = await params;
@@ -32,7 +14,10 @@ export default async function AdminProjectImages({ params }) {
   
   if (!project) notFound();
   
-  const modules = await getBehanceModules(project.behanceUrl);
+  let modules = [];
+  try {
+    modules = JSON.parse(project.content || '[]');
+  } catch(e) {}
   let hiddenModules = [];
   try {
     hiddenModules = JSON.parse(project.hiddenModules || '[]');

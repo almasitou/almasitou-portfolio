@@ -114,9 +114,13 @@ export async function triggerBehanceSync() {
         addedCount++;
       } else {
         // Optionally update existing ones to ensure latest cover images and content
+        const updateData = { coverImage: proj.coverImage, title: proj.title };
+        if (proj.content !== '[]') {
+            updateData.content = proj.content;
+        }
         await prisma.project.updateMany({
             where: { behanceUrl: proj.behanceUrl },
-            data: { coverImage: proj.coverImage, title: proj.title, content: proj.content }
+            data: updateData
         });
       }
     }
@@ -132,3 +136,48 @@ export async function triggerBehanceSync() {
 }
 
 
+
+export async function updateProjectOrder(updates) {
+  try {
+    const transaction = updates.map(update => 
+      prisma.project.update({
+        where: { id: update.id },
+        data: { orderIndex: update.orderIndex }
+      })
+    );
+    await prisma.$transaction(transaction);
+    revalidatePath('/', 'layout');
+    return { success: true };
+  } catch (err) {
+    return { error: err.message };
+  }
+}
+
+export async function saveInstagramReels(formData) {
+  try {
+    await prisma.instagramReel.deleteMany({});
+    
+    const urls = [
+      formData.get('reel_0'),
+      formData.get('reel_1'),
+      formData.get('reel_2')
+    ];
+
+    for (let i = 0; i < urls.length; i++) {
+      if (urls[i] && urls[i].trim() !== '') {
+        await prisma.instagramReel.create({
+          data: {
+            url: urls[i].trim(),
+            orderIndex: i
+          }
+        });
+      }
+    }
+    
+    revalidatePath('/', 'layout');
+    revalidatePath('/admin/instagram', 'layout');
+    return { success: true };
+  } catch (err) {
+    return { error: err.message };
+  }
+}

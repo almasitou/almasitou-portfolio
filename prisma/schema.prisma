@@ -18,7 +18,14 @@ model Settings {
   email             String  @default("almasitou@gmail.com")
   linkedinUrl       String  @default("https://www.linkedin.com/in/almasitou")
   behanceUrl        String  @default("https://www.behance.net/almasitou")
+  instagramUrl      String  @default("https://instagram.com/almasitou.design")
   adminPasswordHash String?
+}
+
+model InstagramReel {
+  id         String   @id @default(cuid())
+  url        String
+  orderIndex Int      @default(0)
 }
 
 model Project {
