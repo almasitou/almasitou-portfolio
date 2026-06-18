@@ -1,5 +1,6 @@
 import { Archivo, Space_Grotesk } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import '../globals.css';
 
 const archivo = Archivo({
@@ -30,6 +31,7 @@ export default async function RootLayout({ children, params }) {
       <body className="antialiased bg-black text-white selection:bg-blue-600">
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
