@@ -257,7 +257,7 @@ export default async function Home({ params }) {
               // Ensure URL is clean and append /embed
               let embedUrl = reel.url.split('?')[0];
               if (!embedUrl.endsWith('/')) embedUrl += '/';
-              embedUrl += 'embed/captioned';
+              embedUrl += 'embed/captioned/?theme=dark';
 
               return (
                 <div key={i} className={`w-full max-w-[350px] bg-zinc-900 rounded-[24px] overflow-hidden shadow-2xl relative min-h-[500px] h-[580px] ${i === 2 ? 'hidden lg:block' : ''}`}>
@@ -265,7 +265,7 @@ export default async function Home({ params }) {
                     src={embedUrl} 
                     className="w-full h-full border-0" 
                     scrolling="no" 
-                    allowTransparency="true"
+                    allowtransparency="true"
                     allow="encrypted-media"
                   ></iframe>
                 </div>
