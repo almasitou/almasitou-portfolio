@@ -60,7 +60,7 @@ export default async function ProjectPage({ params }) {
           )}
         </div>
         
-        <div className="w-full bg-black rounded-3xl overflow-hidden border border-zinc-900 shadow-2xl flex flex-col">
+        <div className="w-full bg-black rounded-3xl overflow-hidden border border-zinc-900 shadow-2xl leading-[0]">
           {modules.map((mod, index) => {
             let hiddenModules = [];
             try { hiddenModules = JSON.parse(project.hiddenModules || '[]'); } catch(e) {}
@@ -89,11 +89,16 @@ export default async function ProjectPage({ params }) {
                 />
               );
             } else if (mod.__typename === 'TextModule' || mod.type === 'text') {
+              const content = (mod.text || mod.text_plain || '').trim();
+              // Ignore empty text modules to prevent unwanted padding gaps
+              if (!content || content === '' || content === '<p></p>' || content === '<div></div>') return null;
+              
               return (
                 <div 
                   key={mod.id || index} 
-                  className="text-white p-8 md:p-16 prose prose-invert max-w-none text-lg leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: mod.text || mod.text_plain }}
+                  className="text-white p-8 md:p-16 prose prose-invert max-w-none text-lg leading-relaxed normal-line-height"
+                  dangerouslySetInnerHTML={{ __html: content }}
+                  style={{ lineHeight: '1.625' }}
                 />
               );
             }
