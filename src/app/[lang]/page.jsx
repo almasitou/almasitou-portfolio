@@ -83,7 +83,7 @@ export default async function Home({ params }) {
                 </div>
               </div>
               
-              <div className="absolute -bottom-8 lg:-bottom-10 left-1/2 -translate-x-1/2 z-20 bg-black/60 backdrop-blur-xl border border-zinc-700/50 px-8 py-6 lg:px-12 lg:py-8 rounded-[2rem] shadow-2xl flex justify-center items-center gap-8 lg:gap-12 w-max transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:-translate-x-1/2 group-hover:border-blue-500/40 group-hover:bg-black/70">
+              <div className="absolute -bottom-8 lg:-bottom-10 left-1/2 -translate-x-1/2 z-20 bg-black/30 backdrop-blur-xl border border-zinc-700/40 px-8 py-6 lg:px-12 lg:py-8 rounded-[2rem] shadow-2xl flex justify-center items-center gap-8 lg:gap-12 w-max transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:-translate-x-1/2 group-hover:border-blue-500/40 group-hover:bg-black/40">
                 <div className="text-center">
                   <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">6+</div>
                   <div className="text-xs md:text-sm text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.yearsExp}</div>
