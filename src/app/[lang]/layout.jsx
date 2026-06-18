@@ -14,10 +14,33 @@ const spaceGrotesk = Space_Grotesk({
   display: 'swap',
 });
 
-export const metadata = {
-  title: 'Almas Qajymuratuly | Product Designer',
-  description: 'Portfolio of Almas Qajymuratuly, Senior Product Designer specializing in Fintech, EdTech, and AI-driven products.',
-};
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+  const isRu = lang === 'ru';
+  
+  return {
+    title: isRu ? 'Алмас Кажымуратулы | Product Designer' : 'Almas Qajymuratuly | Product Designer',
+    description: isRu 
+      ? 'Портфолио Алмаса Кажымуратулы, Product Designer. Проектирование Fintech, EdTech и AI-продуктов. UX/UI дизайн мирового уровня.'
+      : 'Portfolio of Almas Qajymuratuly, Product Designer specializing in Fintech, EdTech, and AI-driven products. World-class UX/UI design.',
+    keywords: ['Product Designer', 'UX/UI', 'Fintech Design', 'EdTech', 'AI Interface', 'Алмас Кажымуратулы', 'Дизайнер интерфейсов'],
+    openGraph: {
+      title: isRu ? 'Алмас Кажымуратулы | Product Designer' : 'Almas Qajymuratuly | Product Designer',
+      description: isRu ? 'Создаю красивые и интуитивно понятные цифровые продукты.' : 'Crafting beautiful and intuitive digital experiences.',
+      url: `https://almasitou-portfolio.vercel.app/${lang}`,
+      siteName: 'Almas Qajymuratuly Portfolio',
+      locale: isRu ? 'ru_RU' : 'en_US',
+      type: 'website',
+    },
+    alternates: {
+      canonical: `https://almasitou-portfolio.vercel.app/${lang}`,
+      languages: {
+        'en': 'https://almasitou-portfolio.vercel.app/en',
+        'ru': 'https://almasitou-portfolio.vercel.app/ru',
+      },
+    },
+  };
+}
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'ru' }];
