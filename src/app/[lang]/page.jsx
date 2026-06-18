@@ -310,8 +310,8 @@ export default async function Home({ params }) {
           </div>
         </section>
 
-        <footer id="contact" className="py-24 mt-24 border-t border-zinc-800 flex flex-col items-center text-center overflow-hidden w-full px-4">
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tighter mb-12 whitespace-nowrap">{t.contact.title}</h2>
+        <footer id="contact" className="py-24 mt-24 border-t border-zinc-800 flex flex-col items-center text-center w-full px-4">
+          <h2 className="font-heading text-[4.5vw] md:text-[4vw] lg:text-[3.5vw] xl:text-[3vw] 2xl:text-[2.5vw] font-bold tracking-tighter mb-12 whitespace-nowrap">{t.contact.title}</h2>
           
           <a 
             href="https://t.me/almasitou" 
