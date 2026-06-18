@@ -1,7 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import { dictionaries } from '@/i18n/dictionaries';
 import Navbar from '@/components/Navbar';
-import InstagramReel from '@/components/InstagramReel';
 import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
@@ -254,11 +253,30 @@ export default async function Home({ params }) {
               { url: 'https://www.instagram.com/reel/DE-R6IttzVb/' },
               { url: 'https://www.instagram.com/reel/DFsH3JBNnN7/' },
               { url: 'https://www.instagram.com/p/DFc6H4_tJ8d/' }
-            ]).map((reel, i) => (
-              <div key={i} className={`${i === 2 ? 'hidden lg:block' : ''}`}>
-                <InstagramReel url={reel.url} />
-              </div>
-            ))}
+            ]).map((reel, i) => {
+              let embedUrl = reel.url.split('?')[0];
+              if (!embedUrl.endsWith('/')) embedUrl += '/';
+              embedUrl += 'embed/'; // No caption to minimize white space
+
+              return (
+                <div key={i} className={`w-full max-w-[350px] bg-black rounded-[24px] overflow-hidden shadow-2xl relative h-[580px] ${i === 2 ? 'hidden lg:block' : ''}`}>
+                  {/* Clip top (54px) and bottom (44px) white headers/footers */}
+                  <iframe 
+                    src={embedUrl} 
+                    className="absolute border-0" 
+                    style={{
+                      top: '-54px',
+                      left: '-2px',
+                      width: 'calc(100% + 4px)',
+                      height: 'calc(100% + 98px)'
+                    }}
+                    scrolling="no" 
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
+                </div>
+              );
+            })}
           </div>
         </section>
 
