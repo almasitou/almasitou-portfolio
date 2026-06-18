@@ -259,17 +259,11 @@ export default async function Home({ params }) {
               embedUrl += 'embed/'; // No caption to minimize white space
 
               return (
-                <div key={i} className={`w-full max-w-[350px] bg-black rounded-[24px] overflow-hidden shadow-2xl relative aspect-[9/16] ${i === 2 ? 'hidden lg:block' : ''}`}>
-                  {/* Clip top (54px) and massive bottom footer */}
+                <div key={i} className={`w-full max-w-[350px] bg-white rounded-[24px] overflow-hidden shadow-2xl relative ${i === 2 ? 'hidden lg:block' : ''}`}>
                   <iframe 
                     src={embedUrl} 
-                    className="absolute border-0" 
-                    style={{
-                      top: '-54px',
-                      left: '-2px',
-                      width: 'calc(100% + 4px)',
-                      height: 'calc(100% + 98px)'
-                    }}
+                    className="w-full border-0" 
+                    style={{ height: '750px' }}
                     scrolling="no" 
                     allowtransparency="true"
                     allow="encrypted-media"
