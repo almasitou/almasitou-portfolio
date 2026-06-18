@@ -258,16 +258,21 @@ export default async function Home({ params }) {
               if (!embedUrl.endsWith('/')) embedUrl += '/';
               embedUrl += 'embed/'; // No caption to minimize white space
 
+              const rotations = ['-rotate-2', 'rotate-2', '-rotate-1'];
+              const rotation = rotations[i % 3];
+
               return (
-                <div key={i} className={`w-full max-w-[350px] bg-white rounded-[24px] overflow-hidden shadow-2xl relative ${i === 2 ? 'hidden lg:block' : ''}`}>
-                  <iframe 
-                    src={embedUrl} 
-                    className="w-full border-0" 
-                    style={{ height: '750px' }}
-                    scrolling="no" 
-                    allowtransparency="true"
-                    allow="encrypted-media"
-                  ></iframe>
+                <div key={i} className={`w-full max-w-[350px] bg-[#f8f9fa] p-3 pb-8 rounded-2xl shadow-xl transition-all duration-500 hover:scale-[1.02] hover:z-10 hover:shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:rotate-0 cursor-pointer ${rotation} ${i === 2 ? 'hidden lg:block' : ''}`}>
+                  <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-inner">
+                    <iframe 
+                      src={embedUrl} 
+                      className="w-full border-0" 
+                      style={{ height: '750px' }}
+                      scrolling="no" 
+                      allowtransparency="true"
+                      allow="encrypted-media"
+                    ></iframe>
+                  </div>
                 </div>
               );
             })}
