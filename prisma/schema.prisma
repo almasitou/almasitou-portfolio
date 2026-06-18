@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_URL")
+  directUrl = env("POSTGRES_URL")
+}
+
+model Settings {
+  id                String  @id @default(cuid())
+  name              String  @default("Almas Qajymuratuly")
+  title             String  @default("Senior Product Designer")
+  titleRu           String  @default("Старший продуктовый дизайнер")
+  bio               String  @default("Crafting user-centric interfaces for Fintech, EdTech, and AI-driven products...")
+  bioRu             String  @default("Создаю удобные интерфейсы для Fintech, EdTech и AI-продуктов...")
+  email             String  @default("almasitou@gmail.com")
+  linkedinUrl       String  @default("https://www.linkedin.com/in/almasitou")
+  behanceUrl        String  @default("https://www.behance.net/almasitou")
+  adminPasswordHash String?
+}
+
+model Project {
+  id            String   @id @default(cuid())
+  title         String
+  titleRu       String?
+  description   String
+  descriptionRu String?
+  coverImage    String?
+  behanceUrl    String
+  hiddenModules String   @default("[]")
+  content       String   @default("[]")
+  tags          String   // comma separated or JSON
+  orderIndex    Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Experience {
+  id             String   @id @default(cuid())
+  company        String
+  companyRu      String?
+  role           String
+  roleRu         String?
+  dates          String
+  datesRu        String?
+  achievements   String   // JSON array of strings
+  achievementsRu String?  // JSON array of strings
+  orderIndex     Int      @default(0)
+}
+
+model SkillCategory {
+  id         String   @id @default(cuid())
+  name       String
+  nameRu     String?
+  tags       String   // comma separated
+  tagsRu     String?
+  orderIndex Int      @default(0)
+}
+
+model Recommendation {
+  id           String   @id @default(cuid())
+  authorName   String
+  authorRole   String
+  authorRoleRu String?
+  text         String
+  textRu       String?
+  avatarUrl    String?
+  linkedinUrl  String?
+  orderIndex   Int      @default(0)
+}
