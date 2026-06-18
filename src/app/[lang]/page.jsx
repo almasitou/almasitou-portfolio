@@ -62,10 +62,10 @@ export default async function Home({ params }) {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-24">
         
-        <section className="min-h-[80vh] flex flex-col lg:flex-row justify-center items-center lg:items-start pt-12 md:pt-16 pb-16 gap-16 lg:gap-8">
+        <section className="min-h-[80vh] grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center pt-12 md:pt-16 pb-16">
           
           {/* Left Column (Text Content) */}
-          <div className="w-full lg:w-1/2 flex flex-col items-start">
+          <div className="lg:col-span-7 flex flex-col items-start w-full">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-zinc-700/50 text-xs font-medium text-zinc-300 mb-8">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               {t.hero.available}
@@ -100,14 +100,14 @@ export default async function Home({ params }) {
           </div>
 
           {/* Right Column (Photo & Floating Stats) */}
-          <div className="w-full lg:w-1/2 relative">
+          <div className="lg:col-span-5 w-full relative">
             <div className="relative w-full max-w-[300px] md:max-w-[360px] group mt-4 lg:mt-0 mx-auto lg:ml-auto lg:mr-0">
               
               {/* Decorative Background Glow for AI Integration */}
               <div className="absolute -inset-6 bg-gradient-to-tr from-blue-500/20 via-indigo-500/15 to-purple-500/20 rounded-[3.5rem] blur-3xl opacity-60 group-hover:opacity-85 transition-opacity duration-700 -z-10 animate-pulse" style={{ animationDuration: '6s' }}></div>
               
               {/* Premium Glass Frame */}
-              <div className="p-3 rounded-[2.8rem] md:rounded-[3.2rem] bg-zinc-900/30 border border-zinc-800/60 backdrop-blur-md shadow-2xl transition-all duration-500 group-hover:border-zinc-700/50 group-hover:bg-zinc-900/40">
+              <div className="p-3 rounded-[2.8rem] md:rounded-[3.2rem] bg-zinc-950/40 border border-zinc-800/50 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:border-blue-500/30 group-hover:bg-zinc-950/60">
                 
                 {/* Photo Container with overflow-hidden for zoom effect */}
                 <div className="relative w-full aspect-[4/5] md:aspect-[3/4] rounded-[2.2rem] md:rounded-[2.5rem] overflow-hidden">
@@ -121,7 +121,7 @@ export default async function Home({ params }) {
               </div>
               
               {/* Floating Glass Stats - Breaks grid */}
-              <div className="absolute -bottom-6 left-4 right-4 md:right-auto md:-left-8 md:bottom-12 z-20 glass px-6 py-5 rounded-3xl shadow-2xl flex justify-around md:justify-start md:gap-8 transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:border-blue-500/30">
+              <div className="absolute -bottom-6 left-4 right-4 lg:right-auto lg:-left-12 lg:bottom-10 z-20 glass px-6 py-5 rounded-3xl shadow-2xl flex justify-around lg:justify-start lg:gap-8 transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:border-blue-500/30">
                 <div className="text-center md:text-left">
                   <div className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">6+</div>
                   <div className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.yearsExp}</div>
