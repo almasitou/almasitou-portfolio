@@ -31,7 +31,7 @@ export const dictionaries = {
     },
     content: {
       title: 'Design Content',
-      subtitle: 'I have an active Instagram account, check it out and follow my creativity!'
+      subtitle: 'Follow my creativity.'
     }
   },
   ru: {
@@ -72,7 +72,7 @@ export const dictionaries = {
     },
     content: {
       title: 'Design Content',
-      subtitle: 'У меня есть Instagram-аккаунт, смотрите там, следите за моим творчеством.'
+      subtitle: 'Следите за моим творчеством.'
     }
   }
 };
