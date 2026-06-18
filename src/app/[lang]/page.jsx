@@ -30,7 +30,7 @@ export default async function Home({ params }) {
         <section className="min-h-[80vh] grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center pt-12 md:pt-16 pb-16">
           
           {/* Left Column (Text Content) */}
-          <div className="lg:col-span-7 flex flex-col items-start w-full">
+          <div className="lg:col-span-6 flex flex-col items-start w-full">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-zinc-700/50 text-xs font-medium text-zinc-300 mb-8">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               {t.hero.available}
@@ -63,8 +63,8 @@ export default async function Home({ params }) {
           </div>
 
           {/* Right Column (Photo & Floating Stats) */}
-          <div className="lg:col-span-5 w-full relative">
-            <div className="relative w-full max-w-[300px] md:max-w-[360px] group mt-4 lg:mt-0 mx-auto lg:ml-auto lg:mr-0">
+          <div className="lg:col-span-6 w-full relative">
+            <div className="relative w-full max-w-[400px] md:max-w-[500px] lg:max-w-[600px] group mt-12 lg:mt-0 mx-auto lg:ml-auto lg:mr-0">
               
               {/* Decorative Background Glow for AI Integration */}
               <div className="absolute -inset-6 bg-gradient-to-tr from-blue-500/20 via-indigo-500/15 to-purple-500/20 rounded-[3.5rem] blur-3xl opacity-60 group-hover:opacity-85 transition-opacity duration-700 -z-10 animate-pulse" style={{ animationDuration: '6s' }}></div>
