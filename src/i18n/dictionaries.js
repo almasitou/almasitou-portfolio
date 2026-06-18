@@ -9,7 +9,8 @@ export const dictionaries = {
     hero: {
       available: 'Available for new opportunities',
       yearsExp: 'Years Exp',
-      companies: 'Companies'
+      companies: 'Companies',
+      projects: 'Projects'
     },
     work: {
       title: 'Selected Work',
@@ -29,8 +30,8 @@ export const dictionaries = {
       resume: 'Download CV'
     },
     content: {
-      title: 'Follow on Instagram',
-      subtitle: 'Check out my Instagram account where I share my design work, creative process, and daily design updates. Follow along!'
+      title: 'Design Content',
+      subtitle: 'I have an active Instagram account, check it out and follow my creativity!'
     }
   },
   ru: {
@@ -44,6 +45,7 @@ export const dictionaries = {
       available: 'Открыт к новым предложениям',
       yearsExp: 'Лет опыта',
       companies: 'Компаний',
+      projects: 'Проектов',
       skills: {
         strategy: 'Продуктовая стратегия',
         ux: 'UX / UI Дизайн',
@@ -69,8 +71,8 @@ export const dictionaries = {
       resume: 'Скачать резюме'
     },
     content: {
-      title: 'Мой Instagram',
-      subtitle: 'Я активно веду свой аккаунт — заглядывайте туда, чтобы посмотреть на мои работы, дизайн-процессы и следить за моим творчеством!'
+      title: 'Design Content',
+      subtitle: 'У меня есть Instagram-аккаунт, смотрите там, следите за моим творчеством.'
     }
   }
 };

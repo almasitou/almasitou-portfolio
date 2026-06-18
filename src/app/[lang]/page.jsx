@@ -76,18 +76,16 @@ export default async function Home({ params }) {
               {settings.title?.split(' ').slice(1).join(' ')}
             </h1>
             
-            <div className="glass inline-flex flex-wrap items-center gap-3 md:gap-6 px-5 py-3 md:px-8 md:py-5 rounded-3xl border border-zinc-800/60 mb-8 shadow-xl relative overflow-hidden group hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] hover:-translate-y-1 active:scale-95 active:border-blue-500/50 transition-all duration-500 cursor-default">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-8">
               {[
                 t.hero?.skills?.strategy || 'Product Strategy',
                 t.hero?.skills?.ux || 'UX / UI Design',
                 t.hero?.skills?.systems || 'Design Systems',
                 t.hero?.skills?.apps || 'Web & Mobile Apps'
               ].map((item, i) => (
-                <div key={i} className="flex items-center">
+                <div key={i} className="glass inline-flex items-center px-4 py-2 md:px-5 md:py-3 rounded-full border border-zinc-800/60 shadow-lg hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-default">
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 md:mr-3 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
-                  <span className="text-[10px] md:text-sm font-medium tracking-wide uppercase text-zinc-200">{item}</span>
-                  {i !== 3 && <div className="hidden lg:block w-px h-4 bg-zinc-700 ml-4 md:ml-6"></div>}
+                  <span className="text-[10px] md:text-xs font-medium tracking-wide uppercase text-zinc-200">{item}</span>
                 </div>
               ))}
             </div>
@@ -120,7 +118,6 @@ export default async function Home({ params }) {
                 </div>
               </div>
               
-              {/* Floating Glass Stats - Breaks grid */}
               <div className="absolute -bottom-6 left-4 right-4 lg:right-auto lg:-left-12 lg:bottom-10 z-20 glass px-6 py-5 rounded-3xl shadow-2xl flex justify-around lg:justify-start lg:gap-8 transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:border-blue-500/30">
                 <div className="text-center md:text-left">
                   <div className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">6+</div>
@@ -128,8 +125,8 @@ export default async function Home({ params }) {
                 </div>
                 <div className="w-px bg-zinc-800"></div>
                 <div className="text-center md:text-left">
-                  <div className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">7</div>
-                  <div className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.companies}</div>
+                  <div className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">20+</div>
+                  <div className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.projects || 'Projects'}</div>
                 </div>
               </div>
             </div>
