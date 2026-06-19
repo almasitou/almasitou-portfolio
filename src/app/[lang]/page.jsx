@@ -167,6 +167,7 @@ export default async function Home({ params }) {
                   href={`/${lang}/project/${proj.id}`}
                   className="group block relative rounded-3xl overflow-hidden glass glass-hover aspect-[4/3] hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:border-blue-500/30 active:scale-95 transition-all duration-500"
                 >
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer-once pointer-events-none z-20" />
                   {proj.coverImage ? (
                     <img 
                       src={proj.coverImage} 
@@ -222,8 +223,9 @@ export default async function Home({ params }) {
 
                 return (
                   <Reveal key={exp.id} delay={i * 0.1}>
-                    <div className="group/item relative pl-8 pr-4 md:px-8 py-6 transition-all duration-500 md:group-hover/list:opacity-20 md:hover:!opacity-100 md:hover:scale-[1.02] md:hover:bg-zinc-900/40 rounded-3xl border border-transparent md:hover:border-zinc-800/60 md:hover:shadow-2xl active:bg-zinc-900/40 active:scale-[0.98]">
-                      <div className="absolute left-0 top-8 bottom-0 w-px bg-zinc-800 md:hidden" />
+                    <div className="group/item relative overflow-hidden pl-8 pr-4 md:px-8 py-6 transition-all duration-500 md:group-hover/list:opacity-20 md:hover:!opacity-100 md:hover:scale-[1.02] md:hover:bg-zinc-900/40 rounded-3xl border border-transparent md:hover:border-zinc-800/60 md:hover:shadow-2xl active:bg-zinc-900/40 active:scale-[0.98]">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full md:group-hover/item:animate-shimmer-once pointer-events-none z-0" />
+                      <div className="absolute left-0 top-8 bottom-0 w-px bg-zinc-800 md:hidden z-10" />
                       <div className="absolute left-[-4px] top-8 w-2 h-2 rounded-full bg-blue-500 md:hidden" />
 
                       <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
@@ -253,9 +255,10 @@ export default async function Home({ params }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {skills.map((skill, i) => (
               <Reveal key={skill.id} delay={i * 0.1} className="h-full">
-                <div className="glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] hover:border-blue-500/20 active:scale-95 transition-all duration-500 h-full">
-                  <h3 className="text-zinc-400 font-medium text-sm tracking-widest uppercase mb-6">{getS(skill, 'name')}</h3>
-                  <div className="flex flex-wrap gap-2">
+                <div className="group relative overflow-hidden glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] hover:border-blue-500/20 active:scale-95 transition-all duration-500 h-full">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer-once pointer-events-none z-0" />
+                  <h3 className="relative z-10 text-zinc-400 font-medium text-sm tracking-widest uppercase mb-6">{getS(skill, 'name')}</h3>
+                  <div className="relative z-10 flex flex-wrap gap-2">
                     {(getS(skill, 'tags') || '').split(',').map(tag => (
                       <span key={tag} className="px-3 py-1.5 bg-zinc-800/50 border border-zinc-700/50 rounded-lg text-sm text-zinc-300">
                         {tag.trim()}

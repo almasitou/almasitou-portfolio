@@ -7,6 +7,7 @@
   --animate-float: float 6s ease-in-out infinite;
   --animate-shimmer: shimmer 6.5s linear infinite;
   --animate-shimmer-seq: shimmer-seq 20s linear infinite;
+  --animate-shimmer-once: shimmer-once 1.2s ease-in-out forwards;
 }
 
 @keyframes marquee {
@@ -23,6 +24,11 @@
 @keyframes shimmer-seq {
   0% { transform: translateX(-200%); }
   10% { transform: translateX(200%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes shimmer-once {
+  0% { transform: translateX(-200%); }
   100% { transform: translateX(200%); }
 }
 
