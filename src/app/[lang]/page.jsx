@@ -272,7 +272,7 @@ export default async function Home({ params }) {
         </section>
 
         {/* Instagram Reels Section */}
-        <section id="content" className="py-24 border-t border-zinc-900 overflow-hidden">
+        <section id="content" className="py-24 border-t border-zinc-900">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
               <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tight mb-4">{t.content.title}</h2>
@@ -358,6 +358,7 @@ export default async function Home({ params }) {
           </a>
           
           <div className="flex gap-8 text-sm font-medium tracking-widest uppercase text-zinc-500">
+            <a href={settings.instagramUrl || "https://instagram.com/almasitou.design"} target="_blank" className="hover:text-white transition-colors">Instagram</a>
             <a href={settings.linkedinUrl} target="_blank" className="hover:text-white transition-colors">LinkedIn</a>
             <a href={settings.behanceUrl} target="_blank" className="hover:text-white transition-colors">Behance</a>
           </div>
