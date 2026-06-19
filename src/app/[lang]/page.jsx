@@ -251,8 +251,8 @@ export default async function Home({ params }) {
         <section className="py-24 border-t border-zinc-900">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {skills.map((skill, i) => (
-              <Reveal key={skill.id} delay={i * 0.1}>
-                <div className="glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] hover:border-blue-500/20 active:scale-95 transition-all duration-500">
+              <Reveal key={skill.id} delay={i * 0.1} className="h-full">
+                <div className="glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] hover:border-blue-500/20 active:scale-95 transition-all duration-500 h-full">
                   <h3 className="text-zinc-400 font-medium text-sm tracking-widest uppercase mb-6">{getS(skill, 'name')}</h3>
                   <div className="flex flex-wrap gap-2">
                     {(getS(skill, 'tags') || '').split(',').map(tag => (
