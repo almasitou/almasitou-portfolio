@@ -42,8 +42,8 @@ export default function SparklesButton({ children, href, className, target }) {
         id: String(Math.random()),
         size: Math.random() * (isHovered ? 20 : 15) + (isHovered ? 15 : 10), // Bigger on hover
         color: ['#60A5FA', '#93C5FD', '#BFDBFE', '#3B82F6'][Math.floor(Math.random() * 4)],
-        top: Math.random() * 120 - 10 + '%',
-        left: Math.random() * 120 - 10 + '%',
+        top: `calc(${Math.random() * 100}% + ${Math.random() * 10 - 5}px)`,
+        left: `calc(${Math.random() * 100}% + ${Math.random() * 10 - 5}px)`,
       };
       
       setSparkles(s => [...s, sparkle]);
