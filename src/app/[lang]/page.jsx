@@ -78,27 +78,22 @@ export default async function Home({ params }) {
                 <div className="relative w-full aspect-[4/5] md:aspect-[3/4] rounded-[2.2rem] md:rounded-[2.5rem] overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
                   
-                  {/* Glassmorphic Name Badge */}
-                  <div className="absolute top-6 right-6 md:top-8 md:right-8 z-20 transform transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-1">
-                    <div className="relative overflow-hidden glass px-5 py-3 md:px-6 md:py-3.5 rounded-2xl flex items-center gap-4 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.5)] backdrop-blur-md bg-black/20 group-hover:bg-black/40 group-hover:border-blue-500/40 transition-colors">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
-                      <div className="flex flex-col text-right">
-                        <span className="font-heading font-bold text-lg md:text-xl text-white tracking-tight leading-none">{t.hero.firstName}</span>
-                        <span className="font-heading font-medium text-[10px] md:text-xs text-blue-400 tracking-[0.2em] uppercase mt-1">{t.hero.lastName}</span>
-                      </div>
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/10 flex items-center justify-center bg-white/5 shadow-inner">
-                        <svg className="w-5 h-5 md:w-6 md:h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
 
                   <img 
                     src="/profile.jpg" 
                     alt={`${t.hero.firstName} ${t.hero.lastName}`} 
                     className="w-full h-full object-cover object-center opacity-90 transition-all duration-700 group-hover:opacity-100 group-hover:scale-105"
                   />
+                </div>
+              </div>
+
+              {/* Glassmorphic Name Badge - Decomposed Intersection */}
+              <div className="absolute -top-6 -right-4 md:-top-8 md:-right-8 lg:-right-12 z-30 transform transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 group-hover:rotate-2">
+                <div className="relative overflow-hidden glass px-6 py-4 md:px-8 md:py-5 rounded-[2rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl bg-zinc-950/50 group-hover:bg-zinc-900/70 group-hover:border-blue-400/50 transition-colors flex flex-col items-center">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-shimmer" />
+                  <span className="font-heading font-bold text-xl md:text-3xl text-white tracking-tight leading-none drop-shadow-lg relative z-10">{t.hero.firstName}</span>
+                  <span className="font-heading font-semibold text-[10px] md:text-xs text-blue-400 tracking-[0.3em] uppercase mt-1.5 drop-shadow-md relative z-10">{t.hero.lastName}</span>
                 </div>
               </div>
               
