@@ -91,7 +91,7 @@ export default async function Home({ params }) {
               {/* Glassmorphic Name Badge - Decomposed Intersection */}
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-top-8 md:-left-8 lg:-left-12 z-30 w-max transform transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 group-hover:-rotate-2">
                 <div className="relative overflow-hidden glass px-6 py-4 md:px-8 md:py-5 rounded-[2rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl bg-zinc-950/50 group-hover:bg-zinc-900/70 group-hover:border-blue-400/50 transition-colors flex flex-col items-center">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-shimmer" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shimmer" />
                   <span className="font-heading font-bold text-xl md:text-3xl text-white tracking-tight leading-none drop-shadow-lg relative z-10">{t.hero.firstName}</span>
                   <span className="font-heading font-semibold text-[10px] md:text-xs text-blue-400 tracking-[0.3em] uppercase mt-1.5 drop-shadow-md relative z-10">{t.hero.lastName}</span>
                 </div>
