@@ -78,10 +78,20 @@ export default async function Home({ params }) {
                 <div className="relative w-full aspect-[4/5] md:aspect-[3/4] rounded-[2.2rem] md:rounded-[2.5rem] overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
                   
-                  {/* Localized Name */}
-                  <div className="absolute top-5 right-6 md:top-6 md:right-8 z-20 flex flex-col items-end text-right transform transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
-                    <span className="font-heading font-bold text-2xl md:text-3xl text-white drop-shadow-lg tracking-tight leading-none">{t.hero.firstName}</span>
-                    <span className="font-heading font-medium text-sm md:text-base text-zinc-300 drop-shadow-md tracking-widest uppercase mt-1">{t.hero.lastName}</span>
+                  {/* Glassmorphic Name Badge */}
+                  <div className="absolute top-6 right-6 md:top-8 md:right-8 z-20 transform transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-1">
+                    <div className="relative overflow-hidden glass px-5 py-3 md:px-6 md:py-3.5 rounded-2xl flex items-center gap-4 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.5)] backdrop-blur-md bg-black/20 group-hover:bg-black/40 group-hover:border-blue-500/40 transition-colors">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
+                      <div className="flex flex-col text-right">
+                        <span className="font-heading font-bold text-lg md:text-xl text-white tracking-tight leading-none">{t.hero.firstName}</span>
+                        <span className="font-heading font-medium text-[10px] md:text-xs text-blue-400 tracking-[0.2em] uppercase mt-1">{t.hero.lastName}</span>
+                      </div>
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/10 flex items-center justify-center bg-white/5 shadow-inner">
+                        <svg className="w-5 h-5 md:w-6 md:h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
 
                   <img 
