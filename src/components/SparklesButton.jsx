@@ -42,8 +42,8 @@ export default function SparklesButton({ children, href, className, target }) {
         id: String(Math.random()),
         size: Math.random() * (isHovered ? 20 : 15) + (isHovered ? 15 : 10), // Bigger on hover
         color: ['#60A5FA', '#93C5FD', '#BFDBFE', '#3B82F6'][Math.floor(Math.random() * 4)],
-        top: Math.random() * 100 + '%',
-        left: Math.random() * 100 + '%',
+        top: Math.random() * 120 - 10 + '%',
+        left: Math.random() * 120 - 10 + '%',
       };
       
       setSparkles(s => [...s, sparkle]);
@@ -60,7 +60,7 @@ export default function SparklesButton({ children, href, className, target }) {
     <a 
       href={href} 
       target={target}
-      className={`relative overflow-hidden group/sparkles ${className}`}
+      className={`relative group/sparkles ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
