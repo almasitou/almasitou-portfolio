@@ -4,6 +4,9 @@ import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 import Image from 'next/image';
 import InstagramReel from '@/components/InstagramReel';
+import Typewriter from '@/components/Typewriter';
+import Reveal from '@/components/Reveal';
+import SparklesButton from '@/components/SparklesButton';
 
 export const dynamic = 'force-dynamic';
 
@@ -33,86 +36,95 @@ export default async function Home({ params }) {
           
           {/* Left Column (Text Content) */}
           <div className="lg:col-span-6 flex flex-col items-start w-full">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-zinc-700/50 text-xs font-medium text-zinc-300 mb-8">
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              {t.hero.available}
-            </div>
+            <Reveal delay={0.1}>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-zinc-700/50 text-xs font-medium text-zinc-300 mb-8">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                {t.hero.available}
+              </div>
+            </Reveal>
             
-            <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tighter leading-[0.9] mb-6">
-              <span className="text-gradient">{settings.title?.split(' ')[0]}</span><br/>
-              {settings.title?.split(' ').slice(1).join(' ')}
-            </h1>
+            <Reveal delay={0.2}>
+              <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tighter leading-[0.9] mb-6 min-h-[2em]">
+                <Typewriter title={lang === 'ru' ? settings.titleRu : settings.title} />
+              </h1>
+            </Reveal>
             
-            <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-8">
-              {[
-                t.hero.skills?.strategy,
-                t.hero.skills?.ux,
-                t.hero.skills?.systems,
-                t.hero.skills?.apps
-              ].filter(Boolean).map((item, i) => (
-                <div key={i} className="relative overflow-hidden glass inline-flex items-center px-4 py-2 md:px-5 md:py-3 rounded-full border border-zinc-800/60 shadow-lg hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
-                  <div 
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shimmer-seq"
-                    style={{ animationDelay: `${i * 2.5}s` }}
-                  />
-                  <span className="relative z-10 w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 md:mr-3 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
-                  <span className="relative z-10 text-[10px] md:text-xs font-medium tracking-wide uppercase text-zinc-200">{item}</span>
-                </div>
-              ))}
-            </div>
+            <Reveal delay={0.3}>
+              <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-8">
+                {[
+                  t.hero.skills?.strategy,
+                  t.hero.skills?.ux,
+                  t.hero.skills?.systems,
+                  t.hero.skills?.apps
+                ].filter(Boolean).map((item, i) => (
+                  <div key={i} className="relative overflow-hidden glass inline-flex items-center px-4 py-2 md:px-5 md:py-3 rounded-full border border-zinc-800/60 shadow-lg hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
+                    <div 
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shimmer-seq"
+                      style={{ animationDelay: `${i * 2.5}s` }}
+                    />
+                    <span className="relative z-10 w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 md:mr-3 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
+                    <span className="relative z-10 text-[10px] md:text-xs font-medium tracking-wide uppercase text-zinc-200">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
 
-            <div className="max-w-2xl mb-8">
-              <p className="text-lg md:text-xl text-zinc-400/90 font-medium leading-relaxed">
-                {getS(settings, 'bio')}
-              </p>
-            </div>
+            <Reveal delay={0.4}>
+              <div className="max-w-2xl mb-8">
+                <p className="text-lg md:text-xl text-zinc-400/90 font-medium leading-relaxed">
+                  {getS(settings, 'bio')}
+                </p>
+              </div>
+            </Reveal>
           </div>
 
           {/* Right Column (Photo & Floating Stats) */}
           <div className="lg:col-span-6 w-full relative">
-            <div className="relative w-full max-w-[400px] md:max-w-[500px] lg:max-w-[600px] group mt-12 lg:mt-0 mx-auto lg:ml-auto lg:mr-0">
-              
-              {/* Decorative Background Glow for AI Integration */}
-              <div className="absolute -inset-6 bg-gradient-to-tr from-blue-500/20 via-indigo-500/15 to-purple-500/20 rounded-[3.5rem] blur-3xl opacity-60 group-hover:opacity-85 transition-opacity duration-700 -z-10 animate-pulse" style={{ animationDuration: '6s' }}></div>
-              
-              {/* Premium Glass Frame */}
-              <div className="p-3 rounded-[2.8rem] md:rounded-[3.2rem] bg-zinc-950/40 border border-zinc-800/50 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:border-blue-500/30 group-hover:bg-zinc-950/60 animate-float">
+            <Reveal delay={0.5}>
+              <div className="relative w-full max-w-[400px] md:max-w-[500px] lg:max-w-[600px] group mt-12 lg:mt-0 mx-auto lg:ml-auto lg:mr-0">
                 
-                {/* Photo Container with overflow-hidden for zoom effect */}
-                <div className="relative w-full aspect-[4/5] md:aspect-[3/4] rounded-[2.2rem] md:rounded-[2.5rem] overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
+                {/* Decorative Background Glow for AI Integration */}
+                <div className="absolute -inset-6 bg-gradient-to-tr from-blue-500/20 via-indigo-500/15 to-purple-500/20 rounded-[3.5rem] blur-3xl opacity-60 group-hover:opacity-85 transition-opacity duration-700 -z-10 animate-pulse" style={{ animationDuration: '6s' }}></div>
+                
+                {/* Premium Glass Frame */}
+                <div className="p-3 rounded-[2.8rem] md:rounded-[3.2rem] bg-zinc-950/40 border border-zinc-800/50 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:border-blue-500/30 group-hover:bg-zinc-950/60 animate-float">
                   
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
+                  {/* Photo Container with overflow-hidden for zoom effect */}
+                  <div className="relative w-full aspect-[4/5] md:aspect-[3/4] rounded-[2.2rem] md:rounded-[2.5rem] overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
+                    
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
 
-                  <img 
-                    src="/profile.jpg" 
-                    alt={`${t.hero.firstName} ${t.hero.lastName}`} 
-                    className="w-full h-full object-cover object-center opacity-90 transition-all duration-700 group-hover:opacity-100 group-hover:scale-105"
-                  />
+                    <img 
+                      src="/profile.jpg" 
+                      alt={`${t.hero.firstName} ${t.hero.lastName}`} 
+                      className="w-full h-full object-cover object-center opacity-90 transition-all duration-700 group-hover:opacity-100 group-hover:scale-105"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* Glassmorphic Name Badge - Decomposed Intersection */}
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-top-8 md:-left-8 lg:-left-12 z-30 w-max transform transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 group-hover:-rotate-2">
-                <div className="relative overflow-hidden glass px-6 py-4 md:px-8 md:py-5 rounded-[2rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl bg-zinc-950/50 group-hover:bg-zinc-900/70 group-hover:border-blue-400/50 transition-colors flex flex-col items-center">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shimmer" />
-                  <span className="font-heading font-bold text-xl md:text-3xl text-white tracking-tight leading-none drop-shadow-lg relative z-10">{t.hero.firstName}</span>
-                  <span className="font-heading font-semibold text-[10px] md:text-xs text-blue-400 tracking-[0.3em] uppercase mt-1.5 drop-shadow-md relative z-10">{t.hero.lastName}</span>
+                {/* Glassmorphic Name Badge - Decomposed Intersection */}
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-top-8 md:-left-8 lg:-left-12 z-30 w-max transform transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 group-hover:-rotate-2">
+                  <div className="relative overflow-hidden glass px-6 py-4 md:px-8 md:py-5 rounded-[2rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl bg-zinc-950/50 group-hover:bg-zinc-900/70 group-hover:border-blue-400/50 transition-colors flex flex-col items-center">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shimmer" />
+                    <span className="font-heading font-bold text-xl md:text-3xl text-white tracking-tight leading-none drop-shadow-lg relative z-10">{t.hero.firstName}</span>
+                    <span className="font-heading font-semibold text-[10px] md:text-xs text-blue-400 tracking-[0.3em] uppercase mt-1.5 drop-shadow-md relative z-10">{t.hero.lastName}</span>
+                  </div>
+                </div>
+                
+                <div className="absolute -bottom-8 lg:-bottom-10 left-1/2 -translate-x-1/2 z-20 bg-black/30 backdrop-blur-xl border border-zinc-700/40 px-8 py-6 lg:px-12 lg:py-8 rounded-[2rem] shadow-2xl flex justify-center items-center gap-8 lg:gap-12 w-max transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:-translate-x-1/2 group-hover:border-blue-500/40 group-hover:bg-black/40">
+                  <div className="text-center">
+                    <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">6+</div>
+                    <div className="text-xs md:text-sm text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.yearsExp}</div>
+                  </div>
+                  <div className="w-px h-16 bg-zinc-800"></div>
+                  <div className="text-center">
+                    <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">20+</div>
+                    <div className="text-xs md:text-sm text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.projects}</div>
+                  </div>
                 </div>
               </div>
-              
-              <div className="absolute -bottom-8 lg:-bottom-10 left-1/2 -translate-x-1/2 z-20 bg-black/30 backdrop-blur-xl border border-zinc-700/40 px-8 py-6 lg:px-12 lg:py-8 rounded-[2rem] shadow-2xl flex justify-center items-center gap-8 lg:gap-12 w-max transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:-translate-x-1/2 group-hover:border-blue-500/40 group-hover:bg-black/40">
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">6+</div>
-                  <div className="text-xs md:text-sm text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.yearsExp}</div>
-                </div>
-                <div className="w-px h-16 bg-zinc-800"></div>
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">20+</div>
-                  <div className="text-xs md:text-sm text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.projects}</div>
-                </div>
-              </div>
-            </div>
+            </Reveal>
           </div>
 
         </section>
@@ -143,41 +155,44 @@ export default async function Home({ params }) {
           </div>
 
         <section id="work" className="py-24">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-16 tracking-tight">{t.work.title}</h2>
+          <Reveal delay={0.1}>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-16 tracking-tight">{t.work.title}</h2>
+          </Reveal>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.length > 0 ? projects.map((proj, i) => (
-              <Link 
-                key={proj.id} 
-                href={`/${lang}/project/${proj.id}`}
-                className="group block relative rounded-3xl overflow-hidden glass glass-hover aspect-[4/3] hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:border-blue-500/30 active:scale-95 transition-all duration-500"
-              >
-                {proj.coverImage ? (
-                  <img 
-                    src={proj.coverImage} 
-                    referrerPolicy="no-referrer"
-                    alt={getS(proj, 'title')} 
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                  />
-                ) : (
-                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center">
-                    <span className="text-zinc-600 font-medium tracking-widest uppercase">{t.work.preview}</span>
-                  </div>
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                
-                <div className="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <div className="flex items-end justify-between">
-                    <div>
-                      <h3 className="font-heading text-2xl font-bold text-white mb-2">{getS(proj, 'title')}</h3>
-                      <p className="text-zinc-400 text-sm group-hover:text-blue-300 transition-colors duration-300">{proj.tags}</p>
+              <Reveal key={proj.id} delay={0.1 * (i % 2)}>
+                <Link 
+                  href={`/${lang}/project/${proj.id}`}
+                  className="group block relative rounded-3xl overflow-hidden glass glass-hover aspect-[4/3] hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:border-blue-500/30 active:scale-95 transition-all duration-500"
+                >
+                  {proj.coverImage ? (
+                    <img 
+                      src={proj.coverImage} 
+                      referrerPolicy="no-referrer"
+                      alt={getS(proj, 'title')} 
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center">
+                      <span className="text-zinc-600 font-medium tracking-widest uppercase">{t.work.preview}</span>
                     </div>
-                    <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                      ↗
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                  
+                  <div className="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <div className="flex items-end justify-between">
+                      <div>
+                        <h3 className="font-heading text-2xl font-bold text-white mb-2">{getS(proj, 'title')}</h3>
+                        <p className="text-zinc-400 text-sm group-hover:text-blue-300 transition-colors duration-300">{proj.tags}</p>
+                      </div>
+                      <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">
+                        ↗
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </Reveal>
             )) : (
               <div className="col-span-2 py-20 text-center glass rounded-3xl">
                 <p className="text-zinc-500">{t.work.empty}</p>
@@ -189,9 +204,11 @@ export default async function Home({ params }) {
         <section id="experience" className="py-24">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             <div className="lg:col-span-1">
-              <h2 className="font-heading text-4xl font-bold tracking-tight sticky top-32">
-                {t.experience.title}
-              </h2>
+              <Reveal delay={0.1}>
+                <h2 className="font-heading text-4xl font-bold tracking-tight sticky top-32">
+                  {t.experience.title}
+                </h2>
+              </Reveal>
             </div>
             
             <div className="lg:col-span-2 space-y-2 md:space-y-4 group/list">
@@ -203,26 +220,28 @@ export default async function Home({ params }) {
                 } catch(e) {}
 
                 return (
-                  <div key={exp.id} className="group/item relative pl-8 pr-4 md:px-8 py-6 transition-all duration-500 md:group-hover/list:opacity-20 md:hover:!opacity-100 md:hover:scale-[1.02] md:hover:bg-zinc-900/40 rounded-3xl border border-transparent md:hover:border-zinc-800/60 md:hover:shadow-2xl active:bg-zinc-900/40 active:scale-[0.98]">
-                    <div className="absolute left-0 top-8 bottom-0 w-px bg-zinc-800 md:hidden" />
-                    <div className="absolute left-[-4px] top-8 w-2 h-2 rounded-full bg-blue-500 md:hidden" />
+                  <Reveal key={exp.id} delay={i * 0.1}>
+                    <div className="group/item relative pl-8 pr-4 md:px-8 py-6 transition-all duration-500 md:group-hover/list:opacity-20 md:hover:!opacity-100 md:hover:scale-[1.02] md:hover:bg-zinc-900/40 rounded-3xl border border-transparent md:hover:border-zinc-800/60 md:hover:shadow-2xl active:bg-zinc-900/40 active:scale-[0.98]">
+                      <div className="absolute left-0 top-8 bottom-0 w-px bg-zinc-800 md:hidden" />
+                      <div className="absolute left-[-4px] top-8 w-2 h-2 rounded-full bg-blue-500 md:hidden" />
 
-                    <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
-                      <div>
-                        <h3 className="font-heading text-2xl font-bold text-white">{getS(exp, 'company')}</h3>
-                        <p className="text-blue-400 font-medium mt-1">{getS(exp, 'role')}</p>
+                      <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                        <div>
+                          <h3 className="font-heading text-2xl font-bold text-white">{getS(exp, 'company')}</h3>
+                          <p className="text-blue-400 font-medium mt-1">{getS(exp, 'role')}</p>
+                        </div>
+                        <span className="text-sm font-medium text-zinc-500 mt-2 md:mt-0 uppercase tracking-widest">{getS(exp, 'dates')}</span>
                       </div>
-                      <span className="text-sm font-medium text-zinc-500 mt-2 md:mt-0 uppercase tracking-widest">{getS(exp, 'dates')}</span>
+                      <ul className="space-y-3 mt-6">
+                        {achievements.map((ach, idx) => (
+                          <li key={idx} className="flex gap-4 text-zinc-400 leading-relaxed">
+                            <span className="text-zinc-600 mt-1.5 opacity-50">▹</span>
+                            {ach}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <ul className="space-y-3 mt-6">
-                      {achievements.map((ach, idx) => (
-                        <li key={idx} className="flex gap-4 text-zinc-400 leading-relaxed">
-                          <span className="text-zinc-600 mt-1.5 opacity-50">▹</span>
-                          {ach}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  </Reveal>
                 );
               })}
             </div>
@@ -231,17 +250,19 @@ export default async function Home({ params }) {
 
         <section className="py-24 border-t border-zinc-900">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {skills.map(skill => (
-              <div key={skill.id} className="glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] hover:border-blue-500/20 active:scale-95 transition-all duration-500">
-                <h3 className="text-zinc-400 font-medium text-sm tracking-widest uppercase mb-6">{getS(skill, 'name')}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {(getS(skill, 'tags') || '').split(',').map(tag => (
-                    <span key={tag} className="px-3 py-1.5 bg-zinc-800/50 border border-zinc-700/50 rounded-lg text-sm text-zinc-300">
-                      {tag.trim()}
-                    </span>
-                  ))}
+            {skills.map((skill, i) => (
+              <Reveal key={skill.id} delay={i * 0.1}>
+                <div className="glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] hover:border-blue-500/20 active:scale-95 transition-all duration-500">
+                  <h3 className="text-zinc-400 font-medium text-sm tracking-widest uppercase mb-6">{getS(skill, 'name')}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {(getS(skill, 'tags') || '').split(',').map(tag => (
+                      <span key={tag} className="px-3 py-1.5 bg-zinc-800/50 border border-zinc-700/50 rounded-lg text-sm text-zinc-300">
+                        {tag.trim()}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </section>
@@ -314,18 +335,18 @@ export default async function Home({ params }) {
         <footer id="contact" className="py-24 mt-24 border-t border-zinc-800 flex flex-col items-center text-center w-full px-4">
           <h2 className="font-heading text-[4.5vw] md:text-[4vw] lg:text-[3.5vw] xl:text-[3vw] 2xl:text-[2.5vw] font-bold tracking-tighter mb-12 whitespace-nowrap">{t.contact.title}</h2>
           
-          <a 
+          <SparklesButton 
             href="https://t.me/almasitou" 
             target="_blank"
             className="group relative inline-flex items-center justify-center px-12 py-6 mb-12 font-heading font-bold text-2xl text-white transition-all duration-300 bg-blue-600 rounded-full hover:bg-blue-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(37,99,235,0.5)]"
           >
-            <span className="mr-3">
+            <span className="mr-3 relative z-10">
               <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.94z"/>
               </svg>
             </span>
-            {t.contact.telegram}
-          </a>
+            <span className="relative z-10">{t.contact.telegram}</span>
+          </SparklesButton>
 
           <a href={`mailto:${settings.email}`} className="text-xl md:text-2xl text-zinc-500 hover:text-white transition-colors underline decoration-zinc-800 hover:decoration-blue-500 underline-offset-8 mb-16">
             {t.contact.email} {settings.email}
