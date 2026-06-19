@@ -33,12 +33,14 @@ const Sparkle = ({ size, color, style }) => {
 
 export default function SparklesButton({ children, href, className, target }) {
   const [sparkles, setSparkles] = useState([]);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
+    const currentInterval = isHovered ? 50 : 250;
     const interval = setInterval(() => {
       const sparkle = {
         id: String(Math.random()),
-        size: Math.random() * 15 + 10, // 10px to 25px
+        size: Math.random() * (isHovered ? 20 : 15) + (isHovered ? 15 : 10), // Bigger on hover
         color: ['#60A5FA', '#93C5FD', '#BFDBFE', '#3B82F6'][Math.floor(Math.random() * 4)],
         top: Math.random() * 100 + '%',
         left: Math.random() * 100 + '%',
@@ -49,16 +51,18 @@ export default function SparklesButton({ children, href, className, target }) {
       setTimeout(() => {
         setSparkles(s => s.filter(sp => sp.id !== sparkle.id));
       }, 800);
-    }, 200); // 200ms for continuous sparkle without overwhelming
+    }, currentInterval);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
 
   return (
     <a 
       href={href} 
       target={target}
       className={`relative overflow-hidden group/sparkles ${className}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="absolute inset-0 pointer-events-none z-0">
         <AnimatePresence>
