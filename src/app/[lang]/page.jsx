@@ -45,11 +45,11 @@ export default async function Home({ params }) {
             
             <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-8">
               {[
-                t.hero?.skills?.strategy || 'Product Strategy',
-                t.hero?.skills?.ux || 'UX / UI Design',
-                t.hero?.skills?.systems || 'Design Systems',
-                t.hero?.skills?.apps || 'Web & Mobile Apps'
-              ].map((item, i) => (
+                t.hero.skills?.strategy,
+                t.hero.skills?.ux,
+                t.hero.skills?.systems,
+                t.hero.skills?.apps
+              ].filter(Boolean).map((item, i) => (
                 <div key={i} className="glass inline-flex items-center px-4 py-2 md:px-5 md:py-3 rounded-full border border-zinc-800/60 shadow-lg hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-default">
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 md:mr-3 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
                   <span className="text-[10px] md:text-xs font-medium tracking-wide uppercase text-zinc-200">{item}</span>
@@ -76,10 +76,17 @@ export default async function Home({ params }) {
                 
                 {/* Photo Container with overflow-hidden for zoom effect */}
                 <div className="relative w-full aspect-[4/5] md:aspect-[3/4] rounded-[2.2rem] md:rounded-[2.5rem] overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-10 transition-opacity duration-700 group-hover:opacity-30"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
+                  
+                  {/* Localized Name */}
+                  <div className="absolute top-5 right-6 md:top-6 md:right-8 z-20 flex flex-col items-end text-right transform transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
+                    <span className="font-heading font-bold text-2xl md:text-3xl text-white drop-shadow-lg tracking-tight leading-none">{t.hero.firstName}</span>
+                    <span className="font-heading font-medium text-sm md:text-base text-zinc-300 drop-shadow-md tracking-widest uppercase mt-1">{t.hero.lastName}</span>
+                  </div>
+
                   <img 
                     src="/profile.jpg" 
-                    alt="Almas Qajymuratuly" 
+                    alt={`${t.hero.firstName} ${t.hero.lastName}`} 
                     className="w-full h-full object-cover object-center opacity-90 transition-all duration-700 group-hover:opacity-100 group-hover:scale-105"
                   />
                 </div>
@@ -93,7 +100,7 @@ export default async function Home({ params }) {
                 <div className="w-px h-16 bg-zinc-800"></div>
                 <div className="text-center">
                   <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">20+</div>
-                  <div className="text-xs md:text-sm text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.projects || 'Projects'}</div>
+                  <div className="text-xs md:text-sm text-zinc-400 uppercase tracking-widest font-medium whitespace-nowrap">{t.hero.projects}</div>
                 </div>
               </div>
             </div>
@@ -145,7 +152,7 @@ export default async function Home({ params }) {
                   />
                 ) : (
                   <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center">
-                    <span className="text-zinc-600 font-medium tracking-widest uppercase">{t.work?.preview || 'Preview'}</span>
+                    <span className="text-zinc-600 font-medium tracking-widest uppercase">{t.work.preview}</span>
                   </div>
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
@@ -234,9 +241,9 @@ export default async function Home({ params }) {
         <section id="content" className="py-24 border-t border-zinc-900 overflow-hidden">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-              <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tight mb-4">{t.content?.title || "Design Content"}</h2>
+              <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tight mb-4">{t.content.title}</h2>
               <p className="text-zinc-400 text-lg max-w-xl">
-                {t.content?.subtitle || "Sharing design tips, process, and case studies on Instagram."}
+                {t.content.subtitle}
               </p>
             </div>
             <a 
@@ -266,7 +273,7 @@ export default async function Home({ params }) {
         </section>
 
         <section id="recommendations" className="py-24 border-t border-zinc-900">
-          <h2 className="font-heading text-4xl font-bold tracking-tight mb-16">{t.recommendations?.title || "Recommendations"}</h2>
+          <h2 className="font-heading text-4xl font-bold tracking-tight mb-16">{t.recommendations.title}</h2>
           <div className="flex flex-col gap-8 max-w-3xl mx-auto">
             {recommendations.map((rec) => (
               <div key={rec.id} className="glass p-8 md:p-10 rounded-3xl relative overflow-hidden group flex flex-col h-full hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] hover:border-blue-500/20 active:scale-95 transition-all duration-500">

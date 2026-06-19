@@ -8,9 +8,17 @@ export const dictionaries = {
     },
     hero: {
       available: 'Available for new opportunities',
+      firstName: 'Almas',
+      lastName: 'Qajymuratuly',
       yearsExp: 'Years Exp',
       companies: 'Companies',
-      projects: 'Projects'
+      projects: 'Projects',
+      skills: {
+        strategy: 'Product Strategy',
+        ux: 'UX / UI Design',
+        systems: 'Design Systems',
+        apps: 'Web & Mobile'
+      }
     },
     work: {
       title: 'Selected Work',
@@ -43,6 +51,8 @@ export const dictionaries = {
     },
     hero: {
       available: 'Открыт к новым предложениям',
+      firstName: 'Алмас',
+      lastName: 'Кажымуратулы',
       yearsExp: 'Лет опыта',
       companies: 'Компаний',
       projects: 'Проектов',
