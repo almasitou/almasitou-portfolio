@@ -32,12 +32,9 @@ const Sparkle = ({ size, color, style }) => {
 };
 
 export default function SparklesButton({ children, href, className, target }) {
-  const [isHovered, setIsHovered] = useState(false);
   const [sparkles, setSparkles] = useState([]);
 
   useEffect(() => {
-    if (!isHovered) return;
-
     const interval = setInterval(() => {
       const sparkle = {
         id: String(Math.random()),
@@ -52,18 +49,16 @@ export default function SparklesButton({ children, href, className, target }) {
       setTimeout(() => {
         setSparkles(s => s.filter(sp => sp.id !== sparkle.id));
       }, 800);
-    }, 100);
+    }, 200); // 200ms for continuous sparkle without overwhelming
 
     return () => clearInterval(interval);
-  }, [isHovered]);
+  }, []);
 
   return (
     <a 
       href={href} 
       target={target}
       className={`relative overflow-hidden group/sparkles ${className}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => { setIsHovered(false); setSparkles([]); }}
     >
       <div className="absolute inset-0 pointer-events-none z-0">
         <AnimatePresence>

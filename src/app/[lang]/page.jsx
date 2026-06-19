@@ -60,7 +60,7 @@ export default async function Home({ params }) {
                   <div key={i} className="relative overflow-hidden glass inline-flex items-center px-4 py-2 md:px-5 md:py-3 rounded-full border border-zinc-800/60 shadow-lg hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
                     <div 
                       className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shimmer-seq"
-                      style={{ animationDelay: `${i * 2.5}s` }}
+                      style={{ animationDelay: `${i * 5}s` }}
                     />
                     <span className="relative z-10 w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 md:mr-3 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
                     <span className="relative z-10 text-[10px] md:text-xs font-medium tracking-wide uppercase text-zinc-200">{item}</span>
