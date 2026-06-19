@@ -45,7 +45,7 @@ export default async function Home({ params }) {
             
             <Reveal delay={0.2}>
               <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tighter leading-[0.9] mb-6 min-h-[2em]">
-                <Typewriter title={lang === 'ru' ? settings.titleRu : settings.title} />
+                <Typewriter title={settings.title} />
               </h1>
             </Reveal>
             
