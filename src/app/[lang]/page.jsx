@@ -194,7 +194,12 @@ export default async function Home({ params }) {
                   <div className="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <div className="flex items-end justify-between">
                       <div>
-                        <h3 className="font-heading text-2xl font-bold text-white mb-2">{getS(proj, 'title')}</h3>
+                        <h3 className="font-heading text-2xl font-bold text-white mb-2">
+                          {proj.id === 'cmqjeakgy0000vxltp4qj7ks1' ? 'Skibo Mobile App & Admin Panel' : 
+                           proj.id === 'cmqjeakqk0001vxltptpxytw5' ? (lang === 'ru' ? 'Kaspi Cinema Booking UX: Билет за пару кликов' : 'Kaspi Cinema Booking UX: Ticket in a few clicks') :
+                           proj.id === 'cmqjeal510004vxlt8hmvmcr6' ? 'Taza B2B Store' :
+                           getS(proj, 'title')}
+                        </h3>
                         <p className="text-zinc-400 text-sm group-hover:text-blue-300 transition-colors duration-300">{getProjectCategory(proj.id, proj.tags)}</p>
                       </div>
                       <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">

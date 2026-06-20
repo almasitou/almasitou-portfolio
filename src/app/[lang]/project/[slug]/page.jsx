@@ -90,7 +90,12 @@ export default async function ProjectPage({ params }) {
         </div>
         
         <div className="mb-12">
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">{project.title}</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            {project.id === 'cmqjeakgy0000vxltp4qj7ks1' ? 'Skibo Mobile App & Admin Panel' : 
+             project.id === 'cmqjeakqk0001vxltptpxytw5' ? (lang === 'ru' ? 'Kaspi Cinema Booking UX: Билет за пару кликов' : 'Kaspi Cinema Booking UX: Ticket in a few clicks') :
+             project.id === 'cmqjeal510004vxlt8hmvmcr6' ? 'Taza B2B Store' :
+             project.title}
+          </h1>
           {project.tags && (
             <div className="flex flex-wrap gap-2">
               {project.tags.split(',').map((tag, i) => (
