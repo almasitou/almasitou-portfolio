@@ -8,6 +8,15 @@ import Typewriter from '@/components/Typewriter';
 import Reveal from '@/components/Reveal';
 import SparklesButton from '@/components/SparklesButton';
 
+const getProjectCategory = (id, defaultTag) => {
+  if (id === 'cmqjeakqk0001vxltptpxytw5') return 'Concept Redesign';
+  if (id === 'cmqjeakgy0000vxltp4qj7ks1') return 'B2C App & Admin Panel';
+  if (id === 'cmqjeakvd0002vxltgwlxjlo9') return 'B2C Delivery App';
+  if (id === 'cmqjeal510004vxlt8hmvmcr6') return 'B2B Platform';
+  if (id === 'cmqjeal060003vxlt80svpske') return 'SaaS Concept';
+  return defaultTag;
+};
+
 export const dynamic = 'force-dynamic';
 
 export default async function Home({ params }) {
@@ -164,7 +173,7 @@ export default async function Home({ params }) {
             {projects.length > 0 ? projects.map((proj, i) => (
               <Reveal key={proj.id} delay={0.1 * (i % 2)}>
                 <Link 
-                  href={`/${lang}/project/${proj.id}`}
+                  href={`/${lang}/project/${proj.id === 'cmqjeakgy0000vxltp4qj7ks1' ? 'skibo' : proj.id === 'cmqjeakqk0001vxltptpxytw5' ? 'kaspi' : proj.id === 'cmqjeakvd0002vxltgwlxjlo9' ? 'bao' : proj.id === 'cmqjeal510004vxlt8hmvmcr6' ? 'taza' : proj.id === 'cmqjeal060003vxlt80svpske' ? 'idol' : proj.id}`}
                   className="group block relative rounded-3xl overflow-hidden glass glass-hover aspect-[4/3] hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:border-blue-500/30 active:scale-95 transition-all duration-500"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer-once pointer-events-none z-20" />
@@ -186,7 +195,7 @@ export default async function Home({ params }) {
                     <div className="flex items-end justify-between">
                       <div>
                         <h3 className="font-heading text-2xl font-bold text-white mb-2">{getS(proj, 'title')}</h3>
-                        <p className="text-zinc-400 text-sm group-hover:text-blue-300 transition-colors duration-300">{proj.tags}</p>
+                        <p className="text-zinc-400 text-sm group-hover:text-blue-300 transition-colors duration-300">{getProjectCategory(proj.id, proj.tags)}</p>
                       </div>
                       <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">
                         ↗
@@ -308,10 +317,10 @@ export default async function Home({ params }) {
 
         <section id="recommendations" className="py-24 border-t border-zinc-900">
           <h2 className="font-heading text-4xl font-bold tracking-tight mb-16">{t.recommendations.title}</h2>
-          <div className="flex flex-col gap-8 max-w-3xl mx-auto">
-            {recommendations.map((rec) => (
-              <div key={rec.id} className="glass p-8 md:p-10 rounded-3xl relative overflow-hidden group flex flex-col h-full hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] hover:border-blue-500/20 active:scale-95 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer-once pointer-events-none z-0" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {recommendations.map((rec, i) => (
+              <div key={rec.id} className={`glass p-8 md:p-10 rounded-3xl relative overflow-hidden group flex flex-col h-full hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)] hover:border-blue-500/20 active:scale-95 transition-all duration-500 ${i === 2 ? 'md:col-span-2' : ''}`}>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
                 <div className="absolute top-0 right-0 p-6 opacity-10">
                   <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                 </div>

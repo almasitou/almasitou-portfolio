@@ -4,6 +4,8 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import bcrypt from 'bcryptjs';
 import { prisma } from '@/lib/prisma';
+import fs from 'fs';
+import path from 'path';
 
 export async function login(formData) {
   const password = formData.get('password');
@@ -177,6 +179,68 @@ export async function saveInstagramReels(formData) {
     revalidatePath('/', 'layout');
     revalidatePath('/admin/instagram', 'layout');
     return { success: true };
+  } catch (err) {
+    return { error: err.message };
+  }
+}
+
+export async function saveCaseStudyData(projectId, data) {
+  try {
+    await prisma.project.update({
+      where: { id: projectId },
+      data: { customData: JSON.stringify(data) }
+    });
+    revalidatePath('/', 'layout');
+    return { success: true };
+  } catch (err) {
+    return { error: err.message };
+  }
+}
+
+import { GoogleGenerativeAI } from '@google/generative-ai';
+
+export async function translateTextToEnglish(text) {
+  try {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      throw new Error('GEMINI_API_KEY is not set in .env');
+    }
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-pro' }); // Using a solid standard model
+    const prompt = `Translate the following Russian text to professional English for a UX/UI design portfolio case study. ONLY return the translated text, without any conversational fluff or markdown quotes:\n\n${text}`;
+    
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    const translatedText = response.text();
+    return { success: true, text: translatedText.trim() };
+  } catch (err) {
+    console.error("Translation error:", err);
+    return { error: err.message || 'Translation failed' };
+  }
+}
+
+export async function uploadImage(formData) {
+  try {
+    const file = formData.get('file');
+    if (!file) return { error: "No file provided" };
+    
+    const bytes = await file.arrayBuffer();
+    const buffer = Buffer.from(bytes);
+    
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    const ext = path.extname(file.name) || '.png';
+    const filename = uniqueSuffix + ext;
+    
+    const uploadDir = path.join(process.cwd(), 'public', 'uploads');
+    
+    if (!fs.existsSync(uploadDir)) {
+      fs.mkdirSync(uploadDir, { recursive: true });
+    }
+    
+    const filepath = path.join(uploadDir, filename);
+    await fs.promises.writeFile(filepath, buffer);
+    
+    return { success: true, url: `/uploads/${filename}` };
   } catch (err) {
     return { error: err.message };
   }

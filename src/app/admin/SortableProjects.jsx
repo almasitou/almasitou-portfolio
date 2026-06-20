@@ -58,12 +58,20 @@ export default function SortableProjects({ initialProjects }) {
             <img src={proj.coverImage} className="w-16 h-12 object-cover rounded-md border border-zinc-800" />
             <span className="text-white font-medium ml-2">{proj.title}</span>
           </div>
-          <Link 
-            href={`/admin/project/${proj.id}`}
-            className="text-sm bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
-          >
-            Edit Images
-          </Link>
+          <div className="flex gap-2">
+            <Link 
+              href={`/admin/project/${proj.id}`}
+              className="text-sm bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
+            >
+              Images
+            </Link>
+            <Link 
+              href={`/admin/project/${proj.id}/case-study`}
+              className="text-sm bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
+            >
+              Builder
+            </Link>
+          </div>
         </div>
       ))}
     </div>
