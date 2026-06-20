@@ -21,7 +21,7 @@ export const dictionaries = {
       }
     },
     work: {
-      title: 'Selected Work',
+      title: 'Portfolio',
       preview: 'Project Preview',
       empty: 'No projects synced yet. Use the Admin Panel to fetch Behance projects.'
     },
@@ -64,7 +64,7 @@ export const dictionaries = {
       }
     },
     work: {
-      title: 'Избранные работы',
+      title: 'Портфолио',
       preview: 'Превью проекта',
       empty: 'Проекты еще не загружены. Зайдите в Админку, чтобы засинхронить работы с Behance.'
     },
