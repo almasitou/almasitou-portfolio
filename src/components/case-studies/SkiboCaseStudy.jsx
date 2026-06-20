@@ -63,39 +63,71 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           </motion.p>
           
           {/* Project Meta Info horizontally flexed */}
-          <motion.div variants={fadeInUp} className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-12 max-w-5xl mx-auto w-full">
-            <div className="flex-1 min-w-[180px] p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl">
-              <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-2">{isRu ? 'Моя роль' : 'My Role'}</span>
-              <span className="text-xl md:text-2xl text-white font-medium">Product Designer</span>
+          <motion.div variants={fadeInUp} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-12 w-full">
+            <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
+              <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-2">{isRu ? 'Тип проекта' : 'Project Type'}</span>
+              <span className="text-xl md:text-2xl text-white font-medium">{isRu ? 'Коммерческий' : 'Commercial'}</span>
             </div>
-            <div className="flex-1 min-w-[180px] p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl">
-              <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-2">{isRu ? 'Срок' : 'Timeline'}</span>
-              <span className="text-xl md:text-2xl text-white font-medium">{isRu ? '6 недель' : '6 weeks'}</span>
+            <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
+              <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-2">{isRu ? 'Платформа' : 'Platform'}</span>
+              <span className="text-xl md:text-2xl text-white font-medium">iOS / Android</span>
             </div>
-            <div className="flex-1 min-w-[180px] p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl">
+            <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
               <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-2">{isRu ? 'Релиз' : 'Release Date'}</span>
               <span className="text-xl md:text-2xl text-white font-medium">{isRu ? '28 марта 2025' : 'March 28, 2025'}</span>
             </div>
-          </motion.div>
-          
-          <motion.div variants={fadeInUp} className="mt-6 flex flex-col items-center justify-center p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl w-full">
-             <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-6">{isRu ? 'Что сделал' : 'What I Did'}</span>
-             <div className="flex flex-wrap items-center justify-center gap-3">
-               {(isRu 
-                 ? ['Исследование рынка', 'Анализ сценариев', 'UX Проектирование', 'User Flows', 'Wireframes', 'UI Мобильного приложения', 'UI Админ-панели', 'Прототипирование', 'Тестирование']
-                 : ['Market Research', 'Scenario Analysis', 'UX Design', 'User Flows', 'Wireframing', 'Mobile App UI', 'Admin Panel UI', 'Interactive prototyping', 'User testing']
-               ).map((task, i) => (
-                 <span key={i} className="px-3 py-1.5 md:px-5 md:py-2.5 bg-white/10 hover:bg-white/20 border border-white/10 rounded-full text-white text-sm md:text-lg font-medium transition-colors cursor-default backdrop-blur-md">
-                   {task}
-                 </span>
-               ))}
-             </div>
+            <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
+              <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-2">{isRu ? 'Моя роль' : 'My Role'}</span>
+              <span className="text-xl md:text-2xl text-white font-medium">Product Designer</span>
+            </div>
           </motion.div>
         </motion.div>
       </section>
 
+      {/* Block 1.5: Моя роль и Особенности */}
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 pt-10">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+          
+          <div className="flex-[0.8] text-left">
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-8 text-white">{isRu ? 'Моя роль' : 'My Role'}</motion.h2>
+            <div className="flex flex-wrap gap-3">
+              {[
+                isRu ? 'UX Research' : 'UX Research',
+                isRu ? 'User Flow Design' : 'User Flow Design',
+                isRu ? 'Wireframing' : 'Wireframing',
+                isRu ? 'UI Design' : 'UI Design',
+                isRu ? 'Interactive Prototyping' : 'Interactive Prototyping',
+                isRu ? 'User Testing' : 'User Testing'
+              ].map((role, i) => (
+                <motion.div key={i} variants={fadeInUp} className="px-5 py-3 bg-zinc-900 border border-zinc-800 rounded-2xl hover:bg-zinc-800 transition-colors shadow-lg">
+                  <span className="text-sm md:text-base font-semibold text-white">{role}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex-[1.2] text-left">
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-8 text-white">{isRu ? 'Особенности продукта' : 'Product Features'}</motion.h2>
+            <div className="flex flex-wrap gap-3">
+               {[
+                 { icon: '🏂', text: isRu ? 'Аренда экипировки' : 'Equipment Rental' },
+                 { icon: '📱', text: 'Mobile App' },
+                 { icon: '🖥️', text: 'Admin Panel' },
+                 { icon: '📄', text: isRu ? 'Электронный договор' : 'Electronic Contract' },
+                 { icon: '💳', text: isRu ? 'Онлайн-оплата' : 'Online Payment' }
+               ].map((feature, i) => (
+                 <motion.div variants={fadeInUp} key={i} className="px-5 py-3 bg-white/5 border border-white/10 rounded-2xl text-white text-sm md:text-base font-medium shadow-lg flex items-center backdrop-blur-md">
+                   <span className="mr-3 text-xl">{feature.icon}</span> {feature.text}
+                 </motion.div>
+               ))}
+             </div>
+          </div>
+
+        </motion.div>
+      </section>
+
       {/* Block 2: Проблема бизнеса */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 pt-10 md:pt-24">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
           className="relative md:rounded-[3rem] bg-transparent md:bg-zinc-900 md:border md:border-zinc-800 overflow-hidden flex flex-col md:flex-row items-stretch md:min-h-[500px] md:shadow-2xl"
@@ -178,25 +210,43 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
       {/* Block 4: Исследование */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-            <div className="flex-1 space-y-8 flex flex-col justify-start pt-4 lg:pt-10 text-left">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+            <div className="flex-[0.8] space-y-8 flex flex-col justify-start pt-4 lg:pt-10 text-left">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white">{isRu ? 'Исследование' : 'Research'}</h2>
               <p className="text-zinc-300 text-base md:text-xl leading-relaxed">
                 {isRu 
-                  ? 'Перед проектированием я изучил сервисы аренды спортивного оборудования, системы онлайн-бронирования и маркетплейсы с похожей логикой выбора товаров.' 
-                  : 'Before designing, I analyzed sports equipment rental services, online booking systems, and marketplaces with similar product selection logic.'}
+                  ? 'Перед проектированием я изучил сервисы аренды и маркетплейсы с похожей логикой.' 
+                  : 'Before designing, I analyzed rental services and marketplaces with similar logic.'}
               </p>
             </div>
-            <div className="flex-[1.2] w-full">
-              <div className="bg-white/[0.02] border border-white/[0.05] rounded-3xl md:rounded-[3rem] p-6 md:p-10 lg:p-14 h-full md:shadow-2xl relative overflow-hidden flex flex-col justify-center text-left">
+            <div className="flex-[1.4] w-full">
+              <div className="bg-white/[0.02] border border-white/[0.05] rounded-3xl md:rounded-[3rem] p-6 md:p-10 h-full md:shadow-2xl relative overflow-hidden flex flex-col justify-center text-left">
                 <div className="absolute -top-20 -right-20 w-80 h-80 bg-blue-500/10 blur-[80px] rounded-full pointer-events-none z-0"></div>
-                <h4 className="text-white font-bold text-2xl md:text-3xl mb-6 md:mb-10 relative z-10">{isRu ? 'Ключевые инсайты:' : 'Key insights:'}</h4>
-                <ul className="space-y-4 md:space-y-6 text-zinc-300 text-base md:text-xl relative z-10 font-medium">
-                  <li className="flex items-start"><span className="text-yellow-500 text-2xl md:text-3xl mr-4 md:mr-5 leading-none">✦</span> {isRu ? 'Пользователи хотят заранее видеть наличие размеров' : 'Users want to see size availability in advance'}</li>
-                  <li className="flex items-start"><span className="text-yellow-500 text-2xl md:text-3xl mr-4 md:mr-5 leading-none">✦</span> {isRu ? 'Оформление документов на месте вызывает раздражение' : 'Filling out paperwork on-site is frustrating'}</li>
-                  <li className="flex items-start"><span className="text-yellow-500 text-2xl md:text-3xl mr-4 md:mr-5 leading-none">✦</span> {isRu ? 'Ожидание в очереди негативно влияет на впечатление' : 'Waiting in queues negatively impacts the experience'}</li>
-                  <li className="flex items-start"><span className="text-yellow-500 text-2xl md:text-3xl mr-4 md:mr-5 leading-none">✦</span> {isRu ? 'Сотрудники тратят много времени на повторяющиеся операции' : 'Staff spend too much time on repetitive tasks'}</li>
-                </ul>
+                <h4 className="text-white font-bold text-2xl md:text-3xl mb-6 md:mb-8 relative z-10">{isRu ? 'Что мы узнали' : 'What we learned'}</h4>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
+                  <div className="bg-zinc-900/80 border border-zinc-800 p-6 rounded-2xl hover:bg-zinc-800 transition-colors">
+                    <div className="text-3xl mb-4">📏</div>
+                    <h5 className="text-white text-lg font-semibold mb-2">{isRu ? 'Размер имеет значение' : 'Size matters'}</h5>
+                    <p className="text-zinc-400 text-sm leading-relaxed">{isRu ? 'Пользователи хотят заранее понимать, доступна ли экипировка нужного размера.' : 'Users want to know in advance if equipment in their size is available.'}</p>
+                  </div>
+                  <div className="bg-zinc-900/80 border border-zinc-800 p-6 rounded-2xl hover:bg-zinc-800 transition-colors">
+                    <div className="text-3xl mb-4">⏳</div>
+                    <h5 className="text-white text-lg font-semibold mb-2">{isRu ? 'Очереди создают негативный опыт' : 'Queues create negative experience'}</h5>
+                    <p className="text-zinc-400 text-sm leading-relaxed">{isRu ? 'Большое количество клиентов одновременно перегружает точку выдачи.' : 'A large number of clients simultaneously overloads the pickup point.'}</p>
+                  </div>
+                  <div className="bg-zinc-900/80 border border-zinc-800 p-6 rounded-2xl hover:bg-zinc-800 transition-colors">
+                    <div className="text-3xl mb-4">📄</div>
+                    <h5 className="text-white text-lg font-semibold mb-2">{isRu ? 'Бумажные договоры отнимают время' : 'Paper contracts waste time'}</h5>
+                    <p className="text-zinc-400 text-sm leading-relaxed">{isRu ? 'Подписание документов увеличивает время обслуживания.' : 'Signing documents increases service time.'}</p>
+                  </div>
+                  <div className="bg-zinc-900/80 border border-zinc-800 p-6 rounded-2xl hover:bg-zinc-800 transition-colors">
+                    <div className="text-3xl mb-4">💳</div>
+                    <h5 className="text-white text-lg font-semibold mb-2">{isRu ? 'Оплата на месте замедляет процесс' : 'On-site payment slows the process'}</h5>
+                    <p className="text-zinc-400 text-sm leading-relaxed">{isRu ? 'Клиенты готовы завершать оформление заранее через приложение.' : 'Clients are ready to complete the booking in advance via the app.'}</p>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -212,14 +262,11 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           
           <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-center items-center gap-y-2 md:gap-y-6 gap-x-3 md:gap-x-4 relative z-10">
             {[
-              { n: '1', t: isRu ? 'Каталог' : 'Catalog' },
-              { n: '2', t: isRu ? 'Выбор дат' : 'Select Dates' },
-              { n: '3', t: isRu ? 'Бронирование' : 'Booking' },
-              { n: '4', t: isRu ? 'Эл. договор' : 'Contract', sub: isRu ? '* Подписывается лишь один раз' : '* Signed only once' },
-              { n: '5', t: isRu ? 'Оплата' : 'Payment' },
-              { n: '6', t: isRu ? 'Подтверждение' : 'Confirmation' },
-              { n: '7', t: isRu ? 'Прибытие' : 'Arrival' },
-              { n: '8', t: isRu ? 'Получение' : 'Pickup' },
+              { n: '1', t: isRu ? 'Выбор экипировки' : 'Select Equipment' },
+              { n: '2', t: isRu ? 'Выбор даты аренды' : 'Select Rental Date' },
+              { n: '3', t: isRu ? 'Подписание договора' : 'Sign Contract' },
+              { n: '4', t: isRu ? 'Онлайн-оплата' : 'Online Payment' },
+              { n: '5', t: isRu ? 'Получение экипировки' : 'Receive Equipment' },
             ].map((item, i) => (
               <React.Fragment key={i}>
                 <motion.div variants={fastFadeInUp} className="bg-zinc-950 px-6 py-4 rounded-2xl border border-zinc-800 flex items-center gap-4 shadow-lg hover:bg-zinc-900 active:scale-95 transition-all cursor-pointer select-none">
@@ -229,12 +276,12 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                     {item.sub && <span className="text-zinc-500 text-xs whitespace-nowrap mt-0.5">{item.sub}</span>}
                   </div>
                 </motion.div>
-                {i < 7 && (
+                {i < 4 && (
                   <motion.div variants={fastFadeInUp} className="text-zinc-600 hidden md:flex items-center justify-center">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                   </motion.div>
                 )}
-                {i < 7 && (
+                {i < 4 && (
                   <motion.div variants={fastFadeInUp} className="text-zinc-600 flex md:hidden items-center justify-center py-1">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                   </motion.div>
@@ -249,7 +296,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
       {/* Block 6: Ключевые решения */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold mb-10 md:mb-16 text-left md:text-center">{isRu ? 'Ключевые продуктовые решения' : 'Key Product Solutions'}</motion.h2>
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold mb-10 md:mb-16 text-left md:text-center">{isRu ? 'Как мы сократили время оформления аренды' : 'How We Reduced Booking Time'}</motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -411,7 +458,8 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 md:mb-8 text-white">{isRu ? 'Проверка решений' : 'Validating Solutions'}</h2>
               <div className="text-zinc-300 text-base md:text-xl leading-relaxed space-y-4 md:space-y-6">
                 <p>{isRu ? 'После создания интерактивного прототипа были проведены пользовательские тестирования с потенциальными клиентами сервиса.' : 'After creating an interactive prototype, we conducted user testing with potential service clients.'}</p>
-                <p>{isRu ? 'Полученная обратная связь позволила улучшить структуру экранов и упростить отдельные этапы пользовательского сценария.' : 'The feedback allowed us to improve screen structures and simplify specific steps in the user flow.'}</p>
+                <p>{isRu ? 'Полученная обратная связь позволила уточнить структуру экранов, упростить отдельные шаги сценария аренды и проверить понятность ключевых функций до начала разработки.' : 'The feedback allowed us to refine screen structures, simplify specific rental flow steps, and verify the clarity of key features before development started.'}</p>
+                <p>{isRu ? 'Цель тестирования заключалась в том, чтобы убедиться, что пользователи могут самостоятельно пройти путь от выбора экипировки до завершения бронирования без дополнительных объяснений.' : 'The goal of the testing was to ensure users could independently navigate from selecting equipment to completing the booking without additional explanations.'}</p>
               </div>
             </div>
             <div className="flex-1 w-full relative min-h-[400px] md:min-h-full mt-4 md:mt-0">
@@ -433,8 +481,9 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
             <div className="relative z-10 flex flex-col items-start text-left max-w-3xl">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-10 text-white">{isRu ? 'Результат проекта' : 'The Result'}</h2>
               <div className="prose prose-invert prose-base md:prose-xl max-w-none text-zinc-300 space-y-4 md:space-y-6 font-medium">
-                <p>{isRu ? 'Проект был полностью спроектирован и подготовлен к разработке. Дизайн-система и все компоненты были задокументированы.' : 'The project was fully designed and prepared for development. The design system and all components were documented.'}</p>
-                <p>{isRu ? 'Однако до начала реализации владелец бизнеса принял решение временно отказаться от запуска продукта из-за изменения приоритетов компании.' : 'However, before implementation began, the business owner decided to temporarily pause the product launch due to shifting company priorities.'}</p>
+                <p>{isRu ? 'Спроектирован полный цифровой сценарий аренды экипировки — от выбора товара до подписания договора и оплаты.' : 'A complete digital equipment rental scenario was designed — from selecting items to signing the contract and payment.'}</p>
+                <p>{isRu ? 'Решение позволяет перенести большую часть действий из офлайн-пространства в мобильное приложение, сократить время обслуживания клиентов и снизить нагрузку на сотрудников точки выдачи.' : 'The solution moves most actions from offline to the mobile app, reducing customer service time and lowering the workload on pickup point staff.'}</p>
+                <p>{isRu ? 'Поскольку проект не был запущен в разработку, количественные метрики отсутствуют.' : 'Since the project was not launched into development, quantitative metrics are currently unavailable.'}</p>
               </div>
             </div>
           </motion.div>
@@ -455,8 +504,15 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           <div className="relative z-10 max-w-3xl">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-10 text-white">{isRu ? 'Дальнейшее развитие' : 'Future Development'}</h2>
             <div className="prose prose-invert prose-xl max-w-none text-zinc-300 space-y-6 font-medium">
-              <p>{isRu ? 'Несмотря на то, что проект был поставлен на паузу, он позволил проработать полный цикл цифровой аренды спортивной экипировки — от выбора инвентаря до получения заказа в пункте выдачи.' : 'Despite being paused, the project successfully mapped out the complete cycle of digital sports equipment rental — from selecting inventory to collecting the order at the pickup point.'}</p>
-              <p>{isRu ? 'В будущем эти наработки могут быть адаптированы для других ниш аренды (сапборды, велосипеды, туристическое оборудование), так как ядро логики останется неизменным.' : 'In the future, these foundations can be adapted for other rental niches (paddleboards, bicycles, camping equipment), as the core logic remains the same.'}</p>
+              <p>{isRu ? 'Если бы работа над продуктом продолжилась, следующим этапом развития могли бы стать:' : 'If work on the product had continued, the next stages of development could have included:'}</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>{isRu ? 'программа лояльности для постоянных клиентов;' : 'a loyalty program for regular customers;'}</li>
+                <li>{isRu ? 'рекомендации экипировки на основе истории аренды;' : 'equipment recommendations based on rental history;'}</li>
+                <li>{isRu ? 'push-уведомления о сроках возврата;' : 'push notifications regarding return deadlines;'}</li>
+                <li>{isRu ? 'интеграция с системой управления складом;' : 'integration with a warehouse management system;'}</li>
+                <li>{isRu ? 'аналитика загрузки оборудования и филиалов;' : 'analytics on equipment and branch utilization;'}</li>
+                <li>{isRu ? 'динамическое управление доступностью экипировки.' : 'dynamic management of equipment availability.'}</li>
+              </ul>
             </div>
           </div>
         </motion.div>
