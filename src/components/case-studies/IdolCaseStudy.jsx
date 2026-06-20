@@ -159,17 +159,19 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   { name: 'Veo 3', logo: 'https://www.google.com/s2/favicons?domain=deepmind.google&sz=128', offset: '-mt-8 -rotate-6' },
                   { name: 'Higgsfield', logo: 'https://www.google.com/s2/favicons?domain=higgsfield.ai&sz=128', offset: 'mt-4 rotate-3' }
                 ].map((tool, idx) => (
-                  <motion.div 
-                    key={idx} 
-                    animate={{ y: [0, -8, 0] }} 
-                    transition={{ repeat: Infinity, duration: 3 + idx * 0.4, ease: "easeInOut" }}
-                    className={`bg-zinc-800/90 backdrop-blur-sm border border-zinc-700 px-5 py-3 rounded-2xl flex items-center gap-3 shadow-2xl transition-transform duration-300 hover:scale-110 hover:z-20 cursor-default ${tool.offset}`}
-                  >
-                    <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden shrink-0 bg-white">
-                      <img src={tool.logo} alt={tool.name} className="w-full h-full object-cover" />
-                    </div>
-                    <span className="text-zinc-200 font-bold whitespace-nowrap">{tool.name}</span>
-                  </motion.div>
+                  <div key={idx} className={`relative ${tool.offset}`}>
+                    <motion.div 
+                      animate={{ y: [0, -8, 0], rotate: [0, (idx % 2 === 0 ? -3 : 3), 0] }} 
+                      transition={{ repeat: Infinity, duration: 4 + idx * 0.4, ease: "easeInOut" }}
+                      whileHover={{ scale: 1.1, zIndex: 20 }}
+                      className="bg-zinc-800/90 backdrop-blur-sm border border-zinc-700 px-5 py-3 rounded-2xl flex items-center gap-3 shadow-2xl cursor-pointer"
+                    >
+                      <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden shrink-0 bg-white">
+                        <img src={tool.logo} alt={tool.name} className="w-full h-full object-cover" />
+                      </div>
+                      <span className="text-zinc-200 font-bold whitespace-nowrap">{tool.name}</span>
+                    </motion.div>
+                  </div>
                 ))}
               </div>
             </motion.div>
@@ -307,14 +309,15 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <motion.div variants={fadeInUp} className="md:col-span-8 bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col md:flex-row group items-center shadow-xl">
-              <div className="p-8 md:w-[45%] flex flex-col justify-center h-full">
-                <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'Единый центр управления' : 'Unified Control Center'}</h3>
-                <p className="text-zinc-400">
+            <motion.div variants={fadeInUp} className="md:col-span-8 bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col md:flex-row group items-center shadow-xl relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-orange-500/20 to-transparent pointer-events-none rounded-[2rem]"></div>
+              <div className="p-8 md:p-12 md:w-[45%] flex flex-col justify-center h-full relative z-10">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{isRu ? 'Единый центр управления' : 'Unified Control Center'}</h3>
+                <p className="text-zinc-400 text-lg">
                   {isRu ? 'Управление AI-моделями в одном месте: подключайте аккаунты соцсетей, запускайте задачи и наблюдайте их статистику из единого дашборда.' : 'Manage AI models in one place: connect social accounts, run tasks, and monitor statistics from a single dashboard.'}
                 </p>
               </div>
-              <div className="w-full md:w-[55%] p-8 bg-gradient-to-l from-orange-500/10 to-transparent flex justify-center items-center h-full min-h-[250px]">
+              <div className="w-full md:w-[55%] p-8 flex justify-center items-center h-full min-h-[250px] relative z-10">
                 <img src="/uploads/idol/Talent Roster.png" alt="Unified Control Center" className="w-full h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-x-2" />
               </div>
             </motion.div>
