@@ -93,7 +93,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
               </motion.h2>
               <motion.div variants={fadeInUp} className="flex flex-wrap gap-3">
                 {['Product Discovery', 'UX Research', 'User Flow Design', 'Wireframing', 'UI Design', 'Interactive Prototyping'].map((role, i) => (
-                  <span key={i} className="px-5 py-2.5 bg-zinc-900 border border-zinc-800 rounded-full text-zinc-300 font-medium text-sm md:text-base">
+                  <span key={i} className="px-5 py-2.5 bg-zinc-900 border border-zinc-800 rounded-full text-zinc-300 font-medium text-sm md:text-base hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(59,130,246,0.15)] hover:border-blue-500/30 hover:text-white transition-all duration-300 cursor-default">
                     {role}
                   </span>
                 ))}
@@ -112,9 +112,9 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   { icon: '🎨', text: 'AI Content Creation' },
                   { icon: '🤝', text: 'Creator Marketplace' }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 bg-zinc-900/50 border border-zinc-800/50 p-4 rounded-2xl">
-                    <span className="text-2xl">{item.icon}</span>
-                    <span className="text-zinc-300 font-medium">{item.text}</span>
+                  <div key={i} className="flex items-center gap-4 bg-zinc-900/50 border border-zinc-800/50 p-4 rounded-2xl hover:bg-zinc-800/80 hover:border-blue-500/30 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(59,130,246,0.15)] transition-all duration-300 cursor-default group">
+                    <span className="text-2xl group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300">{item.icon}</span>
+                    <span className="text-zinc-300 font-medium group-hover:text-white transition-colors duration-300">{item.text}</span>
                   </div>
                 ))}
               </motion.div>
@@ -217,7 +217,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                       {isRu ? step : ['Multiple tools', 'Multiple switches', 'Context loss', 'Time loss'][idx]}
                     </motion.div>
                     {idx !== arr.length - 1 && (
-                      <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 2 }} className="text-zinc-700 text-lg font-bold my-1">↓</motion.div>
+                      <motion.div animate={{ opacity: [0.3, 1, 0.3], y: [0, 3, 0] }} transition={{ repeat: Infinity, duration: 2 }} className="text-zinc-700 text-lg font-bold my-1">↓</motion.div>
                     )}
                   </React.Fragment>
                 ))}
@@ -236,7 +236,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                       {isRu ? step : ['IDOL', 'Content creation', 'Planning', 'Publishing', 'Project management', 'Finding clients'][idx]}
                     </motion.div>
                     {idx !== arr.length - 1 && (
-                      <motion.div animate={{ opacity: [0.3, 1, 0.3], y: [0, 2, 0] }} transition={{ repeat: Infinity, duration: 1.5 }} className="text-blue-500/50 text-lg font-bold my-1">↓</motion.div>
+                      <motion.div animate={{ opacity: [0.3, 1, 0.3], y: [0, 3, 0] }} transition={{ repeat: Infinity, duration: 2 }} className="text-blue-500/50 text-lg font-bold my-1">↓</motion.div>
                     )}
                   </React.Fragment>
                 ))}
