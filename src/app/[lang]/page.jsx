@@ -202,9 +202,6 @@ export default async function Home({ params }) {
                         </h3>
                         <p className="text-zinc-400 text-sm group-hover:text-blue-300 transition-colors duration-300">{getProjectCategory(proj.id, proj.tags)}</p>
                       </div>
-                      <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                        ↗
-                      </div>
                     </div>
                   </div>
                 </Link>
