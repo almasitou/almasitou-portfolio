@@ -33,7 +33,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
 
       {/* Block 1: Hero */}
       <section className="relative min-h-screen pt-32 pb-20 md:py-32 flex flex-col items-center justify-start px-6 md:px-12 lg:px-24 w-full">
-        <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#0a0a0a]">
+        <div className="absolute top-0 left-0 w-full h-[100vh] z-0 overflow-hidden bg-[#0a0a0a]">
            <iframe
              src="https://player.vimeo.com/video/1203077862?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-w-[177.77vh] min-h-[100vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-30"
