@@ -351,8 +351,8 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
               isRu ? 'Аналитика пользовательского поведения' : 'User behavior analytics',
               isRu ? 'Подбор мероприятий по интересам пользователя' : 'Event selection based on user interests'
             ].map((item, idx) => (
-              <motion.div key={idx} variants={fadeInUp} className="flex items-start gap-4 p-5 bg-[#0a0a0a] rounded-2xl border border-zinc-800 hover:border-red-500/30 transition-colors">
-                <div className="w-2 h-2 mt-2 rounded-full bg-red-500 shrink-0 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
+              <motion.div key={idx} variants={fadeInUp} className="flex items-center gap-4 p-5 bg-[#0a0a0a] rounded-2xl border border-zinc-800 hover:border-red-500/30 transition-colors">
+                <div className="w-2 h-2 rounded-full bg-red-500 shrink-0 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
                 <p className="text-zinc-300 font-medium">{item}</p>
               </motion.div>
             ))}
