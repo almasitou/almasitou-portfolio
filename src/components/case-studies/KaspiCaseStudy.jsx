@@ -55,9 +55,9 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
         </div>
         
         <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-10 md:mt-20">
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full mb-6">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 mb-6">
             <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-            <span className="text-red-400 text-sm font-medium">Concept Redesign</span>
+            <span className="text-sm font-semibold tracking-wider text-red-500 uppercase">UX/UI Concept</span>
           </motion.div>
           <motion.h1 variants={fadeInUp} className="text-6xl md:text-9xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl leading-none">
             Kaspi Афиша

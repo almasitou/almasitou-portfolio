@@ -42,7 +42,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
         <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-10 md:mt-20">
           <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full mb-6">
             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-            <span className="text-orange-400 text-sm font-medium">B2C Delivery App</span>
+            <span className="text-orange-400 text-sm font-medium">B2C Service</span>
           </motion.div>
           <motion.h1 variants={fadeInUp} className="text-6xl md:text-9xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl leading-none">
             BAO

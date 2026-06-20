@@ -51,9 +51,9 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
         </div>
         
         <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-10 md:mt-20">
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-            <span className="text-blue-400 text-sm font-medium">B2C App & Admin Panel</span>
+            <span className="text-sm font-semibold tracking-wider text-blue-500 uppercase">B2C App & CRM</span>
           </motion.div>
           <motion.h1 variants={fadeInUp} className="text-6xl md:text-9xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl leading-none">
             Skibo

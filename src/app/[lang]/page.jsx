@@ -9,9 +9,9 @@ import Reveal from '@/components/Reveal';
 import SparklesButton from '@/components/SparklesButton';
 
 const getProjectCategory = (id, defaultTag) => {
-  if (id === 'cmqjeakqk0001vxltptpxytw5') return 'Concept Redesign';
-  if (id === 'cmqjeakgy0000vxltp4qj7ks1') return 'B2C App & Admin Panel';
-  if (id === 'cmqjeakvd0002vxltgwlxjlo9') return 'B2C Delivery App';
+  if (id === 'cmqjeakqk0001vxltptpxytw5') return 'UX/UI Concept';
+  if (id === 'cmqjeakgy0000vxltp4qj7ks1') return 'B2C App & CRM';
+  if (id === 'cmqjeakvd0002vxltgwlxjlo9') return 'B2C Service';
   if (id === 'cmqjeal510004vxlt8hmvmcr6') return 'B2B Platform';
   if (id === 'cmqjeal060003vxlt80svpske') return 'SaaS Concept';
   return defaultTag;
