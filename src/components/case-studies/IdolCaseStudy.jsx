@@ -61,20 +61,20 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
           </motion.p>
           
           {/* Project Meta Info */}
-          <motion.div variants={fadeInUp} className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-5xl mx-auto mb-16">
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[140px]">
+          <motion.div variants={fadeInUp} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto mb-16 w-full">
+            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Тип проекта' : 'Project Type'}</span>
               <span className="text-white font-medium">{isRu ? 'Концепт' : 'Concept'}</span>
             </div>
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[140px]">
+            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Платформа' : 'Platform'}</span>
               <span className="text-white font-medium">Web Application</span>
             </div>
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[140px]">
+            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Дата' : 'Date'}</span>
               <span className="text-white font-medium">{isRu ? '19 января 2026' : 'January 19, 2026'}</span>
             </div>
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[200px] md:col-span-3">
+            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Моя роль' : 'My Role'}</span>
               <span className="text-white font-medium text-center">Product Designer</span>
             </div>
