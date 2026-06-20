@@ -29,7 +29,8 @@ export const dictionaries = {
       title: 'Experience'
     },
     recommendations: {
-      title: 'Recommendations'
+      title: 'Recommendations',
+      viewLinkedin: 'View on LinkedIn'
     },
     contact: {
       title: "Let's create something extraordinary",
@@ -72,7 +73,8 @@ export const dictionaries = {
       title: 'Опыт работы'
     },
     recommendations: {
-      title: 'Отзывы'
+      title: 'Отзывы',
+      viewLinkedin: 'Посмотреть в LinkedIn'
     },
     contact: {
       title: 'Давайте создадим нечто выдающееся',
