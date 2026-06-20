@@ -36,7 +36,7 @@ export default function Navbar({ t, lang }) {
     >
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href={`/${lang}`} className="font-heading font-bold text-xl tracking-tighter hover:text-zinc-300 transition-colors">
-          Almas →
+          Almas <span className="text-blue-500">→</span>
         </a>
         <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-400 mr-8">
           <a href="#work" className="hover:text-white transition-colors">{t.nav.work}</a>
