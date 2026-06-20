@@ -18,6 +18,7 @@ const staggerContainer = {
 export default function IdolCaseStudy({ lang, otherProjects }) {
   const isRu = lang === 'ru';
   const [showAllScreenshots, setShowAllScreenshots] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-blue-500/30 font-sans pb-0 overflow-x-hidden w-full max-w-[100vw]">
@@ -33,11 +34,17 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
 
       {/* Block 1: Hero */}
       <section className="relative min-h-screen pt-32 pb-20 md:py-32 flex flex-col items-center justify-start px-6 md:px-12 lg:px-24 w-full">
-        <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#0a0a0a]">
+           <img 
+             src="/uploads/idol/Dashboard.png"
+             alt="Idol Background"
+             className={`absolute w-[150vw] h-[150vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-0' : 'opacity-30'}`}
+           />
            <iframe
              src="https://player.vimeo.com/video/1203077862?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-             className="absolute w-[150vw] h-[150vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover opacity-30 pointer-events-none"
+             className={`absolute w-[150vw] h-[150vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-30' : 'opacity-0'}`}
              allow="autoplay; fullscreen; picture-in-picture"
+             onLoad={() => setIsVideoLoaded(true)}
            ></iframe>
            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/50 to-[#0a0a0a]"></div>
         </div>
