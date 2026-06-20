@@ -36,10 +36,10 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#0a0a0a]">
            <iframe
              src="https://player.vimeo.com/video/1203077862?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-             className="absolute w-[150vw] h-[150vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none opacity-30"
+             className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-w-[177.77vh] min-h-[100vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-30"
              allow="autoplay; fullscreen; picture-in-picture"
            ></iframe>
-           <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/50 to-[#0a0a0a]"></div>
+           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/60 to-[#0a0a0a]"></div>
         </div>
         
         <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-4">
