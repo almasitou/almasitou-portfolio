@@ -36,7 +36,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
       <section className="relative min-h-screen pt-32 pb-20 md:py-32 flex flex-col items-center justify-start px-6 md:px-12 lg:px-24 w-full">
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#0a0a0a]">
            <img 
-             src="/uploads/idol/Dashboard.png"
+             src="https://i.vimeocdn.com/video/2171005282-b01920e44afd27486b0924d1a01273da06c10820b0c76098d5f5380c66cb1e91-d_1920"
              alt="Idol Background"
              className={`absolute w-[150vw] h-[150vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-0' : 'opacity-30'}`}
            />
