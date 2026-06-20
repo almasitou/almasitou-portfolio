@@ -63,7 +63,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           </motion.p>
           
           {/* Project Meta Info horizontally flexed */}
-          <motion.div variants={fadeInUp} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-12 max-w-5xl mx-auto w-full">
+          <motion.div variants={fadeInUp} className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-12 max-w-5xl mx-auto w-full">
             <div className="flex-1 min-w-[180px] p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl">
               <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-2">{isRu ? 'Моя роль' : 'My Role'}</span>
               <span className="text-xl md:text-2xl text-white font-medium">Product Designer</span>
