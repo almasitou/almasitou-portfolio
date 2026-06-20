@@ -49,7 +49,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
       {/* Block 1: Hero */}
       <section className="relative min-h-screen md:min-h-[90vh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full">
         <div className="absolute inset-0 w-full h-full z-0">
-           <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/d0ac70248526435.Y3JvcCwxMDA3LDc4OCwzNDEsMA.png" alt="Kaspi Hero" className="w-full h-full object-cover object-[center_top] md:object-center" />
+           <img src="/kaspi-cover.jpg" alt="Kaspi Hero" className="w-full h-full object-cover object-[center_top] md:object-center" />
            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
            <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
         </div>
