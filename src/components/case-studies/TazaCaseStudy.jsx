@@ -380,6 +380,36 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
         </motion.div>
       </section>
 
+      {/* Google Play App Link */}
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 text-center shadow-xl relative overflow-hidden group">
+          <div className="absolute inset-0 bg-black/10 transition-colors duration-500"></div>
+
+          {/* Decorative blobs (Google Play Colors) */}
+          <div className="absolute top-[-20%] left-[-10%] w-[40%] h-[150%] bg-[#34A853]/15 blur-[80px] rounded-full transform rotate-45 pointer-events-none group-hover:bg-[#34A853]/25 transition-colors duration-700"></div>
+          <div className="absolute top-[-20%] right-[-10%] w-[40%] h-[150%] bg-[#EA4335]/15 blur-[80px] rounded-full transform -rotate-45 pointer-events-none group-hover:bg-[#EA4335]/25 transition-colors duration-700"></div>
+          <div className="absolute bottom-[-50%] left-[10%] w-[40%] h-[150%] bg-[#FBBC04]/15 blur-[80px] rounded-full transform rotate-12 pointer-events-none group-hover:bg-[#FBBC04]/25 transition-colors duration-700"></div>
+          <div className="absolute bottom-[-50%] right-[10%] w-[40%] h-[150%] bg-[#4285F4]/15 blur-[80px] rounded-full transform -rotate-12 pointer-events-none group-hover:bg-[#4285F4]/25 transition-colors duration-700"></div>
+
+          <div className="relative z-10 flex flex-col items-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              {isRu ? 'Оцените приложение вживую' : 'Try the app live'}
+            </h2>
+            <p className="text-zinc-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+              {isRu ? 'Мобильное приложение Taza доступно для скачивания в Google Play. Вы можете самостоятельно протестировать удобство B2B платформы, ознакомиться с каталогом и оценить интерфейс прямо сейчас.' : 'The Taza mobile app is available for download on Google Play. You can test the convenience of the B2B platform, explore the catalog, and evaluate the interface right now.'}
+            </p>
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.daladev.tazab2b&hl=ru" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="inline-block mt-4"
+            >
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-16 md:h-20 hover:scale-105 transition-transform drop-shadow-xl" />
+            </a>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Other Projects */}
       <OtherProjects currentSlug="taza" lang={lang} projects={otherProjects} />
     </div>
