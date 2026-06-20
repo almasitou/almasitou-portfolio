@@ -45,7 +45,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
             <span className="text-emerald-400 text-sm font-medium">B2B Platform</span>
           </motion.div>
           <motion.h1 variants={fadeInUp} className="text-6xl md:text-9xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl leading-none">
-            Taza B2B
+            Taza B2B Store
           </motion.h1>
           <motion.p variants={fadeInUp} className="text-xl md:text-3xl text-zinc-200 font-medium max-w-4xl mx-auto leading-relaxed mb-16">
             {isRu ? 'Мобильный маркетплейс для оптовых закупок' : 'Mobile marketplace for wholesale procurement'}

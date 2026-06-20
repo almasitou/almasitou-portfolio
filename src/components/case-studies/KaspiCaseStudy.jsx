@@ -59,8 +59,8 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
             <span className="text-sm font-semibold tracking-wider text-red-500 uppercase">UX/UI Concept</span>
           </motion.div>
-          <motion.h1 variants={fadeInUp} className="text-6xl md:text-9xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl leading-none">
-            Kaspi Афиша
+          <motion.h1 variants={fadeInUp} className="text-4xl md:text-7xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl leading-tight max-w-5xl mx-auto">
+            {isRu ? 'Kaspi Cinema Booking UX: Билет за пару кликов' : 'Kaspi Cinema Booking UX: Ticket in a few clicks'}
           </motion.h1>
           <motion.p variants={fadeInUp} className="text-xl md:text-3xl text-zinc-200 font-medium max-w-4xl mx-auto leading-relaxed mb-16">
             {isRu ? 'Проектирование билетного сервиса для экосистемы Kaspi' : 'Designing a ticketing service for the Kaspi ecosystem'}
