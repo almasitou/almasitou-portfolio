@@ -68,19 +68,19 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
           
           {/* Project Meta Info */}
           <motion.div variants={fadeInUp} className="flex flex-wrap justify-center gap-4 md:gap-8 max-w-4xl mx-auto">
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[150px]">
+            <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[150px]">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Тип проекта' : 'Project Type'}</span>
               <span className="text-white font-medium">{isRu ? 'Тестовое задание' : 'Test Assignment'}</span>
             </div>
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[150px]">
+            <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[150px]">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Платформа' : 'Platform'}</span>
               <span className="text-white font-medium">iOS / Android</span>
             </div>
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[150px]">
+            <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[150px]">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Релиз' : 'Release Date'}</span>
               <span className="text-white font-medium text-center leading-tight">{isRu ? '30 апреля 2026' : 'April 30, 2026'}</span>
             </div>
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[150px]">
+            <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[150px]">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Моя роль' : 'My Role'}</span>
               <span className="text-white font-medium text-center leading-tight">Product Designer</span>
             </div>

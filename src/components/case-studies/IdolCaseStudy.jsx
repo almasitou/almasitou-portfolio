@@ -159,12 +159,17 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   { name: 'Veo 3', logo: 'https://www.google.com/s2/favicons?domain=deepmind.google&sz=128', offset: '-mt-8 -rotate-6' },
                   { name: 'Higgsfield', logo: 'https://www.google.com/s2/favicons?domain=higgsfield.ai&sz=128', offset: 'mt-4 rotate-3' }
                 ].map((tool, idx) => (
-                  <div key={idx} className={`bg-zinc-800/90 backdrop-blur-sm border border-zinc-700 px-5 py-3 rounded-2xl flex items-center gap-3 shadow-2xl transition-transform duration-300 hover:scale-110 hover:z-20 cursor-default ${tool.offset}`}>
+                  <motion.div 
+                    key={idx} 
+                    animate={{ y: [0, -8, 0] }} 
+                    transition={{ repeat: Infinity, duration: 3 + idx * 0.4, ease: "easeInOut" }}
+                    className={`bg-zinc-800/90 backdrop-blur-sm border border-zinc-700 px-5 py-3 rounded-2xl flex items-center gap-3 shadow-2xl transition-transform duration-300 hover:scale-110 hover:z-20 cursor-default ${tool.offset}`}
+                  >
                     <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden shrink-0 bg-white">
                       <img src={tool.logo} alt={tool.name} className="w-full h-full object-cover" />
                     </div>
                     <span className="text-zinc-200 font-bold whitespace-nowrap">{tool.name}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -198,30 +203,38 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
             {/* Right: Visual Before/After */}
             <motion.div variants={fadeInUp} className="relative grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Было */}
-              <div className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-6 shadow-2xl flex flex-col items-center opacity-70">
+              <div className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-6 shadow-2xl flex flex-col items-center opacity-70 hover:opacity-100 hover:scale-105 transition-all duration-500 cursor-default group">
                 <h3 className="text-zinc-500 font-bold mb-4 uppercase text-sm tracking-wider">{isRu ? 'Было' : 'Before'}</h3>
                 {['Множество инструментов', 'Множество переключений', 'Потеря контекста', 'Потеря времени'].map((step, idx, arr) => (
                   <React.Fragment key={idx}>
-                    <div className="bg-zinc-800/50 border border-zinc-700/50 text-zinc-400 px-4 py-2 rounded-xl text-center text-sm font-medium w-full shadow-lg">
+                    <motion.div 
+                      whileInView={{ opacity: [0, 1], y: [10, 0] }} 
+                      transition={{ delay: idx * 0.2 }}
+                      className="bg-zinc-800/50 border border-zinc-700/50 text-zinc-400 px-4 py-2 rounded-xl text-center text-sm font-medium w-full shadow-lg transition-colors group-hover:bg-zinc-800 group-hover:text-zinc-300"
+                    >
                       {isRu ? step : ['Multiple tools', 'Multiple switches', 'Context loss', 'Time loss'][idx]}
-                    </div>
+                    </motion.div>
                     {idx !== arr.length - 1 && (
-                      <div className="text-zinc-700 text-lg font-bold my-1">↓</div>
+                      <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 2 }} className="text-zinc-700 text-lg font-bold my-1">↓</motion.div>
                     )}
                   </React.Fragment>
                 ))}
               </div>
               
               {/* Стало */}
-              <div className="bg-blue-900/20 border border-blue-500/30 rounded-[2rem] p-6 shadow-2xl flex flex-col items-center">
+              <div className="bg-blue-900/20 border border-blue-500/30 rounded-[2rem] p-6 shadow-2xl flex flex-col items-center hover:scale-105 transition-all duration-500 cursor-default group">
                 <h3 className="text-blue-400 font-bold mb-4 uppercase text-sm tracking-wider">{isRu ? 'Стало' : 'After'}</h3>
                 {['IDOL', 'Создание контента', 'Планирование', 'Публикация', 'Управление проектами', 'Поиск клиентов'].map((step, idx, arr) => (
                   <React.Fragment key={idx}>
-                    <div className={`${idx === 0 ? 'bg-blue-600 border-blue-500 text-white' : 'bg-zinc-800 border-zinc-700 text-zinc-300'} border px-4 py-2 rounded-xl text-center text-sm font-medium w-full shadow-lg`}>
+                    <motion.div 
+                      whileInView={{ opacity: [0, 1], y: [10, 0] }} 
+                      transition={{ delay: idx * 0.15 }}
+                      className={`${idx === 0 ? 'bg-blue-600 border-blue-500 text-white shadow-blue-500/20' : 'bg-zinc-800 border-zinc-700 text-zinc-300'} border px-4 py-2 rounded-xl text-center text-sm font-medium w-full shadow-lg group-hover:shadow-xl transition-shadow`}
+                    >
                       {isRu ? step : ['IDOL', 'Content creation', 'Planning', 'Publishing', 'Project management', 'Finding clients'][idx]}
-                    </div>
+                    </motion.div>
                     {idx !== arr.length - 1 && (
-                      <div className="text-blue-500/50 text-lg font-bold my-1">↓</div>
+                      <motion.div animate={{ opacity: [0.3, 1, 0.3], y: [0, 2, 0] }} transition={{ repeat: Infinity, duration: 1.5 }} className="text-blue-500/50 text-lg font-bold my-1">↓</motion.div>
                     )}
                   </React.Fragment>
                 ))}
@@ -240,57 +253,60 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {/* Card 1 */}
-            <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col group">
-              <div className="p-8 pb-4">
+            <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent pointer-events-none rounded-[2rem]"></div>
+              <div className="p-8 pb-4 relative z-10">
                 <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'Рабочее AI-пространство' : 'AI Workspace'}</h3>
                 <p className="text-zinc-400">
                   {isRu ? 'Единое рабочее пространство для создания и управления контентом.' : 'A unified workspace for creating and managing content.'}
                 </p>
               </div>
-              <div className="mt-4 p-8 bg-gradient-to-t from-blue-500/10 to-transparent flex justify-center items-center">
+              <div className="mt-4 p-8 flex justify-center items-center relative z-10">
                 <img src="/uploads/idol/Dashboard.png" alt="AI Workspace" className="w-[90%] h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-y-2" />
               </div>
             </motion.div>
 
             {/* Card 2 */}
-            <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col group">
-              <div className="p-8 pb-4">
+            <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent pointer-events-none rounded-[2rem]"></div>
+              <div className="p-8 pb-4 relative z-10">
                 <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'Библиотека промптов' : 'Prompt Library'}</h3>
                 <p className="text-zinc-400">
                   {isRu ? 'Хранение, организация и обмен промптами между участниками сообщества.' : 'Storing, organizing, and sharing prompts between community members.'}
                 </p>
               </div>
-              <div className="mt-4 p-8 bg-gradient-to-t from-purple-500/10 to-transparent flex justify-center items-center">
+              <div className="mt-4 p-8 flex justify-center items-center relative z-10">
                 <img src="/uploads/idol/Studio -_ Explore.png" alt="Prompt Library" className="w-[90%] h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-y-2" />
               </div>
             </motion.div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
-            {/* Card 3: Content Planner (No Image, Small Block) */}
-            <motion.div variants={fadeInUp} className="md:col-span-4 bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 flex flex-col justify-center shadow-xl">
-              <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'Планировщик контента' : 'Content Planner'}</h3>
-              <p className="text-zinc-400">
+            {/* Card 3: Content Planner */}
+            <motion.div variants={fadeInUp} className="md:col-span-4 bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 flex flex-col justify-center shadow-xl hover:bg-zinc-800 hover:border-purple-500/30 transition-all duration-500 group relative overflow-hidden hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <h3 className="text-2xl font-bold text-white mb-3 relative z-10">{isRu ? 'Планировщик контента' : 'Content Planner'}</h3>
+              <p className="text-zinc-400 relative z-10">
                 {isRu ? 'Планирование публикаций для Instagram, TikTok, Threads, Telegram и других платформ.' : 'Planning publications for Instagram, TikTok, Threads, Telegram, and other platforms.'}
               </p>
             </motion.div>
 
-            {/* Card 4: AI Assistant (Wide Block) */}
-            <motion.div variants={fadeInUp} className="md:col-span-8 bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col md:flex-row group items-center shadow-xl">
-              <div className="p-8 md:w-[45%] flex flex-col justify-center h-full">
-                <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'AI-ассистент' : 'AI Assistant'}</h3>
-                <p className="text-zinc-400">
+            {/* Card 4: AI Assistant */}
+            <motion.div variants={fadeInUp} className="md:col-span-8 bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col md:flex-row group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-rose-500/20 to-transparent pointer-events-none rounded-[2rem]"></div>
+              <div className="w-full md:w-[45%] p-8 md:p-12 flex flex-col justify-center relative z-10">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{isRu ? 'AI-ассистент' : 'AI Assistant'}</h3>
+                <p className="text-zinc-400 text-lg">
                   {isRu ? 'Контекстный помощник, который понимает проекты пользователя, файлы, задачи и историю работы.' : 'Contextual assistant that understands user projects, files, tasks, and work history.'}
                 </p>
               </div>
-              <div className="w-full md:w-[55%] p-8 bg-gradient-to-l from-rose-500/10 to-transparent flex justify-center items-center h-full min-h-[250px]">
+              <div className="w-full md:w-[55%] p-8 flex justify-center items-center h-full min-h-[250px] relative z-10">
                 <img src="/uploads/idol/Studio -_ Explore -_ Image -_ AI Chat.png" alt="AI Assistant" className="w-full h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-x-2" />
               </div>
             </motion.div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            {/* Card 5: Unified Control Center (Wide Block) */}
             <motion.div variants={fadeInUp} className="md:col-span-8 bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col md:flex-row group items-center shadow-xl">
               <div className="p-8 md:w-[45%] flex flex-col justify-center h-full">
                 <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'Единый центр управления' : 'Unified Control Center'}</h3>
@@ -304,9 +320,10 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
             </motion.div>
 
             {/* Card 6: Creator Marketplace (No Image, Small Block) */}
-            <motion.div variants={fadeInUp} className="md:col-span-4 bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 flex flex-col justify-center shadow-xl">
-              <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'Маркетплейс креаторов' : 'Creator Marketplace'}</h3>
-              <p className="text-zinc-400">
+            <motion.div variants={fadeInUp} className="md:col-span-4 bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 flex flex-col justify-center shadow-xl hover:bg-zinc-800 hover:border-emerald-500/30 transition-all duration-500 group relative overflow-hidden hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <h3 className="text-2xl font-bold text-white mb-3 relative z-10">{isRu ? 'Маркетплейс креаторов' : 'Creator Marketplace'}</h3>
+              <p className="text-zinc-400 relative z-10">
                 {isRu ? 'Пространство для взаимодействия между заказчиками и AI-креаторами.' : 'Space for interaction between clients and AI creators.'}
               </p>
             </motion.div>
@@ -321,7 +338,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
             {isRu ? 'От идеи до публикации' : 'From Idea to Publication'}
           </motion.h2>
 
-          <div className="flex flex-wrap items-center justify-start md:justify-center gap-4 relative z-10 w-full">
+          <div className="flex flex-col md:flex-row md:flex-wrap items-center md:justify-center gap-4 relative z-10 w-full">
             {['Идея', 'Создание контента', 'Планирование публикаций', 'Публикация во всех соцсетях', 'Аналитика', 'Рекомендации AI-ассистента'].map((step, idx, arr) => (
               <React.Fragment key={idx}>
                 <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-full px-5 py-3 flex items-center gap-3 hover:border-zinc-700 transition-colors">
@@ -333,7 +350,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   </span>
                 </motion.div>
                 {idx < arr.length - 1 && (
-                  <motion.div variants={fadeInUp} className="hidden md:flex text-zinc-600">
+                  <motion.div variants={fadeInUp} className="flex text-zinc-600 rotate-90 md:rotate-0">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
@@ -435,7 +452,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
       <section className="px-6 md:px-12 lg:px-24 max-w-5xl mx-auto mb-24 md:mb-32 text-center">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 md:p-12 text-center relative overflow-hidden shadow-2xl">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 opacity-50"></div>
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 relative z-10">Главная мысль кейса</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 relative z-10">{isRu ? 'Главная мысль кейса' : 'Key Takeaway'}</h3>
           <p className="text-zinc-300 text-lg md:text-2xl leading-relaxed relative z-10 max-w-4xl mx-auto">
             {isRu 
               ? 'IDOL — это не просто AI-инструмент. Это концепция единой операционной системы для AI-креаторов, которая объединяет создание контента, управление знаниями, публикацию, поиск клиентов и взаимодействие внутри сообщества в рамках одной платформы.' 

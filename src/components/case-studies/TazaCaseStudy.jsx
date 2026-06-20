@@ -53,19 +53,19 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
           
           {/* Project Meta Info */}
           <motion.div variants={fadeInUp} className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-5xl mx-auto mb-16">
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[140px]">
+            <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[140px]">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Тип проекта' : 'Project Type'}</span>
               <span className="text-white font-medium">{isRu ? 'Коммерческий проект' : 'Commercial Project'}</span>
             </div>
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[140px]">
+            <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[140px]">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Платформа' : 'Platform'}</span>
               <span className="text-white font-medium">iOS & Android</span>
             </div>
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[140px]">
+            <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[140px]">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Дата релиза' : 'Release Date'}</span>
               <span className="text-white font-medium">{isRu ? '14 марта 2022 года' : 'March 14, 2022'}</span>
             </div>
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[200px] md:col-span-3">
+            <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-3xl px-6 py-4 flex flex-col items-center shadow-xl flex-1 min-w-[200px] md:col-span-3">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Моя роль' : 'My Role'}</span>
               <span className="text-white font-medium text-center">UX/UI Designer</span>
             </div>
