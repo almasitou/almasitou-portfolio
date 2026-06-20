@@ -61,7 +61,9 @@ export default function OtherProjects({ projects, lang }) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-6">
                 <h4 className="text-white font-medium text-lg lg:text-xl transform transition-transform duration-500 group-hover:-translate-y-2">
-                  {project.title}
+                  {project.id === 'cmqjeakqk0001vxltptpxytw5' || (project.title || '').toLowerCase().includes('kaspi') 
+                    ? (isRu ? 'Kaspi Cinema Booking UX: Билет за пару кликов' : 'Kaspi Cinema Booking UX: Ticket in a few clicks') 
+                    : project.title}
                 </h4>
               </div>
             </Link>
