@@ -302,7 +302,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   {isRu ? 'Планирование публикаций для Instagram, TikTok, Threads, Telegram и других платформ.' : 'Planning publications for Instagram, TikTok, Threads, Telegram, and other platforms.'}
                 </p>
               </div>
-              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-48 md:h-56 overflow-hidden rounded-b-[2rem]">
+              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-56 md:h-60 overflow-hidden rounded-b-[2rem]">
                 <div className="w-full h-full relative transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 translate-y-4 flex items-center justify-center">
                   <div className="w-[70%] max-w-[180px] bg-zinc-800/80 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-4 shadow-2xl relative z-10">
                     <div className="flex items-center gap-3 mb-4">
@@ -370,7 +370,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   {isRu ? 'Пространство для взаимодействия между заказчиками и AI-креаторами.' : 'Space for interaction between clients and AI creators.'}
                 </p>
               </div>
-              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-48 md:h-56 overflow-hidden rounded-b-[2rem]">
+              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-56 md:h-60 overflow-hidden rounded-b-[2rem]">
                 <div className="w-full h-full relative transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 translate-y-4 flex items-center justify-center">
                   {/* Profile Card 1 */}
                   <div className="absolute z-20 w-[80%] max-w-[200px] bg-zinc-800/90 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-4 shadow-2xl transition-transform duration-700 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4 translate-y-4 animate-bounce" style={{ animationDuration: '4s' }}>
