@@ -381,12 +381,12 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                     {/* Matrix for booking screenshots */}
                     <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 justify-items-start">
                       {scr.images.map((imgSrc, idx) => (
-                        <div key={idx} className="relative group w-[80%] md:w-full max-w-[220px] md:max-w-[280px] flex justify-start cursor-pointer active:scale-95 transition-transform duration-300">
+                        <div key={idx} className="relative group w-full flex justify-start cursor-pointer active:scale-95 transition-transform duration-300">
                           <div className="absolute inset-4 bg-blue-500/40 blur-[60px] opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none rounded-full z-0"></div>
                           <img 
                             src={imgSrc} 
                             alt={`${scr.t} screen ${idx + 1}`} 
-                            className="w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto object-contain object-top drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2" 
+                            className="w-full max-w-[280px] md:max-w-[320px] lg:max-w-none h-auto object-contain object-top drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2" 
                           />
                         </div>
                       ))}
@@ -403,12 +403,12 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                   </div>
                   <div className="flex-[1.5] w-full flex justify-center gap-4 md:gap-8">
                     {scr.images.map((imgSrc, idx) => (
-                      <div key={idx} className="relative group w-[45%] md:w-1/2 max-w-[220px] md:max-w-[280px] flex justify-center cursor-pointer active:scale-95 transition-transform duration-300">
+                      <div key={idx} className="relative group w-[45%] md:w-1/2 max-w-[280px] md:max-w-none flex justify-center cursor-pointer active:scale-95 transition-transform duration-300">
                         <div className="absolute inset-4 bg-blue-500/40 blur-[60px] opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none rounded-full z-0"></div>
                         <img 
                           src={imgSrc} 
                           alt={`${scr.t} screen ${idx + 1}`} 
-                          className="w-[60%] max-w-[240px] sm:max-w-[300px] md:max-w-[120px] lg:max-w-[140px] xl:max-w-none xl:w-[35%] object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-transform duration-700 translate-y-0 group-hover:-translate-y-[10px] group-[.is-active]:-translate-y-[10px]" 
+                          className="w-full max-w-[280px] md:max-w-none object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-transform duration-700 translate-y-0 group-hover:-translate-y-[10px] group-[.is-active]:-translate-y-[10px]" 
                         />
                       </div>
                     ))}
