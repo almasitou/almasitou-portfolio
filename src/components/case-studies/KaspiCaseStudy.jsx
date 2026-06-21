@@ -516,14 +516,40 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
       </section>
 
       {/* Главная мысль кейса */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-5xl mx-auto mb-24 md:mb-32 text-center">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="bg-gradient-to-b from-red-500/10 to-transparent border border-red-500/20 rounded-[3rem] p-10 md:p-16">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            {isRu ? 'Kaspi Афиша — это не просто интерфейс покупки билетов.' : 'Kaspi Afisha is not just a ticket purchasing interface.'}
-          </h2>
-          <p className="text-xl md:text-2xl text-zinc-300 leading-relaxed font-medium">
-            {isRu ? 'Это концепция нового сервиса внутри экосистемы Kaspi, построенная вокруг масштабируемого сценария покупки мероприятий различных категорий через единый пользовательский опыт.' : 'It is a concept for a new service within the Kaspi ecosystem, built around a scalable event purchase scenario across various categories through a unified user experience.'}
-          </p>
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24 md:mb-32">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center relative overflow-hidden shadow-2xl group">
+          <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-red-500/10 opacity-50"></div>
+          
+          <div className="flex-[1.5] text-left relative z-10 pr-0 md:pr-12">
+            <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              {isRu ? 'Kaspi Афиша — это не просто интерфейс покупки билетов.' : 'Kaspi Afisha is not just a ticket purchasing interface.'}
+            </h3>
+            <p className="text-zinc-300 text-lg md:text-2xl leading-relaxed">
+              {isRu ? 'Это концепция нового сервиса внутри экосистемы Kaspi, построенная вокруг масштабируемого сценария покупки мероприятий различных категорий через единый пользовательский опыт.' : 'It is a concept for a new service within the Kaspi ecosystem, built around a scalable event purchase scenario across various categories through a unified user experience.'}
+            </p>
+          </div>
+
+          <div className="flex-1 w-full mt-12 md:mt-0 relative z-10 flex justify-center md:justify-end">
+              {/* Abstract Illustration */}
+              <div className="w-full max-w-[250px] h-[250px] md:max-w-[300px] md:h-[300px] relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full blur-[40px] group-hover:blur-[60px] transition-all duration-700"></div>
+                
+                {/* Main floating shape */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-48 md:h-48 bg-gradient-to-tr from-red-600 to-orange-500 rounded-[2rem] rotate-12 group-hover:rotate-45 transition-all duration-700 shadow-2xl flex items-center justify-center border border-white/10">
+                   <svg className="w-12 h-12 md:w-16 md:h-16 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                </div>
+                
+                {/* Orbiting element 1 */}
+                <div className="absolute top-[10%] right-[10%] w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-xl group-hover:-translate-y-4 group-hover:translate-x-4 transition-transform duration-700 flex items-center justify-center delay-100">
+                  <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-red-400/50"></div>
+                </div>
+                
+                {/* Orbiting element 2 */}
+                <div className="absolute bottom-[15%] left-[10%] w-14 h-14 md:w-16 md:h-16 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 shadow-xl group-hover:translate-y-4 group-hover:-translate-x-4 transition-transform duration-700 flex items-center justify-center rotate-[-15deg] group-hover:rotate-0 delay-200">
+                  <div className="w-5 h-1 md:w-6 md:h-1 rounded-full bg-orange-400/50"></div>
+                </div>
+              </div>
+          </div>
         </motion.div>
       </section>
 

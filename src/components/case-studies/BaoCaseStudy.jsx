@@ -182,7 +182,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
 
           <div className="flex flex-col xl:flex-row items-center justify-between gap-4 xl:gap-6 mb-16 relative z-10 w-full">
             {/* Step 1 */}
-            <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-start">
+            <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-center">
               <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group  shadow-xl hover:shadow-[0_0_30px_rgba(249,115,22,0.1)] [&.is-active]:shadow-[0_0_30px_rgba(249,115,22,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`}>
                 <div className={`absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
                 <div className="p-8 pb-4 relative z-10 h-[280px]">
@@ -205,7 +205,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
             <motion.div variants={fadeInUp} className="xl:hidden text-orange-500 text-5xl font-light drop-shadow-[0_0_15px_rgba(249,115,22,0.6)] animate-pulse">↓</motion.div>
 
             {/* Step 2 */}
-            <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-start">
+            <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-center">
               <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group  shadow-xl hover:shadow-[0_0_30px_rgba(249,115,22,0.1)] [&.is-active]:shadow-[0_0_30px_rgba(249,115,22,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`}>
                 <div className={`absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
                 <div className="p-8 pb-4 relative z-10 h-[280px]">
@@ -228,7 +228,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
             <motion.div variants={fadeInUp} className="xl:hidden text-orange-500 text-5xl font-light drop-shadow-[0_0_15px_rgba(249,115,22,0.6)] animate-pulse">↓</motion.div>
 
             {/* Step 3 */}
-            <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-start">
+            <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-center">
               <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group  shadow-xl hover:shadow-[0_0_30px_rgba(249,115,22,0.1)] [&.is-active]:shadow-[0_0_30px_rgba(249,115,22,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`}>
                 <div className={`absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
                 <div className="p-8 pb-4 relative z-10 h-[280px]">

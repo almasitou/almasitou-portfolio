@@ -302,7 +302,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   {isRu ? 'Планирование публикаций для Instagram, TikTok, Threads, Telegram и других платформ.' : 'Planning publications for Instagram, TikTok, Threads, Telegram, and other platforms.'}
                 </p>
               </div>
-              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-48 md:h-56">
+              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-48 md:h-56 overflow-hidden rounded-b-[2rem]">
                 <div className="w-full h-full relative transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 translate-y-4 flex items-center justify-center">
                   <div className="w-[70%] max-w-[180px] bg-zinc-800/80 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-4 shadow-2xl relative z-10">
                     <div className="flex items-center gap-3 mb-4">
@@ -370,7 +370,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   {isRu ? 'Пространство для взаимодействия между заказчиками и AI-креаторами.' : 'Space for interaction between clients and AI creators.'}
                 </p>
               </div>
-              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-48 md:h-56">
+              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-48 md:h-56 overflow-hidden rounded-b-[2rem]">
                 <div className="w-full h-full relative transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 translate-y-4 flex items-center justify-center">
                   {/* Profile Card 1 */}
                   <div className="absolute z-20 w-[80%] max-w-[200px] bg-zinc-800/90 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-4 shadow-2xl transition-transform duration-700 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4 translate-y-4 animate-bounce" style={{ animationDuration: '4s' }}>
@@ -529,15 +529,40 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
       </section>
 
       {/* Главная мысль кейса */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-5xl mx-auto mb-24 md:mb-32 text-center">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 md:p-12 text-center relative overflow-hidden shadow-2xl">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24 md:mb-32">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center relative overflow-hidden shadow-2xl group">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 opacity-50"></div>
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 relative z-10">{isRu ? 'Главная мысль кейса' : 'Key Takeaway'}</h3>
-          <p className="text-zinc-300 text-lg md:text-2xl leading-relaxed relative z-10 max-w-4xl mx-auto">
-            {isRu 
-              ? 'IDOL — это не просто AI-инструмент. Это концепция единой операционной системы для AI-креаторов, которая объединяет создание контента, управление знаниями, публикацию, поиск клиентов и взаимодействие внутри сообщества в рамках одной платформы.' 
-              : 'IDOL is not just an AI tool. It is a concept of a unified operating system for AI creators that combines content creation, knowledge management, publishing, finding clients, and community interaction within a single platform.'}
-          </p>
+          
+          <div className="flex-[1.5] text-left relative z-10 pr-0 md:pr-12">
+            <h3 className="text-2xl md:text-4xl font-bold text-white mb-6">{isRu ? 'Главная мысль кейса' : 'Key Takeaway'}</h3>
+            <p className="text-zinc-300 text-lg md:text-2xl leading-relaxed">
+              {isRu 
+                ? 'IDOL — это не просто AI-инструмент. Это концепция единой операционной системы для AI-креаторов, которая объединяет создание контента, управление знаниями, публикацию, поиск клиентов и взаимодействие внутри сообщества в рамках одной платформы.' 
+                : 'IDOL is not just an AI tool. It is a concept of a unified operating system for AI creators that combines content creation, knowledge management, publishing, finding clients, and community interaction within a single platform.'}
+            </p>
+          </div>
+
+          <div className="flex-1 w-full mt-12 md:mt-0 relative z-10 flex justify-center md:justify-end">
+              {/* Abstract Illustration */}
+              <div className="w-full max-w-[250px] h-[250px] md:max-w-[300px] md:h-[300px] relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-[40px] group-hover:blur-[60px] transition-all duration-700"></div>
+                
+                {/* Main floating shape */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-48 md:h-48 bg-gradient-to-tr from-blue-600 to-purple-500 rounded-[2rem] rotate-12 group-hover:rotate-45 transition-all duration-700 shadow-2xl flex items-center justify-center border border-white/10">
+                   <svg className="w-12 h-12 md:w-16 md:h-16 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                </div>
+                
+                {/* Orbiting element 1 */}
+                <div className="absolute top-[10%] right-[10%] w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-xl group-hover:-translate-y-4 group-hover:translate-x-4 transition-transform duration-700 flex items-center justify-center delay-100">
+                  <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-blue-400/50"></div>
+                </div>
+                
+                {/* Orbiting element 2 */}
+                <div className="absolute bottom-[15%] left-[10%] w-14 h-14 md:w-16 md:h-16 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 shadow-xl group-hover:translate-y-4 group-hover:-translate-x-4 transition-transform duration-700 flex items-center justify-center rotate-[-15deg] group-hover:rotate-0 delay-200">
+                  <div className="w-5 h-1 md:w-6 md:h-1 rounded-full bg-purple-400/50"></div>
+                </div>
+              </div>
+          </div>
         </motion.div>
       </section>
 
