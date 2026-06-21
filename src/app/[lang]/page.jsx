@@ -39,9 +39,9 @@ export default async function Home({ params }) {
       
       <Navbar t={t} lang={lang} />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-24">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-24 md:pt-28 lg:pt-32 pb-16 md:pb-24">
         
-        <section className="min-h-[80vh] grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center pt-12 md:pt-16 pb-16">
+        <section className="min-h-[85vh] lg:min-h-[80vh] flex flex-col justify-center lg:grid lg:grid-cols-12 gap-12 lg:gap-16 lg:items-center pt-4 lg:pt-0 pb-10 lg:pb-16 w-full">
           
           {/* Left Column (Text Content) */}
           <div className="lg:col-span-6 flex flex-col items-start w-full">
@@ -238,8 +238,8 @@ export default async function Home({ params }) {
                       <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none z-0">
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full md:group-hover/item:animate-shimmer-once" />
                       </div>
-                      <div className="absolute left-0 top-8 bottom-0 w-px bg-zinc-800 md:hidden z-10" />
-                      <div className="absolute left-[-4px] top-8 w-2 h-2 rounded-full bg-blue-500 md:hidden z-10" />
+                      <div className="absolute left-0 top-8 bottom-0 w-px bg-zinc-800 z-10" />
+                      <div className="absolute left-[-4px] top-8 w-2 h-2 rounded-full bg-blue-500 z-10" />
 
                       <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
                         <div>
