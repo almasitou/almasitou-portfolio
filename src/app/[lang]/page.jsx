@@ -215,8 +215,8 @@ export default async function Home({ params }) {
         </section>
 
         <section id="experience" className="py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-            <div className="lg:col-span-1">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 xl:gap-16">
+            <div className="xl:col-span-1">
               <Reveal delay={0.1}>
                 <h2 className="font-heading text-4xl font-bold tracking-tight sticky top-32">
                   {t.experience.title}
@@ -224,7 +224,7 @@ export default async function Home({ params }) {
               </Reveal>
             </div>
             
-            <div className="lg:col-span-2 space-y-2 md:space-y-4 group/list">
+            <div className="xl:col-span-2 space-y-2 md:space-y-4 group/list">
               {experiences.map((exp, i) => {
                 const rawAchievements = getS(exp, 'achievements');
                 let achievements = [];
