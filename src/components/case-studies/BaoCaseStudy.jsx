@@ -412,22 +412,22 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
               <p className="text-zinc-400 text-lg md:text-xl mb-10 max-w-xl leading-relaxed">
                 {isRu ? 'Мобильное приложение BAO доступно для скачивания в Google Play. Вы можете самостоятельно протестировать удобство интерфейса, ознакомиться с меню и заказать доставку прямо сейчас.' : 'The BAO mobile app is available for download on Google Play. You can test the convenience of the interface, explore the menu, and order delivery right now.'}
               </p>
-              <div className="flex flex-row flex-wrap gap-4 mt-2">
+              <div className="flex flex-row flex-nowrap items-center gap-2 sm:gap-4 mt-2 w-full">
                 <a 
                   href="https://play.google.com/store/apps/details?id=kz.osu.bao&pcampaignid=web_share" 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="inline-block"
+                  className="inline-block shrink-0"
                 >
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-12 md:h-16 hover:scale-105 transition-transform drop-shadow-xl" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-10 sm:h-12 md:h-16 w-auto object-contain hover:scale-105 transition-transform drop-shadow-xl" />
                 </a>
                 <a 
                   href="https://apps.apple.com/kz/app/bao-noodles-sushi-bar/id6753782905" 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="inline-block"
+                  className="inline-block shrink-0"
                 >
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" className="h-12 md:h-16 hover:scale-105 transition-transform drop-shadow-xl" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" className="h-10 sm:h-12 md:h-16 w-auto object-contain hover:scale-105 transition-transform drop-shadow-xl" />
                 </a>
               </div>
             </div>

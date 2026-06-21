@@ -236,7 +236,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full flex-1 flex justify-center items-start pt-8 overflow-hidden">
-                  <img src="/uploads/taza/Главная.png" alt="Catalog" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[280px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                  <img src="/uploads/taza/Главная.png" alt="Catalog" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Каталог товаров' : 'Product Catalog'}</div>
@@ -259,7 +259,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full flex-1 flex justify-center items-start pt-8 overflow-hidden">
-                  <img src="/uploads/taza/Корзина.png" alt="Order" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[280px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                  <img src="/uploads/taza/Корзина.png" alt="Order" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Оформление заказа' : 'Place Order'}</div>
@@ -282,7 +282,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full flex-1 flex justify-center items-start pt-8 overflow-hidden">
-                  <img src="/uploads/taza/Страница заказа.png" alt="Tracking" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[280px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                  <img src="/uploads/taza/Страница заказа.png" alt="Tracking" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Отслеживание заказа' : 'Track Order'}</div>
@@ -409,22 +409,22 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
               <p className="text-zinc-400 text-lg md:text-xl mb-10 max-w-xl leading-relaxed">
                 {isRu ? 'Мобильное приложение Taza доступно для скачивания в Google Play. Вы можете самостоятельно протестировать удобство B2B платформы, ознакомиться с каталогом и оценить интерфейс прямо сейчас.' : 'The Taza mobile app is available for download on Google Play. You can test the convenience of the B2B platform, explore the catalog, and evaluate the interface right now.'}
               </p>
-              <div className="flex flex-row flex-wrap gap-4 mt-2">
+              <div className="flex flex-row flex-nowrap items-center gap-2 sm:gap-4 mt-2 w-full">
                 <a 
                   href="https://play.google.com/store/apps/details?id=com.daladev.tazab2b&hl=ru" 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="inline-block"
+                  className="inline-block shrink-0"
                 >
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-12 md:h-16 hover:scale-105 transition-transform drop-shadow-xl" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-10 sm:h-12 md:h-16 w-auto object-contain hover:scale-105 transition-transform drop-shadow-xl" />
                 </a>
                 <a 
                   href="https://apps.apple.com/kz/app/taza-b2b/id6502633786" 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="inline-block"
+                  className="inline-block shrink-0"
                 >
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" className="h-12 md:h-16 hover:scale-105 transition-transform drop-shadow-xl" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" className="h-10 sm:h-12 md:h-16 w-auto object-contain hover:scale-105 transition-transform drop-shadow-xl" />
                 </a>
               </div>
             </div>
@@ -438,11 +438,11 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   className="w-full h-auto rounded-[2rem] md:rounded-[2.5rem] border-[6px] border-zinc-800 shadow-2xl relative z-10 transform transition-transform duration-700 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4" 
                 />
                 {/* Floating secondary screen */}
-                <div className="absolute -left-8 md:-left-16 bottom-12 md:bottom-20 w-[60%] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border-[4px] border-zinc-800 shadow-2xl z-20 transform transition-transform duration-700 group-hover:-translate-x-4 group-hover:-translate-y-2 group-[.is-active]:-translate-x-4 group-[.is-active]:-translate-y-2 delay-100">
+                <div className="absolute -left-8 md:-left-16 bottom-12 md:bottom-20 w-[60%] aspect-square rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border-[4px] border-zinc-800 shadow-2xl z-20 transform transition-transform duration-700 group-hover:-translate-x-4 group-hover:-translate-y-2 group-[.is-active]:-translate-x-4 group-[.is-active]:-translate-y-2 delay-100">
                   <img 
                     src="/uploads/taza/Корзина.png" 
                     alt="Taza App Cart" 
-                    className="w-full h-auto" 
+                    className="w-full h-full object-cover object-top" 
                   />
                 </div>
               </div>

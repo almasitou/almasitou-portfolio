@@ -278,7 +278,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-white text-left">{isRu ? 'Пользовательский сценарий' : 'User Flow'}</motion.h2>
           
-          <div className="flex flex-col md:flex-row md:flex-wrap items-center md:justify-start gap-y-3 md:gap-y-6 gap-x-2 md:gap-x-4 relative z-10 w-full">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap items-center sm:justify-start gap-y-3 sm:gap-y-6 gap-x-2 sm:gap-x-4 relative z-10 w-full">
             {[
               { n: '1', t: isRu ? 'Выбор экипировки' : 'Select Equipment' },
               { n: '2', t: isRu ? 'Выбор даты аренды' : 'Select Rental Date' },
@@ -295,7 +295,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                   </div>
                 </motion.div>
                 {i < 4 && (
-                  <motion.div variants={fastFadeInUp} className="text-zinc-600 flex items-center justify-center rotate-90 md:rotate-0 shrink-0">
+                  <motion.div variants={fastFadeInUp} className="text-zinc-600 flex items-center justify-center rotate-90 sm:rotate-0 shrink-0">
                     <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                   </motion.div>
                 )}
@@ -386,7 +386,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                           <img 
                             src={imgSrc} 
                             alt={`${scr.t} screen ${idx + 1}`} 
-                            className="relative z-10 w-full h-auto object-contain drop-shadow-2xl transition-transform duration-500 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4" 
+                            className="w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto object-contain object-top drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2" 
                           />
                         </div>
                       ))}
@@ -408,7 +408,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                         <img 
                           src={imgSrc} 
                           alt={`${scr.t} screen ${idx + 1}`} 
-                          className="relative z-10 w-full h-auto object-contain drop-shadow-2xl transition-transform duration-500 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4" 
+                          className="w-[60%] max-w-[240px] sm:max-w-[300px] md:max-w-[120px] lg:max-w-[140px] xl:max-w-none xl:w-[35%] object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-transform duration-700 translate-y-0 group-hover:-translate-y-[10px] group-[.is-active]:-translate-y-[10px]" 
                         />
                       </div>
                     ))}

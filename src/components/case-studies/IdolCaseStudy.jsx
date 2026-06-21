@@ -423,7 +423,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
             {isRu ? 'От идеи до публикации' : 'From Idea to Publication'}
           </motion.h2>
 
-          <div className="flex flex-col md:flex-row md:flex-wrap items-center md:justify-start gap-y-3 md:gap-y-4 gap-x-2 md:gap-x-3 relative z-10 w-full">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap items-center sm:justify-start gap-y-3 sm:gap-y-4 gap-x-2 sm:gap-x-3 relative z-10 w-full">
             {['Идея', 'Создание контента', 'Планирование публикаций', 'Публикация во всех соцсетях', 'Аналитика', 'Рекомендации AI-ассистента'].map((step, idx, arr) => (
               <React.Fragment key={idx}>
                 <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 md:px-5 md:py-3 flex items-center gap-2 md:gap-3 hover:border-zinc-700 transition-colors w-auto">
@@ -435,8 +435,8 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   </span>
                 </motion.div>
                 {idx < arr.length - 1 && (
-                  <motion.div variants={fadeInUp} className="flex text-zinc-600 shrink-0 rotate-90 md:rotate-0">
-                    <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <motion.div variants={fadeInUp} className="flex text-zinc-600 shrink-0 rotate-90 sm:rotate-0">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
                   </motion.div>

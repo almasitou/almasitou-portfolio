@@ -292,11 +292,11 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                   <p className="text-zinc-400 leading-relaxed">{ux.desc}</p>
                 </div>
                 {/* Image bottom embedded */}
-                <div className={`relative w-full flex-1 flex items-start justify-center pt-8 bg-gradient-to-t ${ux.color} overflow-hidden`}>
+                <div className={`relative w-full flex-1 flex justify-center items-start pt-8 bg-gradient-to-t ${ux.color} overflow-hidden`}>
                   <img 
                     src={ux.img} 
                     alt={ux.title} 
-                    className="w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[280px] xl:max-w-none xl:w-[60%] h-auto object-contain object-top drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 group-data-[active=true]:-translate-y-2" 
+                    className="w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto object-contain object-top drop-shadow-2xl translate-y-12 transition-transform duration-700 group-hover:translate-y-8 group-[.is-active]:translate-y-8 group-data-[active=true]:translate-y-8" 
                   />
                 </div>
               </motion.div>
@@ -328,7 +328,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                   <img 
                     src="/uploads/kaspi/ticket.png?v=3" 
                     alt="Ticket Details" 
-                    className="w-[60%] max-w-[240px] sm:max-w-[300px] md:max-w-[220px] xl:max-w-none xl:w-[35%] translate-y-0 md:-translate-y-[100px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-transform duration-700 group-hover:-translate-y-[10px] group-[.is-active]:-translate-y-[10px] md:group-hover:-translate-y-[110px] group-[.is-active]:-translate-y-[110px] group-data-[active=true]:-translate-y-[10px] md:group-data-[active=true]:-translate-y-[110px]"
+                    className="w-[60%] max-w-[240px] sm:max-w-[300px] md:max-w-[120px] lg:max-w-[140px] xl:max-w-none xl:w-[35%] object-contain object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] translate-y-12 transition-transform duration-700 group-hover:translate-y-8 group-[.is-active]:translate-y-8 group-data-[active=true]:translate-y-8"
                   />
                 </div>
               </div>
@@ -387,7 +387,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             </div>
           </motion.div>
 
-          <div className="flex flex-col md:flex-row md:flex-wrap items-center md:justify-start gap-y-3 md:gap-y-4 gap-x-2 md:gap-x-3 lg:gap-x-4 relative z-10 w-full">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap items-center sm:justify-start gap-y-3 sm:gap-y-4 gap-x-2 sm:gap-x-3 lg:gap-x-4 relative z-10 w-full">
             {[
               { n: '1', t: isRu ? 'Главная Kaspi' : 'Kaspi Home' },
               { n: '2', t: isRu ? 'Афиша' : 'Afisha' },
@@ -405,8 +405,8 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                   <span className="text-white text-xs md:text-base font-medium whitespace-nowrap">{step.t}</span>
                 </motion.div>
                 {i < 8 && (
-                  <motion.div variants={fastFadeInUp} className="text-zinc-600 flex items-center justify-center rotate-90 md:rotate-0 shrink-0">
-                    <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                  <motion.div variants={fastFadeInUp} className="text-zinc-600 flex items-center justify-center rotate-90 sm:rotate-0 shrink-0">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                   </motion.div>
                 )}
               </React.Fragment>
