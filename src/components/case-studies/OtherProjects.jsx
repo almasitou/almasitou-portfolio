@@ -42,7 +42,7 @@ export default function OtherProjects({ projects, lang }) {
       </section>
 
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto pb-20 md:pb-32 relative z-10">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "0px" }} variants={fadeInUp} className="border-t border-zinc-800 pt-16 md:pt-24">
+        <motion.div initial="visible" animate="visible" variants={fadeInUp} className="border-t border-zinc-800 pt-16 md:pt-24">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-10 text-left">
             {isRu ? 'Мои другие проекты' : 'My Other Projects'}
           </h3>

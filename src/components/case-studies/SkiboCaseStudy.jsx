@@ -57,7 +57,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
       </div>
 
       {/* Block 1: Hero */}
-      <section className="relative min-h-screen pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full">
+      <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/19dd56222469445.67e6476145244.png" alt="Skibo Hero" className="w-full h-full object-cover object-[center_top] md:object-center" />
            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
