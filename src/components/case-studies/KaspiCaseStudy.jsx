@@ -251,7 +251,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white text-left">
             {isRu ? 'Ключевые UX-решения' : 'Key UX Decisions'}
           </motion.h2>
-          <motion.p variants={fadeInUp} className="text-xl text-zinc-400 mb-16 text-left max-w-3xl mx-auto">
+          <motion.p variants={fadeInUp} className="text-xl text-zinc-400 mb-16 text-left max-w-3xl">
             {isRu ? 'Проектирование сценария покупки билетов' : 'Designing the ticket purchase flow'}
           </motion.p>
 
@@ -369,7 +369,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
           </motion.h2>
 
           {/* Entry points highlight */}
-          <motion.div variants={fadeInUp} className="bg-zinc-900/50 backdrop-blur-md border border-zinc-800 rounded-3xl p-6 md:p-10 mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10 text-left max-w-5xl mx-auto">
+          <motion.div variants={fadeInUp} className="bg-zinc-900/50 backdrop-blur-md border border-zinc-800 rounded-3xl p-6 md:p-10 mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10 text-left w-full">
             <div className="flex-1">
               <h3 className="text-xl font-bold text-white mb-2">{isRu ? 'Точки входа' : 'Entry Points'}</h3>
               <p className="text-zinc-400">{isRu ? 'Пользователь может начать сценарий несколькими способами. Независимо от точки входа путь оформления заказа остаётся единым.' : 'The user can start the flow in several ways. Regardless of the entry point, the checkout path remains unified.'}</p>
@@ -382,7 +382,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             </div>
           </motion.div>
 
-          <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-start md:justify-center items-stretch md:items-center gap-y-2 md:gap-y-6 gap-x-3 md:gap-x-4 relative z-10 max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-start items-stretch md:items-center gap-y-2 md:gap-y-6 gap-x-3 md:gap-x-4 relative z-10 w-full">
             {[
               { n: '1', t: isRu ? 'Главная Kaspi' : 'Kaspi Home' },
               { n: '2', t: isRu ? 'Афиша' : 'Afisha' },
