@@ -330,7 +330,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                   <img 
                     src="/uploads/kaspi/ticket.png?v=3" 
                     alt="Ticket Details" 
-                    className="w-[60%] max-w-[240px] sm:max-w-[300px] md:max-w-[120px] lg:max-w-[140px] xl:max-w-none xl:w-[35%] object-contain object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] translate-y-12 transition-transform duration-700 group-hover:translate-y-8 group-[.is-active]:translate-y-8 group-data-[active=true]:translate-y-8"
+                    className="w-[60%] max-w-[240px] sm:max-w-[300px] md:max-w-[120px] lg:max-w-[140px] xl:max-w-none xl:w-[35%] object-contain object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] -translate-x-6 md:translate-x-0 translate-y-7 md:translate-y-12 transition-transform duration-700 group-hover:translate-y-3 md:group-hover:translate-y-8 group-[.is-active]:translate-y-3 md:group-[.is-active]:translate-y-8 group-data-[active=true]:translate-y-3 md:group-data-[active=true]:translate-y-8"
                   />
                 </div>
               </div>
