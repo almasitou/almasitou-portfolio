@@ -430,7 +430,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
             </div>
             
             <div className="flex-1 w-full flex justify-center lg:justify-end mt-8 lg:mt-0">
-              <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] flex justify-center pl-8 md:pl-16">
+              <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] flex justify-center pl-8 md:pl-16 -mb-[80%] md:-mb-[60%] lg:mb-0">
                 {/* Main Screen */}
                 <img 
                   src="/uploads/taza/Главная.png" 
