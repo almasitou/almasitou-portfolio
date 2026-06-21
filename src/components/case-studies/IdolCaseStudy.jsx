@@ -294,7 +294,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
             {/* Card 3: Content Planner */}
-            <motion.div variants={fadeInUp} className={`md:col-span-4 bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col shadow-xl hover:bg-zinc-800 hover:border-purple-500/30 transition-all duration-500 group  relative overflow-hidden hover:-translate-y-1`}>
+            <motion.div variants={fadeInUp} className={`md:col-span-4 bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col shadow-xl hover:bg-zinc-800 hover:border-purple-500/30 transition-all duration-500 group relative hover:-translate-y-1`}>
               <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent pointer-events-none rounded-[2rem]"></div>
               <div className="p-8 pb-4 relative z-10">
                 <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'Планировщик контента' : 'Content Planner'}</h3>
@@ -302,7 +302,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   {isRu ? 'Планирование публикаций для Instagram, TikTok, Threads, Telegram и других платформ.' : 'Planning publications for Instagram, TikTok, Threads, Telegram, and other platforms.'}
                 </p>
               </div>
-              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-48 md:h-56 overflow-hidden">
+              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-48 md:h-56">
                 <div className="w-full h-full relative transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 translate-y-4 flex items-center justify-center">
                   <div className="w-[70%] max-w-[180px] bg-zinc-800/80 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-4 shadow-2xl relative z-10">
                     <div className="flex items-center gap-3 mb-4">
@@ -362,7 +362,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
             </motion.div>
 
             {/* Card 6: Creator Marketplace (With Image) */}
-            <motion.div variants={fadeInUp} className={`md:col-span-4 bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col shadow-xl hover:bg-zinc-800 hover:border-emerald-500/30 transition-all duration-500 group  relative overflow-hidden hover:-translate-y-1`}>
+            <motion.div variants={fadeInUp} className={`md:col-span-4 bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col shadow-xl hover:bg-zinc-800 hover:border-emerald-500/30 transition-all duration-500 group relative hover:-translate-y-1`}>
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/20 to-transparent pointer-events-none rounded-[2rem]"></div>
               <div className="p-8 pb-4 relative z-10">
                 <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'Маркетплейс креаторов' : 'Creator Marketplace'}</h3>
@@ -370,7 +370,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   {isRu ? 'Пространство для взаимодействия между заказчиками и AI-креаторами.' : 'Space for interaction between clients and AI creators.'}
                 </p>
               </div>
-              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-48 md:h-56 overflow-hidden">
+              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-48 md:h-56">
                 <div className="w-full h-full relative transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 translate-y-4 flex items-center justify-center">
                   {/* Profile Card 1 */}
                   <div className="absolute z-20 w-[80%] max-w-[200px] bg-zinc-800/90 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-4 shadow-2xl transition-transform duration-700 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4 translate-y-4 animate-bounce" style={{ animationDuration: '4s' }}>
@@ -418,7 +418,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
             {isRu ? 'От идеи до публикации' : 'From Idea to Publication'}
           </motion.h2>
 
-          <div className="flex flex-col md:flex-row md:flex-wrap items-center md:justify-center gap-4 relative z-10 w-full">
+          <div className="flex flex-col md:flex-row md:flex-wrap items-center md:justify-start gap-4 relative z-10 w-full">
             {['Идея', 'Создание контента', 'Планирование публикаций', 'Публикация во всех соцсетях', 'Аналитика', 'Рекомендации AI-ассистента'].map((step, idx, arr) => (
               <React.Fragment key={idx}>
                 <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-full px-5 py-3 flex items-center gap-3 hover:border-zinc-700 transition-colors">

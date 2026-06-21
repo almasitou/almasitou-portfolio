@@ -401,21 +401,42 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
           <div className={`absolute bottom-[-50%] left-[10%] w-[40%] h-[150%] bg-[#FBBC04]/15 blur-[80px] rounded-full transform rotate-12 pointer-events-none group-hover:bg-[#FBBC04]/25 group-[.is-active]:bg-[#FBBC04]/25 transition-colors duration-700`}></div>
           <div className={`absolute bottom-[-50%] right-[10%] w-[40%] h-[150%] bg-[#4285F4]/15 blur-[80px] rounded-full transform -rotate-12 pointer-events-none group-hover:bg-[#4285F4]/25 group-[.is-active]:bg-[#4285F4]/25 transition-colors duration-700`}></div>
 
-          <div className="relative z-10 flex flex-col items-start">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              {isRu ? 'Оцените приложение вживую' : 'Try the app live'}
-            </h2>
-            <p className="text-zinc-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-              {isRu ? 'Мобильное приложение Taza доступно для скачивания в Google Play. Вы можете самостоятельно протестировать удобство B2B платформы, ознакомиться с каталогом и оценить интерфейс прямо сейчас.' : 'The Taza mobile app is available for download on Google Play. You can test the convenience of the B2B platform, explore the catalog, and evaluate the interface right now.'}
-            </p>
-            <a 
-              href="https://play.google.com/store/apps/details?id=com.daladev.tazab2b&hl=ru" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="inline-block mt-4"
-            >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-16 md:h-20 hover:scale-105 transition-transform drop-shadow-xl" />
-            </a>
+          <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+            <div className="flex-1 flex flex-col items-start w-full">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                {isRu ? 'Оцените приложение вживую' : 'Try the app live'}
+              </h2>
+              <p className="text-zinc-400 text-lg md:text-xl mb-10 max-w-xl leading-relaxed">
+                {isRu ? 'Мобильное приложение Taza доступно для скачивания в Google Play. Вы можете самостоятельно протестировать удобство B2B платформы, ознакомиться с каталогом и оценить интерфейс прямо сейчас.' : 'The Taza mobile app is available for download on Google Play. You can test the convenience of the B2B platform, explore the catalog, and evaluate the interface right now.'}
+              </p>
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.daladev.tazab2b&hl=ru" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="inline-block mt-2"
+              >
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-16 md:h-20 hover:scale-105 transition-transform drop-shadow-xl" />
+              </a>
+            </div>
+            
+            <div className="flex-1 w-full flex justify-center lg:justify-end mt-8 lg:mt-0">
+              <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] flex justify-center pl-8 md:pl-16">
+                {/* Main Screen */}
+                <img 
+                  src="/uploads/taza/Главная.png" 
+                  alt="Taza App Home" 
+                  className="w-full h-auto rounded-[2rem] md:rounded-[2.5rem] border-[6px] border-zinc-800 shadow-2xl relative z-10 transform transition-transform duration-700 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4" 
+                />
+                {/* Floating secondary screen */}
+                <div className="absolute -left-8 md:-left-16 bottom-12 md:bottom-20 w-[60%] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border-[4px] border-zinc-800 shadow-2xl z-20 transform transition-transform duration-700 group-hover:-translate-x-4 group-hover:-translate-y-2 group-[.is-active]:-translate-x-4 group-[.is-active]:-translate-y-2 delay-100">
+                  <img 
+                    src="/uploads/taza/Корзина.png" 
+                    alt="Taza App Cart" 
+                    className="w-full h-auto" 
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </section>
