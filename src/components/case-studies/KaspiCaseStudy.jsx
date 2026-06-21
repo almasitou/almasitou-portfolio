@@ -125,7 +125,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: isRu ? 'Миллионы пользователей' : 'Millions of Users', icon: '👥', desc: isRu ? 'Использование существующей аудитории Kaspi без необходимости привлекать пользователей с нуля.' : 'Utilizing Kaspi’s existing audience without needing to acquire users from scratch.' },
               { title: isRu ? 'Встроенная оплата' : 'Built-in Payment', icon: '💳', desc: isRu ? 'Покупка билетов через привычные платёжные сценарии экосистемы.' : 'Buying tickets through familiar payment flows within the ecosystem.' },
@@ -387,7 +387,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             </div>
           </motion.div>
 
-          <div className="flex flex-col sm:flex-row sm:flex-wrap items-center sm:justify-start gap-y-3 sm:gap-y-4 gap-x-2 sm:gap-x-3 lg:gap-x-4 relative z-10 w-full">
+          <div className="flex flex-col sm:flex-row sm:flex-nowrap sm:overflow-x-auto sm:pb-4 items-center sm:justify-start gap-y-3 sm:gap-y-4 gap-x-2 sm:gap-x-3 lg:gap-x-4 relative z-10 w-full no-scrollbar">
             {[
               { n: '1', t: isRu ? 'Главная Kaspi' : 'Kaspi Home' },
               { n: '2', t: isRu ? 'Афиша' : 'Afisha' },
@@ -464,7 +464,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
           </div>
 
           {/* Screens Grid */}
-          <motion.div variants={fadeInUp} className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 items-start">
+          <motion.div variants={fadeInUp} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 items-start">
             {[
               "Services.png", "Search in main page.png", "Loader.png", "Main page of Afisha.png",
               "Search results.png", "Movie's page_ tickets_ sort time.png", "Movie's page_ tickets_ sort time-1.png",
@@ -481,7 +481,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                 className="col-span-2 md:col-span-4 relative group cursor-pointer w-full h-32 md:h-48 overflow-hidden rounded-t-3xl" 
                 onClick={() => setShowAllScreenshots(true)}
               >
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full h-full pointer-events-none">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full h-full pointer-events-none">
                   {[
                     "Search results.png", "Movie's page_ tickets_ sort time.png", "Movie's page_ tickets_ sort time-1.png",
                     "Movie's page_ feadback.png"
@@ -522,7 +522,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
           
           <div className="flex-[1.5] text-left relative z-10 pr-0 md:pr-12">
             <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              {isRu ? 'Kaspi Афиша — это не просто интерфейс покупки билетов.' : 'Kaspi Afisha is not just a ticket purchasing interface.'}
+              {isRu ? 'Kaspi Афиша — это не просто интерфейс покупки билетов' : 'Kaspi Afisha is not just a ticket purchasing interface'}
             </h3>
             <p className="text-zinc-300 text-lg md:text-2xl leading-relaxed">
               {isRu ? 'Это концепция нового сервиса внутри экосистемы Kaspi, построенная вокруг масштабируемого сценария покупки мероприятий различных категорий через единый пользовательский опыт.' : 'It is a concept for a new service within the Kaspi ecosystem, built around a scalable event purchase scenario across various categories through a unified user experience.'}
@@ -551,9 +551,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                 {/* Unified Checkout (Center) */}
                 <div className="absolute z-30 w-36 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 rounded-3xl p-4 shadow-[0_0_30px_rgba(239,68,68,0.2)] flex flex-col transition-transform duration-700 group-hover:scale-110 translate-x-0">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center shadow-lg shadow-red-500/30 overflow-hidden">
-                      <span className="text-white font-bold text-[11px] tracking-tighter">Kaspi</span>
-                    </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Kaspi.kz_logo.svg" alt="Kaspi.kz" className="h-4 object-contain brightness-0 invert" />
                     <div className="h-2.5 bg-zinc-600 rounded w-16"></div>
                   </div>
                   <div className="space-y-2 mb-4">

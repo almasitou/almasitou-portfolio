@@ -339,7 +339,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
           </div>
 
           {/* Final Screens Grid */}
-          <motion.div variants={fadeInUp} className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 items-start pt-8">
+          <motion.div variants={fadeInUp} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 items-start pt-8">
             {[
               'main.png', 
               'search.png', 
@@ -357,7 +357,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
                 onClick={() => { setShowAllScreenshots(true); triggerAnimation('anim_0'); }}
                 tabIndex="0"
               >
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full h-full pointer-events-none">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full h-full pointer-events-none">
                   {[
                     'cart.png', 
                     'check out - delivery.png', 

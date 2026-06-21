@@ -47,7 +47,7 @@ export default function OtherProjects({ projects, lang }) {
             {isRu ? 'Мои другие проекты' : 'My Other Projects'}
           </h3>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project) => {
             const getSlug = (p) => {
               const title = (p.title || p.titleRu || '').toLowerCase();
