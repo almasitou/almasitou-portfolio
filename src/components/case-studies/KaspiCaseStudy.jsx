@@ -382,7 +382,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             </div>
           </motion.div>
 
-          <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-start items-stretch md:items-center gap-y-2 md:gap-y-6 gap-x-3 md:gap-x-4 relative z-10 w-full">
+          <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-start items-stretch md:items-center gap-y-2 md:gap-y-4 gap-x-2 md:gap-x-2 lg:gap-x-3 relative z-10 w-full">
             {[
               { n: '1', t: isRu ? 'Главная Kaspi' : 'Kaspi Home' },
               { n: '2', t: isRu ? 'Афиша' : 'Afisha' },
@@ -395,13 +395,13 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
               { n: '9', t: isRu ? 'Маршрут и календарь' : 'Route & Calendar' },
             ].map((step, i) => (
               <React.Fragment key={i}>
-                <motion.div variants={fastFadeInUp} className="bg-zinc-900 px-6 py-4 md:py-5 rounded-2xl md:rounded-[2rem] border border-zinc-800 flex items-center justify-center md:justify-start gap-4 shadow-lg hover:border-zinc-700 transition-colors w-full md:w-auto">
-                  <span className="text-red-500 font-mono text-xl md:text-2xl font-bold">{step.n}</span>
-                  <span className="text-white text-base md:text-lg font-medium">{step.t}</span>
+                <motion.div variants={fastFadeInUp} className="bg-zinc-900 px-4 md:px-5 py-3 md:py-4 rounded-2xl md:rounded-[1.5rem] border border-zinc-800 flex items-center justify-center md:justify-start gap-2 md:gap-3 shadow-lg hover:border-zinc-700 transition-colors w-full md:w-auto">
+                  <span className="text-red-500 font-mono text-lg md:text-xl font-bold">{step.n}</span>
+                  <span className="text-white text-sm md:text-base font-medium whitespace-nowrap">{step.t}</span>
                 </motion.div>
                 {i < 8 && (
                   <motion.div variants={fastFadeInUp} className="text-zinc-600 hidden md:flex items-center justify-center">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                   </motion.div>
                 )}
                 {i < 8 && (
