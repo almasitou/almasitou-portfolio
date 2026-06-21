@@ -236,7 +236,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full flex-1 flex justify-center items-start pt-8 overflow-hidden">
-                  <img src="/uploads/taza/Главная.png" alt="Catalog" className={`w-[70%] md:w-[40%] lg:w-[30%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                  <img src="/uploads/taza/Главная.png" alt="Catalog" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[280px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Каталог товаров' : 'Product Catalog'}</div>
@@ -259,7 +259,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full flex-1 flex justify-center items-start pt-8 overflow-hidden">
-                  <img src="/uploads/taza/Корзина.png" alt="Order" className={`w-[70%] md:w-[40%] lg:w-[30%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                  <img src="/uploads/taza/Корзина.png" alt="Order" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[280px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Оформление заказа' : 'Place Order'}</div>
@@ -282,7 +282,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full flex-1 flex justify-center items-start pt-8 overflow-hidden">
-                  <img src="/uploads/taza/Страница заказа.png" alt="Tracking" className={`w-[70%] md:w-[40%] lg:w-[30%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                  <img src="/uploads/taza/Страница заказа.png" alt="Tracking" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[280px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Отслеживание заказа' : 'Track Order'}</div>

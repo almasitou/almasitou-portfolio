@@ -296,7 +296,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                   <img 
                     src={ux.img} 
                     alt={ux.title} 
-                    className="w-[70%] md:w-[45%] lg:w-[40%] xl:w-[60%] h-auto object-contain object-top drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 group-data-[active=true]:-translate-y-2" 
+                    className="w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[280px] xl:max-w-none xl:w-[60%] h-auto object-contain object-top drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 group-data-[active=true]:-translate-y-2" 
                   />
                 </div>
               </motion.div>
@@ -328,7 +328,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                   <img 
                     src="/uploads/kaspi/ticket.png?v=3" 
                     alt="Ticket Details" 
-                    className="w-[60%] md:w-[25%] lg:w-[20%] xl:w-[35%] translate-y-0 md:-translate-y-[100px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-transform duration-700 group-hover:-translate-y-[10px] group-[.is-active]:-translate-y-[10px] md:group-hover:-translate-y-[110px] group-[.is-active]:-translate-y-[110px] group-data-[active=true]:-translate-y-[10px] md:group-data-[active=true]:-translate-y-[110px]"
+                    className="w-[60%] max-w-[240px] sm:max-w-[300px] md:max-w-[220px] xl:max-w-none xl:w-[35%] translate-y-0 md:-translate-y-[100px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-transform duration-700 group-hover:-translate-y-[10px] group-[.is-active]:-translate-y-[10px] md:group-hover:-translate-y-[110px] group-[.is-active]:-translate-y-[110px] group-data-[active=true]:-translate-y-[10px] md:group-data-[active=true]:-translate-y-[110px]"
                   />
                 </div>
               </div>
