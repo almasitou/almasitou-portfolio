@@ -296,7 +296,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                   <img 
                     src={ux.img} 
                     alt={ux.title} 
-                    className="w-full max-w-[80%] md:max-w-[70%] h-auto object-contain object-top drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 group-data-[active=true]:-translate-y-2" 
+                    className="w-[70%] md:w-[45%] lg:w-[40%] xl:w-[60%] h-auto object-contain object-top drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 group-data-[active=true]:-translate-y-2" 
                   />
                 </div>
               </motion.div>
@@ -328,7 +328,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                   <img 
                     src="/uploads/kaspi/ticket.png?v=3" 
                     alt="Ticket Details" 
-                    className="w-[50%] md:w-[48%] translate-y-0 md:-translate-y-[100px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-transform duration-700 group-hover:-translate-y-[10px] group-[.is-active]:-translate-y-[10px] md:group-hover:-translate-y-[110px] group-[.is-active]:-translate-y-[110px] group-data-[active=true]:-translate-y-[10px] md:group-data-[active=true]:-translate-y-[110px]"
+                    className="w-[60%] md:w-[25%] lg:w-[20%] xl:w-[35%] translate-y-0 md:-translate-y-[100px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-transform duration-700 group-hover:-translate-y-[10px] group-[.is-active]:-translate-y-[10px] md:group-hover:-translate-y-[110px] group-[.is-active]:-translate-y-[110px] group-data-[active=true]:-translate-y-[10px] md:group-data-[active=true]:-translate-y-[110px]"
                   />
                 </div>
               </div>
@@ -387,7 +387,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             </div>
           </motion.div>
 
-          <div className="flex flex-row flex-wrap justify-center md:justify-start items-center gap-y-3 md:gap-y-4 gap-x-2 md:gap-x-3 lg:gap-x-4 relative z-10 w-full">
+          <div className="flex flex-row flex-wrap justify-start items-center gap-y-3 md:gap-y-4 gap-x-2 md:gap-x-3 lg:gap-x-4 relative z-10 w-full">
             {[
               { n: '1', t: isRu ? 'Главная Kaspi' : 'Kaspi Home' },
               { n: '2', t: isRu ? 'Афиша' : 'Afisha' },
