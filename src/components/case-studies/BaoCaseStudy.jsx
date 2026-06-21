@@ -46,7 +46,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
       </div>
 
       {/* Block 1: Hero */}
-      <section className="relative min-h-screen md:min-h-[90vh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full">
+      <section className="relative min-h-screen pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full">
         <div className="absolute inset-0 w-full h-full z-0">
            <img src="/bao-cover.jpg" alt="BAO Hero" className="w-full h-full object-cover object-[center_top] md:object-center" />
            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
@@ -199,7 +199,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full mt-auto flex justify-center items-start">
-                  <img src="/uploads/bao/foods page.png" alt="Dish Selection" className={`w-[60%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                  <img src="/uploads/bao/foods page.png" alt="Dish Selection" className={`w-[55%] sm:w-[40%] md:w-[35%] lg:w-[30%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Выбрать блюдо' : 'Select Dish'}</div>
@@ -222,7 +222,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full mt-auto flex justify-center items-start">
-                  <img src="/uploads/bao/cart.png" alt="Order Formation" className={`w-[60%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                  <img src="/uploads/bao/cart.png" alt="Order Formation" className={`w-[55%] sm:w-[40%] md:w-[35%] lg:w-[30%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Сформировать заказ' : 'Form Order'}</div>
@@ -245,7 +245,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full mt-auto flex justify-center items-start">
-                  <img src="/uploads/bao/check out - delivery.png" alt="Delivery Checkout" className={`w-[60%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                  <img src="/uploads/bao/check out - delivery.png" alt="Delivery Checkout" className={`w-[55%] sm:w-[40%] md:w-[35%] lg:w-[30%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Оформить доставку' : 'Checkout Delivery'}</div>

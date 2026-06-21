@@ -57,7 +57,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
       </div>
 
       {/* Block 1: Hero */}
-      <section className="relative min-h-screen md:min-h-[90vh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full">
+      <section className="relative min-h-screen pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full">
         <div className="absolute inset-0 w-full h-full z-0">
            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/19dd56222469445.67e6476145244.png" alt="Skibo Hero" className="w-full h-full object-cover object-[center_top] md:object-center" />
            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
@@ -228,9 +228,9 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
       {/* Block 4: Исследование */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
-            <div className="flex-[0.8] space-y-8 flex flex-col justify-start pt-4 lg:pt-10 text-left">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white">{isRu ? 'Исследование' : 'Research'}</h2>
+          <div className="flex flex-col xl:flex-row gap-12 xl:gap-16 items-start">
+            <div className="flex-[0.8] space-y-8 flex flex-col justify-start pt-4 xl:pt-10 text-left">
+              <h2 className="text-3xl md:text-5xl xl:text-6xl font-bold text-white">{isRu ? 'Исследование' : 'Research'}</h2>
               <p className="text-zinc-300 text-base md:text-xl leading-relaxed">
                 {isRu 
                   ? 'Перед проектированием я изучил сервисы аренды и маркетплейсы с похожей логикой.' 
@@ -278,7 +278,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-white text-left">{isRu ? 'Пользовательский сценарий' : 'User Flow'}</motion.h2>
           
-          <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-start items-stretch md:items-center gap-y-2 md:gap-y-6 gap-x-3 md:gap-x-4 relative z-10 w-full">
+          <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-center items-center gap-y-2 md:gap-y-6 gap-x-3 md:gap-x-4 relative z-10">
             {[
               { n: '1', t: isRu ? 'Выбор экипировки' : 'Select Equipment' },
               { n: '2', t: isRu ? 'Выбор даты аренды' : 'Select Rental Date' },
@@ -469,18 +469,18 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           
           <motion.div 
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
-            className="relative md:rounded-[3rem] bg-transparent md:bg-zinc-900 md:border md:border-zinc-800 overflow-hidden flex flex-col md:flex-row items-stretch md:min-h-[500px] md:shadow-2xl"
+            className="relative md:rounded-[3rem] bg-transparent md:bg-zinc-900 md:border md:border-zinc-800 overflow-hidden flex flex-col xl:flex-row items-stretch md:min-h-[500px] md:shadow-2xl"
           >
-            <div className="py-6 md:p-16 lg:p-20 flex-1 relative z-20 flex flex-col justify-center md:bg-zinc-900 text-left">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 md:mb-8 text-white">{isRu ? 'Проверка решений' : 'Validating Solutions'}</h2>
+            <div className="py-6 md:p-16 xl:p-20 flex-1 relative z-20 flex flex-col justify-center md:bg-zinc-900 text-left">
+              <h2 className="text-3xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-6 md:mb-8 text-white">{isRu ? 'Проверка решений' : 'Validating Solutions'}</h2>
               <div className="text-zinc-300 text-base md:text-xl leading-relaxed space-y-4 md:space-y-6">
                 <p>{isRu ? 'После создания интерактивного прототипа были проведены пользовательские тестирования с потенциальными клиентами сервиса.' : 'After creating an interactive prototype, we conducted user testing with potential service clients.'}</p>
                 <p>{isRu ? 'Полученная обратная связь позволила уточнить структуру экранов, упростить отдельные шаги сценария аренды и проверить понятность ключевых функций до начала разработки.' : 'The feedback allowed us to refine screen structures, simplify specific rental flow steps, and verify the clarity of key features before development started.'}</p>
                 <p>{isRu ? 'Цель тестирования заключалась в том, чтобы убедиться, что пользователи могут самостоятельно пройти путь от выбора экипировки до завершения бронирования без дополнительных объяснений.' : 'The goal of the testing was to ensure users could independently navigate from selecting equipment to completing the booking without additional explanations.'}</p>
               </div>
             </div>
-            <div className="flex-1 w-full relative min-h-[400px] md:min-h-full mt-4 md:mt-0">
-              <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-900 to-transparent z-10 pointer-events-none hidden md:block" />
+            <div className="flex-1 w-full relative min-h-[400px] xl:min-h-full mt-4 xl:mt-0">
+              <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-900 to-transparent z-10 pointer-events-none hidden xl:block" />
               <img src="/uploads/skibo/ux_test.jpeg" alt="UX Testing session" className="absolute inset-0 w-full h-full object-cover rounded-[3rem] md:rounded-none" />
             </div>
           </motion.div>

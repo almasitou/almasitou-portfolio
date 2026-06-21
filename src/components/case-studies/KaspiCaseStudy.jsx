@@ -52,7 +52,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
       </div>
 
       {/* Block 1: Hero */}
-      <section className="relative min-h-screen md:min-h-[90vh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full">
+      <section className="relative min-h-screen pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full">
         <div className="absolute inset-0 w-full h-full z-0">
            <img src="/kaspi-cover.jpg" alt="Kaspi Hero" className="w-full h-full object-cover object-[center_top] md:object-center" />
            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
@@ -541,8 +541,10 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                 
                 {/* Connection Paths */}
                 <svg className="absolute inset-0 w-full h-full z-10 pointer-events-none opacity-50 transition-all duration-700 group-hover:opacity-80" viewBox="0 0 300 300">
-                  <path d="M 70 100 Q 130 100 180 150" fill="none" stroke="url(#kaspiGrad)" strokeWidth="2" strokeDasharray="4 4" className="animate-pulse" />
-                  <path d="M 60 180 Q 130 180 180 150" fill="none" stroke="url(#kaspiGrad)" strokeWidth="2" strokeDasharray="4 4" className="animate-pulse" style={{ animationDelay: '1s' }} />
+                  <path d="M 80 80 Q 115 115 150 150" fill="none" stroke="url(#kaspiGrad)" strokeWidth="2" strokeDasharray="4 4" className="animate-pulse" />
+                  <path d="M 80 220 Q 115 185 150 150" fill="none" stroke="url(#kaspiGrad)" strokeWidth="2" strokeDasharray="4 4" className="animate-pulse" style={{ animationDelay: '0.5s' }} />
+                  <path d="M 220 80 Q 185 115 150 150" fill="none" stroke="url(#kaspiGrad)" strokeWidth="2" strokeDasharray="4 4" className="animate-pulse" style={{ animationDelay: '1s' }} />
+                  <path d="M 220 220 Q 185 185 150 150" fill="none" stroke="url(#kaspiGrad)" strokeWidth="2" strokeDasharray="4 4" className="animate-pulse" style={{ animationDelay: '1.5s' }} />
                   <defs>
                     <linearGradient id="kaspiGrad" x1="0" y1="0" x2="1" y2="0">
                       <stop offset="0%" stopColor="rgba(239,68,68,0.2)" />
@@ -551,11 +553,11 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                   </defs>
                 </svg>
 
-                {/* Unified Checkout (Center/Right) */}
-                <div className="absolute z-30 w-36 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 rounded-3xl p-4 shadow-[0_0_30px_rgba(239,68,68,0.2)] flex flex-col transition-transform duration-700 group-hover:scale-110 translate-x-8 md:translate-x-12">
+                {/* Unified Checkout (Center) */}
+                <div className="absolute z-30 w-36 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 rounded-3xl p-4 shadow-[0_0_30px_rgba(239,68,68,0.2)] flex flex-col transition-transform duration-700 group-hover:scale-110 translate-x-0">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center shadow-lg shadow-red-500/30">
-                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    <div className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center shadow-lg shadow-red-500/30 overflow-hidden">
+                      <span className="text-white font-bold text-[11px] tracking-tighter">Kaspi</span>
                     </div>
                     <div className="h-2.5 bg-zinc-600 rounded w-16"></div>
                   </div>
@@ -575,7 +577,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                 </div>
 
                 {/* Category 1: Cinema (Top Left) */}
-                <div className="absolute z-20 w-28 bg-zinc-800/90 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-3 shadow-xl transition-all duration-700 -translate-x-16 -translate-y-12 md:-translate-x-20 md:-translate-y-16 group-hover:-translate-x-24 group-hover:-translate-y-20 group-hover:-rotate-6 animate-bounce" style={{ animationDuration: '6s' }}>
+                <div className="absolute z-20 w-28 bg-zinc-800/90 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-3 shadow-xl transition-all duration-700 -translate-x-16 -translate-y-16 md:-translate-x-24 md:-translate-y-20 group-hover:-translate-x-28 group-hover:-translate-y-24 group-hover:-rotate-6 animate-bounce" style={{ animationDuration: '6s' }}>
                   <div className="w-8 h-8 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center mb-2 border border-orange-500/30">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" /></svg>
                   </div>
@@ -584,7 +586,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                 </div>
 
                 {/* Category 2: Concerts (Bottom Left) */}
-                <div className="absolute z-20 w-32 bg-zinc-800/90 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-3 shadow-xl transition-all duration-700 -translate-x-20 translate-y-12 md:-translate-x-24 md:translate-y-16 group-hover:-translate-x-32 group-hover:translate-y-20 group-hover:rotate-3 animate-pulse" style={{ animationDuration: '4s' }}>
+                <div className="absolute z-20 w-32 bg-zinc-800/90 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-3 shadow-xl transition-all duration-700 -translate-x-16 translate-y-16 md:-translate-x-20 md:translate-y-20 group-hover:-translate-x-28 group-hover:translate-y-24 group-hover:rotate-3 animate-pulse" style={{ animationDuration: '4s' }}>
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center border border-red-500/30">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" /></svg>
@@ -594,6 +596,23 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                       <div className="h-1.5 bg-zinc-700 rounded w-2/3"></div>
                     </div>
                   </div>
+                </div>
+
+                {/* Category 3: Theater (Top Right) */}
+                <div className="absolute z-20 w-28 bg-zinc-800/90 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-3 shadow-xl transition-all duration-700 translate-x-16 -translate-y-16 md:translate-x-24 md:-translate-y-20 group-hover:translate-x-28 group-hover:-translate-y-24 group-hover:rotate-6 animate-pulse" style={{ animationDuration: '5s' }}>
+                  <div className="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center mb-2 border border-purple-500/30">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" /></svg>
+                  </div>
+                  <div className="h-2 bg-zinc-600 rounded w-16 mb-1.5"></div>
+                  <div className="h-1.5 bg-zinc-700 rounded w-10"></div>
+                </div>
+
+                {/* Category 4: Show (Bottom Right) */}
+                <div className="absolute z-20 w-24 bg-zinc-800/90 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-3 shadow-xl transition-all duration-700 translate-x-16 translate-y-16 md:translate-x-20 md:translate-y-20 group-hover:translate-x-28 group-hover:translate-y-24 group-hover:-rotate-3 animate-bounce" style={{ animationDuration: '7s' }}>
+                  <div className="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center mb-2 border border-pink-500/30">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+                  </div>
+                  <div className="h-2 bg-zinc-600 rounded w-12 mb-1.5"></div>
                 </div>
               </div>
           </div>

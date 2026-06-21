@@ -41,7 +41,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
       </div>
 
       {/* Block 1: Hero */}
-      <section className="relative min-h-screen pt-32 pb-20 md:py-32 flex flex-col items-center justify-start px-6 md:px-12 lg:px-24 w-full">
+      <section className="relative min-h-screen pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full">
         <div className="absolute inset-0 w-full h-full z-0">
            <img src="/uploads/taza/cover.jpg" alt="Taza Hero" className="w-full h-full object-cover object-center" />
            <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
