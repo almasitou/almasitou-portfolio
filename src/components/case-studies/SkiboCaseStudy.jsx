@@ -242,7 +242,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                 <div className="absolute -top-20 -right-20 w-80 h-80 bg-blue-500/10 blur-[80px] rounded-full pointer-events-none z-0"></div>
                 <h4 className="text-white font-bold text-2xl md:text-3xl mb-6 md:mb-8 relative z-10">{isRu ? 'Что мы узнали' : 'What we learned'}</h4>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10">
                   <div className="bg-zinc-900/80 border border-zinc-800 p-6 rounded-2xl hover:bg-zinc-800 transition-colors">
                     <div className="text-3xl mb-4">📏</div>
                     <h5 className="text-white text-lg font-semibold mb-2">{isRu ? 'Размер имеет значение' : 'Size matters'}</h5>
