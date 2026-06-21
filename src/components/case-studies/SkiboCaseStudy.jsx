@@ -197,7 +197,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="space-y-16">
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold text-left mb-10 md:mb-16">{isRu ? 'Цели бизнеса' : 'Business Goals'}</motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 md:gap-8">
             <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-3xl md:rounded-[2.5rem] p-6 md:p-10 hover:bg-zinc-800/80 transition-colors text-left">
               <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-500/10 text-blue-500 rounded-2xl md:rounded-3xl flex items-center justify-center mb-6 md:mb-8">
                 <svg className="w-7 h-7 md:w-8 md:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
