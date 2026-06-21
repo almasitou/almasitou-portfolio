@@ -422,7 +422,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
                   <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-12 md:h-16 hover:scale-105 transition-transform drop-shadow-xl" />
                 </a>
                 <a 
-                  href="https://apps.apple.com/kz/app/bao-доставка-еды/id1527772719" 
+                  href="https://apps.apple.com/kz/app/bao-noodles-sushi-bar/id6753782905" 
                   target="_blank" 
                   rel="noreferrer" 
                   className="inline-block"

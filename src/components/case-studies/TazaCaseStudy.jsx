@@ -419,7 +419,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-12 md:h-16 hover:scale-105 transition-transform drop-shadow-xl" />
                 </a>
                 <a 
-                  href="https://apps.apple.com/app/taza-b2b/id1552554705" 
+                  href="https://apps.apple.com/kz/app/taza-b2b/id6502633786" 
                   target="_blank" 
                   rel="noreferrer" 
                   className="inline-block"
