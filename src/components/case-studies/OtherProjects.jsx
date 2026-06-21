@@ -15,8 +15,8 @@ export default function OtherProjects({ projects, lang }) {
 
   return (
     <>
-      <section className="pt-16 pb-20 md:py-24 text-center px-6 relative flex flex-col items-center justify-center overflow-hidden w-full">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-blue-600/10 rounded-t-[100%] blur-[120px] pointer-events-none z-0"></div>
+      <section className="pt-16 pb-20 md:py-32 text-center px-6 relative flex flex-col items-center justify-center w-full">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-4xl h-[300px] md:h-[400px] bg-blue-600/15 md:bg-blue-600/10 rounded-[100%] blur-[80px] md:blur-[120px] pointer-events-none z-0"></div>
         
         <div className="relative z-10 w-full flex flex-col items-center">
           <h2 className="text-4xl md:text-7xl font-bold mb-6 md:mb-10 tracking-tight text-white max-w-3xl leading-tight">

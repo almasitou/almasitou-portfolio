@@ -182,7 +182,9 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                 <div className="hidden md:flex items-center justify-center px-2">
                   <div className="w-px h-full bg-gradient-to-b from-transparent via-zinc-700 to-transparent"></div>
                 </div>
-                <div className="flex md:hidden justify-center text-zinc-700 my-2">↓</div>
+                <div className="flex md:hidden items-center justify-center py-2 w-full">
+                  <div className="h-px w-full bg-gradient-to-r from-transparent via-zinc-700 to-transparent"></div>
+                </div>
 
                 {/* Right side: Kaspi Afisha */}
                 <div className="flex-1 flex flex-col gap-3">
