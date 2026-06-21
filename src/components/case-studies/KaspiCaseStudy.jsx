@@ -282,21 +282,21 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
               <motion.div 
                 key={i} 
                 variants={fadeInUp} 
-                className="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden flex flex-col group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:border-zinc-700 data-[active=true]:-translate-y-2 shadow-xl cursor-pointer"
+                className="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden flex flex-col group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:border-zinc-700 data-[active=true]:-translate-y-2 shadow-xl cursor-pointer min-h-[500px] md:min-h-[600px]"
                 onClick={() => triggerAnimation(`ux-${i}`)}
                 data-active={activeAnimations[`ux-${i}`] || undefined}
               >
                 {/* Content top */}
-                <div className="p-8 pb-4 flex-1">
+                <div className="p-8 pb-4 flex-none">
                   <h3 className="text-2xl font-bold text-white mb-4">{ux.title}</h3>
                   <p className="text-zinc-400 leading-relaxed">{ux.desc}</p>
                 </div>
                 {/* Image bottom embedded */}
-                <div className={`relative w-full h-[350px] md:h-[400px] mt-4 flex items-start justify-center pt-8 bg-gradient-to-t ${ux.color} overflow-hidden`}>
+                <div className={`relative w-full flex-1 flex items-start justify-center pt-8 bg-gradient-to-t ${ux.color} overflow-hidden`}>
                   <img 
                     src={ux.img} 
                     alt={ux.title} 
-                    className="w-full max-w-[60%] md:max-w-[50%] h-auto object-contain object-top drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 group-data-[active=true]:-translate-y-2" 
+                    className="w-full max-w-[80%] md:max-w-[70%] h-auto object-contain object-top drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 group-data-[active=true]:-translate-y-2" 
                   />
                 </div>
               </motion.div>
@@ -387,7 +387,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             </div>
           </motion.div>
 
-          <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-start items-stretch md:items-center gap-y-2 md:gap-y-4 gap-x-2 md:gap-x-2 lg:gap-x-3 relative z-10 w-full">
+          <div className="flex flex-row flex-wrap justify-center md:justify-start items-center gap-y-3 md:gap-y-4 gap-x-2 md:gap-x-3 lg:gap-x-4 relative z-10 w-full">
             {[
               { n: '1', t: isRu ? 'Главная Kaspi' : 'Kaspi Home' },
               { n: '2', t: isRu ? 'Афиша' : 'Afisha' },
@@ -400,18 +400,13 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
               { n: '9', t: isRu ? 'Маршрут и календарь' : 'Route & Calendar' },
             ].map((step, i) => (
               <React.Fragment key={i}>
-                <motion.div variants={fastFadeInUp} className="bg-zinc-900 px-4 md:px-5 py-3 md:py-4 rounded-2xl md:rounded-[1.5rem] border border-zinc-800 flex items-center justify-center md:justify-start gap-2 md:gap-3 shadow-lg hover:border-zinc-700 transition-colors w-full md:w-auto">
-                  <span className="text-red-500 font-mono text-lg md:text-xl font-bold">{step.n}</span>
-                  <span className="text-white text-sm md:text-base font-medium whitespace-nowrap">{step.t}</span>
+                <motion.div variants={fastFadeInUp} className="bg-zinc-900 px-3 md:px-5 py-2 md:py-3 rounded-[1rem] md:rounded-[1.5rem] border border-zinc-800 flex items-center justify-center gap-2 md:gap-3 shadow-lg hover:border-zinc-700 transition-colors w-auto">
+                  <span className="text-red-500 font-mono text-base md:text-xl font-bold">{step.n}</span>
+                  <span className="text-white text-xs md:text-base font-medium whitespace-nowrap">{step.t}</span>
                 </motion.div>
                 {i < 8 && (
-                  <motion.div variants={fastFadeInUp} className="text-zinc-600 hidden md:flex items-center justify-center">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                  </motion.div>
-                )}
-                {i < 8 && (
-                  <motion.div variants={fastFadeInUp} className="text-zinc-600 flex md:hidden items-center justify-center py-1">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                  <motion.div variants={fastFadeInUp} className="text-zinc-600 flex items-center justify-center">
+                    <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                   </motion.div>
                 )}
               </React.Fragment>

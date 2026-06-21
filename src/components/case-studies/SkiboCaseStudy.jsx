@@ -278,7 +278,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-white text-left">{isRu ? 'Пользовательский сценарий' : 'User Flow'}</motion.h2>
           
-          <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-center items-center gap-y-2 md:gap-y-6 gap-x-3 md:gap-x-4 relative z-10">
+          <div className="flex flex-row flex-wrap justify-center items-center gap-y-3 md:gap-y-6 gap-x-2 md:gap-x-4 relative z-10 w-full">
             {[
               { n: '1', t: isRu ? 'Выбор экипировки' : 'Select Equipment' },
               { n: '2', t: isRu ? 'Выбор даты аренды' : 'Select Rental Date' },
@@ -287,24 +287,18 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
               { n: '5', t: isRu ? 'Получение экипировки' : 'Receive Equipment' },
             ].map((item, i) => (
               <React.Fragment key={i}>
-                <motion.div variants={fastFadeInUp} className="bg-zinc-950 px-6 py-4 rounded-2xl border border-zinc-800 flex items-center justify-start gap-4 shadow-lg hover:bg-zinc-900 active:scale-95 transition-all cursor-pointer select-none w-full md:w-auto">
-                  <span className="text-blue-500 font-mono text-xl font-bold">{item.n}</span>
+                <motion.div variants={fastFadeInUp} className="bg-zinc-950 px-4 md:px-6 py-2 md:py-4 rounded-xl md:rounded-2xl border border-zinc-800 flex items-center justify-start gap-2 md:gap-4 shadow-lg hover:bg-zinc-900 active:scale-95 transition-all cursor-pointer select-none w-auto">
+                  <span className="text-blue-500 font-mono text-base md:text-xl font-bold">{item.n}</span>
                   <div className="flex flex-col items-start">
-                    <span className="text-white text-base md:text-lg font-medium whitespace-nowrap leading-tight">{item.t}</span>
+                    <span className="text-white text-sm md:text-lg font-medium whitespace-nowrap leading-tight">{item.t}</span>
                     {item.sub && <span className="text-zinc-500 text-xs whitespace-nowrap mt-0.5">{item.sub}</span>}
                   </div>
                 </motion.div>
                 {i < 4 && (
-                  <motion.div variants={fastFadeInUp} className="text-zinc-600 hidden md:flex items-center justify-center">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                  <motion.div variants={fastFadeInUp} className="text-zinc-600 flex items-center justify-center">
+                    <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                   </motion.div>
                 )}
-                {i < 4 && (
-                  <motion.div variants={fastFadeInUp} className="text-zinc-600 flex md:hidden items-center justify-center py-1">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
-                  </motion.div>
-                )}
-                
               </React.Fragment>
             ))}
           </div>
@@ -407,7 +401,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                     <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">{scr.t}</h3>
                     <p className="text-zinc-400 text-base md:text-xl leading-relaxed">{scr.d}</p>
                   </div>
-                  <div className={`flex-[1.5] w-full flex justify-start ${scr.align === 'right' ? 'lg:justify-center' : 'lg:justify-center'} gap-4 md:gap-8`}>
+                  <div className="flex-[1.5] w-full flex justify-center gap-4 md:gap-8">
                     {scr.images.map((imgSrc, idx) => (
                       <div key={idx} className="relative group w-[45%] md:w-1/2 max-w-[220px] md:max-w-[280px] flex justify-center cursor-pointer active:scale-95 transition-transform duration-300">
                         <div className="absolute inset-4 bg-blue-500/40 blur-[60px] opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none rounded-full z-0"></div>

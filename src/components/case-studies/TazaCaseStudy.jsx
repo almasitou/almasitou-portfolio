@@ -225,9 +225,9 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
           <div className="flex flex-col xl:flex-row items-center justify-between gap-4 xl:gap-6 mb-16 relative z-10 w-full">
             {/* Step 1 */}
             <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-center">
-              <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group ${activeAnimations['anim_2'] ? 'is-active' : ''} shadow-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`} onClick={() => triggerAnimation('anim_2')} tabIndex="0">
+              <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col min-h-[500px] md:min-h-[600px] group ${activeAnimations['anim_2'] ? 'is-active' : ''} shadow-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`} onClick={() => triggerAnimation('anim_2')} tabIndex="0">
                 <div className={`absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
-                <div className="p-8 pb-4 relative z-10 h-[280px]">
+                <div className="p-8 pb-4 relative z-10 flex-none">
                   <h3 className="text-2xl font-bold text-white mb-4 text-left">{isRu ? 'Быстрый поиск товаров' : 'Fast Product Search'}</h3>
                   <p className="text-zinc-400 leading-relaxed text-left">
                     {isRu 
@@ -235,8 +235,8 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                       : 'Users can quickly find needed items among many suppliers and categories. The interface helps reduce search time and move to ordering faster.'}
                   </p>
                 </div>
-                <div className="relative w-full mt-auto flex justify-center items-start">
-                  <img src="/uploads/taza/Главная.png" alt="Catalog" className={`w-[60%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                <div className="relative w-full flex-1 flex justify-center items-start pt-8 overflow-hidden">
+                  <img src="/uploads/taza/Главная.png" alt="Catalog" className={`w-[80%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Каталог товаров' : 'Product Catalog'}</div>
@@ -248,9 +248,9 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
 
             {/* Step 2 */}
             <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-center">
-              <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group ${activeAnimations['anim_3'] ? 'is-active' : ''} shadow-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`} onClick={() => triggerAnimation('anim_3')} tabIndex="0">
+              <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col min-h-[500px] md:min-h-[600px] group ${activeAnimations['anim_3'] ? 'is-active' : ''} shadow-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`} onClick={() => triggerAnimation('anim_3')} tabIndex="0">
                 <div className={`absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
-                <div className="p-8 pb-4 relative z-10 h-[280px]">
+                <div className="p-8 pb-4 relative z-10 flex-none">
                   <h3 className="text-2xl font-bold text-white mb-4 text-left">{isRu ? 'Повторяемые закупки' : 'Repeatable Procurement'}</h3>
                   <p className="text-zinc-400 leading-relaxed text-left">
                     {isRu 
@@ -258,8 +258,8 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                       : 'The ordering scenario is optimized for regular procurement. Users can form new orders faster without having to go through the entire product selection path again.'}
                   </p>
                 </div>
-                <div className="relative w-full mt-auto flex justify-center items-start">
-                  <img src="/uploads/taza/Корзина.png" alt="Order" className={`w-[60%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                <div className="relative w-full flex-1 flex justify-center items-start pt-8 overflow-hidden">
+                  <img src="/uploads/taza/Корзина.png" alt="Order" className={`w-[80%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Оформление заказа' : 'Place Order'}</div>
@@ -271,9 +271,9 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
 
             {/* Step 3 */}
             <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-center">
-              <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group ${activeAnimations['anim_4'] ? 'is-active' : ''} shadow-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`} onClick={() => triggerAnimation('anim_4')} tabIndex="0">
+              <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col min-h-[500px] md:min-h-[600px] group ${activeAnimations['anim_4'] ? 'is-active' : ''} shadow-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`} onClick={() => triggerAnimation('anim_4')} tabIndex="0">
                 <div className={`absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
-                <div className="p-8 pb-4 relative z-10 h-[280px]">
+                <div className="p-8 pb-4 relative z-10 flex-none">
                   <h3 className="text-2xl font-bold text-white mb-4 text-left">{isRu ? 'Контроль поставок' : 'Supply Control'}</h3>
                   <p className="text-zinc-400 leading-relaxed text-left">
                     {isRu 
@@ -281,8 +281,8 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                       : 'Order status and supplier interaction history are available within the app. This reduces out-of-system communication and makes procurement more predictable.'}
                   </p>
                 </div>
-                <div className="relative w-full mt-auto flex justify-center items-start">
-                  <img src="/uploads/taza/Страница заказа.png" alt="Tracking" className={`w-[60%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                <div className="relative w-full flex-1 flex justify-center items-start pt-8 overflow-hidden">
+                  <img src="/uploads/taza/Страница заказа.png" alt="Tracking" className={`w-[80%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Отслеживание заказа' : 'Track Order'}</div>
