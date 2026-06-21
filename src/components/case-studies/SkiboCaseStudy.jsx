@@ -144,19 +144,19 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
-          className="relative md:rounded-[3rem] bg-transparent md:bg-zinc-900 md:border md:border-zinc-800 overflow-hidden flex flex-col md:flex-row items-stretch md:min-h-[500px] md:shadow-2xl"
+          className="relative xl:rounded-[3rem] bg-transparent xl:bg-zinc-900 xl:border xl:border-zinc-800 overflow-hidden flex flex-col xl:flex-row items-stretch xl:min-h-[500px] xl:shadow-2xl"
         >
-          <div className="py-6 md:p-16 lg:p-20 flex-1 relative z-20 flex flex-col justify-center md:bg-zinc-900 text-left">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 md:mb-8 text-white">{isRu ? 'Проблема' : 'The Challenge'}</h2>
+          <div className="py-6 xl:p-16 2xl:p-20 flex-1 relative z-20 flex flex-col justify-center xl:bg-zinc-900 text-left">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 xl:mb-8 text-white">{isRu ? 'Проблема' : 'The Challenge'}</h2>
             <div className="text-zinc-300 text-base md:text-xl leading-relaxed space-y-4 md:space-y-6">
               <p>{isRu ? 'В высокий сезон прокат спортивной экипировки сталкивался с перегрузкой точки выдачи.' : 'During peak season, the sports equipment rental faced severe congestion at the pickup point.'}</p>
               <p>{isRu ? 'Посетители приезжали одновременно, создавались очереди, помещение быстро заполнялось людьми, а сотрудники тратили значительное время на оформление документов и подбор инвентаря.' : 'Visitors arrived simultaneously, creating queues. The space filled up quickly, and staff spent significant time processing paperwork and selecting equipment.'}</p>
               <p>{isRu ? 'Дополнительной проблемой было отсутствие возможности заранее узнать наличие нужного размера или конкретной модели экипировки. Из-за этого часть клиентов уезжала без аренды или оставалась недовольна сервисом.' : 'An additional issue was the inability to check the availability of specific sizes or models in advance, leaving some customers without equipment or dissatisfied with the service.'}</p>
             </div>
           </div>
-          <div className="flex-1 w-full relative min-h-[400px] md:min-h-full mt-4 md:mt-0">
-            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-900 to-transparent z-10 pointer-events-none hidden md:block" />
-            <img src="/uploads/skibo/line.jpeg" alt="Queue" className="absolute inset-0 w-full h-full object-cover rounded-[3rem] md:rounded-none" />
+          <div className="flex-1 w-full relative min-h-[400px] xl:min-h-full mt-4 xl:mt-0">
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-900 to-transparent z-10 pointer-events-none hidden xl:block" />
+            <img src="/uploads/skibo/line.jpeg" alt="Queue" className="absolute inset-0 w-full h-full object-cover rounded-[3rem] xl:rounded-none" />
           </div>
         </motion.div>
       </section>
@@ -469,10 +469,10 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           
           <motion.div 
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
-            className="relative md:rounded-[3rem] bg-transparent md:bg-zinc-900 md:border md:border-zinc-800 overflow-hidden flex flex-col xl:flex-row items-stretch md:min-h-[500px] md:shadow-2xl"
+            className="relative xl:rounded-[3rem] bg-transparent xl:bg-zinc-900 xl:border xl:border-zinc-800 overflow-hidden flex flex-col xl:flex-row items-stretch xl:min-h-[500px] xl:shadow-2xl"
           >
-            <div className="py-6 md:p-16 xl:p-20 flex-1 relative z-20 flex flex-col justify-center md:bg-zinc-900 text-left">
-              <h2 className="text-3xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-6 md:mb-8 text-white">{isRu ? 'Проверка решений' : 'Validating Solutions'}</h2>
+            <div className="py-6 xl:p-16 2xl:p-20 flex-1 relative z-20 flex flex-col justify-center xl:bg-zinc-900 text-left">
+              <h2 className="text-3xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-6 xl:mb-8 text-white">{isRu ? 'Проверка решений' : 'Validating Solutions'}</h2>
               <div className="text-zinc-300 text-base md:text-xl leading-relaxed space-y-4 md:space-y-6">
                 <p>{isRu ? 'После создания интерактивного прототипа были проведены пользовательские тестирования с потенциальными клиентами сервиса.' : 'After creating an interactive prototype, we conducted user testing with potential service clients.'}</p>
                 <p>{isRu ? 'Полученная обратная связь позволила уточнить структуру экранов, упростить отдельные шаги сценария аренды и проверить понятность ключевых функций до начала разработки.' : 'The feedback allowed us to refine screen structures, simplify specific rental flow steps, and verify the clarity of key features before development started.'}</p>
@@ -481,7 +481,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
             </div>
             <div className="flex-1 w-full relative min-h-[400px] xl:min-h-full mt-4 xl:mt-0">
               <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-900 to-transparent z-10 pointer-events-none hidden xl:block" />
-              <img src="/uploads/skibo/ux_test.jpeg" alt="UX Testing session" className="absolute inset-0 w-full h-full object-cover rounded-[3rem] md:rounded-none" />
+              <img src="/uploads/skibo/ux_test.jpeg" alt="UX Testing session" className="absolute inset-0 w-full h-full object-cover rounded-[3rem] xl:rounded-none" />
             </div>
           </motion.div>
 
