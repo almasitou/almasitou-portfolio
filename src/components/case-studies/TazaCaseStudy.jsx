@@ -409,14 +409,24 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
               <p className="text-zinc-400 text-lg md:text-xl mb-10 max-w-xl leading-relaxed">
                 {isRu ? 'Мобильное приложение Taza доступно для скачивания в Google Play. Вы можете самостоятельно протестировать удобство B2B платформы, ознакомиться с каталогом и оценить интерфейс прямо сейчас.' : 'The Taza mobile app is available for download on Google Play. You can test the convenience of the B2B platform, explore the catalog, and evaluate the interface right now.'}
               </p>
-              <a 
-                href="https://play.google.com/store/apps/details?id=com.daladev.tazab2b&hl=ru" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="inline-block mt-2"
-              >
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-16 md:h-20 hover:scale-105 transition-transform drop-shadow-xl" />
-              </a>
+              <div className="flex flex-row flex-wrap gap-4 mt-2">
+                <a 
+                  href="https://play.google.com/store/apps/details?id=com.daladev.tazab2b&hl=ru" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="inline-block"
+                >
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-12 md:h-16 hover:scale-105 transition-transform drop-shadow-xl" />
+                </a>
+                <a 
+                  href="https://apps.apple.com/app/taza-b2b/id1552554705" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="inline-block"
+                >
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" className="h-12 md:h-16 hover:scale-105 transition-transform drop-shadow-xl" />
+                </a>
+              </div>
             </div>
             
             <div className="flex-1 w-full flex justify-center lg:justify-end mt-8 lg:mt-0">
