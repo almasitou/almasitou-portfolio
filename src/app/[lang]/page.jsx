@@ -39,9 +39,9 @@ export default async function Home({ params }) {
       
       <Navbar t={t} lang={lang} />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-24 md:pt-28 lg:pt-32 pb-16 md:pb-24">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-16 lg:pb-24 min-h-[100dvh] flex flex-col justify-center">
         
-        <section className="min-h-[85vh] lg:min-h-[80vh] flex flex-col justify-center lg:grid lg:grid-cols-12 gap-12 lg:gap-16 lg:items-center pt-4 lg:pt-0 pb-10 lg:pb-16 w-full">
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
           
           {/* Left Column (Text Content) */}
           <div className="lg:col-span-6 flex flex-col items-start w-full">
