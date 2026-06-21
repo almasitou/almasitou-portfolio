@@ -163,7 +163,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
       <section className="px-6 md:px-12 lg:px-16 xl:px-24 max-w-[1400px] mx-auto mb-20 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="text-left relative">
           
-          <motion.div variants={fadeInUp} className="max-w-4xl mx-auto mb-16 space-y-6">
+          <motion.div variants={fadeInUp} className="max-w-4xl mb-16 space-y-6">
             <h2 className="text-3xl md:text-5xl font-bold text-white">
               {isRu ? 'Ключевой пользовательский сценарий' : 'Key User Scenario'}
             </h2>
@@ -182,7 +182,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
 
           <div className="flex flex-col xl:flex-row items-center justify-between gap-4 xl:gap-6 mb-16 relative z-10 w-full">
             {/* Step 1 */}
-            <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-center">
+            <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-start">
               <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group  shadow-xl hover:shadow-[0_0_30px_rgba(249,115,22,0.1)] [&.is-active]:shadow-[0_0_30px_rgba(249,115,22,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`}>
                 <div className={`absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
                 <div className="p-8 pb-4 relative z-10 h-[280px]">
@@ -205,7 +205,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
             <motion.div variants={fadeInUp} className="xl:hidden text-orange-500 text-5xl font-light drop-shadow-[0_0_15px_rgba(249,115,22,0.6)] animate-pulse">↓</motion.div>
 
             {/* Step 2 */}
-            <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-center">
+            <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-start">
               <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group  shadow-xl hover:shadow-[0_0_30px_rgba(249,115,22,0.1)] [&.is-active]:shadow-[0_0_30px_rgba(249,115,22,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`}>
                 <div className={`absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
                 <div className="p-8 pb-4 relative z-10 h-[280px]">
@@ -228,7 +228,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
             <motion.div variants={fadeInUp} className="xl:hidden text-orange-500 text-5xl font-light drop-shadow-[0_0_15px_rgba(249,115,22,0.6)] animate-pulse">↓</motion.div>
 
             {/* Step 3 */}
-            <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-center">
+            <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-start">
               <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group  shadow-xl hover:shadow-[0_0_30px_rgba(249,115,22,0.1)] [&.is-active]:shadow-[0_0_30px_rgba(249,115,22,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`}>
                 <div className={`absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
                 <div className="p-8 pb-4 relative z-10 h-[280px]">
@@ -399,21 +399,42 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
           <div className={`absolute bottom-[-50%] left-[10%] w-[40%] h-[150%] bg-[#FBBC04]/15 blur-[80px] rounded-full transform rotate-12 pointer-events-none group-hover:bg-[#FBBC04]/25 group-[.is-active]:bg-[#FBBC04]/25 transition-colors duration-700`}></div>
           <div className={`absolute bottom-[-50%] right-[10%] w-[40%] h-[150%] bg-[#4285F4]/15 blur-[80px] rounded-full transform -rotate-12 pointer-events-none group-hover:bg-[#4285F4]/25 group-[.is-active]:bg-[#4285F4]/25 transition-colors duration-700`}></div>
 
-          <div className="relative z-10 flex flex-col items-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              {isRu ? 'Оцените приложение вживую' : 'Try the app live'}
-            </h2>
-            <p className="text-zinc-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-              {isRu ? 'Мобильное приложение BAO доступно для скачивания в Google Play. Вы можете самостоятельно протестировать удобство интерфейса, ознакомиться с меню и заказать доставку прямо сейчас.' : 'The BAO mobile app is available for download on Google Play. You can test the convenience of the interface, explore the menu, and order delivery right now.'}
-            </p>
-            <a 
-              href="https://play.google.com/store/apps/details?id=kz.osu.bao&pcampaignid=web_share" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="inline-block mt-4"
-            >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-16 md:h-20 hover:scale-105 transition-transform drop-shadow-xl" />
-            </a>
+          <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+            <div className="flex-1 flex flex-col items-start w-full">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                {isRu ? 'Оцените приложение вживую' : 'Try the app live'}
+              </h2>
+              <p className="text-zinc-400 text-lg md:text-xl mb-10 max-w-xl leading-relaxed">
+                {isRu ? 'Мобильное приложение BAO доступно для скачивания в Google Play. Вы можете самостоятельно протестировать удобство интерфейса, ознакомиться с меню и заказать доставку прямо сейчас.' : 'The BAO mobile app is available for download on Google Play. You can test the convenience of the interface, explore the menu, and order delivery right now.'}
+              </p>
+              <a 
+                href="https://play.google.com/store/apps/details?id=kz.osu.bao&pcampaignid=web_share" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="inline-block mt-2"
+              >
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-16 md:h-20 hover:scale-105 transition-transform drop-shadow-xl" />
+              </a>
+            </div>
+            
+            <div className="flex-1 w-full flex justify-center lg:justify-end mt-8 lg:mt-0">
+              <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] flex justify-center pl-8 md:pl-16">
+                {/* Main Screen */}
+                <img 
+                  src="/uploads/bao/foods page.png" 
+                  alt="BAO App Menu" 
+                  className="w-full h-auto rounded-[2rem] md:rounded-[2.5rem] border-[6px] border-zinc-800 shadow-2xl relative z-10 transform transition-transform duration-700 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4" 
+                />
+                {/* Floating secondary screen */}
+                <div className="absolute -left-8 md:-left-16 bottom-12 md:bottom-20 w-[60%] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border-[4px] border-zinc-800 shadow-2xl z-20 transform transition-transform duration-700 group-hover:-translate-x-4 group-hover:-translate-y-2 group-[.is-active]:-translate-x-4 group-[.is-active]:-translate-y-2 delay-100">
+                  <img 
+                    src="/uploads/bao/cart.png" 
+                    alt="BAO App Cart" 
+                    className="w-full h-auto" 
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </section>
