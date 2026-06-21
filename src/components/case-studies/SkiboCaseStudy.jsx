@@ -278,7 +278,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-white text-left">{isRu ? 'Пользовательский сценарий' : 'User Flow'}</motion.h2>
           
-          <div className="flex flex-row flex-wrap justify-center items-center gap-y-3 md:gap-y-6 gap-x-2 md:gap-x-4 relative z-10 w-full">
+          <div className="flex flex-col md:flex-row md:flex-wrap items-center md:justify-start gap-y-3 md:gap-y-6 gap-x-2 md:gap-x-4 relative z-10 w-full">
             {[
               { n: '1', t: isRu ? 'Выбор экипировки' : 'Select Equipment' },
               { n: '2', t: isRu ? 'Выбор даты аренды' : 'Select Rental Date' },
@@ -295,7 +295,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                   </div>
                 </motion.div>
                 {i < 4 && (
-                  <motion.div variants={fastFadeInUp} className="text-zinc-600 flex items-center justify-center">
+                  <motion.div variants={fastFadeInUp} className="text-zinc-600 flex items-center justify-center rotate-90 md:rotate-0 shrink-0">
                     <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                   </motion.div>
                 )}
