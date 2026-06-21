@@ -444,13 +444,13 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                { img: '/uploads/skibo/admin_chat_with_clients.png', desc: isRu ? 'Чат с клиентами' : 'Client Chat' },
                { img: '/uploads/skibo/admin_profile_page.png', desc: isRu ? 'Профиль администратора' : 'Admin Profile' }
              ].map((adminSrc, idx) => (
-               <div key={idx} className="flex flex-col items-start group cursor-pointer active:scale-95 transition-transform duration-300">
+               <div key={idx} className="flex flex-col items-center group cursor-pointer active:scale-95 transition-transform duration-300">
                  <img 
                    src={adminSrc.img} 
                    alt={adminSrc.desc} 
                    className="w-full max-w-[280px] md:max-w-none h-auto object-contain mb-6 transition-all duration-500 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4 drop-shadow-[0_15px_30px_rgba(0,0,0,0.4)] hover:drop-shadow-[0_0_30px_rgba(59,130,246,0.4)] rounded-2xl" 
                  />
-                 <h4 className="text-zinc-400 font-medium text-lg transition-colors group-hover:text-white group-[.is-active]:text-white text-left">{adminSrc.desc}</h4>
+                 <h4 className="text-zinc-400 font-medium text-lg transition-colors group-hover:text-white group-[.is-active]:text-white text-center">{adminSrc.desc}</h4>
                </div>
              ))}
           </div>
