@@ -374,15 +374,15 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
             ].map((scr, i) => {
               if (scr.layout === 'column') {
                 return (
-                  <motion.div key={i} variants={fadeInUp} className="flex flex-col items-center">
-                    <div className="text-left max-w-3xl mx-auto mb-10 md:mb-16">
+                  <motion.div key={i} variants={fadeInUp} className="flex flex-col items-start w-full">
+                    <div className="text-left max-w-3xl mb-10 md:mb-16">
                       <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">{scr.t}</h3>
                       <p className="text-zinc-400 text-base md:text-xl leading-relaxed">{scr.d}</p>
                     </div>
                     {/* Matrix for booking screenshots */}
-                    <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 justify-items-center">
+                    <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 justify-items-start">
                       {scr.images.map((imgSrc, idx) => (
-                        <div key={idx} className="relative group w-[80%] md:w-full max-w-[220px] md:max-w-[280px] flex justify-center cursor-pointer active:scale-95 transition-transform duration-300">
+                        <div key={idx} className="relative group w-[80%] md:w-full max-w-[220px] md:max-w-[280px] flex justify-start cursor-pointer active:scale-95 transition-transform duration-300">
                           <div className="absolute inset-4 bg-blue-500/40 blur-[60px] opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none rounded-full z-0"></div>
                           <img 
                             src={imgSrc} 
@@ -426,7 +426,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="bg-transparent md:bg-zinc-900 md:border md:border-zinc-800 rounded-none md:rounded-[3.5rem] p-0 md:p-16 lg:p-20 md:shadow-2xl overflow-hidden relative">
           <div className="hidden md:block absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
           
-          <div className="relative z-10 flex flex-col items-start md:items-center text-left max-w-4xl mx-auto mb-12 md:mb-20">
+          <div className="relative z-10 flex flex-col items-start text-left max-w-4xl mb-12 md:mb-20">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-white">{isRu ? 'Умная Админ-панель' : 'Smart Admin Panel'}</h2>
             <p className="text-zinc-300 text-base md:text-2xl leading-relaxed mb-6 md:mb-10">
               {isRu 
@@ -445,13 +445,13 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                { img: '/uploads/skibo/admin_chat_with_clients.png', desc: isRu ? 'Чат с клиентами' : 'Client Chat' },
                { img: '/uploads/skibo/admin_profile_page.png', desc: isRu ? 'Профиль администратора' : 'Admin Profile' }
              ].map((adminSrc, idx) => (
-               <div key={idx} className="flex flex-col items-center group cursor-pointer active:scale-95 transition-transform duration-300">
+               <div key={idx} className="flex flex-col items-start group cursor-pointer active:scale-95 transition-transform duration-300">
                  <img 
                    src={adminSrc.img} 
                    alt={adminSrc.desc} 
                    className="w-full max-w-[280px] md:max-w-none h-auto object-contain mb-6 transition-all duration-500 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4 drop-shadow-[0_15px_30px_rgba(0,0,0,0.4)] hover:drop-shadow-[0_0_30px_rgba(59,130,246,0.4)] rounded-2xl" 
                  />
-                 <h4 className="text-zinc-400 font-medium text-lg transition-colors group-hover:text-white group-[.is-active]:text-white text-center">{adminSrc.desc}</h4>
+                 <h4 className="text-zinc-400 font-medium text-lg transition-colors group-hover:text-white group-[.is-active]:text-white text-left">{adminSrc.desc}</h4>
                </div>
              ))}
           </div>
