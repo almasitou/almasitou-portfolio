@@ -402,12 +402,12 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
               }
 
               return (
-                <motion.div key={i} variants={fadeInUp} className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${scr.align === 'right' ? 'lg:flex-row-reverse' : ''}`}>
-                  <div className={`flex-1 text-left ${scr.align === 'right' ? 'lg:text-right' : 'lg:text-left'} max-w-xl mx-auto lg:mx-0`}>
+                <motion.div key={i} variants={fadeInUp} className={`flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-20 ${scr.align === 'right' ? 'lg:flex-row-reverse' : ''}`}>
+                  <div className={`flex-1 text-left ${scr.align === 'right' ? 'lg:text-right' : 'lg:text-left'} max-w-xl w-full`}>
                     <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">{scr.t}</h3>
                     <p className="text-zinc-400 text-base md:text-xl leading-relaxed">{scr.d}</p>
                   </div>
-                  <div className="flex-[1.5] w-full flex justify-center gap-4 md:gap-8">
+                  <div className={`flex-[1.5] w-full flex justify-start ${scr.align === 'right' ? 'lg:justify-center' : 'lg:justify-center'} gap-4 md:gap-8`}>
                     {scr.images.map((imgSrc, idx) => (
                       <div key={idx} className="relative group w-[45%] md:w-1/2 max-w-[220px] md:max-w-[280px] flex justify-center cursor-pointer active:scale-95 transition-transform duration-300">
                         <div className="absolute inset-4 bg-blue-500/40 blur-[60px] opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none rounded-full z-0"></div>
