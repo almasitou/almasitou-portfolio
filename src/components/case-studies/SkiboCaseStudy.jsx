@@ -273,7 +273,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-white text-left">{isRu ? 'Пользовательский сценарий' : 'User Flow'}</motion.h2>
           
-          <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-center items-center gap-y-2 md:gap-y-6 gap-x-3 md:gap-x-4 relative z-10">
+          <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-start items-stretch md:items-center gap-y-2 md:gap-y-6 gap-x-3 md:gap-x-4 relative z-10 w-full">
             {[
               { n: '1', t: isRu ? 'Выбор экипировки' : 'Select Equipment' },
               { n: '2', t: isRu ? 'Выбор даты аренды' : 'Select Rental Date' },
@@ -282,7 +282,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
               { n: '5', t: isRu ? 'Получение экипировки' : 'Receive Equipment' },
             ].map((item, i) => (
               <React.Fragment key={i}>
-                <motion.div variants={fastFadeInUp} className="bg-zinc-950 px-6 py-4 rounded-2xl border border-zinc-800 flex items-center gap-4 shadow-lg hover:bg-zinc-900 active:scale-95 transition-all cursor-pointer select-none">
+                <motion.div variants={fastFadeInUp} className="bg-zinc-950 px-6 py-4 rounded-2xl border border-zinc-800 flex items-center justify-start gap-4 shadow-lg hover:bg-zinc-900 active:scale-95 transition-all cursor-pointer select-none w-full md:w-auto">
                   <span className="text-blue-500 font-mono text-xl font-bold">{item.n}</span>
                   <div className="flex flex-col items-start">
                     <span className="text-white text-base md:text-lg font-medium whitespace-nowrap leading-tight">{item.t}</span>
