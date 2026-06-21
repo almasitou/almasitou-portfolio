@@ -278,7 +278,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-white text-left">{isRu ? 'Пользовательский сценарий' : 'User Flow'}</motion.h2>
           
-          <div className="flex flex-col sm:flex-row sm:flex-nowrap sm:overflow-x-auto sm:pb-4 items-center sm:justify-start gap-y-3 sm:gap-y-6 gap-x-2 sm:gap-x-4 relative z-10 w-full no-scrollbar">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap items-center sm:justify-start gap-y-3 sm:gap-y-6 gap-x-2 sm:gap-x-4 relative z-10 w-full">
             {[
               { n: '1', t: isRu ? 'Выбор экипировки' : 'Select Equipment' },
               { n: '2', t: isRu ? 'Выбор даты аренды' : 'Select Rental Date' },

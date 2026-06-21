@@ -387,7 +387,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             </div>
           </motion.div>
 
-          <div className="flex flex-col sm:flex-row sm:flex-nowrap sm:overflow-x-auto sm:pb-4 items-center sm:justify-start gap-y-3 sm:gap-y-4 gap-x-2 sm:gap-x-3 lg:gap-x-4 relative z-10 w-full no-scrollbar">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap items-center sm:justify-start gap-y-3 sm:gap-y-4 gap-x-2 sm:gap-x-3 lg:gap-x-4 relative z-10 w-full">
             {[
               { n: '1', t: isRu ? 'Главная Kaspi' : 'Kaspi Home' },
               { n: '2', t: isRu ? 'Афиша' : 'Afisha' },
@@ -550,8 +550,8 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
 
                 {/* Unified Checkout (Center) */}
                 <div className="absolute z-30 w-36 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 rounded-3xl p-4 shadow-[0_0_30px_rgba(239,68,68,0.2)] flex flex-col transition-transform duration-700 group-hover:scale-110 translate-x-0">
-                  <div className="flex items-center gap-2 mb-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Kaspi.kz_logo.svg" alt="Kaspi.kz" className="h-4 object-contain brightness-0 invert" />
+                  <div className="flex items-center gap-3 mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Kaspi.kz_logo.svg" alt="Kaspi.kz" className="w-8 h-8 md:w-10 md:h-10 object-cover rounded-[22%] shadow-lg shadow-red-500/20" />
                     <div className="h-2.5 bg-zinc-600 rounded w-16"></div>
                   </div>
                   <div className="space-y-2 mb-4">

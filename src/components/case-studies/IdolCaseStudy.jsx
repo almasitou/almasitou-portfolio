@@ -423,7 +423,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
             {isRu ? 'От идеи до публикации' : 'From Idea to Publication'}
           </motion.h2>
 
-          <div className="flex flex-col sm:flex-row sm:flex-nowrap sm:overflow-x-auto sm:pb-4 items-center sm:justify-start gap-y-3 sm:gap-y-4 gap-x-2 sm:gap-x-3 relative z-10 w-full no-scrollbar">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap items-center sm:justify-start gap-y-3 sm:gap-y-4 gap-x-2 sm:gap-x-3 relative z-10 w-full">
             {['Идея', 'Создание контента', 'Планирование публикаций', 'Публикация во всех соцсетях', 'Аналитика', 'Рекомендации AI-ассистента'].map((step, idx, arr) => (
               <React.Fragment key={idx}>
                 <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 md:px-5 md:py-3 flex items-center gap-2 md:gap-3 hover:border-zinc-700 transition-colors shrink-0">
