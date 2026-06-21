@@ -122,7 +122,7 @@ body {
   width: 50%;
   height: 100%;
   background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
-  animation: fast-shimmer-nav 0.6s infinite;
+  animation: fast-shimmer-nav 1.2s infinite;
   z-index: 50;
   pointer-events: none;
 }
