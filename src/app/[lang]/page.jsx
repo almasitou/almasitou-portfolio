@@ -39,7 +39,7 @@ export default async function Home({ params }) {
       
       <Navbar t={t} lang={lang} />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-16 lg:pb-24 min-h-[100dvh] flex flex-col justify-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 lg:pt-48 pb-24 lg:pb-32 min-h-[100dvh] flex flex-col justify-center">
         
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
           
