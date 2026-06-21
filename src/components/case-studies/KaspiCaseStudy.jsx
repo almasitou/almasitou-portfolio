@@ -292,11 +292,11 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                   <p className="text-zinc-400 leading-relaxed">{ux.desc}</p>
                 </div>
                 {/* Image bottom embedded */}
-                <div className={`relative w-full flex-1 flex justify-center items-start pt-8 bg-gradient-to-t ${ux.color} overflow-hidden`}>
+                <div className={`relative w-full flex-1 flex justify-center items-end bg-gradient-to-t ${ux.color} overflow-hidden`}>
                   <img 
                     src={ux.img} 
                     alt={ux.title} 
-                    className="w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto object-contain object-top drop-shadow-2xl translate-y-12 transition-transform duration-700 group-hover:translate-y-8 group-[.is-active]:translate-y-8 group-data-[active=true]:translate-y-8" 
+                    className="w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto object-contain object-top drop-shadow-2xl translate-y-[20%] transition-transform duration-700 group-hover:translate-y-[15%] group-[.is-active]:translate-y-[15%] group-data-[active=true]:translate-y-[15%]" 
                   />
                 </div>
               </motion.div>
@@ -305,7 +305,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             {/* Third block: Post-Purchase / Full width */}
             <motion.div 
               variants={fadeInUp} 
-              className="md:col-span-2 h-[600px] md:h-[500px] relative bg-zinc-900 rounded-3xl overflow-hidden flex flex-col md:flex-row items-stretch group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(239,68,68,0.2)] data-[active=true]:-translate-y-2 shadow-xl border border-zinc-800 hover:border-zinc-700 cursor-pointer"
+              className="md:col-span-2 h-[500px] md:h-[400px] relative bg-zinc-900 rounded-3xl overflow-hidden flex flex-col md:flex-row items-stretch group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(239,68,68,0.2)] data-[active=true]:-translate-y-2 shadow-xl border border-zinc-800 hover:border-zinc-700 cursor-pointer"
               onClick={() => triggerAnimation('post-purchase')}
               data-active={activeAnimations['post-purchase'] || undefined}
             >

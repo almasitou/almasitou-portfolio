@@ -401,7 +401,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
           <div className={`absolute bottom-[-50%] left-[10%] w-[40%] h-[150%] bg-[#FBBC04]/15 blur-[80px] rounded-full transform rotate-12 pointer-events-none group-hover:bg-[#FBBC04]/25 group-[.is-active]:bg-[#FBBC04]/25 transition-colors duration-700`}></div>
           <div className={`absolute bottom-[-50%] right-[10%] w-[40%] h-[150%] bg-[#4285F4]/15 blur-[80px] rounded-full transform -rotate-12 pointer-events-none group-hover:bg-[#4285F4]/25 group-[.is-active]:bg-[#4285F4]/25 transition-colors duration-700`}></div>
 
-          <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 xl:gap-28">
+          <div className="relative z-10 flex flex-col xl:flex-row items-center gap-12 xl:gap-20">
             <div className="flex-1 flex flex-col items-start w-full">
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
                 {isRu ? 'Оцените приложение вживую' : 'Try the app live'}
@@ -429,8 +429,8 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
               </div>
             </div>
             
-            <div className="flex-1 w-full flex justify-center lg:justify-end mt-8 lg:mt-0">
-              <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] xl:max-w-[400px] flex justify-center pl-8 md:pl-16 -mb-[14rem] md:-mb-[18rem] lg:-mb-[20rem] xl:-mb-[24rem]">
+            <div className="flex-1 w-full flex justify-center xl:justify-end mt-8 xl:mt-0">
+              <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] xl:max-w-[400px] flex justify-center pl-8 md:pl-16 -mb-[14rem] md:-mb-[18rem] lg:-mb-[20rem] xl:mb-0">
                 {/* Main Screen */}
                 <img 
                   src="/uploads/taza/Главная.png" 
@@ -438,11 +438,11 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   className="w-full h-auto rounded-[2rem] md:rounded-[2.5rem] border-[6px] border-zinc-800 shadow-2xl relative z-10 transform transition-transform duration-700 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4" 
                 />
                 {/* Floating secondary screen */}
-                <div className="absolute -left-8 md:-left-16 top-[20%] md:top-[25%] w-[60%] aspect-square rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border-[4px] border-zinc-800 shadow-2xl z-20 transform transition-transform duration-700 group-hover:-translate-x-4 group-hover:-translate-y-2 group-[.is-active]:-translate-x-4 group-[.is-active]:-translate-y-2 delay-100">
+                <div className="absolute -left-8 md:-left-16 top-[20%] md:top-[25%] xl:top-auto xl:bottom-20 w-[60%] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border-[4px] border-zinc-800 shadow-2xl z-20 transform transition-transform duration-700 group-hover:-translate-x-4 group-hover:-translate-y-2 group-[.is-active]:-translate-x-4 group-[.is-active]:-translate-y-2 delay-100">
                   <img 
                     src="/uploads/taza/Корзина.png" 
                     alt="Taza App Cart" 
-                    className="w-full h-full object-cover object-top" 
+                    className="w-full h-auto" 
                   />
                 </div>
               </div>
