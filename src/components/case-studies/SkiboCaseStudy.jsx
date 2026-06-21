@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import SparklesButton from '@/components/SparklesButton';
@@ -29,13 +29,22 @@ const fastStaggerContainer = {
 
 export default function SkiboCaseStudy({ lang, otherProjects }) {
   const isRu = lang === 'ru';
+  const [activeAnimations, setActiveAnimations] = useState({});
+
+  const triggerAnimation = (id) => {
+    if (activeAnimations[id]) return;
+    setActiveAnimations(prev => ({ ...prev, [id]: true }));
+    setTimeout(() => {
+      setActiveAnimations(prev => ({ ...prev, [id]: false }));
+    }, 2000);
+  };
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-blue-500/30 font-sans pb-0 overflow-x-hidden w-full max-w-[100vw]">
       {/* Navigation */}
       <div className="fixed top-6 left-6 z-50">
         <Link href={`/${lang}`} className="inline-flex items-center px-5 py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group">
-          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           {isRu ? 'Назад в портфолио' : 'Back to Portfolio'}
@@ -64,19 +73,19 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           
           {/* Project Meta Info horizontally flexed */}
           <motion.div variants={fadeInUp} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-12 w-full">
-            <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
+            <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 hover:bg-zinc-900/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 hover:border-white/20 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
               <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-2">{isRu ? 'Тип проекта' : 'Project Type'}</span>
               <span className="text-xl md:text-2xl text-white font-medium">{isRu ? 'Коммерческий' : 'Commercial'}</span>
             </div>
-            <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
+            <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 hover:bg-zinc-900/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 hover:border-white/20 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
               <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-2">{isRu ? 'Платформа' : 'Platform'}</span>
               <span className="text-xl md:text-2xl text-white font-medium">iOS / Android</span>
             </div>
-            <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
+            <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 hover:bg-zinc-900/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 hover:border-white/20 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
               <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-2">{isRu ? 'Релиз' : 'Release Date'}</span>
               <span className="text-xl md:text-2xl text-white font-medium">{isRu ? '28 марта 2025' : 'March 28, 2025'}</span>
             </div>
-            <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
+            <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 hover:bg-zinc-900/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 hover:border-white/20 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
               <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-2">{isRu ? 'Моя роль' : 'My Role'}</span>
               <span className="text-xl md:text-2xl text-white font-medium">Product Designer</span>
             </div>
@@ -99,8 +108,8 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                 isRu ? 'Interactive Prototyping' : 'Interactive Prototyping',
                 isRu ? 'User Testing' : 'User Testing'
               ].map((role, i) => (
-                <motion.div key={i} variants={fadeInUp} className="px-5 py-3 bg-zinc-900 border border-zinc-800 rounded-2xl hover:bg-zinc-800 transition-colors shadow-lg">
-                  <span className="text-sm md:text-base font-semibold text-white">{role}</span>
+                <motion.div key={i} variants={fadeInUp} className="px-5 py-3 bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 hover:border-blue-500/30 hover:-translate-y-1 hover:shadow-[0_4px_15px_rgba(59,130,246,0.15)] transition-all duration-300 rounded-2xl shadow-lg cursor-default">
+                  <span className="text-sm md:text-base font-semibold text-zinc-300 group-hover:text-white transition-colors">{role}</span>
                 </motion.div>
               ))}
             </div>
@@ -113,11 +122,11 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                  { icon: '🏂', text: isRu ? 'Аренда экипировки' : 'Equipment Rental' },
                  { icon: '📱', text: 'Mobile App' },
                  { icon: '🖥️', text: 'Admin Panel' },
-                 { icon: '📄', text: isRu ? 'Электронный договор' : 'Electronic Contract' },
-                 { icon: '💳', text: isRu ? 'Онлайн-оплата' : 'Online Payment' }
+                 { icon: '💳', text: isRu ? 'Онлайн-оплата' : 'Online Payment' },
+                 { icon: '📄', text: isRu ? 'Электронный договор' : 'Electronic Contract' }
                ].map((feature, i) => (
-                 <motion.div variants={fadeInUp} key={i} className="px-5 py-3 bg-white/5 border border-white/10 rounded-2xl text-white text-sm md:text-base font-medium shadow-lg flex items-center backdrop-blur-md">
-                   <span className="mr-3 text-xl">{feature.icon}</span> {feature.text}
+                  <motion.div variants={fadeInUp} key={i} className="px-5 py-3 bg-white/5 border border-white/10 hover:bg-white/10 hover:border-blue-500/30 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(59,130,246,0.15)] transition-all duration-300 rounded-2xl text-white text-sm md:text-base font-medium shadow-lg flex items-center backdrop-blur-md cursor-default group">
+                    <span className="mr-3 text-xl transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">{feature.icon}</span> {feature.text}
                  </motion.div>
                ))}
              </div>
@@ -160,15 +169,19 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
               <p>{isRu ? 'Клиенты больше не стоят в очередях — они делают всё в смартфоне: от выбора экипировки до подписания договора и оплаты.' : 'Customers no longer wait in queues — they do everything on their smartphones: from selecting equipment to signing contracts and paying.'}</p>
             </div>
           </div>
-          <div className="w-full relative flex items-start justify-center min-h-[450px] overflow-visible -mb-10">
+          <div 
+            className={`w-full relative flex items-start justify-center min-h-[450px] overflow-visible -mb-10 group cursor-pointer ${activeAnimations['hero'] ? 'is-active' : ''}`}
+            onClick={() => triggerAnimation('hero')}
+            tabIndex="0"
+          >
             {/* Background Glow */}
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-blue-500/20 blur-[100px] z-0"></div>
             
             {/* Multiple Screenshots overlapping with hover spread animation */}
             <div className="relative flex justify-center w-full max-w-4xl z-20 transition-all duration-700">
-              <img src="/uploads/skibo/cart.png" alt="App Screen 1" className="absolute left-0 md:left-10 top-20 w-[60%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl -rotate-6 transition-all duration-700 group-hover:-translate-x-12 group-hover:-rotate-12 group-hover:scale-105" />
-              <img src="/uploads/skibo/combo_page.png" alt="App Screen 3" className="absolute right-0 md:right-10 top-20 w-[60%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl rotate-6 transition-all duration-700 group-hover:translate-x-12 group-hover:rotate-12 group-hover:scale-105" />
-              <img src="/uploads/skibo/media__1781870690123.png" alt="Solution iPhone" className="relative z-30 w-[80%] max-w-[360px] object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-700 group-hover:-translate-y-6 group-hover:scale-105" />
+              <img src="/uploads/skibo/cart.png" alt="App Screen 1" className="absolute left-0 md:left-10 top-20 w-[60%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl -rotate-6 transition-all duration-700 group-hover:-translate-x-1 group-[.is-active]:-translate-x-12 group-[.is-active]:-translate-x-12 group-hover:-rotate-12 group-[.is-active]:-rotate-12 group-hover:scale-105 group-[.is-active]:scale-105" />
+              <img src="/uploads/skibo/combo_page.png" alt="App Screen 3" className="absolute right-0 md:right-10 top-20 w-[60%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl rotate-6 transition-all duration-700 group-hover:translate-x-12 group-[.is-active]:translate-x-12 group-hover:rotate-12 group-[.is-active]:rotate-12 group-hover:scale-105 group-[.is-active]:scale-105" />
+              <img src="/uploads/skibo/media__1781870690123.png" alt="Solution iPhone" className="relative z-30 w-[80%] max-w-[360px] object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-700 group-hover:-translate-y-6 group-[.is-active]:-translate-y-6 group-hover:scale-105 group-[.is-active]:scale-105" />
             </div>
           </div>
         </motion.div>
@@ -320,7 +333,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
               }
             ].map((sol, i) => (
               <motion.div key={i} variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-3xl md:rounded-[2.5rem] p-6 md:p-10 relative overflow-hidden group hover:border-zinc-700 hover:shadow-2xl active:scale-95 cursor-pointer transition-all h-full text-left">
-                <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-blue-500/5 rounded-bl-3xl md:rounded-bl-[4rem] group-hover:bg-blue-500/10 transition-colors pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-blue-500/5 rounded-bl-3xl md:rounded-bl-[4rem] group-hover:bg-blue-500/10 group-[.is-active]:bg-blue-500/10 transition-colors pointer-events-none"></div>
                 <div className={`w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-6 md:mb-8 ${sol.colorClass}`}>
                   <svg className="w-7 h-7 md:w-8 md:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">{sol.icon}</svg>
                 </div>
@@ -371,11 +384,11 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                     <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 justify-items-center">
                       {scr.images.map((imgSrc, idx) => (
                         <div key={idx} className="relative group w-[80%] md:w-full max-w-[220px] md:max-w-[280px] flex justify-center cursor-pointer active:scale-95 transition-transform duration-300">
-                          <div className="absolute inset-4 bg-blue-500/40 blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none rounded-full z-0"></div>
+                          <div className="absolute inset-4 bg-blue-500/40 blur-[60px] opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none rounded-full z-0"></div>
                           <img 
                             src={imgSrc} 
                             alt={`${scr.t} screen ${idx + 1}`} 
-                            className="relative z-10 w-full h-auto object-contain drop-shadow-2xl transition-transform duration-500 group-hover:-translate-y-4" 
+                            className="relative z-10 w-full h-auto object-contain drop-shadow-2xl transition-transform duration-500 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4" 
                           />
                         </div>
                       ))}
@@ -393,11 +406,11 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                   <div className="flex-[1.5] w-full flex justify-center gap-4 md:gap-8">
                     {scr.images.map((imgSrc, idx) => (
                       <div key={idx} className="relative group w-[45%] md:w-1/2 max-w-[220px] md:max-w-[280px] flex justify-center cursor-pointer active:scale-95 transition-transform duration-300">
-                        <div className="absolute inset-4 bg-blue-500/40 blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none rounded-full z-0"></div>
+                        <div className="absolute inset-4 bg-blue-500/40 blur-[60px] opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none rounded-full z-0"></div>
                         <img 
                           src={imgSrc} 
                           alt={`${scr.t} screen ${idx + 1}`} 
-                          className="relative z-10 w-full h-auto object-contain drop-shadow-2xl transition-transform duration-500 group-hover:-translate-y-4" 
+                          className="relative z-10 w-full h-auto object-contain drop-shadow-2xl transition-transform duration-500 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4" 
                         />
                       </div>
                     ))}
@@ -437,9 +450,9 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
                  <img 
                    src={adminSrc.img} 
                    alt={adminSrc.desc} 
-                   className="w-full max-w-[280px] md:max-w-none h-auto object-contain mb-6 transition-all duration-500 group-hover:-translate-y-4 drop-shadow-[0_15px_30px_rgba(0,0,0,0.4)] hover:drop-shadow-[0_0_30px_rgba(59,130,246,0.4)] rounded-2xl" 
+                   className="w-full max-w-[280px] md:max-w-none h-auto object-contain mb-6 transition-all duration-500 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4 drop-shadow-[0_15px_30px_rgba(0,0,0,0.4)] hover:drop-shadow-[0_0_30px_rgba(59,130,246,0.4)] rounded-2xl" 
                  />
-                 <h4 className="text-zinc-400 font-medium text-lg transition-colors group-hover:text-white text-center">{adminSrc.desc}</h4>
+                 <h4 className="text-zinc-400 font-medium text-lg transition-colors group-hover:text-white group-[.is-active]:text-white text-center">{adminSrc.desc}</h4>
                </div>
              ))}
           </div>

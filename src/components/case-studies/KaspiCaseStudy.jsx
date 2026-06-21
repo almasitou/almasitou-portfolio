@@ -39,7 +39,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
       {/* Navigation */}
       <div className="fixed top-6 left-6 z-50">
         <Link href={`/${lang}`} className="inline-flex items-center px-5 py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group">
-          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           {isRu ? 'Назад в портфолио' : 'Back to Portfolio'}
@@ -127,8 +127,8 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
               { title: isRu ? 'Знакомый интерфейс' : 'Familiar Interface', icon: '📱', desc: isRu ? 'Минимальный порог входа благодаря уже знакомым паттернам взаимодействия.' : 'Minimal entry barrier thanks to familiar interaction patterns.' },
               { title: isRu ? 'Новый сценарий' : 'New Use Case', icon: '🎫', desc: isRu ? 'Расширение возможностей экосистемы за счёт сервисов мероприятий и развлечений.' : 'Expanding ecosystem capabilities through event and entertainment services.' }
             ].map((card, i) => (
-              <motion.div key={i} variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 md:p-8 hover:bg-zinc-800/80 transition-colors text-left flex flex-col">
-                <div className="text-4xl mb-6">{card.icon}</div>
+              <motion.div key={i} variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 hover:border-red-500/30 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(239,68,68,0.15)] transition-all duration-300 rounded-3xl p-6 md:p-8 text-left flex flex-col group cursor-default">
+                <div className="text-4xl mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">{card.icon}</div>
                 <h4 className="text-xl font-bold text-white mb-3">{card.title}</h4>
                 <p className="text-zinc-400 leading-relaxed text-sm">{card.desc}</p>
               </motion.div>
@@ -194,18 +194,18 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             </div>
           </div>
           <div 
-            className="w-full relative flex items-start justify-center min-h-[350px] md:min-h-[450px] overflow-visible -mb-10 mt-10 md:mt-0 group cursor-pointer"
+            className={`w-full relative flex items-start justify-center min-h-[350px] md:min-h-[450px] overflow-visible -mb-10 mt-10 md:mt-0 group cursor-pointer ${activeAnimations['concept'] ? 'is-active' : ''}`}
             onClick={() => triggerAnimation('concept')}
-            data-active={activeAnimations['concept'] || undefined}
+            tabIndex="0"
           >
             {/* Background Glow */}
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-red-500/20 blur-[100px] z-0"></div>
             
             {/* Multiple Screenshots overlapping with hover spread animation */}
             <div className="relative flex justify-center w-full max-w-4xl z-20 transition-all duration-700">
-              <img src="/uploads/kaspi/Movie's page_ tickets_ sort time.png" alt="App Screen 1" className="absolute -left-2 md:left-10 top-10 md:top-20 w-[55%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl -rotate-6 transition-all duration-700 group-hover:-translate-x-12 group-hover:-rotate-12 group-hover:scale-105 group-data-[active=true]:-translate-x-8 md:group-data-[active=true]:-translate-x-12 group-data-[active=true]:-rotate-12 group-data-[active=true]:scale-105" />
-              <img src="/uploads/kaspi/Choose place.png" alt="App Screen 3" className="absolute -right-2 md:right-10 top-10 md:top-20 w-[55%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl rotate-6 transition-all duration-700 group-hover:translate-x-12 group-hover:rotate-12 group-hover:scale-105 group-data-[active=true]:translate-x-8 md:group-data-[active=true]:translate-x-12 group-data-[active=true]:rotate-12 group-data-[active=true]:scale-105" />
-              <img src="/uploads/kaspi/Main page of Afisha.png" alt="Solution iPhone" className="relative z-30 w-[65%] md:w-[80%] max-w-[360px] object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-700 group-hover:-translate-y-6 group-hover:scale-105 group-data-[active=true]:-translate-y-4 md:group-data-[active=true]:-translate-y-6 group-data-[active=true]:scale-105" />
+              <img src="/uploads/kaspi/Movie's page_ tickets_ sort time.png" alt="App Screen 1" className="absolute -left-2 md:left-10 top-10 md:top-20 w-[55%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl -rotate-6 transition-all duration-700 group-hover:-translate-x-1 group-[.is-active]:-translate-x-12 group-hover:-rotate-12 group-[.is-active]:-rotate-12 group-hover:scale-105 group-[.is-active]:-translate-x-8 md:group-[.is-active]:-translate-x-12 group-[.is-active]:-rotate-12 group-[.is-active]:scale-105" />
+              <img src="/uploads/kaspi/Choose place.png" alt="App Screen 3" className="absolute -right-2 md:right-10 top-10 md:top-20 w-[55%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl rotate-6 transition-all duration-700 group-hover:translate-x-12 group-[.is-active]:translate-x-12 group-hover:rotate-12 group-[.is-active]:rotate-12 group-hover:scale-105 group-[.is-active]:translate-x-8 md:group-[.is-active]:translate-x-12 group-[.is-active]:rotate-12 group-[.is-active]:scale-105" />
+              <img src="/uploads/kaspi/Main page of Afisha.png" alt="Solution iPhone" className="relative z-30 w-[65%] md:w-[80%] max-w-[360px] object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-700 group-hover:-translate-y-6 group-[.is-active]:-translate-y-6 group-hover:scale-105 group-[.is-active]:-translate-y-4 md:group-[.is-active]:-translate-y-6 group-[.is-active]:scale-105" />
             </div>
           </div>
         </motion.div>
@@ -291,7 +291,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                   <img 
                     src={ux.img} 
                     alt={ux.title} 
-                    className="w-full max-w-[60%] md:max-w-[50%] h-auto object-contain object-top drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-data-[active=true]:-translate-y-2" 
+                    className="w-full max-w-[60%] md:max-w-[50%] h-auto object-contain object-top drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 group-data-[active=true]:-translate-y-2" 
                   />
                 </div>
               </motion.div>
@@ -318,12 +318,12 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
               {/* Image Right */}
               <div className="relative flex-1 w-full h-full flex items-start justify-center group pt-0 md:pt-12 mt-4 md:mt-0">
                 {/* Rotated Flex Container for guaranteed gap and parallel alignment */}
-                <div className="relative z-10 w-[140%] max-w-[700px] flex flex-row items-start justify-center gap-6 md:gap-8 rotate-[12deg] transition-transform duration-700 group-hover:rotate-[14deg] group-data-[active=true]:rotate-[14deg]">
+                <div className="relative z-10 w-[140%] max-w-[700px] flex flex-row items-start justify-center gap-6 md:gap-8 rotate-[12deg] transition-transform duration-700 group-hover:rotate-[14deg] group-[.is-active]:rotate-[14deg] group-data-[active=true]:rotate-[14deg]">
                   {/* Left ticket (Front) */}
                   <img 
                     src="/uploads/kaspi/ticket.png?v=3" 
                     alt="Ticket Details" 
-                    className="w-[50%] md:w-[48%] translate-y-0 md:-translate-y-[100px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-transform duration-700 group-hover:-translate-y-[10px] md:group-hover:-translate-y-[110px] group-data-[active=true]:-translate-y-[10px] md:group-data-[active=true]:-translate-y-[110px]"
+                    className="w-[50%] md:w-[48%] translate-y-0 md:-translate-y-[100px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-transform duration-700 group-hover:-translate-y-[10px] group-[.is-active]:-translate-y-[10px] md:group-hover:-translate-y-[110px] group-[.is-active]:-translate-y-[110px] group-data-[active=true]:-translate-y-[10px] md:group-data-[active=true]:-translate-y-[110px]"
                   />
                 </div>
               </div>
@@ -424,39 +424,39 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-left">
               {/* Card 1 */}
               <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group">
-                <div className="w-14 h-14 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6 text-red-500 group-hover:scale-110 group-hover:bg-red-500/20 transition-all duration-300">
+                <div className="w-14 h-14 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6 text-red-500 group-hover:scale-110 group-[.is-active]:scale-110 group-hover:bg-red-500/20 group-[.is-active]:bg-red-500/20 transition-all duration-300">
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-4">{isRu ? 'Универсальная архитектура' : 'Universal Architecture'}</h4>
-                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 transition-colors">
+                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 group-[.is-active]:text-zinc-300 transition-colors">
                   {isRu ? 'Спроектирован единый сценарий покупки, который одинаково эффективно работает для кинотеатров, концертов, театральных постановок и других мероприятий.' : 'A unified purchasing scenario was designed that works equally efficiently for cinemas, concerts, theatrical performances, and other events.'}
                 </p>
               </motion.div>
 
               {/* Card 2 */}
               <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group">
-                <div className="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 group-hover:bg-orange-500/20 transition-all duration-300">
+                <div className="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 group-[.is-active]:scale-110 group-hover:bg-orange-500/20 group-[.is-active]:bg-orange-500/20 transition-all duration-300">
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-4">{isRu ? 'Оптимизация ключевого сценария' : 'Key Scenario Optimization'}</h4>
-                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 transition-colors">
+                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 group-[.is-active]:text-zinc-300 transition-colors">
                   {isRu ? 'Основное внимание было уделено сокращению количества действий пользователя и упрощению процесса выбора и покупки билетов.' : 'The main focus was on reducing the number of user actions and simplifying the process of selecting and purchasing tickets.'}
                 </p>
               </motion.div>
 
               {/* Card 3 */}
               <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group">
-                <div className="w-14 h-14 bg-rose-500/10 rounded-2xl flex items-center justify-center mb-6 text-rose-500 group-hover:scale-110 group-hover:bg-rose-500/20 transition-all duration-300">
+                <div className="w-14 h-14 bg-rose-500/10 rounded-2xl flex items-center justify-center mb-6 text-rose-500 group-hover:scale-110 group-[.is-active]:scale-110 group-hover:bg-rose-500/20 group-[.is-active]:bg-rose-500/20 transition-all duration-300">
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-4">{isRu ? 'Продуктовое мышление' : 'Product Thinking'}</h4>
-                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 transition-colors">
+                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 group-[.is-active]:text-zinc-300 transition-colors">
                   {isRu ? 'Проект демонстрирует подход к запуску нового сервиса внутри существующей цифровой экосистемы с учётом масштабирования и пользовательских привычек.' : 'The project demonstrates an approach to launching a new service within an existing digital ecosystem, taking into account scalability and user habits.'}
                 </p>
               </motion.div>
@@ -487,14 +487,14 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                     "Movie's page_ feadback.png"
                   ].map((img, i) => (
                     <div key={i} className={`bg-zinc-900 border-x border-t border-zinc-800 rounded-t-3xl overflow-hidden flex items-start justify-center w-full h-full ${i >= 2 ? 'hidden md:flex' : ''}`}>
-                      <img src={`/uploads/kaspi/${img}`} alt={`Hidden Screen ${i}`} className="w-full h-auto block opacity-50 group-hover:opacity-70 transition-opacity" />
+                      <img src={`/uploads/kaspi/${img}`} alt={`Hidden Screen ${i}`} className="w-full h-auto block opacity-50 group-hover:opacity-70 group-[.is-active]:opacity-70 transition-opacity" />
                     </div>
                   ))}
                 </div>
                 
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/80 to-[#0a0a0a]"></div>
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <span className="px-6 py-2.5 bg-zinc-800/90 text-zinc-400 text-sm md:text-base rounded-full backdrop-blur-md border border-zinc-700 pointer-events-auto transition-colors group-hover:bg-zinc-700 group-hover:text-zinc-200">
+                  <span className="px-6 py-2.5 bg-zinc-800/90 text-zinc-400 text-sm md:text-base rounded-full backdrop-blur-md border border-zinc-700 pointer-events-auto transition-colors group-hover:bg-zinc-700 group-[.is-active]:bg-zinc-700 group-hover:text-zinc-200 group-[.is-active]:text-zinc-200">
                     {isRu ? 'Показать все скриншоты' : 'Show all screenshots'}
                   </span>
                 </div>

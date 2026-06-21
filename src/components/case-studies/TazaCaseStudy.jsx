@@ -18,13 +18,22 @@ const staggerContainer = {
 export default function TazaCaseStudy({ lang, otherProjects }) {
   const isRu = lang === 'ru';
   const [showAllScreenshots, setShowAllScreenshots] = useState(false);
+  const [activeAnimations, setActiveAnimations] = useState({});
+
+  const triggerAnimation = (id) => {
+    if (activeAnimations[id]) return;
+    setActiveAnimations(prev => ({ ...prev, [id]: true }));
+    setTimeout(() => {
+      setActiveAnimations(prev => ({ ...prev, [id]: false }));
+    }, 2000);
+  };
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-emerald-500/30 font-sans pb-0 overflow-x-hidden w-full max-w-[100vw]">
       {/* Navigation */}
       <div className="fixed top-6 left-6 z-50">
         <Link href={`/${lang}`} className="inline-flex items-center px-5 py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group">
-          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           {isRu ? 'Назад в портфолио' : 'Back to Portfolio'}
@@ -85,7 +94,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
               </motion.h2>
               <motion.div variants={fadeInUp} className="flex flex-wrap gap-3">
                 {['UX Research', 'User Flow Design', 'Wireframing', 'UI Design', 'Interactive Prototyping'].map((role, i) => (
-                  <span key={i} className="px-5 py-2.5 bg-zinc-900 border border-zinc-800 rounded-full text-zinc-300 font-medium text-sm md:text-base">
+                  <span key={i} className="px-5 py-2.5 bg-zinc-900 border border-zinc-800 rounded-full text-zinc-300 font-medium text-sm md:text-base hover:bg-zinc-800 hover:border-emerald-500/30 hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_15px_rgba(16,185,129,0.15)] transition-all duration-300 cursor-default">
                     {role}
                   </span>
                 ))}
@@ -103,9 +112,9 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   { icon: '🤝', text: isRu ? 'Работа с поставщиками' : 'Supplier Relations' },
                   { icon: '📦', text: isRu ? 'Управление поставками' : 'Supply Management' }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 bg-zinc-900/50 border border-zinc-800/50 p-4 rounded-2xl">
-                    <span className="text-2xl">{item.icon}</span>
-                    <span className="text-zinc-300 font-medium">{item.text}</span>
+                  <div key={i} className="flex items-center gap-4 bg-zinc-900/50 border border-zinc-800/50 p-4 rounded-2xl hover:bg-zinc-800/80 hover:border-emerald-500/30 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(16,185,129,0.15)] transition-all duration-300 cursor-default group">
+                    <span className="text-2xl group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300">{item.icon}</span>
+                    <span className="text-zinc-300 font-medium group-hover:text-white transition-colors duration-300">{item.text}</span>
                   </div>
                 ))}
               </motion.div>
@@ -216,8 +225,8 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
           <div className="flex flex-col xl:flex-row items-center justify-between gap-4 xl:gap-6 mb-16 relative z-10 w-full">
             {/* Step 1 */}
             <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-center">
-              <div className="w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group shadow-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] relative transition-all duration-500 mb-6 cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group ${activeAnimations['anim_2'] ? 'is-active' : ''} shadow-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`} onClick={() => triggerAnimation('anim_2')} tabIndex="0">
+                <div className={`absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
                 <div className="p-8 pb-4 relative z-10 h-[280px]">
                   <h3 className="text-2xl font-bold text-white mb-4 text-left">{isRu ? 'Быстрый поиск товаров' : 'Fast Product Search'}</h3>
                   <p className="text-zinc-400 leading-relaxed text-left">
@@ -227,7 +236,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full mt-auto flex justify-center items-start">
-                  <img src="/uploads/taza/Главная.png" alt="Catalog" className="w-[60%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 transition-transform duration-500" />
+                  <img src="/uploads/taza/Главная.png" alt="Catalog" className={`w-[60%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Каталог товаров' : 'Product Catalog'}</div>
@@ -239,8 +248,8 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
 
             {/* Step 2 */}
             <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-center">
-              <div className="w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group shadow-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] relative transition-all duration-500 mb-6 cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group ${activeAnimations['anim_3'] ? 'is-active' : ''} shadow-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`} onClick={() => triggerAnimation('anim_3')} tabIndex="0">
+                <div className={`absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
                 <div className="p-8 pb-4 relative z-10 h-[280px]">
                   <h3 className="text-2xl font-bold text-white mb-4 text-left">{isRu ? 'Повторяемые закупки' : 'Repeatable Procurement'}</h3>
                   <p className="text-zinc-400 leading-relaxed text-left">
@@ -250,7 +259,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full mt-auto flex justify-center items-start">
-                  <img src="/uploads/taza/Корзина.png" alt="Order" className="w-[60%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 transition-transform duration-500" />
+                  <img src="/uploads/taza/Корзина.png" alt="Order" className={`w-[60%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Оформление заказа' : 'Place Order'}</div>
@@ -262,8 +271,8 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
 
             {/* Step 3 */}
             <motion.div variants={fadeInUp} className="w-full xl:flex-1 flex flex-col items-center">
-              <div className="w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group shadow-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] relative transition-all duration-500 mb-6 cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className={`w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden flex flex-col h-[650px] md:h-[680px] group ${activeAnimations['anim_4'] ? 'is-active' : ''} shadow-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] relative transition-all duration-500 mb-6 cursor-pointer`} onClick={() => triggerAnimation('anim_4')} tabIndex="0">
+                <div className={`absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
                 <div className="p-8 pb-4 relative z-10 h-[280px]">
                   <h3 className="text-2xl font-bold text-white mb-4 text-left">{isRu ? 'Контроль поставок' : 'Supply Control'}</h3>
                   <p className="text-zinc-400 leading-relaxed text-left">
@@ -273,7 +282,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full mt-auto flex justify-center items-start">
-                  <img src="/uploads/taza/Страница заказа.png" alt="Tracking" className="w-[60%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 transition-transform duration-500" />
+                  <img src="/uploads/taza/Страница заказа.png" alt="Tracking" className={`w-[60%] md:w-[70%] xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Отслеживание заказа' : 'Track Order'}</div>
@@ -292,37 +301,37 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-left">
               {/* Card 1 */}
-              <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group">
-                <div className="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 text-emerald-500 group-hover:scale-110 group-hover:bg-emerald-500/20 transition-all duration-300">
+              <motion.div variants={fadeInUp} className={`bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group `}>
+                <div className={`w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 text-emerald-500 group-hover:scale-110 group-[.is-active]:scale-110 group-hover:bg-emerald-500/20 group-[.is-active]:bg-emerald-500/20 transition-all duration-300`}>
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 transition-colors">
+                <p className={`text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 group-[.is-active]:text-zinc-300 transition-colors`}>
                   {isRu ? 'Проект позволил спроектировать мобильный опыт для B2B-маркетплейса, ориентированного на оптовые закупки.' : 'The project made it possible to design a mobile experience for a B2B marketplace focused on wholesale procurement.'}
                 </p>
               </motion.div>
 
               {/* Card 2 */}
-              <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group">
-                <div className="w-14 h-14 bg-teal-500/10 rounded-2xl flex items-center justify-center mb-6 text-teal-500 group-hover:scale-110 group-hover:bg-teal-500/20 transition-all duration-300">
+              <motion.div variants={fadeInUp} className={`bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group `}>
+                <div className={`w-14 h-14 bg-teal-500/10 rounded-2xl flex items-center justify-center mb-6 text-teal-500 group-hover:scale-110 group-[.is-active]:scale-110 group-hover:bg-teal-500/20 group-[.is-active]:bg-teal-500/20 transition-all duration-300`}>
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5" />
                   </svg>
                 </div>
-                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 transition-colors">
+                <p className={`text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 group-[.is-active]:text-zinc-300 transition-colors`}>
                   {isRu ? 'В ходе работы были проработаны сценарии поиска товаров, взаимодействия с поставщиками и оформления заказов для бизнеса.' : 'During the work, scenarios for product search, supplier interaction, and business order placement were developed.'}
                 </p>
               </motion.div>
 
               {/* Card 3 */}
-              <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group">
-                <div className="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 text-cyan-500 group-hover:scale-110 group-hover:bg-cyan-500/20 transition-all duration-300">
+              <motion.div variants={fadeInUp} className={`bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group `}>
+                <div className={`w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 text-cyan-500 group-hover:scale-110 group-[.is-active]:scale-110 group-hover:bg-cyan-500/20 group-[.is-active]:bg-cyan-500/20 transition-all duration-300`}>
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182" />
                   </svg>
                 </div>
-                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 transition-colors">
+                <p className={`text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 group-[.is-active]:text-zinc-300 transition-colors`}>
                   {isRu ? 'Этот кейс отличается от классических e-commerce решений тем, что фокусируется не на импульсных покупках, а на регулярных бизнес-процессах, где важны скорость оформления, прозрачность поставок и удобство повторных закупок.' : 'This case study differs from classic e-commerce solutions by focusing not on impulse purchases, but on regular business processes where speed of ordering, supply transparency, and convenience of repeat procurement are key.'}
                 </p>
               </motion.div>
@@ -337,29 +346,30 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
               'Корзина.png', 'Оформление заказа.png', 'Страница заказа.png', 'Страница заказа модалка заказа.png',
               'Мои аукционы.png', 'Отложанные товары.png', 'Мои счета.png', 'Профиль.png', 'Модалка товара.png'
             ].slice(0, 4).map((img, i) => (
-              <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden flex items-center justify-center w-full group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] hover:border-zinc-700 shadow-xl">
+              <div key={i} className={`bg-zinc-900 border border-zinc-800 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden flex items-center justify-center w-full group  transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] hover:border-zinc-700 shadow-xl`}>
                 <img src={`/uploads/taza/${img}`} alt={`Screen ${i+1}`} className="w-full h-auto block" />
               </div>
             ))}
 
             {!showAllScreenshots && (
               <div 
-                className="col-span-2 md:col-span-4 relative group cursor-pointer w-full h-32 md:h-48 overflow-hidden rounded-t-[2rem]" 
-                onClick={() => setShowAllScreenshots(true)}
+                className={`col-span-2 md:col-span-4 relative group ${activeAnimations['anim_0'] ? 'is-active' : ''} cursor-pointer w-full h-32 md:h-48 overflow-hidden rounded-t-[2rem]`} 
+                onClick={() => { triggerAnimation('anim_0'); setShowAllScreenshots(true); }} 
+                tabIndex="0"
               >
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full h-full pointer-events-none">
                   {[
                     'Главная.png', 'Главная — Ауцион.png', 'Главная — Ауцион модалка.png', 'Главная — Ауцион модалка аукцион завершен.png'
                   ].map((img, i) => (
-                    <div key={i} className={`bg-zinc-900 border-x border-t border-zinc-800 rounded-t-[2rem] overflow-hidden flex items-start justify-center w-full h-full ${i >= 2 ? 'hidden md:flex' : ''}`}>
-                      <img src={`/uploads/taza/${img}`} alt={`Hidden Screen ${i}`} className="w-full h-auto block opacity-50 group-hover:opacity-70 transition-opacity" />
+                    <div key={i} className={"bg-zinc-900 border-x border-t border-zinc-800 rounded-t-[2rem] overflow-hidden flex items-start justify-center w-full h-full " + (i >= 2 ? 'hidden md:flex' : '')}>
+                      <img src={`/uploads/taza/${img}`} alt={`Hidden Screen ${i}`} className="w-full h-auto block opacity-50 group-hover:opacity-70 group-[.is-active]:opacity-70 transition-opacity" />
                     </div>
                   ))}
                 </div>
                 
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/80 to-[#0a0a0a]"></div>
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <span className="px-6 py-2.5 bg-zinc-800/90 text-zinc-400 text-sm md:text-base rounded-full backdrop-blur-md border border-zinc-700 pointer-events-auto transition-colors group-hover:bg-zinc-700 group-hover:text-zinc-200">
+                  <span className={`px-6 py-2.5 bg-zinc-800/90 text-zinc-400 text-sm md:text-base rounded-full backdrop-blur-md border border-zinc-700 pointer-events-auto transition-colors group-hover:bg-zinc-700 group-[.is-active]:bg-zinc-700 group-hover:text-zinc-200 group-[.is-active]:text-zinc-200`}>
                     {isRu ? 'Показать все скриншоты' : 'Show all screenshots'}
                   </span>
                 </div>
@@ -372,7 +382,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
               'Корзина.png', 'Оформление заказа.png', 'Страница заказа.png', 'Страница заказа модалка заказа.png',
               'Мои аукционы.png', 'Отложанные товары.png', 'Мои счета.png', 'Профиль.png', 'Модалка товара.png'
             ].slice(4).map((img, i) => (
-              <div key={i + 4} className="bg-zinc-900 border border-zinc-800 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden flex items-center justify-center w-full group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] hover:border-zinc-700 shadow-xl">
+              <div key={i + 4} className={`bg-zinc-900 border border-zinc-800 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden flex items-center justify-center w-full group  transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] hover:border-zinc-700 shadow-xl`}>
                 <img src={`/uploads/taza/${img}`} alt={`Screen ${i + 5}`} className="w-full h-auto block" />
               </div>
             ))}
@@ -382,14 +392,14 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
 
       {/* Google Play App Link */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 text-center shadow-xl relative overflow-hidden group">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className={`bg-zinc-900 border border-zinc-800 rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 text-center shadow-xl relative overflow-hidden group ${activeAnimations['anim_1'] ? 'is-active' : ''} `} onClick={() => triggerAnimation('anim_1')} tabIndex="0">
           <div className="absolute inset-0 bg-black/10 transition-colors duration-500"></div>
 
           {/* Decorative blobs (Google Play Colors) */}
-          <div className="absolute top-[-20%] left-[-10%] w-[40%] h-[150%] bg-[#34A853]/15 blur-[80px] rounded-full transform rotate-45 pointer-events-none group-hover:bg-[#34A853]/25 transition-colors duration-700"></div>
-          <div className="absolute top-[-20%] right-[-10%] w-[40%] h-[150%] bg-[#EA4335]/15 blur-[80px] rounded-full transform -rotate-45 pointer-events-none group-hover:bg-[#EA4335]/25 transition-colors duration-700"></div>
-          <div className="absolute bottom-[-50%] left-[10%] w-[40%] h-[150%] bg-[#FBBC04]/15 blur-[80px] rounded-full transform rotate-12 pointer-events-none group-hover:bg-[#FBBC04]/25 transition-colors duration-700"></div>
-          <div className="absolute bottom-[-50%] right-[10%] w-[40%] h-[150%] bg-[#4285F4]/15 blur-[80px] rounded-full transform -rotate-12 pointer-events-none group-hover:bg-[#4285F4]/25 transition-colors duration-700"></div>
+          <div className={`absolute top-[-20%] left-[-10%] w-[40%] h-[150%] bg-[#34A853]/15 blur-[80px] rounded-full transform rotate-45 pointer-events-none group-hover:bg-[#34A853]/25 group-[.is-active]:bg-[#34A853]/25 transition-colors duration-700`}></div>
+          <div className={`absolute top-[-20%] right-[-10%] w-[40%] h-[150%] bg-[#EA4335]/15 blur-[80px] rounded-full transform -rotate-45 pointer-events-none group-hover:bg-[#EA4335]/25 group-[.is-active]:bg-[#EA4335]/25 transition-colors duration-700`}></div>
+          <div className={`absolute bottom-[-50%] left-[10%] w-[40%] h-[150%] bg-[#FBBC04]/15 blur-[80px] rounded-full transform rotate-12 pointer-events-none group-hover:bg-[#FBBC04]/25 group-[.is-active]:bg-[#FBBC04]/25 transition-colors duration-700`}></div>
+          <div className={`absolute bottom-[-50%] right-[10%] w-[40%] h-[150%] bg-[#4285F4]/15 blur-[80px] rounded-full transform -rotate-12 pointer-events-none group-hover:bg-[#4285F4]/25 group-[.is-active]:bg-[#4285F4]/25 transition-colors duration-700`}></div>
 
           <div className="relative z-10 flex flex-col items-center">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">

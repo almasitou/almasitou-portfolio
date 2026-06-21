@@ -48,10 +48,20 @@ export default function OtherProjects({ projects, lang }) {
           </h3>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {projects.map((project) => (
+          {projects.map((project) => {
+            const getSlug = (p) => {
+              const title = (p.title || p.titleRu || '').toLowerCase();
+              if (p.id === 'cmqjeakgy0000vxltp4qj7ks1' || title.includes('skibo')) return 'skibo';
+              if (p.id === 'cmqjeakqk0001vxltptpxytw5' || title.includes('kaspi')) return 'kaspi';
+              if (p.id === 'cmqjeakvd0002vxltgwlxjlo9' || title.includes('bao')) return 'bao';
+              if (p.id === 'cmqjeal510004vxlt8hmvmcr6' || title.includes('taza')) return 'taza';
+              if (p.id === 'cmqjeal060003vxlt80svpske' || title.includes('idol')) return 'idol';
+              return p.id;
+            };
+            return (
             <Link 
               key={project.id} 
-              href={`/${lang}/project/${(project.title || project.titleRu || '').toLowerCase().includes('skibo') ? 'skibo' : (project.title || project.titleRu || '').toLowerCase().includes('kaspi') ? 'kaspi' : (project.title || project.titleRu || '').toLowerCase().includes('bao') ? 'bao' : (project.title || project.titleRu || '').toLowerCase().includes('taza') ? 'taza' : (project.title || project.titleRu || '').toLowerCase().includes('idol') ? 'idol' : project.id}`}
+              href={`/${lang}/project/${getSlug(project)}`}
               className="group block relative overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800 aspect-[4/3] hover:border-zinc-600 transition-colors"
             >
               <img 
@@ -67,7 +77,8 @@ export default function OtherProjects({ projects, lang }) {
                 </h4>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </motion.div>
       </section>

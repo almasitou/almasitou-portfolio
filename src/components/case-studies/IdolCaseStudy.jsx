@@ -18,13 +18,22 @@ const staggerContainer = {
 export default function IdolCaseStudy({ lang, otherProjects }) {
   const isRu = lang === 'ru';
   const [showAllScreenshots, setShowAllScreenshots] = useState(false);
+  const [activeAnimations, setActiveAnimations] = useState({});
+
+  const triggerAnimation = (id) => {
+    if (activeAnimations[id]) return;
+    setActiveAnimations(prev => ({ ...prev, [id]: true }));
+    setTimeout(() => {
+      setActiveAnimations(prev => ({ ...prev, [id]: false }));
+    }, 2000);
+  };
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-blue-500/30 font-sans pb-0 overflow-x-hidden w-full max-w-[100vw]">
       {/* Navigation */}
       <div className="fixed top-6 left-6 z-50">
         <Link href={`/${lang}`} className="inline-flex items-center px-5 py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group">
-          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           {isRu ? 'Назад в портфолио' : 'Back to Portfolio'}
@@ -62,19 +71,19 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
           
           {/* Project Meta Info */}
           <motion.div variants={fadeInUp} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto mb-16 w-full">
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
+            <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-3xl px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Тип проекта' : 'Project Type'}</span>
               <span className="text-white font-medium">{isRu ? 'Концепт' : 'Concept'}</span>
             </div>
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
+            <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-3xl px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Платформа' : 'Platform'}</span>
               <span className="text-white font-medium">Web Application</span>
             </div>
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
+            <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-3xl px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Дата' : 'Date'}</span>
               <span className="text-white font-medium">{isRu ? '19 января 2026' : 'January 19, 2026'}</span>
             </div>
-            <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
+            <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-3xl px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
               <span className="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Моя роль' : 'My Role'}</span>
               <span className="text-white font-medium text-center">Product Designer</span>
             </div>
@@ -93,7 +102,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
               </motion.h2>
               <motion.div variants={fadeInUp} className="flex flex-wrap gap-3">
                 {['Product Discovery', 'UX Research', 'User Flow Design', 'Wireframing', 'UI Design', 'Interactive Prototyping'].map((role, i) => (
-                  <span key={i} className="px-5 py-2.5 bg-zinc-900 border border-zinc-800 rounded-full text-zinc-300 font-medium text-sm md:text-base hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(59,130,246,0.15)] hover:border-blue-500/30 hover:text-white transition-all duration-300 cursor-default">
+                  <span key={i} className="px-5 py-2.5 bg-zinc-900 border border-zinc-800 rounded-full text-zinc-300 font-medium text-sm md:text-base hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(236,72,153,0.15)] hover:border-pink-500/30 hover:text-white transition-all duration-300 cursor-default">
                     {role}
                   </span>
                 ))}
@@ -112,9 +121,9 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   { icon: '🎨', text: 'AI Content Creation' },
                   { icon: '🤝', text: 'Creator Marketplace' }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 bg-zinc-900/50 border border-zinc-800/50 p-4 rounded-2xl hover:bg-zinc-800/80 hover:border-blue-500/30 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(59,130,246,0.15)] transition-all duration-300 cursor-default group">
-                    <span className="text-2xl group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300">{item.icon}</span>
-                    <span className="text-zinc-300 font-medium group-hover:text-white transition-colors duration-300">{item.text}</span>
+                  <div key={i} className={`flex items-center gap-4 bg-zinc-900/50 border border-zinc-800/50 p-4 rounded-2xl hover:bg-zinc-800/80 hover:border-pink-500/30 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(236,72,153,0.15)] transition-all duration-300 cursor-default group `}>
+                    <span className={`text-2xl group-hover:scale-110 group-[.is-active]:scale-110 group-hover:-rotate-3 group-[.is-active]:-rotate-3 transition-transform duration-300`}>{item.icon}</span>
+                    <span className={`text-zinc-300 font-medium group-hover:text-white group-[.is-active]:text-white transition-colors duration-300`}>{item.text}</span>
                   </div>
                 ))}
               </motion.div>
@@ -159,12 +168,12 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   { name: 'Veo 3', logo: 'https://www.google.com/s2/favicons?domain=deepmind.google&sz=128', offset: '-mt-8 -rotate-6' },
                   { name: 'Higgsfield', logo: 'https://www.google.com/s2/favicons?domain=higgsfield.ai&sz=128', offset: 'mt-4 rotate-3' }
                 ].map((tool, idx) => (
-                  <div key={idx} className={`relative ${tool.offset}`}>
+                  <div key={idx} className={"relative " + tool.offset}>
                     <motion.div 
                       animate={{ y: [0, -8, 0], rotate: [0, (idx % 2 === 0 ? -3 : 3), 0] }} 
                       transition={{ repeat: Infinity, duration: 4 + idx * 0.4, ease: "easeInOut" }}
                       whileHover={{ scale: 1.1, zIndex: 20 }}
-                      className="bg-zinc-800/90 backdrop-blur-sm border border-zinc-700 px-5 py-3 rounded-2xl flex items-center gap-3 shadow-2xl cursor-pointer"
+                      className="bg-zinc-800/90 backdrop-blur-sm border border-zinc-700 hover:border-pink-500/50 hover:shadow-[0_0_20px_rgba(236,72,153,0.4)] transition-shadow transition-colors duration-300 px-5 py-3 rounded-2xl flex items-center gap-3 shadow-2xl cursor-pointer"
                     >
                       <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden shrink-0 bg-white">
                         <img src={tool.logo} alt={tool.name} className="w-full h-full object-cover" />
@@ -205,14 +214,14 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
             {/* Right: Visual Before/After */}
             <motion.div variants={fadeInUp} className="relative grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Было */}
-              <div className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-6 shadow-2xl flex flex-col items-center opacity-70 hover:opacity-100 hover:scale-105 transition-all duration-500 cursor-default group">
+              <div className={`bg-zinc-900 border border-zinc-800 rounded-[2rem] p-6 shadow-2xl flex flex-col items-center opacity-70 hover:opacity-100 hover:scale-105 transition-all duration-500 cursor-default group ${activeAnimations['anim_0'] ? 'is-active' : ''} `} onClick={() => triggerAnimation('anim_0')} tabIndex="0">
                 <h3 className="text-zinc-500 font-bold mb-4 uppercase text-sm tracking-wider">{isRu ? 'Было' : 'Before'}</h3>
                 {['Множество инструментов', 'Множество переключений', 'Потеря контекста', 'Потеря времени'].map((step, idx, arr) => (
                   <React.Fragment key={idx}>
                     <motion.div 
                       whileInView={{ opacity: [0, 1], y: [10, 0] }} 
                       transition={{ delay: idx * 0.2 }}
-                      className="bg-zinc-800/50 border border-zinc-700/50 text-zinc-400 px-4 py-2 rounded-xl text-center text-sm font-medium w-full shadow-lg transition-colors group-hover:bg-zinc-800 group-hover:text-zinc-300"
+                      className={`bg-zinc-800/50 border border-zinc-700/50 text-zinc-400 px-4 py-2 rounded-xl text-center text-sm font-medium w-full shadow-lg transition-colors group-hover:bg-zinc-800 group-[.is-active]:bg-zinc-800 group-hover:text-zinc-300 group-[.is-active]:text-zinc-300`}
                     >
                       {isRu ? step : ['Multiple tools', 'Multiple switches', 'Context loss', 'Time loss'][idx]}
                     </motion.div>
@@ -224,14 +233,14 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
               </div>
               
               {/* Стало */}
-              <div className="bg-blue-900/20 border border-blue-500/30 rounded-[2rem] p-6 shadow-2xl flex flex-col items-center hover:scale-105 transition-all duration-500 cursor-default group">
+              <div className={`bg-blue-900/20 border border-blue-500/30 rounded-[2rem] p-6 shadow-2xl flex flex-col items-center hover:scale-105 transition-all duration-500 cursor-default group`}>
                 <h3 className="text-blue-400 font-bold mb-4 uppercase text-sm tracking-wider">{isRu ? 'Стало' : 'After'}</h3>
                 {['IDOL', 'Создание контента', 'Планирование', 'Публикация', 'Управление проектами', 'Поиск клиентов'].map((step, idx, arr) => (
                   <React.Fragment key={idx}>
                     <motion.div 
                       whileInView={{ opacity: [0, 1], y: [10, 0] }} 
                       transition={{ delay: idx * 0.15 }}
-                      className={`${idx === 0 ? 'bg-blue-600 border-blue-500 text-white shadow-blue-500/20' : 'bg-zinc-800 border-zinc-700 text-zinc-300'} border px-4 py-2 rounded-xl text-center text-sm font-medium w-full shadow-lg group-hover:shadow-xl transition-shadow`}
+                      className={`${idx === 0 ? 'bg-blue-600 border-blue-500 text-white shadow-blue-500/20' : 'bg-zinc-800 border-zinc-700 text-zinc-300'} border px-4 py-2 rounded-xl text-center text-sm font-medium w-full shadow-lg group-hover:shadow-xl group-[.is-active]:shadow-xl transition-shadow`}
                     >
                       {isRu ? step : ['IDOL', 'Content creation', 'Planning', 'Publishing', 'Project management', 'Finding clients'][idx]}
                     </motion.div>
@@ -255,7 +264,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {/* Card 1 */}
-            <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col group relative overflow-hidden">
+            <motion.div variants={fadeInUp} className={`bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col group ${activeAnimations['anim_1'] ? 'is-active' : ''} relative overflow-hidden`} onClick={() => triggerAnimation('anim_1')} tabIndex="0">
               <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent pointer-events-none rounded-[2rem]"></div>
               <div className="p-8 pb-4 relative z-10">
                 <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'Рабочее AI-пространство' : 'AI Workspace'}</h3>
@@ -264,12 +273,12 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                 </p>
               </div>
               <div className="mt-4 p-8 flex justify-center items-center relative z-10">
-                <img src="/uploads/idol/Dashboard.png" alt="AI Workspace" className="w-[90%] h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-y-2" />
+                <img src="/uploads/idol/Dashboard.png" alt="AI Workspace" className={`w-[90%] h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2`} />
               </div>
             </motion.div>
 
             {/* Card 2 */}
-            <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col group relative overflow-hidden">
+            <motion.div variants={fadeInUp} className={`bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col group  relative overflow-hidden`}>
               <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent pointer-events-none rounded-[2rem]"></div>
               <div className="p-8 pb-4 relative z-10">
                 <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'Библиотека промптов' : 'Prompt Library'}</h3>
@@ -278,23 +287,53 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                 </p>
               </div>
               <div className="mt-4 p-8 flex justify-center items-center relative z-10">
-                <img src="/uploads/idol/Studio -_ Explore.png" alt="Prompt Library" className="w-[90%] h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-y-2" />
+                <img src="/uploads/idol/Studio -_ Explore.png" alt="Prompt Library" className={`w-[90%] h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2`} />
               </div>
             </motion.div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
             {/* Card 3: Content Planner */}
-            <motion.div variants={fadeInUp} className="md:col-span-4 bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 flex flex-col justify-center shadow-xl hover:bg-zinc-800 hover:border-purple-500/30 transition-all duration-500 group relative overflow-hidden hover:-translate-y-1">
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <h3 className="text-2xl font-bold text-white mb-3 relative z-10">{isRu ? 'Планировщик контента' : 'Content Planner'}</h3>
-              <p className="text-zinc-400 relative z-10">
-                {isRu ? 'Планирование публикаций для Instagram, TikTok, Threads, Telegram и других платформ.' : 'Planning publications for Instagram, TikTok, Threads, Telegram, and other platforms.'}
-              </p>
+            <motion.div variants={fadeInUp} className={`md:col-span-4 bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col shadow-xl hover:bg-zinc-800 hover:border-purple-500/30 transition-all duration-500 group  relative overflow-hidden hover:-translate-y-1`}>
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent pointer-events-none rounded-[2rem]"></div>
+              <div className="p-8 pb-4 relative z-10">
+                <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'Планировщик контента' : 'Content Planner'}</h3>
+                <p className="text-zinc-400">
+                  {isRu ? 'Планирование публикаций для Instagram, TikTok, Threads, Telegram и других платформ.' : 'Planning publications for Instagram, TikTok, Threads, Telegram, and other platforms.'}
+                </p>
+              </div>
+              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-48 md:h-56 overflow-hidden">
+                <div className="w-full h-full relative transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 translate-y-4 flex items-center justify-center">
+                  <div className="w-[70%] max-w-[180px] bg-zinc-800/80 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-4 shadow-2xl relative z-10">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-8 h-8 rounded-full bg-zinc-700/50"></div>
+                      <div className="flex-1 space-y-1.5">
+                        <div className="h-2 bg-zinc-700/50 rounded w-2/3"></div>
+                        <div className="h-2 bg-zinc-700/30 rounded w-1/2"></div>
+                      </div>
+                    </div>
+                    <div className="w-full h-24 bg-zinc-700/30 rounded-xl mb-3 flex items-center justify-center">
+                       <svg className="w-8 h-8 text-pink-500/80" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="h-2 bg-zinc-700/50 rounded w-full"></div>
+                      <div className="h-2 bg-zinc-700/50 rounded w-4/5"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute top-4 right-[15%] w-12 h-12 bg-indigo-500/20 backdrop-blur-md border border-indigo-500/30 rounded-xl flex items-center justify-center animate-bounce shadow-[0_0_15px_rgba(99,102,241,0.2)] z-20" style={{ animationDuration: '3s' }}>
+                    <svg className="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  </div>
+                  
+                  <div className="absolute bottom-6 left-[15%] w-10 h-10 bg-zinc-800/80 backdrop-blur-md border border-zinc-700/50 rounded-lg flex items-center justify-center animate-bounce shadow-lg z-20" style={{ animationDuration: '4s', animationDelay: '1s' }}>
+                    <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 15.68a6.34 6.34 0 006.26 6.32 6.32 6.32 0 006.21-6.32V8.58a8.2 8.2 0 003.53 1.05V6.26a4.87 4.87 0 01-1.41.43z"/></svg>
+                  </div>
+                </div>
+              </div>
             </motion.div>
 
             {/* Card 4: AI Assistant */}
-            <motion.div variants={fadeInUp} className="md:col-span-8 bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col md:flex-row group relative overflow-hidden">
+            <motion.div variants={fadeInUp} className={`md:col-span-8 bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col md:flex-row group  relative overflow-hidden`}>
               <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-rose-500/20 to-transparent pointer-events-none rounded-[2rem]"></div>
               <div className="w-full md:w-[45%] p-8 md:p-12 flex flex-col justify-center relative z-10">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{isRu ? 'AI-ассистент' : 'AI Assistant'}</h3>
@@ -303,13 +342,13 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                 </p>
               </div>
               <div className="w-full md:w-[55%] p-8 flex justify-center items-center h-full min-h-[250px] relative z-10">
-                <img src="/uploads/idol/Studio -_ Explore -_ Image -_ AI Chat.png" alt="AI Assistant" className="w-full h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-x-2" />
+                <img src="/uploads/idol/Studio -_ Explore -_ Image -_ AI Chat.png" alt="AI Assistant" className={`w-full h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-x-2 group-[.is-active]:-translate-x-2`} />
               </div>
             </motion.div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <motion.div variants={fadeInUp} className="md:col-span-8 bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col md:flex-row group items-center shadow-xl relative overflow-hidden">
+            <motion.div variants={fadeInUp} className={`md:col-span-8 bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col md:flex-row group  items-center shadow-xl relative overflow-hidden`}>
               <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-orange-500/20 to-transparent pointer-events-none rounded-[2rem]"></div>
               <div className="p-8 md:p-12 md:w-[45%] flex flex-col justify-center h-full relative z-10">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{isRu ? 'Единый центр управления' : 'Unified Control Center'}</h3>
@@ -318,17 +357,55 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                 </p>
               </div>
               <div className="w-full md:w-[55%] p-8 flex justify-center items-center h-full min-h-[250px] relative z-10">
-                <img src="/uploads/idol/Talent Roster.png" alt="Unified Control Center" className="w-full h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-x-2" />
+                <img src="/uploads/idol/Talent Roster.png" alt="Unified Control Center" className={`w-full h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-x-2 group-[.is-active]:-translate-x-2`} />
               </div>
             </motion.div>
 
-            {/* Card 6: Creator Marketplace (No Image, Small Block) */}
-            <motion.div variants={fadeInUp} className="md:col-span-4 bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 flex flex-col justify-center shadow-xl hover:bg-zinc-800 hover:border-emerald-500/30 transition-all duration-500 group relative overflow-hidden hover:-translate-y-1">
-              <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <h3 className="text-2xl font-bold text-white mb-3 relative z-10">{isRu ? 'Маркетплейс креаторов' : 'Creator Marketplace'}</h3>
-              <p className="text-zinc-400 relative z-10">
-                {isRu ? 'Пространство для взаимодействия между заказчиками и AI-креаторами.' : 'Space for interaction between clients and AI creators.'}
-              </p>
+            {/* Card 6: Creator Marketplace (With Image) */}
+            <motion.div variants={fadeInUp} className={`md:col-span-4 bg-zinc-900 border border-zinc-800 rounded-[2rem] flex flex-col shadow-xl hover:bg-zinc-800 hover:border-emerald-500/30 transition-all duration-500 group  relative overflow-hidden hover:-translate-y-1`}>
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/20 to-transparent pointer-events-none rounded-[2rem]"></div>
+              <div className="p-8 pb-4 relative z-10">
+                <h3 className="text-2xl font-bold text-white mb-3">{isRu ? 'Маркетплейс креаторов' : 'Creator Marketplace'}</h3>
+                <p className="text-zinc-400">
+                  {isRu ? 'Пространство для взаимодействия между заказчиками и AI-креаторами.' : 'Space for interaction between clients and AI creators.'}
+                </p>
+              </div>
+              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-48 md:h-56 overflow-hidden">
+                <div className="w-full h-full relative transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 translate-y-4 flex items-center justify-center">
+                  {/* Profile Card 1 */}
+                  <div className="absolute z-20 w-[80%] max-w-[200px] bg-zinc-800/90 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-4 shadow-2xl transition-transform duration-700 group-hover:-translate-y-4 group-[.is-active]:-translate-y-4 translate-y-4 animate-bounce" style={{ animationDuration: '4s' }}>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-500 to-blue-500 p-[2px]">
+                        <div className="w-full h-full bg-zinc-800 rounded-full border-2 border-zinc-900 flex items-center justify-center overflow-hidden">
+                          <svg className="w-6 h-6 text-zinc-500 mt-2" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" /></svg>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-2.5 bg-zinc-600 rounded w-2/3 mb-1.5"></div>
+                        <div className="flex items-center gap-1">
+                          <svg className="w-3 h-3 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                          <div className="h-2 bg-zinc-700 rounded w-6"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center gap-2">
+                      <div className="h-2 bg-emerald-500/50 rounded w-1/3"></div>
+                      <div className="h-6 w-16 bg-emerald-500/20 text-emerald-400 rounded-lg text-[10px] font-bold flex items-center justify-center border border-emerald-500/30">Hire</div>
+                    </div>
+                  </div>
+                  
+                  {/* Profile Card 2 (Background) */}
+                  <div className="absolute z-10 w-[70%] max-w-[180px] bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/30 rounded-2xl p-4 shadow-xl translate-y-2 translate-x-6 opacity-60 transition-transform duration-700 group-hover:translate-x-12 group-[.is-active]:translate-x-12 group-hover:-rotate-6 group-[.is-active]:-rotate-6 animate-pulse" style={{ animationDuration: '3s' }}>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-8 h-8 rounded-full bg-zinc-700"></div>
+                      <div className="flex-1 space-y-1.5">
+                        <div className="h-2 bg-zinc-700 rounded w-full"></div>
+                        <div className="h-2 bg-zinc-700 rounded w-1/2"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </motion.div>
@@ -390,8 +467,8 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                 icon: '🚀'
               }
             ].map((card, i) => (
-              <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-300 group">
-                <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 text-2xl group-hover:scale-110 group-hover:bg-blue-500/20 transition-all duration-300">
+              <div key={i} className={`bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-300 group `}>
+                <div className={`w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 text-2xl group-hover:scale-110 group-[.is-active]:scale-110 group-hover:bg-blue-500/20 group-[.is-active]:bg-blue-500/20 transition-all duration-300`}>
                   {card.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{card.title}</h3>
@@ -412,37 +489,37 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-left">
               {/* Card 1 */}
-              <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group">
-                <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 text-blue-500 group-hover:scale-110 group-hover:bg-blue-500/20 transition-all duration-300">
+              <motion.div variants={fadeInUp} className={`bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group `}>
+                <div className={`w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 text-blue-500 group-hover:scale-110 group-[.is-active]:scale-110 group-hover:bg-blue-500/20 group-[.is-active]:bg-blue-500/20 transition-all duration-300`}>
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                   </svg>
                 </div>
-                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 transition-colors">
+                <p className={`text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 group-[.is-active]:text-zinc-300 transition-colors`}>
                   {isRu ? 'Исследование нового класса продуктов для AI Creator Economy.' : 'Researching a new class of products for the AI Creator Economy.'}
                 </p>
               </motion.div>
 
               {/* Card 2 */}
-              <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group">
-                <div className="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 text-purple-500 group-hover:scale-110 group-hover:bg-purple-500/20 transition-all duration-300">
+              <motion.div variants={fadeInUp} className={`bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group `}>
+                <div className={`w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 text-purple-500 group-hover:scale-110 group-[.is-active]:scale-110 group-hover:bg-purple-500/20 group-[.is-active]:bg-purple-500/20 transition-all duration-300`}>
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
                   </svg>
                 </div>
-                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 transition-colors">
+                <p className={`text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 group-[.is-active]:text-zinc-300 transition-colors`}>
                   {isRu ? 'Проработка единой платформы вместо набора разрозненных инструментов.' : 'Designing a unified platform instead of a set of fragmented tools.'}
                 </p>
               </motion.div>
 
               {/* Card 3 */}
-              <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group">
-                <div className="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 text-emerald-500 group-hover:scale-110 group-hover:bg-emerald-500/20 transition-all duration-300">
+              <motion.div variants={fadeInUp} className={`bg-zinc-900 border border-zinc-800 rounded-[2rem] p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group `}>
+                <div className={`w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 text-emerald-500 group-hover:scale-110 group-[.is-active]:scale-110 group-hover:bg-emerald-500/20 group-[.is-active]:bg-emerald-500/20 transition-all duration-300`}>
                   <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
                   </svg>
                 </div>
-                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 transition-colors">
+                <p className={`text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-300 group-[.is-active]:text-zinc-300 transition-colors`}>
                   {isRu ? 'Демонстрация продуктового мышления и проектирования цифрового продукта с нуля.' : 'Demonstrating product thinking and designing a digital product from scratch.'}
                 </p>
               </motion.div>
@@ -473,31 +550,32 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
 
           <div className="relative">
             <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 items-start ${!showAllScreenshots ? 'max-h-[800px] md:max-h-[600px] overflow-hidden' : ''}`}>
-              <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl">
+              <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(236,72,153,0.3)] hover:border-pink-500/30">
                 <img src="/uploads/idol/Dashboard.png" alt="Dashboard" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
               </div>
-              <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl">
+              <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(236,72,153,0.3)] hover:border-pink-500/30">
                 <img src="/uploads/idol/Studio -_ Explore.png" alt="Explore" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
               </div>
-              <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl">
-                <img src="/uploads/idol/Studio -_ Explore -_ Image.png" alt="Explore Image" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
+              <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(236,72,153,0.3)] hover:border-pink-500/30">
+                <img src="/uploads/idol/Talent Roster.png" alt="Talent Roster" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
               </div>
-              <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl">
+              <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(236,72,153,0.3)] hover:border-pink-500/30">
                 <img src="/uploads/idol/Studio -_ Explore -_ Image -_ AI Chat.png" alt="AI Chat" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
               </div>
-              <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl md:col-span-2">
-                <img src="/uploads/idol/Talent Roster.png" alt="Talent Roster" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
+              <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl md:col-span-2 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(236,72,153,0.3)] hover:border-pink-500/30">
+                <img src="/uploads/idol/Studio -_ Explore -_ Image.png" alt="Explore Image" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
               </div>
             </div>
 
             {!showAllScreenshots && (
               <div 
-                className="absolute bottom-0 left-0 right-0 h-48 md:h-64 cursor-pointer group z-20"
-                onClick={() => setShowAllScreenshots(true)}
+                className={`absolute bottom-0 left-0 right-0 h-48 md:h-64 cursor-pointer group ${activeAnimations['anim_2'] ? 'is-active' : ''} z-20`}
+                onClick={() => { setShowAllScreenshots(true); triggerAnimation('anim_2'); }}
+                tabIndex="0"
               >
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/80 to-[#0a0a0a]"></div>
                 <div className="absolute inset-0 flex items-end justify-center pointer-events-none pb-8">
-                  <span className="px-6 py-2.5 bg-zinc-800/90 text-zinc-400 text-sm md:text-base rounded-full backdrop-blur-md border border-zinc-700 pointer-events-auto transition-colors group-hover:bg-zinc-700 group-hover:text-zinc-200 shadow-xl">
+                  <span className={`px-6 py-2.5 bg-zinc-800/90 text-zinc-400 text-sm md:text-base rounded-full backdrop-blur-md border border-zinc-700 pointer-events-auto transition-colors group-hover:bg-zinc-700 group-[.is-active]:bg-zinc-700 group-hover:text-zinc-200 group-[.is-active]:text-zinc-200 shadow-xl`}>
                     {isRu ? 'Показать все скриншоты' : 'Show all screenshots'}
                   </span>
                 </div>
