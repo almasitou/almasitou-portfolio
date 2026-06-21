@@ -96,32 +96,32 @@ export default async function Home({ params }) {
                 <div className="absolute -inset-6 bg-gradient-to-tr from-blue-500/20 via-indigo-500/15 to-purple-500/20 rounded-[3.5rem] blur-3xl opacity-60 group-hover:opacity-85 transition-opacity duration-700 -z-10 animate-pulse" style={{ animationDuration: '6s' }}></div>
                 
                 {/* Premium Glass Frame */}
-                <div className="p-3 rounded-[2.8rem] md:rounded-[3.2rem] bg-zinc-950/40 border border-zinc-800/50 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:border-blue-500/30 group-hover:bg-zinc-950/60 animate-float">
+                <div className="p-3 rounded-[2.8rem] md:rounded-[3.2rem] bg-zinc-950/40 border border-zinc-800/50 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:border-blue-500/30 group-[.is-active]:border-blue-500/30 group-hover:bg-zinc-950/60 group-[.is-active]:bg-zinc-950/60 animate-float">
                   
                   {/* Photo Container with overflow-hidden for zoom effect */}
                   <div className="relative w-full aspect-[4/5] md:aspect-[3/4] rounded-[2.2rem] md:rounded-[2.5rem] overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-40 group-[.is-active]:opacity-40"></div>
                     
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-40"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-40 group-[.is-active]:opacity-40"></div>
 
                     <img 
                       src="/profile.jpg" 
                       alt={`${t.hero.firstName} ${t.hero.lastName}`} 
-                      className="w-full h-full object-cover object-center opacity-90 transition-all duration-700 group-hover:opacity-100 group-hover:scale-105"
+                      className="w-full h-full object-cover object-center opacity-90 transition-all duration-700 group-hover:opacity-100 group-[.is-active]:opacity-100 group-hover:scale-105 group-[.is-active]:scale-105"
                     />
                   </div>
                 </div>
 
                 {/* Glassmorphic Name Badge - Decomposed Intersection */}
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-top-8 md:-left-8 lg:-left-12 z-30 w-max transform transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 group-hover:-rotate-2">
-                  <div className="relative overflow-hidden glass px-6 py-4 md:px-8 md:py-5 rounded-[2rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl bg-zinc-950/50 group-hover:bg-zinc-900/70 group-hover:border-blue-400/50 transition-colors flex flex-col items-center">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-top-8 md:-left-8 lg:-left-12 z-30 w-max transform transition-all duration-500 group-hover:scale-105 group-[.is-active]:scale-105 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 group-hover:-rotate-2 group-[.is-active]:-rotate-2">
+                  <div className="relative overflow-hidden glass px-6 py-4 md:px-8 md:py-5 rounded-[2rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl bg-zinc-950/50 group-hover:bg-zinc-900/70 group-[.is-active]:bg-zinc-900/70 group-hover:border-blue-400/50 group-[.is-active]:border-blue-400/50 transition-colors flex flex-col items-center">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shimmer" />
                     <span className="font-heading font-bold text-xl md:text-3xl text-white tracking-tight leading-none drop-shadow-lg relative z-10">{t.hero.firstName}</span>
                     <span className="font-heading font-semibold text-[10px] md:text-xs text-blue-400 tracking-[0.3em] uppercase mt-1.5 drop-shadow-md relative z-10">{t.hero.lastName}</span>
                   </div>
                 </div>
                 
-                <div className="absolute -bottom-8 lg:-bottom-10 left-1/2 -translate-x-1/2 z-20 bg-black/30 backdrop-blur-xl border border-zinc-700/40 px-8 py-6 lg:px-12 lg:py-8 rounded-[2rem] shadow-2xl flex justify-center items-center gap-8 lg:gap-12 w-max transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:-translate-x-1/2 group-hover:border-blue-500/40 group-hover:bg-black/40 overflow-hidden">
+                <div className="absolute -bottom-8 lg:-bottom-10 left-1/2 -translate-x-1/2 z-20 bg-black/30 backdrop-blur-xl border border-zinc-700/40 px-8 py-6 lg:px-12 lg:py-8 rounded-[2rem] shadow-2xl flex justify-center items-center gap-8 lg:gap-12 w-max transform transition-transform duration-500 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 group-hover:-translate-x-1/2 group-[.is-active]:-translate-x-1/2 group-hover:border-blue-500/40 group-[.is-active]:border-blue-500/40 group-hover:bg-black/40 group-[.is-active]:bg-black/40 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shimmer pointer-events-none" style={{ animationDelay: '3.25s' }} />
                   <div className="text-center relative z-10">
                     <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">6+</div>
@@ -234,10 +234,12 @@ export default async function Home({ params }) {
 
                 return (
                   <Reveal key={exp.id} delay={i * 0.1}>
-                    <div className="group/item relative overflow-hidden pl-8 pr-4 md:px-8 py-6 transition-all duration-500 md:group-hover/list:opacity-20 md:hover:!opacity-100 md:hover:scale-[1.02] md:hover:bg-zinc-900/40 rounded-3xl border border-transparent md:hover:border-zinc-800/60 md:hover:shadow-2xl active:bg-zinc-900/40 active:scale-[0.98]">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full md:group-hover/item:animate-shimmer-once pointer-events-none z-0" />
+                    <div className="group/item relative pl-8 pr-4 md:px-8 py-6 transition-all duration-500 md:group-hover/list:opacity-20 md:hover:!opacity-100 md:hover:scale-[1.02] md:hover:bg-zinc-900/40 rounded-3xl border border-transparent md:hover:border-zinc-800/60 md:hover:shadow-2xl active:bg-zinc-900/40 active:scale-[0.98]">
+                      <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none z-0">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full md:group-hover/item:animate-shimmer-once" />
+                      </div>
                       <div className="absolute left-0 top-8 bottom-0 w-px bg-zinc-800 md:hidden z-10" />
-                      <div className="absolute left-[-4px] top-8 w-2 h-2 rounded-full bg-blue-500 md:hidden" />
+                      <div className="absolute left-[-4px] top-8 w-2 h-2 rounded-full bg-blue-500 md:hidden z-10" />
 
                       <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
                         <div>

@@ -46,7 +46,7 @@ export default function MobileHoverFix() {
           }
         });
         touchedElements.clear();
-      }, 600); // 600ms delay to allow the hover animation to fully play
+      }, 1000); // 1000ms delay to allow the hover animation to fully play
     };
 
     document.addEventListener('touchstart', handleTouchStart, { passive: true });

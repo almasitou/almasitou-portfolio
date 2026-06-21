@@ -19,6 +19,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
   const isRu = lang === 'ru';
   const [showAllScreenshots, setShowAllScreenshots] = useState(false);
   const [activeAnimations, setActiveAnimations] = useState({});
+  const [isNavigating, setIsNavigating] = useState(false);
 
   const triggerAnimation = (id) => {
     if (activeAnimations[id]) return;
@@ -32,7 +33,11 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-blue-500/30 font-sans pb-0 overflow-x-hidden w-full max-w-[100vw]">
       {/* Navigation */}
       <div className="fixed top-6 left-6 z-50">
-        <Link href={`/${lang}`} className="inline-flex items-center px-5 py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group">
+        <Link 
+          href={`/${lang}`} 
+          onClick={() => setIsNavigating(true)}
+          className={`inline-flex items-center px-5 py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group ${isNavigating ? 'is-loading-nav' : ''}`}
+        >
           <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
@@ -302,7 +307,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                   {isRu ? 'Планирование публикаций для Instagram, TikTok, Threads, Telegram и других платформ.' : 'Planning publications for Instagram, TikTok, Threads, Telegram, and other platforms.'}
                 </p>
               </div>
-              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-56 md:h-60 overflow-hidden rounded-b-[2rem]">
+              <div className="mt-auto p-6 flex justify-center items-end relative z-10 h-[244px] md:h-60 overflow-hidden rounded-b-[2rem]">
                 <div className="w-full h-full relative transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 translate-y-4 flex items-center justify-center">
                   <div className="w-[70%] max-w-[180px] bg-zinc-800/80 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-4 shadow-2xl relative z-10">
                     <div className="flex items-center gap-3 mb-4">
