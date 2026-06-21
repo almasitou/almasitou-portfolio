@@ -138,13 +138,13 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
       </section>
 
       {/* Product Concept (Skibo style) */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32 text-center">
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32 text-left">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
           className="relative rounded-3xl md:rounded-[3rem] bg-gradient-to-tr from-red-900/40 to-zinc-900 border border-red-500/20 overflow-hidden flex flex-col items-start md:items-center pt-10 md:pt-20 px-4 md:px-6 shadow-[0_0_50px_rgba(239,68,68,0.1)] group"
         >
           <div className="w-full relative z-20 mb-12 px-4 md:px-8">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-12 text-white text-left md:text-center">{isRu ? 'Продуктовая концепция' : 'Product Concept'}</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-12 text-white text-left">{isRu ? 'Продуктовая концепция' : 'Product Concept'}</h2>
             
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8 mb-16">
               <div className="flex-1 text-zinc-300 text-base md:text-lg leading-relaxed space-y-6 text-left">
@@ -211,7 +211,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
-          <motion.h3 variants={fadeInUp} className="text-2xl md:text-4xl font-bold text-white mb-10 mt-20 text-left md:text-center">{isRu ? 'Ключевые принципы' : 'Key Principles'}</motion.h3>
+          <motion.h3 variants={fadeInUp} className="text-2xl md:text-4xl font-bold text-white mb-10 mt-20 text-left">{isRu ? 'Ключевые принципы' : 'Key Principles'}</motion.h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { 
@@ -248,10 +248,10 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
       {/* 3. Ключевые UX-решения (Bento) */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white text-left md:text-center">
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white text-left">
             {isRu ? 'Ключевые UX-решения' : 'Key UX Decisions'}
           </motion.h2>
-          <motion.p variants={fadeInUp} className="text-xl text-zinc-400 mb-16 text-left md:text-center max-w-3xl mx-auto">
+          <motion.p variants={fadeInUp} className="text-xl text-zinc-400 mb-16 text-left max-w-3xl mx-auto">
             {isRu ? 'Проектирование сценария покупки билетов' : 'Designing the ticket purchase flow'}
           </motion.p>
 
@@ -362,9 +362,9 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
 
       {/* 4. Пользовательский сценарий */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-transparent text-left md:text-center relative">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-transparent text-left relative">
           
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-10 md:mb-16 relative z-10 text-left md:text-center">
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-10 md:mb-16 relative z-10 text-left">
             {isRu ? 'Пользовательский сценарий' : 'User Flow'}
           </motion.h2>
 
@@ -419,7 +419,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="space-y-16">
           <div className="w-full">
-            <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 text-white text-center md:text-left">{isRu ? 'Итоги проекта' : 'Project Results'}</motion.h2>
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 text-white text-left">{isRu ? 'Итоги проекта' : 'Project Results'}</motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-left">
               {/* Card 1 */}

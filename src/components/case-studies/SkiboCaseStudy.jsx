@@ -162,7 +162,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
           className="relative rounded-3xl md:rounded-[3rem] bg-gradient-to-tr from-blue-900/40 to-zinc-900 border border-blue-500/20 overflow-hidden flex flex-col items-start md:items-center pt-10 md:pt-20 px-4 md:px-6 shadow-[0_0_50px_rgba(37,99,235,0.1)] group"
         >
-          <div className="max-w-4xl text-left md:text-center relative z-20 mb-12 md:mb-16 px-2 md:px-4">
+          <div className="max-w-4xl text-left relative z-20 mb-12 md:mb-16 px-2 md:px-4">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 md:mb-8 text-white">{isRu ? 'Решение' : 'The Solution'}</h2>
             <div className="text-zinc-300 text-base md:text-xl leading-relaxed space-y-4 md:space-y-6">
               <p>{isRu ? 'Мы разработали комплексную экосистему: мобильное приложение для клиентов и мощную админ-панель для бизнеса.' : 'We developed a comprehensive ecosystem: a mobile app for customers and a powerful admin panel for the business.'}</p>
@@ -190,7 +190,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
       {/* Block 3: Цели проекта */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="space-y-16">
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold text-left md:text-center mb-10 md:mb-16">{isRu ? 'Цели бизнеса' : 'Business Goals'}</motion.h2>
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold text-left mb-10 md:mb-16">{isRu ? 'Цели бизнеса' : 'Business Goals'}</motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <motion.div variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-3xl md:rounded-[2.5rem] p-6 md:p-10 hover:bg-zinc-800/80 transition-colors text-left">
@@ -268,10 +268,10 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
 
       {/* Block 5: User Flow */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fastStaggerContainer} className="bg-transparent md:bg-zinc-900 md:border md:border-zinc-800 rounded-none md:rounded-[3rem] p-0 md:p-10 lg:p-16 md:shadow-2xl relative overflow-hidden text-left md:text-center">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fastStaggerContainer} className="bg-transparent md:bg-zinc-900 md:border md:border-zinc-800 rounded-none md:rounded-[3rem] p-0 md:p-10 lg:p-16 md:shadow-2xl relative overflow-hidden text-left">
           <div className="hidden md:block absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
           
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-white text-left md:text-center">{isRu ? 'Пользовательский сценарий' : 'User Flow'}</motion.h2>
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-white text-left">{isRu ? 'Пользовательский сценарий' : 'User Flow'}</motion.h2>
           
           <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-center items-center gap-y-2 md:gap-y-6 gap-x-3 md:gap-x-4 relative z-10">
             {[
@@ -309,7 +309,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
       {/* Block 6: Ключевые решения */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold mb-10 md:mb-16 text-left md:text-center">{isRu ? 'Как мы сократили время оформления аренды' : 'How We Reduced Booking Time'}</motion.h2>
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl lg:text-6xl font-bold mb-10 md:mb-16 text-left">{isRu ? 'Как мы сократили время оформления аренды' : 'How We Reduced Booking Time'}</motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -347,7 +347,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
       {/* Block 7: Мобильное приложение */}
       <section className="mb-20 pt-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-          <motion.h2 variants={fadeInUp} className="text-4xl md:text-7xl font-bold text-left md:text-center mb-16 md:mb-24">{isRu ? 'Мобильное приложение' : 'Mobile App'}</motion.h2>
+          <motion.h2 variants={fadeInUp} className="text-4xl md:text-7xl font-bold text-left mb-16 md:mb-24">{isRu ? 'Мобильное приложение' : 'Mobile App'}</motion.h2>
           
           <div className="space-y-32">
             {[
@@ -375,7 +375,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
               if (scr.layout === 'column') {
                 return (
                   <motion.div key={i} variants={fadeInUp} className="flex flex-col items-center">
-                    <div className="text-left md:text-center max-w-3xl mx-auto mb-10 md:mb-16">
+                    <div className="text-left max-w-3xl mx-auto mb-10 md:mb-16">
                       <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">{scr.t}</h3>
                       <p className="text-zinc-400 text-base md:text-xl leading-relaxed">{scr.d}</p>
                     </div>
@@ -398,7 +398,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
 
               return (
                 <motion.div key={i} variants={fadeInUp} className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${scr.align === 'right' ? 'lg:flex-row-reverse' : ''}`}>
-                  <div className={`flex-1 text-left md:text-center ${scr.align === 'right' ? 'lg:text-right' : 'lg:text-left'} max-w-xl mx-auto lg:mx-0`}>
+                  <div className={`flex-1 text-left ${scr.align === 'right' ? 'lg:text-right' : 'lg:text-left'} max-w-xl mx-auto lg:mx-0`}>
                     <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">{scr.t}</h3>
                     <p className="text-zinc-400 text-base md:text-xl leading-relaxed">{scr.d}</p>
                   </div>
@@ -426,7 +426,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="bg-transparent md:bg-zinc-900 md:border md:border-zinc-800 rounded-none md:rounded-[3.5rem] p-0 md:p-16 lg:p-20 md:shadow-2xl overflow-hidden relative">
           <div className="hidden md:block absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
           
-          <div className="relative z-10 flex flex-col items-start md:items-center text-left md:text-center max-w-4xl mx-auto mb-12 md:mb-20">
+          <div className="relative z-10 flex flex-col items-start md:items-center text-left max-w-4xl mx-auto mb-12 md:mb-20">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-white">{isRu ? 'Умная Админ-панель' : 'Smart Admin Panel'}</h2>
             <p className="text-zinc-300 text-base md:text-2xl leading-relaxed mb-6 md:mb-10">
               {isRu 

@@ -137,7 +137,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="relative pt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
             {/* Left: Text */}
-            <div className="space-y-8 text-center md:text-left">
+            <div className="space-y-8 text-left">
               <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold text-white">
                 {isRu ? 'Контент создаётся в десятках разных инструментов' : 'Content is created in dozens of different tools'}
               </motion.h2>
@@ -193,7 +193,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="relative pt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
             {/* Left: Text */}
-            <div className="space-y-8 text-center md:text-left">
+            <div className="space-y-8 text-left">
               <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold text-white">
                 {isRu ? 'Что если весь цикл создания контента будет происходить в одном месте?' : 'What if the entire content creation cycle happened in one place?'}
               </motion.h2>
@@ -258,7 +258,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
       {/* 5. Основные возможности */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold text-white mb-12 text-center md:text-left">
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold text-white mb-12 text-left">
             {isRu ? 'Основные возможности' : 'Key Features'}
           </motion.h2>
 
@@ -413,8 +413,8 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
 
       {/* 6. Как работает платформа */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="text-left md:text-center">
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold text-white mb-12 text-left md:text-center">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="text-left">
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold text-white mb-12 text-left">
             {isRu ? 'От идеи до публикации' : 'From Idea to Publication'}
           </motion.h2>
 
@@ -445,7 +445,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
       {/* 7. Почему этот продукт интересен */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold text-white mb-12 text-center md:text-left">
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold text-white mb-12 text-left">
             {isRu ? 'Почему этот продукт интересен' : 'Why this product is interesting'}
           </motion.h2>
 
@@ -483,7 +483,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-24 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="space-y-16">
           <div className="w-full">
-            <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-12 text-white text-center md:text-left">
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-12 text-white text-left">
               {isRu ? 'Итоги проекта' : 'Project Results'}
             </motion.h2>
             
@@ -544,7 +544,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
       {/* Gallery */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold text-white mb-12 text-center md:text-left">
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold text-white mb-12 text-left">
             {isRu ? 'Галерея экранов' : 'Screenshots Gallery'}
           </motion.h2>
 
