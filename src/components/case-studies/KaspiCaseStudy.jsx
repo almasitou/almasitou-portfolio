@@ -531,22 +531,64 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
 
           <div className="flex-1 w-full mt-12 md:mt-0 relative z-10 flex justify-center md:justify-end">
               {/* Abstract Illustration */}
-              <div className="w-full max-w-[250px] h-[250px] md:max-w-[300px] md:h-[300px] relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full blur-[40px] group-hover:blur-[60px] transition-all duration-700"></div>
+              <div className="w-full max-w-[250px] h-[250px] md:max-w-[300px] md:h-[300px] relative flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-full blur-[50px] group-hover:blur-[70px] transition-all duration-700"></div>
                 
-                {/* Main floating shape */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-48 md:h-48 bg-gradient-to-tr from-red-600 to-orange-500 rounded-[2rem] rotate-12 group-hover:rotate-45 transition-all duration-700 shadow-2xl flex items-center justify-center border border-white/10">
-                   <svg className="w-12 h-12 md:w-16 md:h-16 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                {/* Connection Paths */}
+                <svg className="absolute inset-0 w-full h-full z-10 pointer-events-none opacity-50 transition-all duration-700 group-hover:opacity-80" viewBox="0 0 300 300">
+                  <path d="M 70 100 Q 130 100 180 150" fill="none" stroke="url(#kaspiGrad)" strokeWidth="2" strokeDasharray="4 4" className="animate-pulse" />
+                  <path d="M 60 180 Q 130 180 180 150" fill="none" stroke="url(#kaspiGrad)" strokeWidth="2" strokeDasharray="4 4" className="animate-pulse" style={{ animationDelay: '1s' }} />
+                  <defs>
+                    <linearGradient id="kaspiGrad" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stopColor="rgba(239,68,68,0.2)" />
+                      <stop offset="100%" stopColor="rgba(249,115,22,0.8)" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+                {/* Unified Checkout (Center/Right) */}
+                <div className="absolute z-30 w-36 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 rounded-3xl p-4 shadow-[0_0_30px_rgba(239,68,68,0.2)] flex flex-col transition-transform duration-700 group-hover:scale-110 translate-x-8 md:translate-x-12">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center shadow-lg shadow-red-500/30">
+                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    </div>
+                    <div className="h-2.5 bg-zinc-600 rounded w-16"></div>
+                  </div>
+                  <div className="space-y-2 mb-4">
+                    <div className="flex justify-between items-center">
+                      <div className="h-1.5 bg-zinc-700 rounded w-12"></div>
+                      <div className="h-1.5 bg-zinc-600 rounded w-8"></div>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <div className="h-1.5 bg-zinc-700 rounded w-16"></div>
+                      <div className="h-1.5 bg-zinc-600 rounded w-10"></div>
+                    </div>
+                  </div>
+                  <div className="w-full h-8 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center shadow-inner">
+                    <div className="w-10 h-1.5 bg-white/40 rounded-full"></div>
+                  </div>
                 </div>
-                
-                {/* Orbiting element 1 */}
-                <div className="absolute top-[10%] right-[10%] w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-xl group-hover:-translate-y-4 group-hover:translate-x-4 transition-transform duration-700 flex items-center justify-center delay-100">
-                  <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-red-400/50"></div>
+
+                {/* Category 1: Cinema (Top Left) */}
+                <div className="absolute z-20 w-28 bg-zinc-800/90 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-3 shadow-xl transition-all duration-700 -translate-x-16 -translate-y-12 md:-translate-x-20 md:-translate-y-16 group-hover:-translate-x-24 group-hover:-translate-y-20 group-hover:-rotate-6 animate-bounce" style={{ animationDuration: '6s' }}>
+                  <div className="w-8 h-8 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center mb-2 border border-orange-500/30">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" /></svg>
+                  </div>
+                  <div className="h-2 bg-zinc-600 rounded w-16 mb-1.5"></div>
+                  <div className="h-1.5 bg-zinc-700 rounded w-10"></div>
                 </div>
-                
-                {/* Orbiting element 2 */}
-                <div className="absolute bottom-[15%] left-[10%] w-14 h-14 md:w-16 md:h-16 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 shadow-xl group-hover:translate-y-4 group-hover:-translate-x-4 transition-transform duration-700 flex items-center justify-center rotate-[-15deg] group-hover:rotate-0 delay-200">
-                  <div className="w-5 h-1 md:w-6 md:h-1 rounded-full bg-orange-400/50"></div>
+
+                {/* Category 2: Concerts (Bottom Left) */}
+                <div className="absolute z-20 w-32 bg-zinc-800/90 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-3 shadow-xl transition-all duration-700 -translate-x-20 translate-y-12 md:-translate-x-24 md:translate-y-16 group-hover:-translate-x-32 group-hover:translate-y-20 group-hover:rotate-3 animate-pulse" style={{ animationDuration: '4s' }}>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center border border-red-500/30">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" /></svg>
+                    </div>
+                    <div className="flex-1">
+                      <div className="h-2 bg-zinc-600 rounded w-full mb-1.5"></div>
+                      <div className="h-1.5 bg-zinc-700 rounded w-2/3"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
           </div>

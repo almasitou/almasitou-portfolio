@@ -544,22 +544,52 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
 
           <div className="flex-1 w-full mt-12 md:mt-0 relative z-10 flex justify-center md:justify-end">
               {/* Abstract Illustration */}
-              <div className="w-full max-w-[250px] h-[250px] md:max-w-[300px] md:h-[300px] relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-[40px] group-hover:blur-[60px] transition-all duration-700"></div>
+              <div className="w-full max-w-[250px] h-[250px] md:max-w-[300px] md:h-[300px] relative flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-[50px] group-hover:blur-[70px] transition-all duration-700"></div>
                 
-                {/* Main floating shape */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-48 md:h-48 bg-gradient-to-tr from-blue-600 to-purple-500 rounded-[2rem] rotate-12 group-hover:rotate-45 transition-all duration-700 shadow-2xl flex items-center justify-center border border-white/10">
-                   <svg className="w-12 h-12 md:w-16 md:h-16 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                {/* Connecting dashed lines (SVG) */}
+                <svg className="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-30 transition-transform duration-700 group-hover:scale-105 group-hover:rotate-6" viewBox="0 0 300 300">
+                  <circle cx="150" cy="150" r="75" fill="none" stroke="currentColor" className="text-blue-400" strokeWidth="1.5" strokeDasharray="4 4" />
+                  <circle cx="150" cy="150" r="110" fill="none" stroke="currentColor" className="text-purple-400" strokeWidth="1" strokeDasharray="2 6" />
+                </svg>
+
+                {/* Central Hub */}
+                <div className="absolute z-30 w-32 h-32 bg-zinc-800/90 backdrop-blur-md border border-zinc-700/50 rounded-3xl p-4 shadow-[0_0_30px_rgba(99,102,241,0.2)] flex flex-col items-center justify-center transition-transform duration-700 group-hover:scale-110">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                  </div>
+                  <div className="h-2 bg-zinc-600 rounded w-16 mb-1.5"></div>
+                  <div className="h-1.5 bg-zinc-700 rounded w-10"></div>
                 </div>
-                
-                {/* Orbiting element 1 */}
-                <div className="absolute top-[10%] right-[10%] w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-xl group-hover:-translate-y-4 group-hover:translate-x-4 transition-transform duration-700 flex items-center justify-center delay-100">
-                  <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-blue-400/50"></div>
+
+                {/* Orbiting Card 1: Content (Top Right) */}
+                <div className="absolute z-20 w-24 bg-zinc-800/80 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-3 shadow-xl transition-all duration-700 translate-x-16 -translate-y-16 group-hover:translate-x-24 group-hover:-translate-y-20 group-hover:rotate-6 animate-pulse" style={{ animationDuration: '4s' }}>
+                  <div className="w-full h-10 bg-indigo-500/20 border border-indigo-500/20 rounded-lg mb-2"></div>
+                  <div className="space-y-1.5">
+                    <div className="h-1.5 bg-zinc-600 rounded w-full"></div>
+                    <div className="h-1.5 bg-zinc-700 rounded w-4/5"></div>
+                  </div>
                 </div>
-                
-                {/* Orbiting element 2 */}
-                <div className="absolute bottom-[15%] left-[10%] w-14 h-14 md:w-16 md:h-16 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 shadow-xl group-hover:translate-y-4 group-hover:-translate-x-4 transition-transform duration-700 flex items-center justify-center rotate-[-15deg] group-hover:rotate-0 delay-200">
-                  <div className="w-5 h-1 md:w-6 md:h-1 rounded-full bg-purple-400/50"></div>
+
+                {/* Orbiting Card 2: Clients (Bottom Left) */}
+                <div className="absolute z-20 w-28 bg-zinc-800/90 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-3 shadow-xl transition-all duration-700 -translate-x-16 translate-y-16 group-hover:-translate-x-24 group-hover:translate-y-24 group-hover:-rotate-6 animate-bounce" style={{ animationDuration: '5s' }}>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
+                       <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
+                    </div>
+                    <div className="flex-1">
+                      <div className="h-1.5 bg-zinc-600 rounded w-full mb-1"></div>
+                      <div className="h-1.5 bg-zinc-700 rounded w-2/3"></div>
+                    </div>
+                  </div>
+                  <div className="w-full h-6 bg-zinc-700/50 rounded-md"></div>
+                </div>
+
+                {/* Orbiting Card 3: Publishing (Top Left) */}
+                <div className="absolute z-10 w-20 bg-zinc-800/70 backdrop-blur-sm border border-zinc-700/40 rounded-xl p-2 shadow-xl transition-all duration-700 -translate-x-20 -translate-y-6 group-hover:-translate-x-28 group-hover:-translate-y-10 group-hover:-rotate-12">
+                  <div className="w-full h-4 bg-purple-500/20 rounded mb-1"></div>
+                  <div className="w-full h-4 bg-zinc-700/50 rounded mb-1"></div>
+                  <div className="w-full h-4 bg-zinc-700/50 rounded"></div>
                 </div>
               </div>
           </div>
