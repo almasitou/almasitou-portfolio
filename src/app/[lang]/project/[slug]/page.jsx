@@ -81,7 +81,7 @@ export default async function ProjectPage({ params }) {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="mb-8 sticky top-4 z-50">
-          <Link href={`/${lang}`} className="inline-flex items-center px-4 py-2 bg-zinc-900/90 backdrop-blur border border-zinc-800 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-lg group">
+          <Link href={`/${lang}`} className="nav-loadable inline-flex items-center px-4 py-2 bg-zinc-900/90 backdrop-blur border border-zinc-800 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-lg group">
             <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>

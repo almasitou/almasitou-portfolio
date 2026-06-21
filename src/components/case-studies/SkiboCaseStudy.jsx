@@ -333,7 +333,6 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
               }
             ].map((sol, i) => (
               <motion.div key={i} variants={fadeInUp} className="bg-zinc-900 border border-zinc-800 rounded-3xl md:rounded-[2.5rem] p-6 md:p-10 relative overflow-hidden group hover:border-zinc-700 hover:shadow-2xl active:scale-95 cursor-pointer transition-all h-full text-left">
-                <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-blue-500/5 rounded-bl-3xl md:rounded-bl-[4rem] group-hover:bg-blue-500/10 group-[.is-active]:bg-blue-500/10 transition-colors pointer-events-none"></div>
                 <div className={`w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-6 md:mb-8 ${sol.colorClass}`}>
                   <svg className="w-7 h-7 md:w-8 md:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">{sol.icon}</svg>
                 </div>

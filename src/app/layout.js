@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import MobileHoverFix from "@/components/MobileHoverFix";
+import NavigationLoader from "@/components/NavigationLoader";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <MobileHoverFix />
+        <NavigationLoader />
         {children}
         <Analytics />
       </body>

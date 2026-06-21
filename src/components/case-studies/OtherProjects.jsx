@@ -62,7 +62,7 @@ export default function OtherProjects({ projects, lang }) {
             <Link 
               key={project.id} 
               href={`/${lang}/project/${getSlug(project)}`}
-              className="group block relative overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800 aspect-[4/3] hover:border-zinc-600 transition-colors"
+              className="nav-loadable group block relative overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800 aspect-[4/3] hover:border-zinc-600 transition-colors"
             >
               <img 
                 src={project.coverImage || project.cover} 

@@ -107,3 +107,29 @@ body {
                     linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   mask-image: radial-gradient(circle at center, black, transparent 80%);
 }
+
+.is-loading-nav {
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.is-loading-nav::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: fast-shimmer-nav 0.6s infinite;
+  z-index: 50;
+  pointer-events: none;
+}
+
+@keyframes fast-shimmer-nav {
+  100% {
+    left: 200%;
+  }
+}
+

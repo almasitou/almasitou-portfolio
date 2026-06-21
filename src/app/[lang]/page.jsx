@@ -174,7 +174,7 @@ export default async function Home({ params }) {
               <Reveal key={proj.id} delay={0.1 * (i % 2)} className={proj.id === 'cmqjeal510004vxlt8hmvmcr6' ? 'md:col-span-2' : ''}>
                 <Link 
                   href={`/${lang}/project/${proj.id === 'cmqjeakgy0000vxltp4qj7ks1' ? 'skibo' : proj.id === 'cmqjeakqk0001vxltptpxytw5' ? 'kaspi' : proj.id === 'cmqjeakvd0002vxltgwlxjlo9' ? 'bao' : proj.id === 'cmqjeal510004vxlt8hmvmcr6' ? 'taza' : proj.id === 'cmqjeal060003vxlt80svpske' ? 'idol' : proj.id}`}
-                  className={`group block relative rounded-3xl overflow-hidden glass glass-hover ${proj.id === 'cmqjeal510004vxlt8hmvmcr6' ? 'aspect-[16/9] md:aspect-[21/9]' : 'aspect-[4/3]'} hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:border-blue-500/30 active:scale-95 transition-all duration-500`}
+                  className={`nav-loadable group block relative rounded-3xl overflow-hidden glass glass-hover ${proj.id === 'cmqjeal510004vxlt8hmvmcr6' ? 'aspect-[16/9] md:aspect-[21/9]' : 'aspect-[4/3]'} hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:border-blue-500/30 active:scale-95 transition-all duration-500`}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer-once pointer-events-none z-20" />
                   {proj.coverImage ? (
