@@ -445,7 +445,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
             </div>
             
             <div className="flex-1 w-full flex justify-center xl:justify-end mt-8 xl:mt-0">
-              <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] xl:max-w-[400px] flex justify-center pl-8 md:pl-16 -mb-[14rem] md:-mb-[18rem] lg:-mb-[20rem] xl:mb-0">
+              <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] xl:max-w-[280px] flex justify-center pl-8 md:pl-16 -mb-[14rem] md:-mb-[18rem] lg:-mb-[20rem] xl:-mb-[8rem]">
                 {/* Main Screen */}
                 <img 
                   src="/uploads/bao/foods page.png" 
