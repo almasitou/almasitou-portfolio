@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import OtherProjects from './OtherProjects';
+import InteractiveGlobe from './InteractiveGlobe';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -652,8 +653,8 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
 
           {/* Right Column: Illustration */}
           <motion.div variants={fadeInUp} className="flex-1 relative z-10 w-full flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[500px] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.15)] border border-white/10 group">
-              <img src="/uploads/chaickout/global_map_connections.png" alt="Global Launch Map" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            <div className="relative w-full max-w-[500px] h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.15)] border border-white/10 group bg-black/20">
+              <InteractiveGlobe />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 via-transparent to-transparent pointer-events-none"></div>
             </div>
           </motion.div>
