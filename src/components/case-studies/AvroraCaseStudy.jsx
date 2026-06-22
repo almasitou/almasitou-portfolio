@@ -91,12 +91,7 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
         </motion.div>
       </section>
 
-      {/* Main Cover Display */}
-      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto -mt-20 md:-mt-32 relative z-20 mb-20 md:mb-32">
-        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="w-full">
-          <img src="/uploads/avrora/avrora_cover.jpg" alt="Avrora Dashboard" className="w-full h-auto rounded-md shadow-lg block" />
-        </motion.div>
-      </section>
+
 
       {/* ===================== BLOCK 1.5: MY ROLE ===================== */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
