@@ -630,12 +630,12 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
 
           {/* Absolute Globe */}
-          <div className="absolute -bottom-[10%] -right-[60%] md:-bottom-[20%] md:-right-[40%] lg:-bottom-[40%] lg:-right-[35%] w-[600px] h-[600px] md:w-[800px] md:h-[800px] lg:w-[1300px] lg:h-[1300px] z-10 pointer-events-auto">
+          <div className="absolute -bottom-[10%] -right-[30%] md:-bottom-[20%] md:-right-[20%] lg:-bottom-[10%] lg:-right-[5%] w-[400px] h-[400px] md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] z-10 pointer-events-auto">
             <InteractiveGlobe />
           </div>
 
           {/* Text Content */}
-          <div className="relative z-20 w-full max-w-2xl pointer-events-none lg:-translate-x-8">
+          <div className="relative z-20 w-full max-w-lg lg:max-w-xl pointer-events-none lg:-translate-x-4">
             <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
               {isRu ? 'Успешный запуск в Европе и США' : 'Successful Launch in Europe and the US'}
             </motion.h2>

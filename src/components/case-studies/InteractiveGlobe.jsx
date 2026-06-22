@@ -75,9 +75,9 @@ export default function InteractiveGlobe() {
           labelLat={d => d.lat}
           labelLng={d => d.lng}
           labelText={d => d.name}
-          labelSize={1.5}
+          labelSize={2}
           labelDotRadius={0.4}
-          labelColor={() => '#60a5fa'}
+          labelColor={() => '#ffffff'}
           labelResolution={2}
           labelAltitude={0.05}
         />
