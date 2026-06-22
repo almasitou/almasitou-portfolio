@@ -74,7 +74,7 @@ export default function InteractiveGlobe() {
     animate();
     
     return () => clearTimeout(timeoutId);
-  }, [globeRef.current, countries, userInteracted]);
+  }, [size, countries, userInteracted]);
 
   return (
     <div 
