@@ -61,8 +61,8 @@ export default function InteractiveGlobe() {
           atmosphereAltitude={0.15}
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg"
           polygonsData={countries.features}
-          polygonAltitude={d => (highlightedCountries.includes(d.properties.ISO_A3) ? 0.03 : 0.01)}
-          polygonCapColor={d => (highlightedCountries.includes(d.properties.ISO_A3) ? '#3b82f6' : 'rgba(39, 39, 42, 0.4)')}
+          polygonAltitude={d => ((highlightedCountries.includes(d.properties.ISO_A3) || highlightedCountries.includes(d.properties.ADM0_A3)) ? 0.03 : 0.01)}
+          polygonCapColor={d => ((highlightedCountries.includes(d.properties.ISO_A3) || highlightedCountries.includes(d.properties.ADM0_A3)) ? '#3b82f6' : 'rgba(39, 39, 42, 0.4)')}
           polygonSideColor={() => 'rgba(0,0,0,0.1)'}
           polygonStrokeColor={() => '#18181b'}
           labelsData={[

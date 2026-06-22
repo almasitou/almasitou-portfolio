@@ -630,7 +630,7 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
 
           {/* Absolute Globe */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[40%] lg:bottom-auto lg:top-1/2 lg:left-auto lg:right-[-20%] lg:translate-x-0 lg:-translate-y-1/2 w-[600px] h-[600px] md:w-[1200px] md:h-[1200px] lg:w-[1000px] lg:h-[1000px] z-10 pointer-events-auto">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[40%] lg:bottom-auto lg:top-1/2 lg:left-auto lg:right-[-25%] lg:translate-x-0 lg:-translate-y-1/2 w-[600px] h-[600px] md:w-[1200px] md:h-[1200px] lg:w-[700px] lg:h-[700px] z-10 pointer-events-auto">
             <InteractiveGlobe />
           </div>
 
@@ -647,7 +647,10 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-3 pointer-events-auto">
-              {['USA', 'France', 'Italy', 'Portugal', 'Belgium'].map((country) => (
+              {(isRu 
+                ? ['США', 'Франция', 'Италия', 'Португалия', 'Бельгия'] 
+                : ['USA', 'France', 'Italy', 'Portugal', 'Belgium']
+              ).map((country) => (
                 <div key={country} className="px-4 py-2 bg-zinc-900/80 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium flex items-center gap-2 shadow-xl backdrop-blur-md">
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
                   {country}
