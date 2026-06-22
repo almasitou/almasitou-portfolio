@@ -284,8 +284,8 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
           </div>
 
           <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <img src="/uploads/avrora/aurora_screen_1.png" alt="Production Plan 1" className="w-full h-auto rounded-md shadow-md block" />
-            <img src="/uploads/avrora/aurora_screen_3.png" alt="Status Tracking" className="w-full h-auto rounded-md shadow-md block" />
+            <img src="/uploads/avrora/production_plan_1.png" alt="Production Plan 1" className="w-full h-auto rounded-2xl shadow-2xl block" />
+            <img src="/uploads/avrora/status_tracking.png" alt="Status Tracking" className="w-full h-auto rounded-2xl shadow-2xl block" />
           </motion.div>
         </motion.div>
       </section>
@@ -305,9 +305,9 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
           </div>
 
           <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <img src="/uploads/avrora/aurora_screen_7.png" alt="Inventory Turnover 1" className="w-full h-auto rounded-md shadow-md block" />
-            <img src="/uploads/avrora/aurora_screen_8.png" alt="Inventory Turnover 2" className="w-full h-auto rounded-md shadow-md block" />
-            <img src="/uploads/avrora/aurora_screen_9.png" alt="Inventory Charts" className="w-full h-auto rounded-md shadow-md block" />
+            <img src="/uploads/avrora/turnover_1.png" alt="Inventory Turnover 1" className="w-full h-auto rounded-2xl shadow-2xl block" />
+            <img src="/uploads/avrora/turnover_2.png" alt="Inventory Turnover 2" className="w-full h-auto rounded-2xl shadow-2xl block" />
+            <img src="/uploads/avrora/turnover_3.png" alt="Inventory Charts" className="w-full h-auto rounded-2xl shadow-2xl block" />
           </motion.div>
         </motion.div>
       </section>
@@ -315,7 +315,7 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
       {/* ===================== BLOCK 7: RAW MATERIALS ===================== */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <img src="/uploads/avrora/aurora_screen_4.png" alt="Raw Materials" className="order-2 md:order-1 w-full h-auto rounded-md shadow-md block" />
+          <img src="/uploads/avrora/raw_materials.png" alt="Raw Materials" className="order-2 md:order-1 w-full h-auto rounded-2xl shadow-2xl block" />
 
           <div className="order-1 md:order-2">
             <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-white">
@@ -352,8 +352,8 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
           </div>
 
           <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <img src="/uploads/avrora/aurora_screen_6.png" alt="Users List" className="w-full h-auto rounded-md shadow-md block" />
-            <img src="/uploads/avrora/aurora_screen_5.png" alt="Users Filters" className="w-full h-auto rounded-md shadow-md block" />
+            <img src="/uploads/avrora/users_1.png" alt="Users List" className="w-full h-auto rounded-2xl shadow-2xl block" />
+            <img src="/uploads/avrora/users_2.png" alt="Users Filters" className="w-full h-auto rounded-2xl shadow-2xl block" />
           </motion.div>
         </motion.div>
       </section>
