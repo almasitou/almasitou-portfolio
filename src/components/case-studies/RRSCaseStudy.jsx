@@ -624,13 +624,13 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
 
       {/* ===================== NEW BLOCK: GLOBAL LAUNCH ===================== */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-gradient-to-br from-blue-900/20 via-zinc-900/50 to-zinc-900 border border-blue-500/20 rounded-[2rem] p-8 md:p-12 lg:p-16 relative overflow-hidden min-h-[500px] lg:min-h-[600px] flex items-center">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-gradient-to-br from-blue-900/20 via-zinc-900/50 to-zinc-900 border border-blue-500/20 rounded-[2rem] p-8 pb-[260px] md:p-12 md:pb-[380px] lg:p-16 relative overflow-hidden min-h-[500px] lg:min-h-[600px] flex items-center">
           
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
 
           {/* Absolute Globe */}
-          <div className="absolute top-1/2 -translate-y-1/2 -right-[40%] md:-right-[30%] lg:-right-[20%] w-[400px] h-[400px] md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] z-10 pointer-events-auto">
+          <div className="absolute bottom-0 translate-y-[40%] left-1/2 -translate-x-1/2 lg:bottom-auto lg:translate-y-0 lg:top-1/2 lg:-translate-y-1/2 lg:left-auto lg:translate-x-0 lg:-right-[20%] w-[400px] h-[400px] md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] z-10 pointer-events-auto">
             <InteractiveGlobe />
           </div>
 
