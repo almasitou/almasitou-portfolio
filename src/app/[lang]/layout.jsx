@@ -49,11 +49,9 @@ export async function generateStaticParams() {
 export default async function RootLayout({ children, params }) {
   const { lang } = await params;
   return (
-    <html lang={lang} className={`${archivo.variable} ${spaceGrotesk.variable} scroll-smooth`}>
-      <body className="antialiased bg-black text-white selection:bg-blue-600">
-        {children}
-        <Analytics />
-      </body>
-    </html>
+    <div lang={lang} className={`${archivo.variable} ${spaceGrotesk.variable} scroll-smooth antialiased bg-black text-white selection:bg-blue-600 min-h-screen`}>
+      {children}
+      <Analytics />
+    </div>
   );
 }
