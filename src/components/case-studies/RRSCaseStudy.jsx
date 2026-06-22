@@ -152,9 +152,9 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
             <motion.div variants={fadeInUp} className="bg-zinc-950 border border-zinc-800 rounded-2xl p-8 flex flex-col gap-6 relative overflow-hidden">
               <div className="flex flex-col gap-2 relative z-10">
                 <div className="text-xs font-semibold text-red-400 uppercase tracking-wider mb-2">{isRu ? 'Было' : 'Before'}</div>
-                {['Выбор еды', 'Очередь', 'Ручная идентификация', 'Оплата'].map((step, i) => (
+                {(isRu ? ['Выбор еды', 'Очередь', 'Ручная идентификация', 'Оплата'] : ['Food selection', 'Queue', 'Manual identification', 'Payment']).map((step, i) => (
                   <React.Fragment key={`old-${i}`}>
-                    <div className="bg-zinc-900 border border-zinc-700 px-6 py-3 rounded-xl text-zinc-400 text-center">{isRu ? step : step}</div>
+                    <div className="bg-zinc-900 border border-zinc-700 px-6 py-3 rounded-xl text-zinc-400 text-center">{step}</div>
                     {i < 3 && <div className="text-zinc-600 text-center">↓</div>}
                   </React.Fragment>
                 ))}
@@ -164,9 +164,9 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
               
               <div className="flex flex-col gap-2 relative z-10">
                 <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-2">{isRu ? 'Стало' : 'After'}</div>
-                {['Выбор еды', 'AI Recognition', 'Оплата'].map((step, i) => (
+                {(isRu ? ['Выбор еды', 'AI Recognition', 'Оплата'] : ['Food selection', 'AI Recognition', 'Payment']).map((step, i) => (
                   <React.Fragment key={`new-${i}`}>
-                    <div className={`px-6 py-3 rounded-xl text-center font-medium ${step === 'AI Recognition' ? 'bg-cyan-600/20 border border-cyan-500/50 text-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.15)]' : 'bg-zinc-800 border border-zinc-600 text-white'}`}>{isRu ? step : step}</div>
+                    <div className={`px-6 py-3 rounded-xl text-center font-medium ${step === 'AI Recognition' ? 'bg-cyan-600/20 border border-cyan-500/50 text-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.15)]' : 'bg-zinc-800 border border-zinc-600 text-white'}`}>{step}</div>
                     {i < 2 && <div className="text-zinc-600 text-center">↓</div>}
                   </React.Fragment>
                 ))}
