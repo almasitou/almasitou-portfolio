@@ -630,7 +630,7 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
 
           {/* Absolute Globe */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[40%] lg:bottom-auto lg:top-1/2 lg:left-auto lg:-right-[10%] lg:translate-x-0 lg:-translate-y-1/2 w-[600px] h-[600px] md:w-[1200px] md:h-[1200px] lg:w-[500px] lg:h-[500px] z-10 pointer-events-auto">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[40%] lg:bottom-auto lg:top-1/2 lg:left-auto lg:-right-[20%] lg:translate-x-0 lg:-translate-y-1/2 w-[600px] h-[600px] md:w-[1200px] md:h-[1200px] lg:w-[800px] lg:h-[800px] z-10 pointer-events-auto">
             <InteractiveGlobe />
           </div>
 
