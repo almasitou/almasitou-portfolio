@@ -32,24 +32,49 @@ export default function InteractiveGlobe() {
   }, []);
 
   const highlightedCountries = ['USA', 'FRA', 'ITA', 'PRT', 'BEL'];
+  const [userInteracted, setUserInteracted] = useState(false);
 
   useEffect(() => {
-    if (globeRef.current && countries.features.length) {
-      globeRef.current.controls().autoRotate = true;
-      globeRef.current.controls().autoRotateSpeed = 0.8;
-      globeRef.current.controls().enableZoom = false;
-      
-      // Try to focus near Europe/USA
-      setTimeout(() => {
-        if (globeRef.current) {
-          globeRef.current.pointOfView({ lat: 40, lng: -20, altitude: 2 }, 1000);
-        }
-      }, 500);
+    if (!globeRef.current || !countries.features.length) return;
+
+    globeRef.current.controls().enableZoom = false;
+    
+    if (userInteracted) {
+      globeRef.current.controls().autoRotate = false;
+      return;
     }
-  }, [globeRef.current, countries]);
+
+    globeRef.current.controls().autoRotate = false;
+
+    let isUsa = false;
+    let timeoutId;
+    
+    // Initial view (middle of Atlantic)
+    globeRef.current.pointOfView({ lat: 40, lng: -20, altitude: 2 }, 1000);
+
+    const animate = () => {
+      if (userInteracted || !globeRef.current) return;
+      
+      const targetLng = isUsa ? -90 : 10; // -90 for USA, 10 for Europe
+      isUsa = !isUsa;
+      
+      globeRef.current.pointOfView({ lat: 40, lng: targetLng, altitude: 2 }, 3000);
+      timeoutId = setTimeout(animate, 5000); // 3s travel + 2s pause
+    };
+
+    timeoutId = setTimeout(animate, 2000); // Start after 2s
+    
+    return () => clearTimeout(timeoutId);
+  }, [globeRef.current, countries, userInteracted]);
 
   return (
-    <div ref={containerRef} className="w-full h-full cursor-grab active:cursor-grabbing flex items-center justify-center min-h-[300px] lg:min-h-[500px]">
+    <div 
+      ref={containerRef} 
+      onPointerDown={() => setUserInteracted(true)}
+      onTouchStart={() => setUserInteracted(true)}
+      onWheel={() => setUserInteracted(true)}
+      className="w-full h-full cursor-grab active:cursor-grabbing flex items-center justify-center min-h-[300px] lg:min-h-[500px]"
+    >
       {size.width > 0 && (
         <Globe
           ref={globeRef}
