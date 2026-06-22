@@ -371,7 +371,7 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
             {[
               {
                 title: isRu ? 'Единая платформа' : 'Unified Platform',
-                desc: isRu ? 'Заменили разрозненные инструменты (Excel, Trello, 1C) на одну систему.' : 'Replaced multiple disconnected tools (Excel, Trello, 1C) with one ecosystem.'
+                desc: isRu ? 'Заменили разрозненные инструменты (Excel, почту, Trello) на одну систему.' : 'Replaced multiple disconnected tools (Excel, Email, Trello) with one ecosystem.'
               },
               {
                 title: isRu ? 'Минимизация потерь' : 'Reduced Fragmentation',
