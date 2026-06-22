@@ -59,21 +59,19 @@ export default function InteractiveGlobe() {
 
     let isUsa = false;
     let timeoutId;
-    
-    // Smoothly transition back to the animation path
-    globeRef.current.pointOfView({ lat: 40, lng: 10, altitude: 2 }, 2000);
 
     const animate = () => {
       if (!globeRef.current) return;
       
-      const targetLng = isUsa ? -90 : 10; // -90 for USA, 10 for Europe
+      const targetLng = isUsa ? 10 : -90; // 10 for Europe, -90 for USA
       isUsa = !isUsa;
       
-      globeRef.current.pointOfView({ lat: 40, lng: targetLng, altitude: 2 }, 3000);
-      timeoutId = setTimeout(animate, 5000); // 3s travel + 2s pause
+      globeRef.current.pointOfView({ lat: 40, lng: targetLng, altitude: 2 }, 4000);
+      timeoutId = setTimeout(animate, 6000); // 4s travel + 2s pause
     };
 
-    timeoutId = setTimeout(animate, 2500); // Start after initial repositioning
+    // Start immediately
+    animate();
     
     return () => clearTimeout(timeoutId);
   }, [globeRef.current, countries, userInteracted]);
@@ -82,8 +80,6 @@ export default function InteractiveGlobe() {
     <div 
       ref={containerRef} 
       onPointerDown={handleInteraction}
-      onTouchStart={handleInteraction}
-      onWheel={handleInteraction}
       className="w-full h-full cursor-grab active:cursor-grabbing flex items-center justify-center min-h-[300px] lg:min-h-[500px]"
     >
       {size.width > 0 && (
