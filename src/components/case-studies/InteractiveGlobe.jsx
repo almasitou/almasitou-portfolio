@@ -46,35 +46,56 @@ export default function InteractiveGlobe() {
   };
 
   useEffect(() => {
-    if (!globeRef.current || !countries.features.length) return;
-
-    globeRef.current.controls().enableZoom = false;
-    
-    if (userInteracted) {
-      globeRef.current.controls().autoRotate = false;
-      return;
-    }
-
-    globeRef.current.controls().autoRotate = false;
+    if (!countries.features.length) return;
 
     let isUsa = false;
     let timeoutId;
+    let checkInterval;
 
-    const animate = () => {
+    const startAnimation = () => {
       if (!globeRef.current) return;
-      
-      const targetLng = isUsa ? 10 : -90; // 10 for Europe, -90 for USA
-      isUsa = !isUsa;
-      
-      globeRef.current.pointOfView({ lat: 40, lng: targetLng, altitude: 2 }, 4000);
-      timeoutId = setTimeout(animate, 6000); // 4s travel + 2s pause
+      globeRef.current.controls().enableZoom = false;
+      globeRef.current.controls().autoRotate = false;
+
+      const animate = () => {
+        if (!globeRef.current) return;
+        
+        const targetLng = isUsa ? 10 : -90; // 10 for Europe, -90 for USA
+        isUsa = !isUsa;
+        
+        globeRef.current.pointOfView({ lat: 40, lng: targetLng, altitude: 2 }, 4000);
+        timeoutId = setTimeout(animate, 6000); // 4s travel + 2s pause
+      };
+
+      animate();
     };
 
-    // Start immediately
-    animate();
+    if (userInteracted) {
+      if (globeRef.current) {
+        globeRef.current.controls().autoRotate = false;
+      }
+      return;
+    }
+
+    const checkGlobeReady = () => {
+      if (globeRef.current && globeRef.current.controls && globeRef.current.controls()) {
+        clearInterval(checkInterval);
+        startAnimation();
+      }
+    };
+
+    if (globeRef.current && globeRef.current.controls && globeRef.current.controls()) {
+      startAnimation();
+    } else {
+      // Poll every 100ms until the dynamically imported component mounts
+      checkInterval = setInterval(checkGlobeReady, 100);
+    }
     
-    return () => clearTimeout(timeoutId);
-  }, [size, countries, userInteracted]);
+    return () => {
+      clearInterval(checkInterval);
+      clearTimeout(timeoutId);
+    };
+  }, [countries, userInteracted]);
 
   return (
     <div 
