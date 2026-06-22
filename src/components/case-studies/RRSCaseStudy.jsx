@@ -624,13 +624,18 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
 
       {/* ===================== NEW BLOCK: GLOBAL LAUNCH ===================== */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-gradient-to-br from-blue-900/20 via-zinc-900/50 to-zinc-900 border border-blue-500/20 rounded-[2rem] p-8 md:p-12 lg:p-16 relative overflow-hidden flex flex-col lg:flex-row items-center gap-12">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-gradient-to-br from-blue-900/20 via-zinc-900/50 to-zinc-900 border border-blue-500/20 rounded-[2rem] p-8 md:p-12 lg:p-16 relative overflow-hidden min-h-[500px] lg:min-h-[600px] flex items-center">
           
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
 
-          {/* Left Column: Text Content */}
-          <div className="flex-1 relative z-10 w-full">
+          {/* Absolute Globe */}
+          <div className="absolute -bottom-[10%] -right-[40%] md:-bottom-[30%] md:-right-[20%] lg:-bottom-[40%] lg:-right-[10%] w-[500px] h-[500px] md:w-[700px] md:h-[700px] lg:w-[1000px] lg:h-[1000px] z-10 pointer-events-auto">
+            <InteractiveGlobe />
+          </div>
+
+          {/* Text Content */}
+          <div className="relative z-20 w-full max-w-2xl pointer-events-none">
             <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
               {isRu ? 'Успешный запуск в Европе и США' : 'Successful Launch in Europe and the US'}
             </motion.h2>
@@ -641,23 +646,15 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
                 : 'Today, the Retail Robotics Solution system is successfully implemented and operating in canteens and self-service restaurants across Europe and the US. The product has proven its efficiency in international markets, processing thousands of orders daily and reducing service time.'}
             </motion.p>
 
-            <motion.div variants={fadeInUp} className="flex flex-wrap gap-3">
+            <motion.div variants={fadeInUp} className="flex flex-wrap gap-3 pointer-events-auto">
               {['USA', 'France', 'Italy', 'Portugal', 'Belgium'].map((country) => (
-                <div key={country} className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium flex items-center gap-2">
+                <div key={country} className="px-4 py-2 bg-zinc-900/80 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium flex items-center gap-2 shadow-xl backdrop-blur-md">
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
                   {country}
                 </div>
               ))}
             </motion.div>
           </div>
-
-          {/* Right Column: Illustration */}
-          <motion.div variants={fadeInUp} className="flex-1 relative z-10 w-full flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[500px] h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.15)] border border-white/10 group bg-black/20">
-              <InteractiveGlobe />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 via-transparent to-transparent pointer-events-none"></div>
-            </div>
-          </motion.div>
 
         </motion.div>
       </section>
