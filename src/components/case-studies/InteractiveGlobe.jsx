@@ -65,26 +65,21 @@ export default function InteractiveGlobe() {
           polygonCapColor={d => (highlightedCountries.includes(d.properties.ISO_A3) ? '#3b82f6' : 'rgba(39, 39, 42, 0.4)')}
           polygonSideColor={() => 'rgba(0,0,0,0.1)'}
           polygonStrokeColor={() => '#18181b'}
-          htmlElementsData={[
-            { id: 'USA', name: 'USA', lat: 38, lng: -97 },
-            { id: 'FRA', name: 'France', lat: 46, lng: 2 },
+          labelsData={[
+            { id: 'USA', name: 'USA', lat: 39.5, lng: -98.5 },
+            { id: 'FRA', name: 'France', lat: 46.2, lng: 2.2 },
             { id: 'ITA', name: 'Italy', lat: 41.8, lng: 12.5 },
             { id: 'PRT', name: 'Portugal', lat: 39.3, lng: -8 },
             { id: 'BEL', name: 'Belgium', lat: 50.5, lng: 4.4 }
           ]}
-          htmlElement={d => {
-            const el = document.createElement('div');
-            el.innerHTML = `
-              <div style="display:flex; flex-direction:column; align-items:center; pointer-events:none; font-family:sans-serif;">
-                <div style="padding: 4px 10px; background: rgba(9, 9, 11, 0.9); border: 1px solid rgba(59, 130, 246, 0.5); color: #60a5fa; font-size: 13px; border-radius: 6px; box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2); backdrop-filter: blur(4px); white-space: nowrap; font-weight: 600;">
-                  ${d.name}
-                </div>
-                <div style="width: 2px; height: 24px; background: linear-gradient(to bottom, rgba(59, 130, 246, 0.8), transparent);"></div>
-              </div>
-            `;
-            el.style.transform = 'translate(-50%, -100%)';
-            return el;
-          }}
+          labelLat={d => d.lat}
+          labelLng={d => d.lng}
+          labelText={d => d.name}
+          labelSize={1.5}
+          labelDotRadius={0.4}
+          labelColor={() => '#60a5fa'}
+          labelResolution={2}
+          labelAltitude={0.05}
         />
       )}
     </div>
