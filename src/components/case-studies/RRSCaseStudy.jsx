@@ -623,25 +623,41 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
 
       {/* ===================== NEW BLOCK: GLOBAL LAUNCH ===================== */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-gradient-to-br from-blue-900/20 via-zinc-900/50 to-zinc-900 border border-blue-500/20 rounded-[2rem] p-8 md:p-12 lg:p-16 relative overflow-hidden text-center flex flex-col items-center justify-center min-h-[300px]">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589519160732-57fc498494f8?q=80&w=2000&auto=format&fit=crop')] opacity-5 bg-cover bg-center mix-blend-luminosity"></div>
-          
-          <motion.div variants={fadeInUp} className="w-16 h-16 md:w-20 md:h-20 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center mb-8 relative z-10 shadow-[0_0_30px_rgba(59,130,246,0.2)]">
-            <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          </motion.div>
-          
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight relative z-10 max-w-3xl">
-            {isRu ? 'Успешный запуск в Европе и США' : 'Successful Launch in Europe and the US'}
-          </motion.h2>
-          
-          <motion.p variants={fadeInUp} className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-3xl relative z-10">
-            {isRu 
-              ? 'Сегодня система Retail Robotics Solution успешно внедрена и работает в столовых и ресторанах самообслуживания по всей Европе и в США. Продукт доказал свою эффективность на международных рынках, ежедневно обрабатывая тысячи заказов и сокращая время обслуживания.' 
-              : 'Today, the Retail Robotics Solution system is successfully implemented and operating in canteens and self-service restaurants across Europe and the US. The product has proven its efficiency in international markets, processing thousands of orders daily and reducing service time.'}
-          </motion.p>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-gradient-to-br from-blue-900/20 via-zinc-900/50 to-zinc-900 border border-blue-500/20 rounded-[2rem] p-8 md:p-12 lg:p-16 relative overflow-hidden flex flex-col lg:flex-row items-center gap-12">
           
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+          {/* Left Column: Text Content */}
+          <div className="flex-1 relative z-10 w-full">
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
+              {isRu ? 'Успешный запуск в Европе и США' : 'Successful Launch in Europe and the US'}
+            </motion.h2>
+            
+            <motion.p variants={fadeInUp} className="text-zinc-400 text-lg md:text-xl leading-relaxed mb-8">
+              {isRu 
+                ? 'Сегодня система Retail Robotics Solution успешно внедрена и работает в столовых и ресторанах самообслуживания по всей Европе и в США. Продукт доказал свою эффективность на международных рынках, ежедневно обрабатывая тысячи заказов и сокращая время обслуживания.' 
+                : 'Today, the Retail Robotics Solution system is successfully implemented and operating in canteens and self-service restaurants across Europe and the US. The product has proven its efficiency in international markets, processing thousands of orders daily and reducing service time.'}
+            </motion.p>
+
+            <motion.div variants={fadeInUp} className="flex flex-wrap gap-3">
+              {['USA', 'France', 'Italy', 'Portugal', 'Belgium'].map((country) => (
+                <div key={country} className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+                  {country}
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Right Column: Illustration */}
+          <motion.div variants={fadeInUp} className="flex-1 relative z-10 w-full flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[500px] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.15)] border border-white/10 group">
+              <img src="/uploads/chaickout/global_map_connections.png" alt="Global Launch Map" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+          </motion.div>
+
         </motion.div>
       </section>
 
