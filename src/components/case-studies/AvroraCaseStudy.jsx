@@ -104,12 +104,12 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
               </p>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 md:p-8 flex flex-col lg:flex-row items-center justify-center lg:gap-8 relative overflow-hidden h-full">
+            <motion.div variants={fadeInUp} className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 md:p-8 flex flex-col lg:flex-row items-center lg:items-stretch justify-center lg:gap-8 relative overflow-hidden h-full">
               
-              <div className="grid grid-cols-2 lg:flex lg:flex-col gap-3 relative z-10 w-full lg:w-auto max-w-[320px] lg:max-w-none mx-auto lg:mx-0">
+              <div className="grid grid-cols-2 lg:flex lg:flex-col gap-3 relative z-10 w-full lg:w-auto max-w-[320px] lg:max-w-none mx-auto lg:mx-0 lg:py-2">
                 {['Excel', 'Email', 'WhatsApp', 'Trello'].map((tool, i) => (
-                  <div key={tool} className="flex items-center gap-4 w-full justify-center lg:justify-start">
-                    <div className="bg-zinc-900 border border-zinc-700 px-3 py-3 lg:px-6 lg:py-3 rounded-xl text-zinc-400 text-center w-full lg:w-40 flex-shrink-0 text-sm lg:text-base">{tool}</div>
+                  <div key={tool} className="flex items-center gap-4 w-full justify-center lg:justify-start lg:flex-1">
+                    <div className="bg-zinc-900 border border-zinc-700 px-3 py-3 lg:px-6 lg:py-3 rounded-xl text-zinc-400 text-center w-full lg:w-40 flex-shrink-0 text-sm lg:text-base h-full flex items-center justify-center">{tool}</div>
                     <div className="text-zinc-600 hidden lg:block">→</div>
                   </div>
                 ))}
@@ -117,8 +117,8 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
 
               <div className="text-zinc-600 lg:hidden flex justify-center text-xl my-4">↓</div>
 
-              <div className="relative z-10 w-full lg:w-auto">
-                <div className="bg-blue-600/20 border border-blue-500/50 px-6 md:px-8 py-8 md:py-12 rounded-2xl text-blue-400 font-bold text-center h-full flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.15)] leading-tight w-full max-w-[320px] lg:max-w-none mx-auto lg:mx-0">
+              <div className="relative z-10 w-full lg:w-auto lg:flex lg:flex-col lg:justify-stretch">
+                <div className="bg-blue-600/20 border border-blue-500/50 px-6 md:px-8 py-8 md:py-12 rounded-2xl text-blue-400 font-bold text-center flex-1 flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.15)] leading-tight w-full max-w-[320px] lg:max-w-none mx-auto lg:mx-0 lg:w-48 lg:text-xl">
                   Avrora<br/>Platform
                 </div>
               </div>
