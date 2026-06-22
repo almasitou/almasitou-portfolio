@@ -1,11 +1,13 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import OtherProjects from './OtherProjects';
 
 export default function AvroraCaseStudy({ lang, otherProjects }) {
   const isRu = lang === 'ru';
+  const [isNavigating, setIsNavigating] = useState(false);
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
@@ -22,6 +24,19 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
 
   return (
     <div className="bg-zinc-950 min-h-screen font-sans selection:bg-blue-500/30">
+      {/* Navigation */}
+      <div className="fixed top-6 left-6 z-50">
+        <Link 
+          href={`/${lang}`} 
+          onClick={() => setIsNavigating(true)}
+          className={`inline-flex items-center px-5 py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group ${isNavigating ? 'is-loading-nav' : ''}`}
+        >
+          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          {isRu ? 'Назад в портфолио' : 'Back to Portfolio'}
+        </Link>
+      </div>
       {/* Background elements */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/10 rounded-full blur-[120px]"></div>
