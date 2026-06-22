@@ -122,6 +122,60 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
         </motion.div>
       </section>
 
+      {/* ===================== NEW BLOCK: БИЗНЕС ПРОБЛЕМА ===================== */}
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden">
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-8 text-white tracking-tight">
+            {isRu ? 'Почему ресторанам понадобилось автоматическое распознавание еды' : 'Why restaurants needed automatic food recognition'}
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <motion.div variants={fadeInUp} className="space-y-6 text-zinc-300 text-lg leading-relaxed">
+              <p>
+                {isRu ? 'В традиционных системах самообслуживания пользователь вынужден вручную искать блюда, сканировать штрихкоды или взаимодействовать с персоналом.' : 'In traditional self-service systems, the user has to manually search for dishes, scan barcodes, or interact with staff.'}
+              </p>
+              <p className="font-semibold text-white mt-4">{isRu ? 'Это приводит к:' : 'This leads to:'}</p>
+              <ul className="list-disc pl-6 space-y-2 text-zinc-400">
+                <li>{isRu ? 'увеличению времени обслуживания;' : 'increased service time;'}</li>
+                <li>{isRu ? 'образованию очередей в часы пик;' : 'queues during peak hours;'}</li>
+                <li>{isRu ? 'дополнительной нагрузке на сотрудников;' : 'extra workload on employees;'}</li>
+                <li>{isRu ? 'ошибкам при идентификации блюд.' : 'errors in identifying dishes.'}</li>
+              </ul>
+              <div className="mt-8 bg-cyan-500/10 border border-cyan-500/20 p-6 rounded-2xl">
+                <h4 className="text-cyan-400 font-bold mb-2 text-xl">{isRu ? 'Цель проекта:' : 'Project Goal:'}</h4>
+                <p className="text-white">
+                  {isRu ? 'Создать систему компьютерного зрения, способную автоматически определять блюда на подносе и сокращать путь пользователя от выбора еды до оплаты.' : 'Create a computer vision system capable of automatically identifying dishes on a tray and shortening the user journey from food selection to payment.'}
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className="bg-zinc-950 border border-zinc-800 rounded-2xl p-8 flex flex-col gap-6 relative overflow-hidden">
+              <div className="flex flex-col gap-2 relative z-10">
+                <div className="text-xs font-semibold text-red-400 uppercase tracking-wider mb-2">{isRu ? 'Было' : 'Before'}</div>
+                {['Выбор еды', 'Очередь', 'Ручная идентификация', 'Оплата'].map((step, i) => (
+                  <React.Fragment key={`old-${i}`}>
+                    <div className="bg-zinc-900 border border-zinc-700 px-6 py-3 rounded-xl text-zinc-400 text-center">{isRu ? step : step}</div>
+                    {i < 3 && <div className="text-zinc-600 text-center">↓</div>}
+                  </React.Fragment>
+                ))}
+              </div>
+              
+              <div className="h-px bg-zinc-800 my-2"></div>
+              
+              <div className="flex flex-col gap-2 relative z-10">
+                <div className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-2">{isRu ? 'Стало' : 'After'}</div>
+                {['Выбор еды', 'AI Recognition', 'Оплата'].map((step, i) => (
+                  <React.Fragment key={`new-${i}`}>
+                    <div className={`px-6 py-3 rounded-xl text-center font-medium ${step === 'AI Recognition' ? 'bg-cyan-600/20 border border-cyan-500/50 text-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.15)]' : 'bg-zinc-800 border border-zinc-600 text-white'}`}>{isRu ? step : step}</div>
+                    {i < 2 && <div className="text-zinc-600 text-center">↓</div>}
+                  </React.Fragment>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* ===================== BLOCK 2: ABOUT ===================== */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-gradient-to-br from-zinc-900/80 to-zinc-900/40 backdrop-blur-md border border-zinc-800 rounded-2xl p-6 md:p-12 shadow-2xl relative overflow-hidden text-left hover:border-cyan-500/20 transition-colors duration-500">
@@ -144,35 +198,28 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
       {/* ===================== BLOCK 3: MY ROLE ===================== */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-            {/* Left: Моя роль */}
-            <div>
-              <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold text-white mb-8">
-                {isRu ? 'Моя роль' : 'My Role'}
-              </motion.h2>
-              <motion.div variants={fadeInUp} className="flex flex-wrap gap-3">
-                {['UX Research', 'Interaction Design', 'UI Design', 'Prototyping', 'Design System', 'User Testing', 'AI/CV UX Patterns', 'Kiosk Interface'].map((role, i) => (
-                  <span key={i} className="px-5 py-2.5 bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 hover:border-cyan-500/30 hover:-translate-y-1 hover:shadow-[0_4px_15px_rgba(6,182,212,0.15)] hover:text-white transition-all duration-300 rounded-full text-zinc-300 font-medium text-sm md:text-base cursor-default">
-                    {role}
-                  </span>
-                ))}
-              </motion.div>
-            </div>
-            {/* Right: Особенности продукта */}
-            <div>
-              <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold text-white mb-8">
-                {isRu ? 'Особенности продукта' : 'Product Features'}
-              </motion.h2>
-              <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {featuresList.map((item, i) => (
-                  <div key={i} className={`flex items-center gap-4 bg-zinc-900/50 border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/80 hover:border-cyan-500/30 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(6,182,212,0.15)] transition-all duration-300 cursor-default group`}>
-                    <span className={`text-2xl group-hover:scale-110 transition-transform duration-300`}>{item.icon}</span>
-                    <span className={`text-zinc-300 font-medium group-hover:text-white transition-colors duration-300`}>{item.text}</span>
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-          </div>
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold text-white mb-8">
+            {isRu ? 'Моя зона ответственности' : 'My Responsibilities'}
+          </motion.h2>
+          <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              isRu ? 'UX/UI дизайн терминала самообслуживания;' : 'UX/UI design of the self-service terminal;',
+              isRu ? 'проектирование пользовательских сценариев оплаты;' : 'designing user payment flows;',
+              isRu ? 'дизайн экранов распознавания блюд;' : 'designing food recognition screens;',
+              isRu ? 'анализ нестандартных сценариев использования;' : 'analyzing edge cases;',
+              isRu ? 'проектирование взаимодействия пользователя с AI-системой;' : 'designing user interaction with AI;',
+              isRu ? 'работа с бизнес-требованиями;' : 'working with business requirements;',
+              isRu ? 'проработка интерфейсов для реальных ресторанных сценариев;' : 'detailing interfaces for real restaurant scenarios;',
+              isRu ? 'участие в развитии рекламного модуля внутри системы.' : 'participating in the development of the ad module.'
+            ].map((role, i) => (
+              <div key={i} className="bg-zinc-900/50 border border-zinc-800 p-5 rounded-xl hover:border-cyan-500/30 transition-colors">
+                <div className="w-8 h-8 rounded-full bg-cyan-500/10 flex items-center justify-center mb-4">
+                  <div className="w-2 h-2 rounded-full bg-cyan-400"></div>
+                </div>
+                <p className="text-zinc-300 text-sm md:text-base leading-relaxed">{role}</p>
+              </div>
+            ))}
+          </motion.div>
         </motion.div>
       </section>
 
@@ -251,6 +298,32 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
         </motion.div>
       </section>
 
+      {/* ===================== NEW BLOCK: ОГРАНИЧЕНИЯ ПРОЕКТА ===================== */}
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+            {isRu ? 'Ограничения и требования' : 'Constraints and Requirements'}
+          </motion.h2>
+          <motion.p variants={fadeInUp} className="text-zinc-400 text-lg md:text-xl mb-12 max-w-4xl leading-relaxed">
+            {isRu ? 'Проектирование происходило с учетом нескольких важных ограничений:' : 'The design process took into account several key constraints:'}
+          </motion.p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              isRu ? 'пользователь не должен проходить сложное обучение;' : 'the user should not require complex training;',
+              isRu ? 'интерфейс должен быть понятен с первого взаимодействия;' : 'the interface must be intuitive from the first interaction;',
+              isRu ? 'система должна корректно обрабатывать ошибки распознавания;' : 'the system must gracefully handle recognition errors;',
+              isRu ? 'сценарий оплаты должен оставаться быстрым даже при нестандартных ситуациях;' : 'the payment flow must remain fast even in edge cases;',
+              isRu ? 'взаимодействие должно быть одинаково понятным для пользователей разного возраста и опыта.' : 'the interaction must be equally clear to users of all ages and experiences.'
+            ].map((constraint, i) => (
+              <motion.div variants={fadeInUp} key={i} className="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl flex items-start gap-4">
+                <div className="w-10 h-10 shrink-0 bg-red-500/10 text-red-500 rounded-full flex items-center justify-center font-bold">!</div>
+                <p className="text-zinc-300 pt-2 leading-relaxed">{constraint}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
       {/* ===================== BLOCK 5: AI COMPLEXITY ===================== */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
@@ -286,6 +359,25 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
               <p className="text-zinc-400 text-base md:text-lg leading-relaxed">{isRu ? 'Одно и то же блюдо выглядит по-разному в зависимости от повара, порции, освещения, посуды.' : 'The same dish looks different depending on the cook, portion size, lighting, and plate.'}</p>
             </motion.div>
           </div>
+          <motion.div variants={fadeInUp} className="mt-16 bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 md:p-12">
+            <h3 className="text-2xl font-bold text-white mb-8">{isRu ? 'С какими сценариями сталкивается система' : 'Scenarios the system faces'}</h3>
+            <div className="flex flex-wrap gap-4">
+              {[
+                isRu ? 'блюда похожи друг на друга' : 'dishes look alike',
+                isRu ? 'одно и то же блюдо выглядит по-разному в зависимости от порции' : 'the same dish looks different depending on the portion',
+                isRu ? 'часть блюда может быть закрыта другими объектами' : 'part of the dish may be covered by other objects',
+                isRu ? 'пользователь может поставить поднос нестандартным образом' : 'the user may place the tray in a non-standard way',
+                isRu ? 'некоторые позиции визуально практически не отличаются' : 'some items are visually almost indistinguishable'
+              ].map((scenario, i) => (
+                <div key={i} className="bg-zinc-800/50 border border-zinc-700/50 px-5 py-3 rounded-full text-zinc-300 text-sm md:text-base">
+                  {scenario}
+                </div>
+              ))}
+            </div>
+            <p className="text-zinc-400 mt-8 leading-relaxed max-w-4xl text-lg md:text-xl">
+              {isRu ? 'Всё это показывает, что проблема намного сложнее обычного сканирования товара.' : 'All of this shows that the problem is much more complex than simple item scanning.'}
+            </p>
+          </motion.div>
         </motion.div>
       </section>
 
@@ -347,6 +439,43 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
         </motion.div>
       </section>
 
+      {/* ===================== NEW BLOCK: UX ARTIFACT ===================== */}
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="relative">
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-12 tracking-tight text-center md:text-left relative z-10">{isRu ? 'Путь пользователя' : 'User Journey'}</motion.h2>
+          
+          <div className="flex flex-col md:flex-row md:flex-wrap items-center md:items-center justify-center md:justify-start gap-4 md:gap-4 relative z-10">
+            {[
+              isRu ? 'Берет поднос' : 'Takes tray',
+              isRu ? 'Подходит к терминалу' : 'Approaches terminal',
+              isRu ? 'Система распознает блюда' : 'System recognizes dishes',
+              isRu ? 'Пользователь проверяет результат' : 'User verifies result',
+              isRu ? 'Оплачивает заказ' : 'Pays for order',
+              isRu ? 'Получает подтверждение' : 'Gets confirmation'
+            ].map((step, i, arr) => (
+              <React.Fragment key={i}>
+                <motion.div variants={fadeInUp} className="flex items-center bg-zinc-900 border border-zinc-800 rounded-full py-2 px-4 gap-3 hover:border-cyan-500/30 transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold text-sm shrink-0">
+                    {i + 1}
+                  </div>
+                  <div className="text-zinc-300 text-sm md:text-base font-medium">{step}</div>
+                </motion.div>
+                {i < arr.length - 1 && (
+                  <motion.div variants={fadeInUp} className="text-zinc-600 hidden md:flex items-center justify-center">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                  </motion.div>
+                )}
+                {i < arr.length - 1 && (
+                  <motion.div variants={fadeInUp} className="text-zinc-600 md:hidden flex items-center justify-center">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                  </motion.div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
       {/* ===================== BLOCK 7: EDGE CASES ===================== */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
@@ -356,11 +485,16 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
               <span className="text-sm font-semibold tracking-wider text-cyan-400 uppercase">{isRu ? 'Продуктовое мышление' : 'Product Thinking'}</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">{isRu ? 'Edge-кейсы — настоящий вызов' : 'Edge Cases — The Real Challenge'}</h2>
-            <p className="text-zinc-400 text-lg md:text-xl max-w-4xl">
-              {isRu 
-                ? 'Главный flow прост и покрывает большинство ситуаций. Но настоящая работа дизайнера — в пограничных сценариях. Что делать, когда AI не уверен? Когда поднос пуст? Когда на подносе алкоголь?' 
-                : 'The main flow is simple and covers most situations. But the real designer work is in edge cases. What happens when AI is uncertain? When the tray is empty? When there\'s alcohol on the tray?'}
-            </p>
+            <div className="space-y-4 text-zinc-400 text-lg md:text-xl max-w-4xl leading-relaxed">
+              <p>
+                {isRu ? 'Основная сложность проекта заключалась не в идеальном сценарии, а в обработке реальных ситуаций, которые регулярно происходят в ресторанах самообслуживания.' : 'The main challenge of the project was not the ideal scenario, but handling real situations that regularly occur in self-service restaurants.'}
+              </p>
+              <p>
+                {isRu 
+                  ? 'Главный flow прост и покрывает большинство ситуаций. Но настоящая работа дизайнера — в пограничных сценариях. Что делать, когда AI не уверен? Когда поднос пуст? Когда на подносе алкоголь?' 
+                  : 'The main flow is simple and covers most situations. But the real designer work is in edge cases. What happens when AI is uncertain? When the tray is empty? When there\'s alcohol on the tray?'}
+              </p>
+            </div>
           </motion.div>
 
           {/* Edge Case 1: Empty Tray */}
@@ -428,10 +562,40 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
         </motion.div>
       </section>
 
+      {/* ===================== NEW BLOCK: РЕКЛАМНЫЙ МОДУЛЬ ===================== */}
+      <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <motion.div variants={fadeInUp}>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-white">{isRu ? 'Дополнительная ценность экрана оплаты' : 'Additional value of the payment screen'}</h2>
+            <div className="space-y-4 text-zinc-400 text-lg md:text-xl leading-relaxed">
+              <p>
+                {isRu ? 'Помимо основной функции оплаты терминал позволяет использовать экран как рекламную площадку.' : 'Besides the main payment function, the terminal allows using the screen as an advertising platform.'}
+              </p>
+              <p>
+                {isRu ? 'Рестораны могут размещать рекламный контент партнеров и использовать время ожидания для дополнительной коммуникации с посетителями.' : 'Restaurants can place partner advertising content and use the waiting time for additional communication with visitors.'}
+              </p>
+            </div>
+          </motion.div>
+          <motion.div variants={fadeInUp} className="relative w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] p-4 flex flex-col shadow-2xl">
+            <div className="w-full bg-zinc-950 rounded-xl overflow-hidden relative border border-zinc-800/50 flex flex-col h-full">
+               <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2000&auto=format&fit=crop" alt="Ad Banner" className="w-full aspect-[2/1] md:aspect-[16/9] object-cover opacity-80" />
+               <div className="bg-zinc-900 p-6 flex flex-col justify-center flex-1">
+                 <div className="text-white font-bold text-xl md:text-2xl mb-2">{isRu ? 'Специальное предложение' : 'Special Offer'}</div>
+                 <div className="text-zinc-400 text-sm md:text-base">{isRu ? 'Получите скидку 20% на десерты при оплате картой партнера.' : 'Get a 20% discount on desserts when paying with a partner card.'}</div>
+               </div>
+               <div className="absolute top-4 right-4 bg-black/60 backdrop-blur text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider border border-white/10">{isRu ? 'Реклама' : 'Ad'}</div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </section>
+
       {/* ===================== BLOCK 8: RESULTS ===================== */}
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
-          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-12 tracking-tight">{isRu ? 'Результаты' : 'Results'}</motion.h2>
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">{isRu ? 'Результаты' : 'Results'}</motion.h2>
+          <motion.p variants={fadeInUp} className="text-zinc-400 text-lg md:text-xl mb-12 max-w-4xl leading-relaxed">
+            {isRu ? 'В результате проект объединил технологии компьютерного зрения и удобный пользовательский интерфейс, позволив создать быстрый и понятный сценарий самообслуживания.' : 'As a result, the project combined computer vision technologies and a convenient user interface, allowing to create a fast and intuitive self-service flow.'}
+          </motion.p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.div variants={fadeInUp} className="bg-gradient-to-tr from-cyan-900/30 to-zinc-900 border border-cyan-500/20 rounded-2xl p-8 hover:-translate-y-2 transition-transform duration-500 shadow-xl group">
