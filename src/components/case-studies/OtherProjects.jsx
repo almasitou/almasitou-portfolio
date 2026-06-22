@@ -56,6 +56,8 @@ export default function OtherProjects({ projects, lang }) {
               if (p.id === 'cmqjeakvd0002vxltgwlxjlo9' || title.includes('bao')) return 'bao';
               if (p.id === 'cmqjeal510004vxlt8hmvmcr6' || title.includes('taza')) return 'taza';
               if (p.id === 'cmqjeal060003vxlt80svpske' || title.includes('idol')) return 'idol';
+              if (p.id === 'rrs' || title.includes('rrs')) return 'rrs';
+              if (p.id === 'avrora' || title.includes('avrora') || p.id === 'aurora' || title.includes('aurora')) return 'avrora';
               return p.id;
             };
             return (
@@ -65,7 +67,7 @@ export default function OtherProjects({ projects, lang }) {
               className="nav-loadable group block relative overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800 aspect-[4/3] hover:border-zinc-600 transition-colors"
             >
               <img 
-                src={project.id === 'cmqjeakqk0001vxltptpxytw5' ? '/kaspi-cover.jpg' : project.id === 'cmqjeakvd0002vxltgwlxjlo9' ? '/bao-cover.jpg' : (project.coverImage || project.cover)} 
+                src={project.id === 'cmqjeakqk0001vxltptpxytw5' ? '/kaspi-cover.jpg' : project.id === 'cmqjeakvd0002vxltgwlxjlo9' ? '/bao-cover.jpg' : (project.id === 'rrs' || (project.title || '').toLowerCase().includes('rrs')) ? '/uploads/chaickout/cover-hero.jpg' : (project.id === 'avrora' || project.id === 'aurora' || (project.title || '').toLowerCase().includes('avrora') || (project.title || '').toLowerCase().includes('aurora')) ? '/uploads/avrora/avrora_cover.jpg' : (project.coverImage || project.cover)} 
                 alt={project.title} 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -73,6 +75,10 @@ export default function OtherProjects({ projects, lang }) {
                 <h4 className="text-white font-medium text-lg lg:text-xl transform transition-transform duration-500 group-hover:-translate-y-2">
                   {project.id === 'cmqjeakqk0001vxltptpxytw5' || (project.title || '').toLowerCase().includes('kaspi') 
                     ? (isRu ? 'Kaspi Cinema Booking UX: Билет за пару кликов' : 'Kaspi Cinema Booking UX: Ticket in a few clicks') 
+                    : project.id === 'rrs' || (project.title || '').toLowerCase().includes('rrs')
+                    ? 'Retail Robotics Solution'
+                    : project.id === 'avrora' || project.id === 'aurora' || (project.title || '').toLowerCase().includes('avrora') || (project.title || '').toLowerCase().includes('aurora')
+                    ? 'Avrora Holdings'
                     : project.title}
                 </h4>
               </div>

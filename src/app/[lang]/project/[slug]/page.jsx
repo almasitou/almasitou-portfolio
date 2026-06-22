@@ -7,6 +7,8 @@ import BaoCaseStudy from '@/components/case-studies/BaoCaseStudy';
 import TazaCaseStudy from '@/components/case-studies/TazaCaseStudy';
 
 import IdolCaseStudy from '@/components/case-studies/IdolCaseStudy';
+import RRSCaseStudy from '@/components/case-studies/RRSCaseStudy';
+import AvroraCaseStudy from '@/components/case-studies/AvroraCaseStudy';
 
 // Modules are now fetched during sync and stored in project.content
 export const dynamic = 'force-dynamic';
@@ -20,6 +22,8 @@ export default async function ProjectPage({ params }) {
   else if (slug === 'bao') currentSlug = 'cmqjeakvd0002vxltgwlxjlo9';
   else if (slug === 'taza') currentSlug = 'cmqjeal510004vxlt8hmvmcr6';
   else if (slug === 'idol') currentSlug = 'cmqjeal060003vxlt80svpske';
+  else if (slug === 'rrs') currentSlug = 'rrs';
+  else if (slug === 'avrora') currentSlug = 'avrora';
   const allProjects = await prisma.project.findMany({
     orderBy: { createdAt: 'desc' }
   });
@@ -48,6 +52,14 @@ export default async function ProjectPage({ params }) {
   
   if (slug === 'idol' || slug === 'cmqjeal060003vxlt80svpske') {
     return <IdolCaseStudy lang={lang} otherProjects={otherProjects} />;
+  }
+
+  if (slug === 'rrs') {
+    return <RRSCaseStudy lang={lang} otherProjects={otherProjects} />;
+  }
+
+  if (slug === 'avrora') {
+    return <AvroraCaseStudy lang={lang} otherProjects={otherProjects} />;
   }
   
   const project = await prisma.project.findUnique({
