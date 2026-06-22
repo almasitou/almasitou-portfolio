@@ -104,17 +104,20 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
               </p>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="bg-zinc-950 border border-zinc-800 rounded-2xl p-8 flex flex-col gap-4 relative overflow-hidden h-full">
-              <div className="flex flex-col gap-3 relative z-10">
+            <motion.div variants={fadeInUp} className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-center md:gap-12 lg:gap-8 relative overflow-hidden h-full">
+              <div className="flex flex-col gap-3 relative z-10 items-center md:items-start w-full md:w-auto">
                 {['Excel', 'Email', 'WhatsApp', 'Trello'].map((tool, i) => (
-                  <div key={tool} className="flex items-center gap-4">
-                    <div className="bg-zinc-900 border border-zinc-700 px-6 py-3 rounded-xl text-zinc-400 text-center w-32 md:w-40 flex-shrink-0">{tool}</div>
-                    <div className="text-zinc-600">→</div>
+                  <div key={tool} className="flex items-center gap-4 w-full justify-center md:justify-start">
+                    <div className="bg-zinc-900 border border-zinc-700 px-6 py-3 rounded-xl text-zinc-400 text-center w-40 flex-shrink-0">{tool}</div>
+                    <div className="text-zinc-600 hidden md:block">→</div>
                   </div>
                 ))}
               </div>
-              <div className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-0">
-                <div className="bg-blue-600/20 border border-blue-500/50 px-6 md:px-8 py-10 md:py-12 rounded-2xl text-blue-400 font-bold text-center h-full flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.15)] leading-tight">
+
+              <div className="text-zinc-600 md:hidden flex justify-center text-xl my-4">↓</div>
+
+              <div className="relative z-10 w-full md:w-auto">
+                <div className="bg-blue-600/20 border border-blue-500/50 px-6 md:px-8 py-8 md:py-12 rounded-2xl text-blue-400 font-bold text-center h-full flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.15)] leading-tight">
                   Avrora<br/>Platform
                 </div>
               </div>
