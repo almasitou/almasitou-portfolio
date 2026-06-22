@@ -65,40 +65,41 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
             {isRu ? 'Когда бизнес-процессы разбросаны по пяти разным инструментам' : 'When business processes are scattered across five tools'}
           </motion.h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div variants={fadeInUp} className="space-y-6 text-zinc-300 text-lg leading-relaxed">
-              <p>
-                {isRu ? 'До начала проекта сотрудники использовали разные инструменты для разных задач:' : 'Before the project, employees used different tools for different tasks:'}
+          <motion.div variants={fadeInUp} className="space-y-6 text-zinc-300 text-lg leading-relaxed max-w-4xl mb-12">
+            <p>
+              {isRu ? 'До начала проекта сотрудники использовали разные инструменты для разных задач:' : 'Before the project, employees used different tools for different tasks:'}
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-zinc-400">
+              <li>{isRu ? 'постановка задач велась в отдельных сервисах вроде Trello;' : 'task management in separate services like Trello;'}</li>
+              <li>{isRu ? 'коммуникация происходила через WhatsApp;' : 'communication via WhatsApp;'}</li>
+              <li>{isRu ? 'документооборот велся через электронную почту;' : 'document flow through email;'}</li>
+              <li>{isRu ? 'производственные данные хранились в Excel-таблицах;' : 'manufacturing data stored in Excel;'}</li>
+              <li>{isRu ? 'информация была распределена между несколькими системами.' : 'information distributed across multiple systems.'}</li>
+            </ul>
+            <p>
+              {isRu ? 'Из-за этого сотрудники тратили время на поиск информации, переключались между сервисами и работали с несинхронизированными данными.' : 'Because of this, employees wasted time searching for info, switching tools, and dealing with out-of-sync data.'}
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            <motion.div variants={fadeInUp} className="bg-blue-500/10 border border-blue-500/20 p-8 rounded-2xl flex flex-col justify-center">
+              <h4 className="text-blue-400 font-bold mb-4 text-2xl">{isRu ? 'Цель проекта:' : 'Project Goal:'}</h4>
+              <p className="text-white text-xl leading-relaxed">
+                {isRu ? 'Создать единую цифровую платформу для управления ключевыми внутренними процессами предприятия.' : 'Create a unified digital platform to manage key internal enterprise processes.'}
               </p>
-              <ul className="list-disc pl-6 space-y-2 text-zinc-400">
-                <li>{isRu ? 'постановка задач велась в отдельных сервисах вроде Trello;' : 'task management in separate services like Trello;'}</li>
-                <li>{isRu ? 'коммуникация происходила через WhatsApp;' : 'communication via WhatsApp;'}</li>
-                <li>{isRu ? 'документооборот велся через электронную почту;' : 'document flow through email;'}</li>
-                <li>{isRu ? 'производственные данные хранились в Excel-таблицах;' : 'manufacturing data stored in Excel;'}</li>
-                <li>{isRu ? 'информация была распределена между несколькими системами.' : 'information distributed across multiple systems.'}</li>
-              </ul>
-              <p>
-                {isRu ? 'Из-за этого сотрудники тратили время на поиск информации, переключались между сервисами и работали с несинхронизированными данными.' : 'Because of this, employees wasted time searching for info, switching tools, and dealing with out-of-sync data.'}
-              </p>
-              <div className="mt-8 bg-blue-500/10 border border-blue-500/20 p-6 rounded-2xl">
-                <h4 className="text-blue-400 font-bold mb-2">{isRu ? 'Цель проекта:' : 'Project Goal:'}</h4>
-                <p className="text-white">
-                  {isRu ? 'Создать единую цифровую платформу для управления ключевыми внутренними процессами предприятия.' : 'Create a unified digital platform to manage key internal enterprise processes.'}
-                </p>
-              </div>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="bg-zinc-950 border border-zinc-800 rounded-2xl p-8 flex flex-col gap-4 relative overflow-hidden">
-              <div className="flex flex-col gap-3">
+            <motion.div variants={fadeInUp} className="bg-zinc-950 border border-zinc-800 rounded-2xl p-8 flex flex-col gap-4 relative overflow-hidden h-full">
+              <div className="flex flex-col gap-3 relative z-10">
                 {['Excel', 'Email', 'WhatsApp', 'Trello'].map((tool, i) => (
                   <div key={tool} className="flex items-center gap-4">
-                    <div className="bg-zinc-900 border border-zinc-700 px-6 py-3 rounded-xl text-zinc-400 text-center w-40 flex-shrink-0">{tool}</div>
+                    <div className="bg-zinc-900 border border-zinc-700 px-6 py-3 rounded-xl text-zinc-400 text-center w-32 md:w-40 flex-shrink-0">{tool}</div>
                     <div className="text-zinc-600">→</div>
                   </div>
                 ))}
               </div>
-              <div className="absolute right-8 top-1/2 -translate-y-1/2">
-                <div className="bg-blue-600/20 border border-blue-500/50 px-8 py-12 rounded-2xl text-blue-400 font-bold text-center h-full flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.15)]">
+              <div className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-0">
+                <div className="bg-blue-600/20 border border-blue-500/50 px-6 md:px-8 py-10 md:py-12 rounded-2xl text-blue-400 font-bold text-center h-full flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.15)] leading-tight">
                   Avrora<br/>Platform
                 </div>
               </div>
