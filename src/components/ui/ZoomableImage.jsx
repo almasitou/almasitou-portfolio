@@ -43,14 +43,17 @@ export default function ZoomableImage({ src, alt, className }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="absolute inset-0 bg-zinc-950/90 backdrop-blur-md cursor-zoom-out"
+            className="absolute inset-0 bg-zinc-950/80 backdrop-blur-3xl cursor-zoom-out"
             onClick={() => setIsZoomed(false)}
           />
           
           {/* Image Container */}
           <div className="relative z-10 w-full h-full p-4 md:p-8 lg:p-12 flex items-center justify-center pointer-events-none">
             <motion.img
-              layoutId={`zoomable-img-${src}`}
+              initial={{ opacity: 0, scale: 0.8, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.8, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
               src={src}
               alt={alt}
               className="w-auto h-auto max-w-full max-h-full object-contain rounded-xl shadow-2xl pointer-events-auto cursor-zoom-out"
@@ -78,8 +81,7 @@ export default function ZoomableImage({ src, alt, className }) {
 
   return (
     <>
-      <motion.img
-        layoutId={`zoomable-img-${src}`}
+      <img
         src={src}
         alt={alt}
         className={`cursor-zoom-in transition-all duration-300 hover:opacity-90 ${className || ''}`}

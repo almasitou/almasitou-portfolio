@@ -430,7 +430,11 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
                       )}
                     </p>
                     <p className="text-zinc-500 text-sm md:text-base leading-relaxed max-w-xl">
-                      {isRu ? 'Для сравнения: обычный кассир тратит на одного гостя от 45 секунд до 1 минуты. Мы ускорили процесс чекаута в 4-5 раз.' : 'For comparison: a regular human cashier takes 45 to 60 seconds per guest. We sped up the checkout process by 4-5x.'}
+                      {isRu ? (
+                        <>Для сравнения: обычный кассир тратит на одного гостя от 45 секунд до 1 минуты. Мы ускорили процесс чекаута в <span className="text-blue-500 font-bold">4-5 раз</span>.</>
+                      ) : (
+                        <>For comparison: a regular human cashier takes 45 to 60 seconds per guest. We sped up the checkout process by <span className="text-blue-500 font-bold">4-5x</span>.</>
+                      )}
                     </p>
                   </div>
                 </div>

@@ -182,7 +182,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                       className="bg-zinc-800/90 backdrop-blur-sm border border-zinc-700 hover:border-pink-500/50 hover:shadow-[0_0_20px_rgba(236,72,153,0.4)] transition-shadow transition-colors duration-300 px-5 py-3 rounded-2xl flex items-center gap-3 shadow-2xl cursor-pointer"
                     >
                       <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden shrink-0 bg-white">
-                        <ZoomableImage src={tool.logo} alt={tool.name} className="w-full h-full object-cover" />
+                        <img src={tool.logo} alt={tool.name} className="w-full h-full object-cover" />
                       </div>
                       <span className="text-zinc-200 font-bold whitespace-nowrap">{tool.name}</span>
                     </motion.div>
