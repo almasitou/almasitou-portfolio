@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+
 export default function ZoomableImage({ src, alt, className }) {
   const [isZoomed, setIsZoomed] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -48,17 +50,29 @@ export default function ZoomableImage({ src, alt, className }) {
           />
           
           {/* Image Container */}
-          <div className="relative z-10 w-full h-full p-4 md:p-8 lg:p-12 flex items-center justify-center pointer-events-none">
-            <motion.img
-              initial={{ opacity: 0, scale: 0.8, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8, y: 20 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              src={src}
-              alt={alt}
-              className="w-auto h-auto max-w-full max-h-full object-contain rounded-xl shadow-2xl pointer-events-auto cursor-zoom-out"
-              onClick={() => setIsZoomed(false)}
-            />
+          <div className="relative z-10 w-full h-full flex items-center justify-center pointer-events-none">
+            <TransformWrapper
+              initialScale={1}
+              minScale={0.5}
+              maxScale={4}
+              wheel={{ step: 0.1 }}
+              doubleClick={{ disabled: false, step: 0.5 }}
+              pinch={{ step: 5 }}
+            >
+              {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
+                <TransformComponent wrapperClass="!w-full !h-full flex items-center justify-center" contentClass="!w-full !h-full flex items-center justify-center pointer-events-auto">
+                  <motion.img
+                    initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.8, y: 20 }}
+                    transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                    src={src}
+                    alt={alt}
+                    className="w-auto h-auto max-w-[90vw] max-h-[90vh] object-contain rounded-xl shadow-2xl cursor-grab active:cursor-grabbing"
+                  />
+                </TransformComponent>
+              )}
+            </TransformWrapper>
             
             {/* Close Button */}
             <motion.button

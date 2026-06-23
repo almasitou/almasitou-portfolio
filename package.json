@@ -21,7 +21,8 @@
     "react-dom": "19.2.4",
     "react-globe.gl": "^2.38.0",
     "react-social-media-embed": "^2.5.18",
-    "react-type-animation": "^3.2.0"
+    "react-type-animation": "^3.2.0",
+    "react-zoom-pan-pinch": "^4.0.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -158,7 +158,7 @@ export default function BaoCaseStudy({ lang, otherProjects }) {
 
             {/* Right: Photo */}
             <motion.div variants={fadeInUp} className={`relative h-[300px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl group  border border-zinc-800`}>
-              <ZoomableImage src="/uploads/bao/bao_restaurant.jpg" alt="BAO Restaurant" className={`absolute inset-0 w-full h-full object-cover object-[center_30%] group-hover:scale-105 group-[.is-active]:scale-105 transition-transform duration-700`} />
+              <img src="/uploads/bao/bao_restaurant.jpg" alt="BAO Restaurant" className={`absolute inset-0 w-full h-full object-cover object-[center_30%] group-hover:scale-105 group-[.is-active]:scale-105 transition-transform duration-700`} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
             </motion.div>
           </div>
