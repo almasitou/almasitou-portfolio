@@ -224,42 +224,54 @@ export default async function Home({ params }) {
               </Reveal>
             </div>
             
-            <div className="xl:col-span-2 space-y-2 md:space-y-4 group/list">
-              {experiences.map((exp, i) => {
-                const rawAchievements = getS(exp, 'achievements');
-                let achievements = [];
-                try {
-                  achievements = JSON.parse(rawAchievements || '[]');
-                } catch(e) {}
+            <div className="xl:col-span-2 relative">
+              {/* Continuous vertical line */}
+              <div className="absolute left-[11px] top-[60px] bottom-[60px] w-px bg-zinc-800 z-0 hidden md:block" />
+              
+              <div className="space-y-2 md:space-y-4 group/list">
+                {experiences.map((exp, i) => {
+                  const rawAchievements = getS(exp, 'achievements');
+                  let achievements = [];
+                  try {
+                    achievements = JSON.parse(rawAchievements || '[]');
+                  } catch(e) {}
 
-                return (
-                  <Reveal key={exp.id} delay={i * 0.1}>
-                    <div className="group/item relative pl-8 pr-4 md:px-8 py-6 transition-all duration-500 md:group-hover/list:opacity-20 md:hover:!opacity-100 md:hover:scale-[1.02] md:hover:bg-zinc-900/40 rounded-3xl border border-transparent md:hover:border-zinc-800/60 md:hover:shadow-2xl active:bg-zinc-900/40 active:scale-[0.98]">
-                      <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none z-0">
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full md:group-hover/item:animate-shimmer-once" />
-                      </div>
-                      <div className="absolute left-0 top-8 bottom-0 w-px bg-zinc-800 z-10" />
-                      <div className="absolute left-[-4px] top-8 w-2 h-2 rounded-full bg-blue-500 z-10" />
+                  return (
+                    <Reveal key={exp.id} delay={i * 0.1}>
+                      <div className="group/item relative pl-8 md:pl-12">
+                        {/* The blue dot */}
+                        <div className="absolute left-[7px] top-[40px] w-2 h-2 rounded-full bg-blue-500 z-10 transition-all duration-500 group-hover/item:scale-[1.5] group-hover/item:shadow-[0_0_15px_rgba(59,130,246,0.8)] hidden md:block" />
+                        
+                        {/* Continuous line for mobile (since we hide the main one to avoid layout issues) */}
+                        <div className="absolute left-[11px] top-[40px] w-px bg-zinc-800 z-0 md:hidden" style={{ height: i === experiences.length - 1 ? 'calc(100% - 40px)' : 'calc(100% + 16px)' }} />
+                        <div className="absolute left-[7px] top-[40px] w-2 h-2 rounded-full bg-blue-500 z-10 md:hidden transition-all duration-500 group-hover/item:scale-[1.5] group-hover/item:shadow-[0_0_15px_rgba(59,130,246,0.8)]" />
 
-                      <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
-                        <div>
-                          <h3 className="font-heading text-2xl font-bold text-white">{getS(exp, 'company')}</h3>
-                          <p className="text-blue-400 font-medium mt-1">{getS(exp, 'role')}</p>
+                        <div className="relative px-6 md:px-8 py-6 transition-all duration-500 md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:bg-zinc-900/40 rounded-3xl border border-transparent md:group-hover/item:border-zinc-800/60 md:group-hover/item:shadow-2xl active:bg-zinc-900/40 transform-gpu md:group-hover/item:translate-x-2">
+                          <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none z-0">
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full md:group-hover/item:animate-shimmer-once" />
+                          </div>
+
+                          <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4 relative z-10">
+                            <div>
+                              <h3 className="font-heading text-2xl font-bold text-white group-hover/item:text-blue-400 transition-colors">{getS(exp, 'company')}</h3>
+                              <p className="text-blue-400 font-medium mt-1">{getS(exp, 'role')}</p>
+                            </div>
+                            <span className="text-sm font-medium text-zinc-500 mt-2 md:mt-0 uppercase tracking-widest">{getS(exp, 'dates')}</span>
+                          </div>
+                          <ul className="space-y-3 mt-6 relative z-10">
+                            {achievements.map((ach, idx) => (
+                              <li key={idx} className="flex gap-4 text-zinc-400 leading-relaxed group-hover/item:text-zinc-300 transition-colors">
+                                <span className="text-zinc-600 mt-1.5 opacity-50">▹</span>
+                                {ach}
+                              </li>
+                            ))}
+                          </ul>
                         </div>
-                        <span className="text-sm font-medium text-zinc-500 mt-2 md:mt-0 uppercase tracking-widest">{getS(exp, 'dates')}</span>
                       </div>
-                      <ul className="space-y-3 mt-6">
-                        {achievements.map((ach, idx) => (
-                          <li key={idx} className="flex gap-4 text-zinc-400 leading-relaxed">
-                            <span className="text-zinc-600 mt-1.5 opacity-50">▹</span>
-                            {ach}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </Reveal>
-                );
-              })}
+                    </Reveal>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
