@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import OtherProjects from './OtherProjects';
+import ZoomableImage from '@/components/ui/ZoomableImage';
 
 export default function AvroraCaseStudy({ lang, otherProjects }) {
   const isRu = lang === 'ru';
@@ -46,7 +47,7 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
       {/* ===================== 1. HERO SECTION ===================== */}
       <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-           <img src="/uploads/avrora/avrora_cover.jpg" alt="Avrora Hero" className="w-full h-full object-cover object-[center_top] opacity-40 blur-sm" />
+           <ZoomableImage src="/uploads/avrora/avrora_cover.jpg" alt="Avrora Hero" className="w-full h-full object-cover object-[center_top] opacity-40 blur-sm" />
            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/90 via-[#0a0a0a]/80 to-[#0a0a0a]"></div>
            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none"></div>
         </div>
@@ -255,14 +256,14 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
                 <span className="text-white font-semibold">{isRu ? 'Модуль:' : 'Module:'}</span> {isRu ? 'Планирование заявок' : 'Request Planning'}<br/>
                 <span className="text-white font-semibold">{isRu ? 'Пользователи:' : 'Users:'}</span> {isRu ? 'Менеджеры производства' : 'Production Managers'}
               </div>
-              <img src="/uploads/avrora/production_plan_1.png" alt="Production Plan 1" className="w-full h-auto rounded-2xl shadow-2xl block" />
+              <ZoomableImage src="/uploads/avrora/production_plan_1.png" alt="Production Plan 1" className="w-full h-auto rounded-2xl shadow-2xl block" />
             </div>
             <div>
               <div className="mb-4 text-sm text-zinc-400">
                 <span className="text-white font-semibold">{isRu ? 'Модуль:' : 'Module:'}</span> {isRu ? 'Мониторинг статусов' : 'Status Monitoring'}<br/>
                 <span className="text-white font-semibold">{isRu ? 'Пользователи:' : 'Users:'}</span> {isRu ? 'Начальники цехов' : 'Shop Floor Managers'}
               </div>
-              <img src="/uploads/avrora/status_tracking.png" alt="Status Tracking" className="w-full h-auto rounded-2xl shadow-2xl block" />
+              <ZoomableImage src="/uploads/avrora/status_tracking.png" alt="Status Tracking" className="w-full h-auto rounded-2xl shadow-2xl block" />
             </div>
           </motion.div>
         </motion.div>
@@ -292,14 +293,14 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
                 <span className="text-white font-semibold">{isRu ? 'Модуль:' : 'Module:'}</span> {isRu ? 'Дашборд остатков' : 'Inventory Dashboard'}<br/>
                 <span className="text-white font-semibold">{isRu ? 'Пользователи:' : 'Users:'}</span> {isRu ? 'Логисты, Склад' : 'Logisticians, Warehouse'}
               </div>
-              <img src="/uploads/avrora/turnover_1.png" alt="Inventory Turnover 1" className="w-full h-auto rounded-2xl shadow-2xl block" />
+              <ZoomableImage src="/uploads/avrora/turnover_1.png" alt="Inventory Turnover 1" className="w-full h-auto rounded-2xl shadow-2xl block" />
             </div>
             <div>
               <div className="mb-4 text-sm text-zinc-400">
                 <span className="text-white font-semibold">{isRu ? 'Модуль:' : 'Module:'}</span> {isRu ? 'Аналитика запасов' : 'Inventory Analytics'}<br/>
                 <span className="text-white font-semibold">{isRu ? 'Пользователи:' : 'Users:'}</span> {isRu ? 'Руководители' : 'Executives'}
               </div>
-              <img src="/uploads/avrora/turnover_2.png" alt="Inventory Turnover 2" className="w-full h-auto rounded-2xl shadow-2xl block" />
+              <ZoomableImage src="/uploads/avrora/turnover_2.png" alt="Inventory Turnover 2" className="w-full h-auto rounded-2xl shadow-2xl block" />
             </div>
           </motion.div>
           <motion.div variants={fadeInUp} className="w-full">
@@ -307,7 +308,7 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
               <span className="text-white font-semibold">{isRu ? 'Модуль:' : 'Module:'}</span> {isRu ? 'Графики оборачиваемости' : 'Turnover Charts'}<br/>
               <span className="text-white font-semibold">{isRu ? 'Пользователи:' : 'Users:'}</span> {isRu ? 'Аналитики' : 'Analysts'}
             </div>
-            <img src="/uploads/avrora/turnover_3.png" alt="Inventory Charts" className="w-full h-auto rounded-2xl shadow-2xl block" />
+            <ZoomableImage src="/uploads/avrora/turnover_3.png" alt="Inventory Charts" className="w-full h-auto rounded-2xl shadow-2xl block" />
           </motion.div>
         </motion.div>
       </section>
@@ -335,7 +336,7 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
               <span className="text-white font-semibold">{isRu ? 'Модуль:' : 'Module:'}</span> {isRu ? 'Детализация сырья (деревья спецификаций)' : 'Raw Material Breakdown (BOM Trees)'}<br/>
               <span className="text-white font-semibold">{isRu ? 'Пользователи:' : 'Users:'}</span> {isRu ? 'Технологи, Отдел закупок' : 'Technologists, Procurement'}
             </div>
-            <img src="/uploads/avrora/raw_materials.png" alt="Raw Materials" className="w-full h-auto rounded-2xl shadow-2xl block" />
+            <ZoomableImage src="/uploads/avrora/raw_materials.png" alt="Raw Materials" className="w-full h-auto rounded-2xl shadow-2xl block" />
           </motion.div>
         </motion.div>
       </section>
@@ -364,14 +365,14 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
                 <span className="text-white font-semibold">{isRu ? 'Модуль:' : 'Module:'}</span> {isRu ? 'Список сотрудников' : 'Employee List'}<br/>
                 <span className="text-white font-semibold">{isRu ? 'Пользователи:' : 'Users:'}</span> {isRu ? 'HR, Системные администраторы' : 'HR, System Administrators'}
               </div>
-              <img src="/uploads/avrora/users_1.png" alt="Users List" className="w-full h-auto rounded-2xl shadow-2xl block" />
+              <ZoomableImage src="/uploads/avrora/users_1.png" alt="Users List" className="w-full h-auto rounded-2xl shadow-2xl block" />
             </div>
             <div>
               <div className="mb-4 text-sm text-zinc-400">
                 <span className="text-white font-semibold">{isRu ? 'Модуль:' : 'Module:'}</span> {isRu ? 'Настройка ролей' : 'Role Configuration'}<br/>
                 <span className="text-white font-semibold">{isRu ? 'Пользователи:' : 'Users:'}</span> {isRu ? 'Системные администраторы' : 'System Administrators'}
               </div>
-              <img src="/uploads/avrora/users_2.png" alt="Users Filters" className="w-full h-auto rounded-2xl shadow-2xl block" />
+              <ZoomableImage src="/uploads/avrora/users_2.png" alt="Users Filters" className="w-full h-auto rounded-2xl shadow-2xl block" />
             </div>
           </motion.div>
         </motion.div>

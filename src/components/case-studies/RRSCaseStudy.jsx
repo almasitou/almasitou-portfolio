@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import OtherProjects from './OtherProjects';
 import InteractiveGlobe from './InteractiveGlobe';
+import ZoomableImage from '@/components/ui/ZoomableImage';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -84,7 +85,7 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
       {/* ===================== BLOCK 1: HERO ===================== */}
       <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-           <img src="/uploads/chaickout/cover-hero.jpg" alt="Chaickout Hero" className="w-full h-full object-cover object-[center_top] md:object-center opacity-70" />
+           <ZoomableImage src="/uploads/chaickout/cover-hero.jpg" alt="Chaickout Hero" className="w-full h-full object-cover object-[center_top] md:object-center opacity-70" />
            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-black/50 to-[#0a0a0a]"></div>
            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
         </div>
@@ -407,7 +408,7 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
                 
                 {/* Screenshot inside the card */}
                 <div className="relative z-10 w-full mt-auto flex items-center justify-center">
-                  <img src={step.image} alt={step.title} className="w-full h-auto object-contain rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] transform transition-transform duration-700 group-hover:scale-105 group-hover:-translate-y-2" />
+                  <ZoomableImage src={step.image} alt={step.title} className="w-full h-auto object-contain rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] transform transition-transform duration-700 group-hover:scale-105 group-hover:-translate-y-2" />
                 </div>
               </motion.div>
             ))}
@@ -514,7 +515,7 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
                 </p>
               </div>
               <div className="relative flex items-center justify-center p-8 md:p-12 lg:p-16">
-                <img src="/uploads/chaickout/empty-tray.png" alt="Empty tray state" className="w-full max-w-sm md:max-w-md h-auto rounded-xl object-contain shadow-2xl transition-transform duration-700 group-hover:scale-105" />
+                <ZoomableImage src="/uploads/chaickout/empty-tray.png" alt="Empty tray state" className="w-full max-w-sm md:max-w-md h-auto rounded-xl object-contain shadow-2xl transition-transform duration-700 group-hover:scale-105" />
               </div>
             </div>
           </motion.div>
@@ -535,7 +536,7 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
                 </p>
               </div>
               <div className="relative flex items-center justify-center p-8 md:p-12 lg:p-16">
-                <img src="/uploads/chaickout/specify-dish.png" alt="Dish clarification" className="w-full max-w-sm md:max-w-md h-auto rounded-xl object-contain shadow-2xl transition-transform duration-700 group-hover:scale-105" />
+                <ZoomableImage src="/uploads/chaickout/specify-dish.png" alt="Dish clarification" className="w-full max-w-sm md:max-w-md h-auto rounded-xl object-contain shadow-2xl transition-transform duration-700 group-hover:scale-105" />
               </div>
             </div>
           </motion.div>
@@ -556,7 +557,7 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
                 </p>
               </div>
               <div className="relative flex items-center justify-center p-8 md:p-12 lg:p-16">
-                <img src="/uploads/chaickout/dishes-overlapped.png" alt="Dishes overlapped" className="w-full max-w-sm md:max-w-md h-auto rounded-xl object-contain shadow-2xl transition-transform duration-700 group-hover:scale-105" />
+                <ZoomableImage src="/uploads/chaickout/dishes-overlapped.png" alt="Dishes overlapped" className="w-full max-w-sm md:max-w-md h-auto rounded-xl object-contain shadow-2xl transition-transform duration-700 group-hover:scale-105" />
               </div>
             </div>
           </motion.div>
@@ -579,7 +580,7 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
           </motion.div>
           <motion.div variants={fadeInUp} className="relative w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] p-4 flex flex-col shadow-2xl">
             <div className="w-full bg-zinc-950 rounded-xl overflow-hidden relative border border-zinc-800/50 flex flex-col h-full">
-               <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2000&auto=format&fit=crop" alt="Ad Banner" className="w-full aspect-[2/1] md:aspect-[16/9] object-cover opacity-80" />
+               <ZoomableImage src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2000&auto=format&fit=crop" alt="Ad Banner" className="w-full aspect-[2/1] md:aspect-[16/9] object-cover opacity-80" />
                <div className="bg-zinc-900 p-6 flex flex-col justify-center flex-1">
                  <div className="text-white font-bold text-xl md:text-2xl mb-2">{isRu ? 'Специальное предложение' : 'Special Offer'}</div>
                  <div className="text-zinc-400 text-sm md:text-base">{isRu ? 'Получите скидку 20% на десерты при оплате картой партнера.' : 'Get a 20% discount on desserts when paying with a partner card.'}</div>
@@ -677,7 +678,7 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
                 'specify-soup-search.png', 'specify-soup.png'
               ].map((img, i) => (
                 <div key={i} className="rounded-xl border border-zinc-800 overflow-hidden shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(6,182,212,0.3)] hover:border-cyan-500/30 bg-zinc-900">
-                  <img src={`/uploads/chaickout/${img}`} alt={`Screen ${i+1}`} className="w-full h-auto block" />
+                  <ZoomableImage src={`/uploads/chaickout/${img}`} alt={`Screen ${i+1}`} className="w-full h-auto block" />
                 </div>
               ))}
 

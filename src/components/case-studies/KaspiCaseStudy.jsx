@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import SparklesButton from '@/components/SparklesButton';
 import OtherProjects from './OtherProjects';
+import ZoomableImage from '@/components/ui/ZoomableImage';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -54,7 +55,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
       {/* Block 1: Hero */}
       <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
-           <img src="/kaspi-cover.jpg" alt="Kaspi Hero" className="w-full h-full object-cover object-[center_top] md:object-center" />
+           <ZoomableImage src="/kaspi-cover.jpg" alt="Kaspi Hero" className="w-full h-full object-cover object-[center_top] md:object-center" />
            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
            <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
         </div>
@@ -210,9 +211,9 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
             
             {/* Multiple Screenshots overlapping with hover spread animation */}
             <div className="relative flex justify-center w-full max-w-4xl z-20 transition-all duration-700">
-              <img src="/uploads/kaspi/Movie's page_ tickets_ sort time.png" alt="App Screen 1" className="absolute -left-2 md:left-10 top-10 md:top-20 w-[55%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl -rotate-6 transition-all duration-700 group-hover:-translate-x-1 group-[.is-active]:-translate-x-12 group-hover:-rotate-12 group-[.is-active]:-rotate-12 group-hover:scale-105 group-[.is-active]:-translate-x-8 md:group-[.is-active]:-translate-x-12 group-[.is-active]:-rotate-12 group-[.is-active]:scale-105" />
-              <img src="/uploads/kaspi/Choose place.png" alt="App Screen 3" className="absolute -right-2 md:right-10 top-10 md:top-20 w-[55%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl rotate-6 transition-all duration-700 group-hover:translate-x-12 group-[.is-active]:translate-x-12 group-hover:rotate-12 group-[.is-active]:rotate-12 group-hover:scale-105 group-[.is-active]:translate-x-8 md:group-[.is-active]:translate-x-12 group-[.is-active]:rotate-12 group-[.is-active]:scale-105" />
-              <img src="/uploads/kaspi/Main page of Afisha.png" alt="Solution iPhone" className="relative z-30 w-[65%] md:w-[80%] max-w-[360px] object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-700 group-hover:-translate-y-6 group-[.is-active]:-translate-y-6 group-hover:scale-105 group-[.is-active]:-translate-y-4 md:group-[.is-active]:-translate-y-6 group-[.is-active]:scale-105" />
+              <ZoomableImage src="/uploads/kaspi/Movie's page_ tickets_ sort time.png" alt="App Screen 1" className="absolute -left-2 md:left-10 top-10 md:top-20 w-[55%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl -rotate-6 transition-all duration-700 group-hover:-translate-x-1 group-[.is-active]:-translate-x-12 group-hover:-rotate-12 group-[.is-active]:-rotate-12 group-hover:scale-105 group-[.is-active]:-translate-x-8 md:group-[.is-active]:-translate-x-12 group-[.is-active]:-rotate-12 group-[.is-active]:scale-105" />
+              <ZoomableImage src="/uploads/kaspi/Choose place.png" alt="App Screen 3" className="absolute -right-2 md:right-10 top-10 md:top-20 w-[55%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl rotate-6 transition-all duration-700 group-hover:translate-x-12 group-[.is-active]:translate-x-12 group-hover:rotate-12 group-[.is-active]:rotate-12 group-hover:scale-105 group-[.is-active]:translate-x-8 md:group-[.is-active]:translate-x-12 group-[.is-active]:rotate-12 group-[.is-active]:scale-105" />
+              <ZoomableImage src="/uploads/kaspi/Main page of Afisha.png" alt="Solution iPhone" className="relative z-30 w-[65%] md:w-[80%] max-w-[360px] object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-700 group-hover:-translate-y-6 group-[.is-active]:-translate-y-6 group-hover:scale-105 group-[.is-active]:-translate-y-4 md:group-[.is-active]:-translate-y-6 group-[.is-active]:scale-105" />
             </div>
           </div>
         </motion.div>
@@ -474,7 +475,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
               "Buy.png", "Success.png", "My ticket.png", "My ticket-1.png", "My tickets.png"
             ].slice(0, 4).map((img, i) => (
               <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden flex items-center justify-center w-full group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:border-zinc-700 shadow-xl">
-                <img src={`/uploads/kaspi/${img}`} alt={`Screen ${i + 1}`} className="w-full h-auto block" />
+                <ZoomableImage src={`/uploads/kaspi/${img}`} alt={`Screen ${i + 1}`} className="w-full h-auto block" />
               </div>
             ))}
 
@@ -489,7 +490,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                     "Movie's page_ feadback.png"
                   ].map((img, i) => (
                     <div key={i} className={`bg-zinc-900 border-x border-t border-zinc-800 rounded-t-3xl overflow-hidden flex items-start justify-center w-full h-full ${i >= 2 ? 'hidden md:flex' : ''}`}>
-                      <img src={`/uploads/kaspi/${img}`} alt={`Hidden Screen ${i}`} className="w-full h-auto block opacity-50 group-hover:opacity-70 group-[.is-active]:opacity-70 transition-opacity" />
+                      <ZoomableImage src={`/uploads/kaspi/${img}`} alt={`Hidden Screen ${i}`} className="w-full h-auto block opacity-50 group-hover:opacity-70 group-[.is-active]:opacity-70 transition-opacity" />
                     </div>
                   ))}
                 </div>
@@ -510,7 +511,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
               "Buy.png", "Success.png", "My ticket.png", "My ticket-1.png", "My tickets.png"
             ].slice(4).map((img, i) => (
               <div key={i + 4} className="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden flex items-center justify-center w-full group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:border-zinc-700 shadow-xl">
-                <img src={`/uploads/kaspi/${img}`} alt={`Screen ${i + 5}`} className="w-full h-auto block" />
+                <ZoomableImage src={`/uploads/kaspi/${img}`} alt={`Screen ${i + 5}`} className="w-full h-auto block" />
               </div>
             ))}
           </motion.div>
@@ -553,7 +554,7 @@ export default function KaspiCaseStudy({ lang, otherProjects }) {
                 {/* Unified Checkout (Center) */}
                 <div className="absolute z-30 w-36 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 rounded-3xl p-4 shadow-[0_0_30px_rgba(239,68,68,0.2)] flex flex-col transition-transform duration-700 group-hover:scale-110 translate-x-0">
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Kaspi.kz_logo.svg" alt="Kaspi.kz" className="w-8 h-8 md:w-10 md:h-10 object-cover rounded-[22%] shadow-lg shadow-red-500/20" />
+                    <ZoomableImage src="https://upload.wikimedia.org/wikipedia/commons/8/87/Kaspi.kz_logo.svg" alt="Kaspi.kz" className="w-8 h-8 md:w-10 md:h-10 object-cover rounded-[22%] shadow-lg shadow-red-500/20" />
                     <div className="h-2.5 bg-zinc-600 rounded w-16"></div>
                   </div>
                   <div className="space-y-2 mb-4">
