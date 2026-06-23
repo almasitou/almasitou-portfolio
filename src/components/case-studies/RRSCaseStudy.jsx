@@ -431,9 +431,9 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
                     </p>
                     <p className="text-zinc-500 text-sm md:text-base leading-relaxed max-w-xl">
                       {isRu ? (
-                        <>Для сравнения: обычный кассир тратит на одного гостя от 45 секунд до 1 минуты. Мы ускорили процесс чекаута в <span className="text-blue-500 font-bold">4-5 раз</span>.</>
+                        <>Для сравнения: обычный кассир тратит на одного гостя от 45 секунд до 1 минуты. <span className="text-blue-500 font-bold">Мы ускорили процесс чекаута в 4-5 раз</span>.</>
                       ) : (
-                        <>For comparison: a regular human cashier takes 45 to 60 seconds per guest. We sped up the checkout process by <span className="text-blue-500 font-bold">4-5x</span>.</>
+                        <>For comparison: a regular human cashier takes 45 to 60 seconds per guest. <span className="text-blue-500 font-bold">We sped up the checkout process by 4-5x</span>.</>
                       )}
                     </p>
                   </div>
@@ -584,7 +584,7 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
           </motion.div>
           <motion.div variants={fadeInUp} className="relative w-full bg-zinc-900 border border-zinc-800 rounded-[2rem] p-4 flex flex-col shadow-2xl">
             <div className="w-full bg-zinc-950 rounded-xl overflow-hidden relative border border-zinc-800/50 flex flex-col h-full">
-               <ZoomableImage src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2000&auto=format&fit=crop" alt="Ad Banner" className="w-full aspect-[2/1] md:aspect-[16/9] object-cover opacity-80" />
+               <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2000&auto=format&fit=crop" alt="Ad Banner" className="w-full aspect-[2/1] md:aspect-[16/9] object-cover opacity-80" />
                <div className="bg-zinc-900 p-6 flex flex-col justify-center flex-1">
                  <div className="text-white font-bold text-xl md:text-2xl mb-2">{isRu ? 'Специальное предложение' : 'Special Offer'}</div>
                  <div className="text-zinc-400 text-sm md:text-base">{isRu ? 'Получите скидку 20% на десерты при оплате картой партнера.' : 'Get a 20% discount on desserts when paying with a partner card.'}</div>

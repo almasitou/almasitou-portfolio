@@ -32,7 +32,7 @@ export default async function ProjectPage({ params }) {
     if (p.id === currentSlug || p.id === slug) return false;
     if (p.title.toLowerCase().includes(slug.toLowerCase())) return false;
     return true;
-  }).slice(0, 4);
+  });
 
   if (slug === 'skibo' || slug === 'cmqjeakgy0000vxltp4qj7ks1') {
     return <SkiboCaseStudy lang={lang} otherProjects={otherProjects} />;

@@ -378,10 +378,10 @@ export default async function Home({ params }) {
             {t.contact.email} {settings.email}
           </a>
           
-          <div className="flex gap-8 text-sm font-medium tracking-widest uppercase text-zinc-500">
-            <a href={settings.instagramUrl || "https://instagram.com/almasitou.design"} target="_blank" className="hover:text-white transition-colors">Instagram</a>
-            <a href={settings.linkedinUrl} target="_blank" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href={settings.behanceUrl} target="_blank" className="hover:text-white transition-colors">Behance</a>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm font-medium tracking-widest uppercase text-zinc-500">
+            <a href={settings.instagramUrl || "https://instagram.com/almasitou.design"} target="_blank" className="p-3 -m-3 hover:text-white transition-colors">Instagram</a>
+            <a href={settings.linkedinUrl} target="_blank" className="p-3 -m-3 hover:text-white transition-colors">LinkedIn</a>
+            <a href={settings.behanceUrl} target="_blank" className="p-3 -m-3 hover:text-white transition-colors">Behance</a>
           </div>
         </footer>
       </div>
