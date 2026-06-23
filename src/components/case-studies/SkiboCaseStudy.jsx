@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import SparklesButton from '@/components/SparklesButton';
 import OtherProjects from './OtherProjects';
+import ZoomableImage from '@/components/ui/ZoomableImage';
 
 // Animation variants
 const fadeInUp = {
@@ -59,7 +60,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
       {/* Block 1: Hero */}
       <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
-           <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/19dd56222469445.67e6476145244.png" alt="Skibo Hero" className="w-full h-full object-cover object-[center_top] md:object-center" />
+           <ZoomableImage src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/19dd56222469445.67e6476145244.png" alt="Skibo Hero" className="w-full h-full object-cover object-[center_top] md:object-center" />
            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
            <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
         </div>
@@ -156,7 +157,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
           </div>
           <div className="flex-1 w-full relative min-h-[400px] xl:min-h-full mt-4 xl:mt-0">
             <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-900 to-transparent z-10 pointer-events-none hidden xl:block" />
-            <img src="/uploads/skibo/line.jpeg" alt="Queue" className="absolute inset-0 w-full h-full object-cover rounded-[3rem] xl:rounded-none" />
+            <ZoomableImage src="/uploads/skibo/line.jpeg" alt="Queue" className="absolute inset-0 w-full h-full object-cover rounded-[3rem] xl:rounded-none" />
           </div>
         </motion.div>
       </section>
@@ -184,9 +185,9 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
             
             {/* Multiple Screenshots overlapping with hover spread animation */}
             <div className="relative flex justify-center w-full max-w-4xl z-20 transition-all duration-700">
-              <img src="/uploads/skibo/cart.png" alt="App Screen 1" className="absolute left-0 md:left-10 top-20 w-[60%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl -rotate-6 transition-all duration-700 group-hover:-translate-x-1 group-[.is-active]:-translate-x-12 group-[.is-active]:-translate-x-12 group-hover:-rotate-12 group-[.is-active]:-rotate-12 group-hover:scale-105 group-[.is-active]:scale-105" />
-              <img src="/uploads/skibo/combo_page.png" alt="App Screen 3" className="absolute right-0 md:right-10 top-20 w-[60%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl rotate-6 transition-all duration-700 group-hover:translate-x-12 group-[.is-active]:translate-x-12 group-hover:rotate-12 group-[.is-active]:rotate-12 group-hover:scale-105 group-[.is-active]:scale-105" />
-              <img src="/uploads/skibo/media__1781870690123.png" alt="Solution iPhone" className="relative z-30 w-[80%] max-w-[360px] object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-700 group-hover:-translate-y-6 group-[.is-active]:-translate-y-6 group-hover:scale-105 group-[.is-active]:scale-105" />
+              <ZoomableImage src="/uploads/skibo/cart.png" alt="App Screen 1" className="absolute left-0 md:left-10 top-20 w-[60%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl -rotate-6 transition-all duration-700 group-hover:-translate-x-1 group-[.is-active]:-translate-x-12 group-[.is-active]:-translate-x-12 group-hover:-rotate-12 group-[.is-active]:-rotate-12 group-hover:scale-105 group-[.is-active]:scale-105" />
+              <ZoomableImage src="/uploads/skibo/combo_page.png" alt="App Screen 3" className="absolute right-0 md:right-10 top-20 w-[60%] md:w-[45%] lg:w-[35%] object-contain drop-shadow-2xl rotate-6 transition-all duration-700 group-hover:translate-x-12 group-[.is-active]:translate-x-12 group-hover:rotate-12 group-[.is-active]:rotate-12 group-hover:scale-105 group-[.is-active]:scale-105" />
+              <ZoomableImage src="/uploads/skibo/media__1781870690123.png" alt="Solution iPhone" className="relative z-30 w-[80%] max-w-[360px] object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-700 group-hover:-translate-y-6 group-[.is-active]:-translate-y-6 group-hover:scale-105 group-[.is-active]:scale-105" />
             </div>
           </div>
         </motion.div>
@@ -475,7 +476,7 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
             </div>
             <div className="flex-1 w-full relative min-h-[400px] xl:min-h-full mt-4 xl:mt-0">
               <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-900 to-transparent z-10 pointer-events-none hidden xl:block" />
-              <img src="/uploads/skibo/ux_test.jpeg" alt="UX Testing session" className="absolute inset-0 w-full h-full object-cover rounded-[3rem] xl:rounded-none" />
+              <ZoomableImage src="/uploads/skibo/ux_test.jpeg" alt="UX Testing session" className="absolute inset-0 w-full h-full object-cover rounded-[3rem] xl:rounded-none" />
             </div>
           </motion.div>
 

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import OtherProjects from './OtherProjects';
+import ZoomableImage from '@/components/ui/ZoomableImage';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -181,7 +182,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                       className="bg-zinc-800/90 backdrop-blur-sm border border-zinc-700 hover:border-pink-500/50 hover:shadow-[0_0_20px_rgba(236,72,153,0.4)] transition-shadow transition-colors duration-300 px-5 py-3 rounded-2xl flex items-center gap-3 shadow-2xl cursor-pointer"
                     >
                       <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden shrink-0 bg-white">
-                        <img src={tool.logo} alt={tool.name} className="w-full h-full object-cover" />
+                        <ZoomableImage src={tool.logo} alt={tool.name} className="w-full h-full object-cover" />
                       </div>
                       <span className="text-zinc-200 font-bold whitespace-nowrap">{tool.name}</span>
                     </motion.div>
@@ -278,7 +279,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                 </p>
               </div>
               <div className="mt-4 p-8 flex justify-center items-center relative z-10">
-                <img src="/uploads/idol/Dashboard.png" alt="AI Workspace" className={`w-[90%] h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2`} />
+                <ZoomableImage src="/uploads/idol/Dashboard.png" alt="AI Workspace" className={`w-[90%] h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2`} />
               </div>
             </motion.div>
 
@@ -292,7 +293,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                 </p>
               </div>
               <div className="mt-4 p-8 flex justify-center items-center relative z-10">
-                <img src="/uploads/idol/Studio -_ Explore.png" alt="Prompt Library" className={`w-[90%] h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2`} />
+                <ZoomableImage src="/uploads/idol/Studio -_ Explore.png" alt="Prompt Library" className={`w-[90%] h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2`} />
               </div>
             </motion.div>
           </div>
@@ -347,7 +348,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                 </p>
               </div>
               <div className="w-full md:w-[55%] p-8 flex justify-center items-center h-full min-h-[250px] relative z-10">
-                <img src="/uploads/idol/Studio -_ Explore -_ Image -_ AI Chat.png" alt="AI Assistant" className={`w-full h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-x-2 group-[.is-active]:-translate-x-2`} />
+                <ZoomableImage src="/uploads/idol/Studio -_ Explore -_ Image -_ AI Chat.png" alt="AI Assistant" className={`w-full h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-x-2 group-[.is-active]:-translate-x-2`} />
               </div>
             </motion.div>
           </div>
@@ -362,7 +363,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
                 </p>
               </div>
               <div className="w-full md:w-[55%] p-8 flex justify-center items-center h-full min-h-[250px] relative z-10">
-                <img src="/uploads/idol/Talent Roster.png" alt="Unified Control Center" className={`w-full h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-x-2 group-[.is-active]:-translate-x-2`} />
+                <ZoomableImage src="/uploads/idol/Talent Roster.png" alt="Unified Control Center" className={`w-full h-auto object-cover rounded-2xl border border-zinc-700/50 shadow-2xl transition-transform duration-700 group-hover:-translate-x-2 group-[.is-active]:-translate-x-2`} />
               </div>
             </motion.div>
 
@@ -611,19 +612,19 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
           <div className="relative">
             <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 items-start ${!showAllScreenshots ? 'max-h-[800px] md:max-h-[600px] overflow-hidden' : ''}`}>
               <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(236,72,153,0.3)] hover:border-pink-500/30">
-                <img src="/uploads/idol/Dashboard.png" alt="Dashboard" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
+                <ZoomableImage src="/uploads/idol/Dashboard.png" alt="Dashboard" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
               </div>
               <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(236,72,153,0.3)] hover:border-pink-500/30">
-                <img src="/uploads/idol/Studio -_ Explore.png" alt="Explore" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
+                <ZoomableImage src="/uploads/idol/Studio -_ Explore.png" alt="Explore" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
               </div>
               <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(236,72,153,0.3)] hover:border-pink-500/30">
-                <img src="/uploads/idol/Talent Roster.png" alt="Talent Roster" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
+                <ZoomableImage src="/uploads/idol/Talent Roster.png" alt="Talent Roster" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
               </div>
               <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(236,72,153,0.3)] hover:border-pink-500/30">
-                <img src="/uploads/idol/Studio -_ Explore -_ Image -_ AI Chat.png" alt="AI Chat" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
+                <ZoomableImage src="/uploads/idol/Studio -_ Explore -_ Image -_ AI Chat.png" alt="AI Chat" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
               </div>
               <div className="rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl md:col-span-2 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(236,72,153,0.3)] hover:border-pink-500/30">
-                <img src="/uploads/idol/Studio -_ Explore -_ Image.png" alt="Explore Image" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
+                <ZoomableImage src="/uploads/idol/Studio -_ Explore -_ Image.png" alt="Explore Image" className="w-full h-auto block" onError={(e) => e.target.style.display = 'none'} />
               </div>
             </div>
 

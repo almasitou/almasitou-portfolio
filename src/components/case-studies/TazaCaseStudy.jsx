@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import OtherProjects from './OtherProjects';
+import ZoomableImage from '@/components/ui/ZoomableImage';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -43,7 +44,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
       {/* Block 1: Hero */}
       <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
-           <img src="/uploads/taza/cover.jpg" alt="Taza Hero" className="w-full h-full object-cover object-center" />
+           <ZoomableImage src="/uploads/taza/cover.jpg" alt="Taza Hero" className="w-full h-full object-cover object-center" />
            <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
            <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
         </div>
@@ -236,7 +237,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full flex-1 flex justify-center items-start pt-8 overflow-hidden">
-                  <img src="/uploads/taza/Главная.png" alt="Catalog" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                  <ZoomableImage src="/uploads/taza/Главная.png" alt="Catalog" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Каталог товаров' : 'Product Catalog'}</div>
@@ -259,7 +260,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full flex-1 flex justify-center items-start pt-8 overflow-hidden">
-                  <img src="/uploads/taza/Корзина.png" alt="Order" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                  <ZoomableImage src="/uploads/taza/Корзина.png" alt="Order" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Оформление заказа' : 'Place Order'}</div>
@@ -282,7 +283,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                   </p>
                 </div>
                 <div className="relative w-full flex-1 flex justify-center items-start pt-8 overflow-hidden">
-                  <img src="/uploads/taza/Страница заказа.png" alt="Tracking" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
+                  <ZoomableImage src="/uploads/taza/Страница заказа.png" alt="Tracking" className={`w-[70%] max-w-[200px] sm:max-w-[240px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-none xl:w-[60%] h-auto rounded-[1.5rem] drop-shadow-2xl translate-y-12 group-hover:translate-y-8 group-[.is-active]:translate-y-8 transition-transform duration-500`} />
                 </div>
               </div>
               <div className="text-white font-bold text-xl">{isRu ? 'Отслеживание заказа' : 'Track Order'}</div>
@@ -347,7 +348,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
               'Мои аукционы.png', 'Отложанные товары.png', 'Мои счета.png', 'Профиль.png', 'Модалка товара.png'
             ].slice(0, 4).map((img, i) => (
               <div key={i} className={`bg-zinc-900 border border-zinc-800 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden flex items-center justify-center w-full group  transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] hover:border-zinc-700 shadow-xl`}>
-                <img src={`/uploads/taza/${img}`} alt={`Screen ${i+1}`} className="w-full h-auto block" />
+                <ZoomableImage src={`/uploads/taza/${img}`} alt={`Screen ${i+1}`} className="w-full h-auto block" />
               </div>
             ))}
 
@@ -362,7 +363,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
                     'Главная.png', 'Главная — Ауцион.png', 'Главная — Ауцион модалка.png', 'Главная — Ауцион модалка аукцион завершен.png'
                   ].map((img, i) => (
                     <div key={i} className={"bg-zinc-900 border-x border-t border-zinc-800 rounded-t-[2rem] overflow-hidden flex items-start justify-center w-full h-full " + (i >= 2 ? 'hidden md:flex' : '')}>
-                      <img src={`/uploads/taza/${img}`} alt={`Hidden Screen ${i}`} className="w-full h-auto block opacity-50 group-hover:opacity-70 group-[.is-active]:opacity-70 transition-opacity" />
+                      <ZoomableImage src={`/uploads/taza/${img}`} alt={`Hidden Screen ${i}`} className="w-full h-auto block opacity-50 group-hover:opacity-70 group-[.is-active]:opacity-70 transition-opacity" />
                     </div>
                   ))}
                 </div>
@@ -383,7 +384,7 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
               'Мои аукционы.png', 'Отложанные товары.png', 'Мои счета.png', 'Профиль.png', 'Модалка товара.png'
             ].slice(4).map((img, i) => (
               <div key={i + 4} className={`bg-zinc-900 border border-zinc-800 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden flex items-center justify-center w-full group  transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] hover:border-zinc-700 shadow-xl`}>
-                <img src={`/uploads/taza/${img}`} alt={`Screen ${i + 5}`} className="w-full h-auto block" />
+                <ZoomableImage src={`/uploads/taza/${img}`} alt={`Screen ${i + 5}`} className="w-full h-auto block" />
               </div>
             ))}
           </motion.div>
