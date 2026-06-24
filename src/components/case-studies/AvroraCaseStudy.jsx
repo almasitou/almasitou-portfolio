@@ -47,7 +47,7 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
       {/* ===================== 1. HERO SECTION ===================== */}
       <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-           <ZoomableImage src="/uploads/avrora/avrora_cover.jpg" alt="Avrora Hero" className="w-full h-full object-cover object-[center_top] opacity-40 blur-sm" />
+           <ZoomableImage src="/uploads/avrora/avrora_cover.png" alt="Avrora Hero" className="w-full h-full object-cover object-[center_top] opacity-40 blur-sm" />
            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/90 via-[#0a0a0a]/80 to-[#0a0a0a]"></div>
            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none"></div>
         </div>

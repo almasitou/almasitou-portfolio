@@ -179,7 +179,7 @@ export default async function Home({ params }) {
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer-once pointer-events-none z-20" />
                   {proj.coverImage ? (
                     <img 
-                      src={proj.id === 'cmqjeakqk0001vxltptpxytw5' ? '/kaspi-cover.jpg' : proj.coverImage} 
+                      src={proj.coverImage} 
                       referrerPolicy="no-referrer"
                       alt={getS(proj, 'title')} 
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"

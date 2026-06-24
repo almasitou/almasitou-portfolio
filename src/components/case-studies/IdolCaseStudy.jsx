@@ -49,11 +49,7 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
       {/* Block 1: Hero */}
       <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-[100vh] md:h-full z-0 overflow-hidden bg-[#0a0a0a]">
-           <iframe
-             src="https://player.vimeo.com/video/1203077862?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-             className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-w-[177.77vh] min-h-[100vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-30"
-             allow="autoplay; fullscreen; picture-in-picture"
-           ></iframe>
+           <ZoomableImage src="/uploads/idol/cover-main.png" alt="IDOL Hero" className="w-full h-full object-cover object-[center_top] md:object-center opacity-40 blur-sm" />
            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/60 to-[#0a0a0a]"></div>
         </div>
         

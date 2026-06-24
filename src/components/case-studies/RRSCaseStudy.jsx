@@ -85,7 +85,7 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
       {/* ===================== BLOCK 1: HERO ===================== */}
       <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-           <ZoomableImage src="/uploads/chaickout/cover-hero.jpg" alt="Chaickout Hero" className="w-full h-full object-cover object-[center_top] md:object-center opacity-70" />
+           <ZoomableImage src="/uploads/chaickout/cover-hero.png" alt="Chaickout Hero" className="w-full h-full object-cover object-[center_top] md:object-center opacity-70" />
            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-black/50 to-[#0a0a0a]"></div>
            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
         </div>
