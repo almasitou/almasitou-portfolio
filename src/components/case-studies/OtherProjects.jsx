@@ -67,7 +67,7 @@ export default function OtherProjects({ projects, lang }) {
               className="nav-loadable group block relative overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800 aspect-[4/3] hover:border-zinc-600 transition-colors"
             >
               <img 
-                src={project.id === 'cmqjeakqk0001vxltptpxytw5' ? '/kaspi-cover.jpg' : project.id === 'cmqjeakvd0002vxltgwlxjlo9' ? '/bao-cover.jpg' : (project.id === 'rrs' || (project.title || '').toLowerCase().includes('rrs')) ? '/uploads/chaickout/cover-hero.jpg' : (project.id === 'avrora' || project.id === 'aurora' || (project.title || '').toLowerCase().includes('avrora') || (project.title || '').toLowerCase().includes('aurora')) ? '/uploads/avrora/avrora_cover.jpg' : (project.coverImage || project.cover)} 
+                src={project.coverImage || project.cover || '/project-placeholder.jpg'} 
                 alt={project.title} 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
