@@ -7,6 +7,7 @@ import InstagramReel from '@/components/InstagramReel';
 import Typewriter from '@/components/Typewriter';
 import Reveal from '@/components/Reveal';
 import SparklesButton from '@/components/SparklesButton';
+import TechMarquee from '@/components/TechMarquee';
 
 const getProjectCategory = (id, defaultTag) => {
   if (id === 'cmqjeakqk0001vxltptpxytw5') return 'UX/UI Concept';
@@ -140,29 +141,7 @@ export default async function Home({ params }) {
         </section>
 
         {/* Tech Stack Marquee for HRs */}
-          <div className="w-full mt-24 mb-12 pt-12 border-t border-zinc-900 overflow-hidden relative">
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
-            <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-              {[...Array(2)].map((_, i) => (
-                <div key={i} className="flex items-center gap-16 px-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-300">
-                  <span className="text-xl font-bold font-heading">Figma</span>
-                  <span className="text-xl font-bold font-heading text-zinc-400">FigJam</span>
-                  <span className="text-xl font-bold font-heading">Miro</span>
-                  <span className="text-xl font-bold font-heading text-zinc-400">Tilda</span>
-                  <span className="text-xl font-bold font-heading">HTML/CSS</span>
-                  <span className="text-xl font-bold font-heading text-zinc-400">JavaScript</span>
-                  <span className="text-xl font-bold font-heading">Jira</span>
-                  <span className="text-xl font-bold font-heading text-zinc-400">Trello</span>
-                  <span className="text-xl font-bold font-heading">Confluence</span>
-                  <span className="text-xl font-bold font-heading text-zinc-400">Notion</span>
-                  <span className="text-xl font-bold font-heading">Slack</span>
-                  <span className="text-xl font-bold font-heading text-zinc-400">Photoshop</span>
-                  <span className="text-xl font-bold font-heading">CapCut</span>
-                </div>
-              ))}
-            </div>
-          </div>
+        <TechMarquee />
 
         <section id="work" className="py-24">
           <Reveal delay={0.1}>
