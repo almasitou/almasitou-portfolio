@@ -8,6 +8,8 @@ import Typewriter from '@/components/Typewriter';
 import Reveal from '@/components/Reveal';
 import SparklesButton from '@/components/SparklesButton';
 import TechMarquee from '@/components/TechMarquee';
+import SpotlightCard from '@/components/ui/SpotlightCard';
+import DesignPrinciples from '@/components/DesignPrinciples';
 
 const getProjectCategory = (id, defaultTag) => {
   if (id === 'cmqjeakqk0001vxltptpxytw5') return 'UX/UI Concept';
@@ -16,6 +18,52 @@ const getProjectCategory = (id, defaultTag) => {
   if (id === 'cmqjeal510004vxlt8hmvmcr6') return 'B2B Platform';
   if (id === 'cmqjeal060003vxlt80svpske') return 'SaaS Concept';
   return defaultTag;
+};
+
+const PROJECT_SUMMARIES = {
+  rrs: {
+    ru: 'AI-терминалы самообслуживания в ресторанах Европы: сокращение времени заказа в 4–5 раз и интуитивный тач-интерфейс.',
+    en: 'AI self-checkout kiosks across European restaurants: reduced order time by 4–5x with intuitive touch UX.'
+  },
+  avrora: {
+    ru: 'Единая B2B-платформа завода: оцифровка хаоса из WhatsApp, почты и Excel в один дашборд с кастомным трекингом.',
+    en: 'Unified B2B manufacturing platform: digitized fragmented WhatsApp & Excel workflows into a single dashboard.'
+  },
+  cmqjeakgy0000vxltp4qj7ks1: {
+    ru: 'Комплексный сервис онлайн-бронирования горнолыжной экипировки: мобильное приложение и CRM для проката (4.9★).',
+    en: 'Comprehensive ski equipment rental ecosystem: rider mobile app for iOS/Android and rental CRM (4.9★).'
+  },
+  cmqjeakqk0001vxltptpxytw5: {
+    ru: 'UX-концепт для суперприложения Kaspi: покупка билетов в кино в 3 клика с мгновенным выбором мест и сеансов.',
+    en: 'Kaspi super-app UX concept: cinema ticket booking in 3 clicks with frictionless seat and showtime selection.'
+  },
+  cmqjeal060003vxlt80svpske: {
+    ru: 'SaaS-система аналитики аудитории и автоматизации рекламных контрактов для блогеров и агентств.',
+    en: 'SaaS platform for influencer analytics, campaign tracking, and automated contract workflows.'
+  },
+  cmqjeakvd0002vxltgwlxjlo9: {
+    ru: 'Мобильное приложение азиатского бистро: оптимизация повторных заказов и рост среднего чека.',
+    en: 'Asian bistro delivery mobile app optimized for repeat orders and higher average order value.'
+  },
+  cmqjeal510004vxlt8hmvmcr6: {
+    ru: 'B2B оптовый маркетплейс и личный кабинет регулярных поставок расходных материалов для бизнеса.',
+    en: 'B2B wholesale marketplace and client portal for automated business consumable procurement.'
+  }
+};
+
+const getProjectSummary = (proj, lang) => {
+  const id = proj.id;
+  if (PROJECT_SUMMARIES[id]) {
+    return PROJECT_SUMMARIES[id][lang] || PROJECT_SUMMARIES[id]['en'];
+  }
+  const titleLower = (proj.title || '').toLowerCase();
+  if (titleLower.includes('robotics') || titleLower.includes('rrs') || titleLower.includes('chaickout')) {
+    return PROJECT_SUMMARIES.rrs[lang] || PROJECT_SUMMARIES.rrs.en;
+  }
+  if (titleLower.includes('aurora') || titleLower.includes('avrora')) {
+    return PROJECT_SUMMARIES.avrora[lang] || PROJECT_SUMMARIES.avrora.en;
+  }
+  return lang === 'ru' ? proj.descriptionRu || proj.description || '' : proj.description || proj.descriptionRu || '';
 };
 
 const COMPANY_LOGOS = {
@@ -62,16 +110,18 @@ export default async function Home({ params }) {
       
       <Navbar t={t} lang={lang} />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 lg:pt-48 pb-24 lg:pb-32 min-h-[100dvh] flex flex-col justify-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-6 pt-36 sm:pt-32 lg:pt-48 pb-20 sm:pb-24 lg:pb-32 min-h-[100dvh] flex flex-col justify-start sm:justify-center">
         
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
           
           {/* Left Column (Text Content) */}
           <div className="lg:col-span-6 flex flex-col items-start w-full">
             <Reveal delay={0.1}>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-zinc-700/50 text-xs font-medium text-zinc-300 mb-8">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                {t.hero.available}
+              <div className="mb-8">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-zinc-700/50 text-xs font-medium text-zinc-300">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  {t.hero.available}
+                </div>
               </div>
             </Reveal>
             
@@ -102,10 +152,39 @@ export default async function Home({ params }) {
             </Reveal>
 
             <Reveal delay={0.4}>
-              <div className="max-w-2xl mb-8">
+              <div className="max-w-2xl mb-6">
                 <p className="text-lg md:text-xl text-zinc-400/90 font-medium leading-relaxed">
                   {getS(settings, 'bio')}
                 </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.45}>
+              <div className="pt-6 border-t border-zinc-900/90 w-full mb-6">
+                <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 mb-4">
+                  {t.hero.trustedBy}
+                </p>
+                <div className="flex items-center flex-wrap gap-6 md:gap-9">
+                  {[
+                    { name: 'RRS', logo: '/uploads/companies/rrs.svg' },
+                    { name: 'Europharma', logo: '/uploads/companies/europharma-icon.png' },
+                    { name: 'Aurora Holding', logo: '/uploads/companies/aurora.svg' },
+                    { name: 'Qalan.kz', logo: '/uploads/companies/qalan.svg' },
+                    { name: 'KBTU', logo: '/uploads/companies/kbtu-icon.png' },
+                  ].map((item, idx) => (
+                    <div 
+                      key={idx}
+                      className="transition-transform duration-300 hover:scale-110"
+                      title={item.name}
+                    >
+                      <img 
+                        src={item.logo} 
+                        alt={item.name} 
+                        className="h-8 md:h-11 max-h-12 w-auto max-w-[130px] object-contain filter grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </Reveal>
           </div>
@@ -173,39 +252,51 @@ export default async function Home({ params }) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.length > 0 ? projects.map((proj, i) => (
               <Reveal key={proj.id} delay={0.1 * (i % 2)}>
-                <Link 
-                  href={`/${lang}/project/${proj.id === 'cmqjeakgy0000vxltp4qj7ks1' ? 'skibo' : proj.id === 'cmqjeakqk0001vxltptpxytw5' ? 'kaspi' : proj.id === 'cmqjeakvd0002vxltgwlxjlo9' ? 'bao' : proj.id === 'cmqjeal510004vxlt8hmvmcr6' ? 'taza' : proj.id === 'cmqjeal060003vxlt80svpske' ? 'idol' : proj.id}`}
-                  className={`nav-loadable group block relative rounded-3xl overflow-hidden glass glass-hover aspect-[4/3] hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:border-blue-500/30 active:scale-95 transition-all duration-500`}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer-once pointer-events-none z-20" />
-                  {proj.coverImage ? (
-                    <img 
-                      src={proj.coverImage} 
-                      referrerPolicy="no-referrer"
-                      alt={getS(proj, 'title')} 
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center">
-                      <span className="text-zinc-600 font-medium tracking-widest uppercase">{t.work.preview}</span>
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                  
-                  <div className="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <div className="flex items-end justify-between">
-                      <div>
-                        <h3 className="font-heading text-2xl font-bold text-white mb-2">
+                <SpotlightCard className="rounded-3xl h-full shadow-lg" spotlightColor="rgba(59, 130, 246, 0.22)">
+                  <Link 
+                    href={`/${lang}/project/${proj.id === 'cmqjeakgy0000vxltp4qj7ks1' ? 'skibo' : proj.id === 'cmqjeakqk0001vxltptpxytw5' ? 'kaspi' : proj.id === 'cmqjeakvd0002vxltgwlxjlo9' ? 'bao' : proj.id === 'cmqjeal510004vxlt8hmvmcr6' ? 'taza' : proj.id === 'cmqjeal060003vxlt80svpske' ? 'idol' : proj.id}`}
+                    className={`nav-loadable group block relative rounded-3xl overflow-hidden glass glass-hover aspect-[4/3] hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:border-blue-500/30 active:scale-95 transition-all duration-500 w-full h-full`}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer-once pointer-events-none z-20" />
+                    {proj.coverImage ? (
+                      <img 
+                        src={proj.coverImage} 
+                        referrerPolicy="no-referrer"
+                        alt={getS(proj, 'title')} 
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center">
+                        <span className="text-zinc-600 font-medium tracking-widest uppercase">{t.work.preview}</span>
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-75 group-hover:opacity-90 transition-opacity" />
+                    
+                    <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                      <div className="flex flex-col">
+                        <div className="flex items-center justify-between gap-2 mb-2">
+                          <span className="px-2.5 py-0.5 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 font-semibold text-[11px] tracking-wider uppercase">
+                            {getProjectCategory(proj.id, proj.tags)}
+                          </span>
+                          <span className="text-xs text-zinc-400 group-hover:text-blue-400 transition-colors flex items-center gap-1 font-medium">
+                            {lang === 'ru' ? 'Кейс' : 'View case'} →
+                          </span>
+                        </div>
+
+                        <h3 className="font-heading text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                           {proj.id === 'cmqjeakgy0000vxltp4qj7ks1' ? 'Skibo Mobile App & Admin Panel' : 
                            proj.id === 'cmqjeakqk0001vxltptpxytw5' ? (lang === 'ru' ? 'Kaspi Cinema Booking UX: Билет за пару кликов' : 'Kaspi Cinema Booking UX: Ticket in a few clicks') :
                            proj.id === 'cmqjeal510004vxlt8hmvmcr6' ? 'Taza B2B Store' :
                            getS(proj, 'title')}
                         </h3>
-                        <p className="text-zinc-400 text-sm group-hover:text-blue-300 transition-colors duration-300">{getProjectCategory(proj.id, proj.tags)}</p>
+
+                        <p className="text-zinc-300/85 text-xs md:text-sm line-clamp-2 leading-relaxed font-normal">
+                          {getProjectSummary(proj, lang)}
+                        </p>
                       </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </SpotlightCard>
               </Reveal>
             )) : (
               <div className="col-span-2 py-20 text-center glass rounded-3xl">
@@ -214,6 +305,9 @@ export default async function Home({ params }) {
             )}
           </div>
         </section>
+
+        {/* Design Principles / Philosophy Section */}
+        <DesignPrinciples t={t} />
 
         <section id="experience" className="py-24">
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 xl:gap-16">

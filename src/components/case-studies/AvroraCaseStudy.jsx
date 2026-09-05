@@ -26,13 +26,13 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
   return (
     <div className="bg-zinc-950 min-h-screen font-sans selection:bg-blue-500/30">
       {/* Navigation */}
-      <div className="fixed top-6 left-6 z-50">
+      <div className="fixed top-4 left-4 sm:top-6 sm:left-6 z-50">
         <Link 
           href={`/${lang}`} 
           onClick={() => setIsNavigating(true)}
-          className={`inline-flex items-center px-5 py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group ${isNavigating ? 'is-loading-nav' : ''}`}
+          className={`inline-flex items-center px-4 py-2 sm:px-5 sm:py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-xs sm:text-sm text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group ${isNavigating ? 'is-loading-nav' : ''}`}
         >
-          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           {isRu ? 'Назад в портфолио' : 'Back to Portfolio'}
@@ -45,22 +45,22 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
       </div>
 
       {/* ===================== 1. HERO SECTION ===================== */}
-      <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
+      <section className="relative min-h-[100dvh] h-auto pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-36 md:pb-24 flex flex-col items-center justify-start md:justify-center px-4 sm:px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
            <ZoomableImage src="/uploads/avrora/avrora_cover.png" alt="Avrora Hero" className="w-full h-full object-cover object-[center_top] opacity-40 blur-sm" />
            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/90 via-[#0a0a0a]/80 to-[#0a0a0a]"></div>
            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none"></div>
         </div>
         
-        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-10 md:mt-20">
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
+        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-6 sm:mt-10 md:mt-14">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4 sm:mb-6">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-            <span className="text-sm font-semibold tracking-wider text-blue-400 uppercase">Enterprise SaaS</span>
+            <span className="text-xs sm:text-sm font-semibold tracking-wider text-blue-400 uppercase">Enterprise SaaS</span>
           </motion.div>
-          <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl leading-none">
+          <motion.h1 variants={fadeInUp} className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 sm:mb-6 text-white drop-shadow-2xl leading-[1.08]">
             Avrora Holdings
           </motion.h1>
-          <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-zinc-300 font-medium max-w-4xl mx-auto leading-relaxed mb-16">
+          <motion.p variants={fadeInUp} className="text-base sm:text-xl md:text-2xl text-zinc-300 font-medium max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-12 md:mb-16">
             {isRu ? 'Внутренняя цифровая платформа для управления производственными процессами, запасами, сырьем и пользователями внутри производственного предприятия.' : 'Internal digital platform for managing manufacturing processes, inventory, raw materials, and users within a manufacturing enterprise.'}
           </motion.p>
           
@@ -70,6 +70,42 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
                 {role}
               </span>
             ))}
+          </motion.div>
+
+          {/* Project TL;DR Summary */}
+          <motion.div variants={fadeInUp} className="mt-12 max-w-5xl mx-auto w-full p-6 md:p-8 rounded-3xl bg-zinc-950/70 border border-blue-500/30 backdrop-blur-xl text-left shadow-2xl">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-400">
+                {isRu ? 'Краткое резюме проекта (TL;DR)' : 'Project Summary (TL;DR)'}
+              </span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/80">
+                <span className="text-zinc-500 text-xs font-bold uppercase tracking-wider block mb-1.5">
+                  {isRu ? 'Проблема' : 'Problem'}
+                </span>
+                <p className="text-zinc-200 leading-relaxed text-xs md:text-sm">
+                  {isRu ? 'Хаос на заводе: задачи в Trello, согласования в WhatsApp, документооборот по почте и учет в Excel.' : 'Manufacturing chaos: fragmented tasks across Trello, WhatsApp chats, email approvals, and Excel tables.'}
+                </p>
+              </div>
+              <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/80">
+                <span className="text-zinc-500 text-xs font-bold uppercase tracking-wider block mb-1.5">
+                  {isRu ? 'Решение' : 'Solution'}
+                </span>
+                <p className="text-zinc-200 leading-relaxed text-xs md:text-sm">
+                  {isRu ? 'Единая ERP/B2B-система: прозрачный трекинг производства, сырья, остатков и сквозная коммуникация.' : 'Unified ERP/B2B platform: centralized tracking of production batches, raw materials, inventory, and role permissions.'}
+                </p>
+              </div>
+              <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/80">
+                <span className="text-blue-400 text-xs font-bold uppercase tracking-wider block mb-1.5">
+                  {isRu ? 'Результат' : 'Outcome'}
+                </span>
+                <p className="text-zinc-200 leading-relaxed text-xs md:text-sm">
+                  {isRu ? 'Отказ от разрозненных чатов, сокращение времени согласований на 60%, сквозной контроль над производством.' : 'Eliminated chat fragmentation, cut approval cycles by 60%, and delivered end-to-end operational visibility.'}
+                </p>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       </section>

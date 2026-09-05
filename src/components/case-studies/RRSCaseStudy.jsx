@@ -69,13 +69,13 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-cyan-500/30 font-sans pb-0 overflow-x-hidden w-full max-w-[100vw]">
       {/* Navigation */}
-      <div className="fixed top-6 left-6 z-50">
+      <div className="fixed top-4 left-4 sm:top-6 sm:left-6 z-50">
         <Link 
           href={`/${lang}`} 
           onClick={() => setIsNavigating(true)}
-          className={`inline-flex items-center px-5 py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group ${isNavigating ? 'is-loading-nav' : ''}`}
+          className={`inline-flex items-center px-4 py-2 sm:px-5 sm:py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-xs sm:text-sm text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group ${isNavigating ? 'is-loading-nav' : ''}`}
         >
-          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           {isRu ? 'Назад в портфолио' : 'Back to Portfolio'}
@@ -83,22 +83,22 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
       </div>
 
       {/* ===================== BLOCK 1: HERO ===================== */}
-      <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
+      <section className="relative min-h-[100dvh] h-auto pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-36 md:pb-24 flex flex-col items-center justify-start md:justify-center px-4 sm:px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
            <ZoomableImage src="/uploads/chaickout/cover-hero.png" alt="Chaickout Hero" className="w-full h-full object-cover object-[center_top] md:object-center opacity-70" />
            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-black/50 to-[#0a0a0a]"></div>
            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
         </div>
         
-        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-10 md:mt-20">
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-6">
+        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-6 sm:mt-10 md:mt-14">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-4 sm:mb-6">
             <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
-            <span className="text-sm font-semibold tracking-wider text-cyan-400 uppercase">AI + Computer Vision</span>
+            <span className="text-xs sm:text-sm font-semibold tracking-wider text-cyan-400 uppercase">AI + Computer Vision</span>
           </motion.div>
-          <motion.h1 variants={fadeInUp} className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl leading-none">
+          <motion.h1 variants={fadeInUp} className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-4 sm:mb-6 text-white drop-shadow-2xl leading-[1.08]">
             Retail Robotics Solution
           </motion.h1>
-          <motion.p variants={fadeInUp} className="text-xl md:text-3xl text-zinc-200 font-medium max-w-4xl mx-auto leading-relaxed mb-16">
+          <motion.p variants={fadeInUp} className="text-base sm:text-xl md:text-3xl text-zinc-200 font-medium max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-12 md:mb-16">
             {isRu ? 'AI-платформа для самообслуживания в ресторанах' : 'AI-powered checkout platform for restaurants'}
           </motion.p>
           
@@ -119,6 +119,42 @@ export default function RRSCaseStudy({ lang, otherProjects }) {
             <div className="bg-zinc-900/60 hover:bg-zinc-800/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 backdrop-blur-xl border border-white/10 hover:border-white/20 rounded-xl px-4 md:px-6 py-4 flex flex-col items-center justify-center text-center shadow-xl h-full">
               <span className="text-zinc-500 text-xs md:text-sm font-semibold uppercase tracking-wider mb-1">{isRu ? 'Моя роль' : 'My Role'}</span>
               <span className="text-white font-medium text-center text-sm md:text-base">Lead Product Designer</span>
+            </div>
+          </motion.div>
+
+          {/* Project TL;DR Summary */}
+          <motion.div variants={fadeInUp} className="mt-8 max-w-5xl mx-auto w-full p-6 md:p-8 rounded-3xl bg-zinc-950/70 border border-cyan-500/30 backdrop-blur-xl text-left shadow-2xl">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="text-xs font-bold uppercase tracking-wider text-cyan-400">
+                {isRu ? 'Краткое резюме проекта (TL;DR)' : 'Project Summary (TL;DR)'}
+              </span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/80">
+                <span className="text-zinc-500 text-xs font-bold uppercase tracking-wider block mb-1.5">
+                  {isRu ? 'Проблема' : 'Problem'}
+                </span>
+                <p className="text-zinc-200 leading-relaxed text-xs md:text-sm">
+                  {isRu ? 'Очереди и медленный ручной поиск блюд на традиционных терминалах самообслуживания в столовых и фудкортах Европы.' : 'Long queues and tedious manual dish lookup in European self-service cafeterias and foodcourts.'}
+                </p>
+              </div>
+              <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/80">
+                <span className="text-zinc-500 text-xs font-bold uppercase tracking-wider block mb-1.5">
+                  {isRu ? 'Решение' : 'Solution'}
+                </span>
+                <p className="text-zinc-200 leading-relaxed text-xs md:text-sm">
+                  {isRu ? 'AI-распознавание подноса с едой через компьютерное зрение за 1 сек с интуитивным тач-интерфейсом подтверждения.' : 'Computer-vision AI recognizing the food tray in 1 second with a frictionless touch confirmation flow.'}
+                </p>
+              </div>
+              <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/80">
+                <span className="text-cyan-400 text-xs font-bold uppercase tracking-wider block mb-1.5">
+                  {isRu ? 'Результат' : 'Outcome'}
+                </span>
+                <p className="text-zinc-200 leading-relaxed text-xs md:text-sm">
+                  {isRu ? 'Сокращение времени оформления заказа в 4–5 раз, точность распознавания 98%+, успешный запуск в сетях Европы.' : '4–5x faster customer throughput, 98%+ AI recognition accuracy, successfully deployed in European restaurant chains.'}
+                </p>
+              </div>
             </div>
           </motion.div>
         </motion.div>

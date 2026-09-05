@@ -33,13 +33,13 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-blue-500/30 font-sans pb-0 overflow-x-hidden w-full max-w-[100vw]">
       {/* Navigation */}
-      <div className="fixed top-6 left-6 z-50">
+      <div className="fixed top-4 left-4 sm:top-6 sm:left-6 z-50">
         <Link 
           href={`/${lang}`} 
           onClick={() => setIsNavigating(true)}
-          className={`inline-flex items-center px-5 py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group ${isNavigating ? 'is-loading-nav' : ''}`}
+          className={`inline-flex items-center px-4 py-2 sm:px-5 sm:py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-xs sm:text-sm text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group ${isNavigating ? 'is-loading-nav' : ''}`}
         >
-          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           {isRu ? 'Назад в портфолио' : 'Back to Portfolio'}
@@ -47,27 +47,27 @@ export default function IdolCaseStudy({ lang, otherProjects }) {
       </div>
 
       {/* Block 1: Hero */}
-      <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-[100vh] md:h-full z-0 overflow-hidden bg-[#0a0a0a]">
+      <section className="relative min-h-[100dvh] h-auto pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-36 md:pb-24 flex flex-col items-center justify-start md:justify-center px-4 sm:px-6 md:px-12 lg:px-24 w-full overflow-hidden">
+        <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#0a0a0a]">
            <ZoomableImage src="/uploads/idol/cover-main.png" alt="IDOL Hero" className="w-full h-full object-cover object-[center_top] md:object-center opacity-40 blur-sm" />
            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/60 to-[#0a0a0a]"></div>
         </div>
         
-        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-4">
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
+        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-6 sm:mt-10 md:mt-14">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4 sm:mb-6">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-            <span className="text-blue-400 text-sm font-medium">SaaS Concept</span>
+            <span className="text-blue-400 text-xs sm:text-sm font-medium">SaaS Concept</span>
           </motion.div>
-          <motion.h1 variants={fadeInUp} className="text-6xl md:text-9xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl leading-none">
+          <motion.h1 variants={fadeInUp} className="text-5xl sm:text-7xl md:text-9xl font-bold tracking-tight mb-4 sm:mb-6 text-white drop-shadow-2xl leading-[1.05]">
             IDOL
           </motion.h1>
-          <motion.p variants={fadeInUp} className="text-2xl md:text-4xl text-white font-bold max-w-4xl mx-auto leading-relaxed mb-6">
+          <motion.p variants={fadeInUp} className="text-xl sm:text-2xl md:text-4xl text-white font-bold max-w-4xl mx-auto leading-relaxed mb-4 sm:mb-6">
             AI Creator Operating System
           </motion.p>
-          <motion.p variants={fadeInUp} className="text-base md:text-lg text-zinc-300 font-medium max-w-4xl mx-auto leading-relaxed mb-6">
+          <motion.p variants={fadeInUp} className="text-sm sm:text-base md:text-lg text-zinc-300 font-medium max-w-4xl mx-auto leading-relaxed mb-4 sm:mb-6">
             {isRu ? 'Концепция платформы, объединяющей создание контента, управление знаниями, планирование публикаций и взаимодействие между AI-креаторами в едином рабочем пространстве.' : 'A platform concept combining content creation, knowledge management, publication planning, and interaction between AI creators in a single workspace.'}
           </motion.p>
-          <motion.p variants={fadeInUp} className="text-sm md:text-base text-zinc-400 max-w-4xl mx-auto leading-relaxed mb-16">
+          <motion.p variants={fadeInUp} className="text-xs sm:text-sm md:text-base text-zinc-400 max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-12 md:mb-16">
             {isRu ? 'Проект был создан как продуктовая инициатива и исследование того, каким может быть следующий этап развития AI Creator Economy.' : 'The project was created as a product initiative and exploration of what the next stage of the AI Creator Economy could be.'}
           </motion.p>
           

@@ -32,9 +32,9 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-emerald-500/30 font-sans pb-0 overflow-x-hidden w-full max-w-[100vw]">
       {/* Navigation */}
-      <div className="fixed top-6 left-6 z-50">
-        <Link href={`/${lang}`} className="inline-flex items-center px-5 py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group">
-          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="fixed top-4 left-4 sm:top-6 sm:left-6 z-50">
+        <Link href={`/${lang}`} className="inline-flex items-center px-4 py-2 sm:px-5 sm:py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-xs sm:text-sm text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           {isRu ? 'Назад в портфолио' : 'Back to Portfolio'}
@@ -42,22 +42,22 @@ export default function TazaCaseStudy({ lang, otherProjects }) {
       </div>
 
       {/* Block 1: Hero */}
-      <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
+      <section className="relative min-h-[100dvh] h-auto pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-36 md:pb-24 flex flex-col items-center justify-start md:justify-center px-4 sm:px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
            <ZoomableImage src="/uploads/taza/cover-main.png" alt="Taza Hero" className="w-full h-full object-cover object-center" />
            <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
            <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
         </div>
         
-        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-4">
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-6">
+        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-6 sm:mt-10 md:mt-14">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4 sm:mb-6">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span className="text-emerald-400 text-sm font-medium">B2B Platform</span>
+            <span className="text-emerald-400 text-xs sm:text-sm font-medium">B2B Platform</span>
           </motion.div>
-          <motion.h1 variants={fadeInUp} className="text-6xl md:text-9xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl leading-none">
+          <motion.h1 variants={fadeInUp} className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-4 sm:mb-6 text-white drop-shadow-2xl leading-[1.08]">
             Taza B2B Store
           </motion.h1>
-          <motion.p variants={fadeInUp} className="text-xl md:text-3xl text-zinc-200 font-medium max-w-4xl mx-auto leading-relaxed mb-16">
+          <motion.p variants={fadeInUp} className="text-base sm:text-xl md:text-3xl text-zinc-200 font-medium max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-12 md:mb-16">
             {isRu ? 'Мобильный маркетплейс для оптовых закупок' : 'Mobile marketplace for wholesale procurement'}
           </motion.p>
           

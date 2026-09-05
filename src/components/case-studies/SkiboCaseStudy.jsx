@@ -44,13 +44,13 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-blue-500/30 font-sans pb-0 overflow-x-hidden w-full max-w-[100vw]">
       {/* Navigation */}
-      <div className="fixed top-6 left-6 z-50">
+      <div className="fixed top-4 left-4 sm:top-6 sm:left-6 z-50">
         <Link 
           href={`/${lang}`} 
           onClick={() => setIsNavigating(true)}
-          className={`inline-flex items-center px-5 py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group ${isNavigating ? 'is-loading-nav' : ''}`}
+          className={`inline-flex items-center px-4 py-2 sm:px-5 sm:py-2.5 bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-full text-xs sm:text-sm text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all shadow-2xl group ${isNavigating ? 'is-loading-nav' : ''}`}
         >
-          <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 transform group-hover:-translate-x-1 group-[.is-active]:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           {isRu ? 'Назад в портфолио' : 'Back to Portfolio'}
@@ -58,22 +58,22 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
       </div>
 
       {/* Block 1: Hero */}
-      <section className="relative h-[100dvh] pt-32 pb-10 md:py-0 flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 w-full overflow-hidden">
+      <section className="relative min-h-[100dvh] h-auto pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-36 md:pb-24 flex flex-col items-center justify-start md:justify-center px-4 sm:px-6 md:px-12 lg:px-24 w-full overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
            <ZoomableImage src="/uploads/skibo/cover-main.png" alt="Skibo Hero" className="w-full h-full object-cover object-[center_top] md:object-center" />
            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
            <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
         </div>
         
-        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-10 md:mt-20">
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
+        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto text-center mt-6 sm:mt-10 md:mt-14">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4 sm:mb-6">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-            <span className="text-sm font-semibold tracking-wider text-blue-500 uppercase">B2C App & CRM</span>
+            <span className="text-xs sm:text-sm font-semibold tracking-wider text-blue-500 uppercase">B2C App & CRM</span>
           </motion.div>
-          <motion.h1 variants={fadeInUp} className="text-6xl md:text-8xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl leading-none">
+          <motion.h1 variants={fadeInUp} className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight mb-4 sm:mb-6 text-white drop-shadow-2xl leading-[1.08]">
             Skibo Mobile App & Admin Panel
           </motion.h1>
-          <motion.p variants={fadeInUp} className="text-xl md:text-3xl text-zinc-200 font-medium max-w-4xl mx-auto leading-relaxed mb-16">
+          <motion.p variants={fadeInUp} className="text-base sm:text-xl md:text-3xl text-zinc-200 font-medium max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-12 md:mb-16">
             {isRu ? 'Онлайн-бронирование спортивной экипировки' : 'Online Sports Equipment Booking'}
           </motion.p>
           
@@ -94,6 +94,42 @@ export default function SkiboCaseStudy({ lang, otherProjects }) {
             <div className="p-6 md:p-8 rounded-[2rem] bg-zinc-950/60 hover:bg-zinc-900/80 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-300 hover:border-white/20 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center text-center">
               <span className="block text-zinc-400 text-sm uppercase tracking-wider mb-2">{isRu ? 'Моя роль' : 'My Role'}</span>
               <span className="text-xl md:text-2xl text-white font-medium">Product Designer</span>
+            </div>
+          </motion.div>
+
+          {/* Project TL;DR Summary */}
+          <motion.div variants={fadeInUp} className="mt-8 max-w-5xl mx-auto w-full p-6 md:p-8 rounded-3xl bg-zinc-950/70 border border-blue-500/30 backdrop-blur-xl text-left shadow-2xl">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-400">
+                {isRu ? 'Краткое резюме проекта (TL;DR)' : 'Project Summary (TL;DR)'}
+              </span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/80">
+                <span className="text-zinc-500 text-xs font-bold uppercase tracking-wider block mb-1.5">
+                  {isRu ? 'Проблема' : 'Problem'}
+                </span>
+                <p className="text-zinc-200 leading-relaxed text-xs md:text-sm">
+                  {isRu ? 'Долгие очереди в пунктах проката, ручной подбор ростовок экипировки на бумаге и нехватка нужных размеров в пиковые дни.' : 'Long rental queues, manual sizing on paper slips, and frequent stockouts during peak winter seasons.'}
+                </p>
+              </div>
+              <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/80">
+                <span className="text-zinc-500 text-xs font-bold uppercase tracking-wider block mb-1.5">
+                  {isRu ? 'Решение' : 'Solution'}
+                </span>
+                <p className="text-zinc-200 leading-relaxed text-xs md:text-sm">
+                  {isRu ? 'Мобильное приложение с умным подбором экипировки по параметрам райдера + CRM-система учета инвентаря для сотрудников.' : 'Mobile app with smart gear matching by rider height/weight + real-time inventory management CRM for staff.'}
+                </p>
+              </div>
+              <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/80">
+                <span className="text-blue-400 text-xs font-bold uppercase tracking-wider block mb-1.5">
+                  {isRu ? 'Результат' : 'Outcome'}
+                </span>
+                <p className="text-zinc-200 leading-relaxed text-xs md:text-sm">
+                  {isRu ? 'Выдача комплекта сократилась с 15 до 2 минут, оценка пользователей 4.9★, оцифровано более 1000 единиц снаряжения.' : 'Gear pickup time reduced from 15 to 2 minutes, 4.9★ user rating, and 1,000+ rental assets digitized.'}
+                </p>
+              </div>
             </div>
           </motion.div>
         </motion.div>
