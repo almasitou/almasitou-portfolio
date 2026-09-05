@@ -18,6 +18,28 @@ const getProjectCategory = (id, defaultTag) => {
   return defaultTag;
 };
 
+const COMPANY_LOGOS = {
+  rrs: '/uploads/companies/rrs.svg',
+  qalan: '/uploads/companies/qalan.svg',
+  aurora: '/uploads/companies/aurora.svg',
+  avrora: '/uploads/companies/aurora.svg',
+  'аврора': '/uploads/companies/aurora.svg',
+  adata: '/uploads/companies/adata-white.png',
+  europharma: '/uploads/companies/europharma-icon.png',
+  kbtu: '/uploads/companies/kbtu-icon.png',
+  'кбту': '/uploads/companies/kbtu-icon.png',
+  hickmet: '/uploads/companies/hickmet-white.png',
+  inlab: '/uploads/companies/inlab.svg',
+};
+
+const getCompanyLogo = (company = '') => {
+  const c = company.toLowerCase();
+  for (const [k, v] of Object.entries(COMPANY_LOGOS)) {
+    if (c.includes(k)) return v;
+  }
+  return null;
+};
+
 export const dynamic = 'force-dynamic';
 
 export default async function Home({ params }) {
@@ -214,28 +236,44 @@ export default async function Home({ params }) {
                   try {
                     achievements = JSON.parse(rawAchievements || '[]');
                   } catch(e) {}
+                  const logo = getCompanyLogo(exp.company || '');
 
                   return (
                     <Reveal key={exp.id} delay={i * 0.1}>
                       <div className="group/item relative pl-8 md:pl-12">
                         {/* The blue dot */}
-                        <div className="absolute left-[7px] top-[40px] w-2 h-2 rounded-full bg-blue-500 z-10 transition-all duration-500 group-hover/item:scale-[1.5] group-hover/item:shadow-[0_0_15px_rgba(59,130,246,0.8)] hidden md:block" />
+                        <div className="absolute left-[7px] top-[52px] w-2 h-2 rounded-full bg-blue-500 z-10 transition-all duration-500 group-hover/item:scale-[1.5] group-hover/item:shadow-[0_0_15px_rgba(59,130,246,0.8)] hidden md:block" />
                         
                         {/* Continuous line for mobile (since we hide the main one to avoid layout issues) */}
-                        <div className="absolute left-[11px] top-[40px] w-px bg-zinc-800 z-0 md:hidden" style={{ height: i === experiences.length - 1 ? 'calc(100% - 40px)' : 'calc(100% + 16px)' }} />
-                        <div className="absolute left-[7px] top-[40px] w-2 h-2 rounded-full bg-blue-500 z-10 md:hidden transition-all duration-500 group-hover/item:scale-[1.5] group-hover/item:shadow-[0_0_15px_rgba(59,130,246,0.8)]" />
+                        <div className="absolute left-[11px] top-[52px] w-px bg-zinc-800 z-0 md:hidden" style={{ height: i === experiences.length - 1 ? 'calc(100% - 52px)' : 'calc(100% + 16px)' }} />
+                        <div className="absolute left-[7px] top-[52px] w-2 h-2 rounded-full bg-blue-500 z-10 md:hidden transition-all duration-500 group-hover/item:scale-[1.5] group-hover/item:shadow-[0_0_15px_rgba(59,130,246,0.8)]" />
 
                         <div className="relative px-6 md:px-8 py-6 transition-all duration-500 md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:bg-zinc-900/40 rounded-3xl border border-transparent md:group-hover/item:border-zinc-800/60 md:group-hover/item:shadow-2xl active:bg-zinc-900/40 transform-gpu md:group-hover/item:translate-x-2">
                           <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none z-0">
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full md:group-hover/item:animate-shimmer-once" />
                           </div>
 
-                          <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4 relative z-10">
-                            <div>
-                              <h3 className="font-heading text-2xl font-bold text-white group-hover/item:text-blue-400 transition-colors">{getS(exp, 'company')}</h3>
-                              <p className="text-blue-400 font-medium mt-1">{getS(exp, 'role')}</p>
+                          <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4 relative z-10">
+                            <div className="flex items-center gap-4 md:gap-5">
+                              {logo && (
+                                <div className="h-12 md:h-14 w-20 md:w-24 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-center justify-center px-3 py-2 shrink-0 shadow-lg group-hover/item:border-blue-500/40 group-hover/item:shadow-[0_0_20px_rgba(59,130,246,0.2)] transition-all duration-300">
+                                  <img 
+                                    src={logo} 
+                                    alt={getS(exp, 'company')} 
+                                    className="w-full h-full object-contain filter brightness-95 group-hover/item:brightness-100 transition-all duration-300"
+                                  />
+                                </div>
+                              )}
+                              <div>
+                                <h3 className="font-heading text-xl md:text-2xl font-bold text-white group-hover/item:text-blue-400 transition-colors">
+                                  {getS(exp, 'company')}
+                                </h3>
+                                <p className="text-blue-400 font-medium mt-0.5">{getS(exp, 'role')}</p>
+                              </div>
                             </div>
-                            <span className="text-sm font-medium text-zinc-500 mt-2 md:mt-0 uppercase tracking-widest">{getS(exp, 'dates')}</span>
+                            <span className="text-sm font-medium text-zinc-500 mt-1 md:mt-0 uppercase tracking-widest shrink-0">
+                              {getS(exp, 'dates')}
+                            </span>
                           </div>
                           <ul className="space-y-3 mt-6 relative z-10">
                             {achievements.map((ach, idx) => (
