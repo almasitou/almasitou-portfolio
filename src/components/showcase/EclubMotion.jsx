@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { MousePointer2 } from 'lucide-react';
-import assets from '@/lib/odunsi-assets.json';
+import assets from '@/lib/showcase-assets.json';
 import MerchantDashboardScreen from './MerchantDashboardScreen';
 import TeaserCaptions from './TeaserCaptions';
-import '@/app/odunsi-eclub-motion.css';
+import '@/app/showcase-eclub-motion.css';
 
 const merchant = [
   { start: 0, end: 45, asset: 'merchant-dashboard-full', action: [5, 44],

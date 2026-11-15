@@ -2,10 +2,10 @@ import { prisma } from '@/lib/prisma';
 import { notFound } from 'next/navigation';
 import { findCase, localize } from '@/lib/portfolio';
 import PresentationCase from '@/components/presentation/PresentationCase';
-import PortfolioCase from '@/components/odunsi/PortfolioCase';
-import CaseTopbar from '@/components/odunsi/CaseTopbar';
-import CaseProjectFooter from '@/components/odunsi/CaseProjectFooter';
-import { getOdunsiProjects } from '@/lib/odunsi-portfolio';
+import PortfolioCase from '@/components/showcase/PortfolioCase';
+import CaseTopbar from '@/components/showcase/CaseTopbar';
+import CaseProjectFooter from '@/components/showcase/CaseProjectFooter';
+import { getShowcaseProjects } from '@/lib/showcase-portfolio';
 import { PortfolioMotion, Contact } from '@/components/Portfolio';
 export const dynamic = 'force-dynamic';
 
@@ -15,7 +15,7 @@ const tazaStoreLinks = [
 ];
 
 function getCaseSelection(lang, slug) {
-  const projects = getOdunsiProjects(lang);
+  const projects = getShowcaseProjects(lang);
   const legacy = findCase(slug);
   const index = projects.findIndex(project => project.slug === slug || (slug === 'b2b' && project.slug === 'b2c') || project.slug === legacy?.slug);
 

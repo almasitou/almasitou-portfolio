@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import '@/app/odunsi-merchant-dashboard.css';
+import '@/app/showcase-merchant-dashboard.css';
 
 export default function MerchantDashboardScreen({ screen, sizes, panClass = '', scrollLabel }) {
   const image = { src: screen.src, width: screen.width, height: screen.height, sizes, quality: 90, loading: 'eager' };

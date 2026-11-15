@@ -1,11 +1,11 @@
 'use client';
 
 import {useMemo} from 'react';
-import CaseTopbar from '@/components/odunsi/CaseTopbar';
+import CaseTopbar from '@/components/showcase/CaseTopbar';
 import {getPresentationCase} from '@/lib/presentation';
 import {localize} from '@/lib/portfolio';
 import {CaseImage} from '@/components/case-studies/EditorialCase';
-import CaseStoreLinks from '@/components/odunsi/CaseStoreLinks';
+import CaseStoreLinks from '@/components/showcase/CaseStoreLinks';
 import usePresentationDeck from './usePresentationDeck';
 import '@/app/presentation.css';
 import '@/app/presentation-case.css';

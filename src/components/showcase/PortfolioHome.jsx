@@ -6,7 +6,7 @@ import HomeCoverGallery from './HomeCoverGallery';
 import LanguageSwitch from './LanguageSwitch';
 import LinkedInIcon from './LinkedInIcon';
 import ProjectPreview from './ProjectPreview';
-import '../../app/odunsi-home.css';
+import '../../app/showcase-home.css';
 
 const COPY = {
   ru: {

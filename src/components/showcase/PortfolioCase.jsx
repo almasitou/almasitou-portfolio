@@ -6,7 +6,7 @@ import CaseDevice from './CaseDevice';
 import CaseProjectFooter from './CaseProjectFooter';
 import CaseStoreLinks from './CaseStoreLinks';
 import DashboardPresentation from './DashboardPresentation';
-import '@/app/odunsi-case.css';
+import '@/app/showcase-case.css';
 
 const labels = {
   ru: {
@@ -24,56 +24,56 @@ const labels = {
 function CaseCover({ images, slug }) {
   if (slug === 'rrs') {
     return (
-      <Image className="od-case-cover-image" src="/odunsi/rrs-case-cover-titled.webp" alt=""
+      <Image className="od-case-cover-image" src="/showcase/rrs-case-cover-titled.webp" alt=""
         width={2400} height={1250} sizes="(min-width: 1240px) 1200px, calc(100vw - 40px)"
         unoptimized loading="eager" fetchPriority="high" />
     );
   }
   if (slug === 'avrora') {
     return (
-      <Image className="od-case-cover-image" src="/odunsi/avrora-case-cover-titled.webp" alt=""
+      <Image className="od-case-cover-image" src="/showcase/avrora-case-cover-titled.webp" alt=""
         width={2400} height={1250} sizes="(min-width: 1240px) 1200px, calc(100vw - 40px)"
         unoptimized loading="eager" fetchPriority="high" />
     );
   }
   if (slug === 'kaspi') {
     return (
-      <Image className="od-case-cover-image" src="/odunsi/kaspi-case-cover-titled.webp" alt=""
+      <Image className="od-case-cover-image" src="/showcase/kaspi-case-cover-titled.webp" alt=""
         width={2400} height={1250} sizes="(min-width: 1240px) 1200px, calc(100vw - 40px)"
         unoptimized loading="eager" fetchPriority="high" />
     );
   }
   if (slug === 'skibo') {
     return (
-      <Image className="od-case-cover-image" src="/odunsi/skibo-case-cover-titled.webp" alt=""
+      <Image className="od-case-cover-image" src="/showcase/skibo-case-cover-titled.webp" alt=""
         width={2400} height={1250} sizes="(min-width: 1240px) 1200px, calc(100vw - 40px)"
         unoptimized loading="eager" fetchPriority="high" />
     );
   }
   if (slug === 'qalan-english') {
     return (
-      <Image className="od-case-cover-image" src="/odunsi/qalan-case-cover-titled.webp" alt=""
+      <Image className="od-case-cover-image" src="/showcase/qalan-case-cover-titled.webp" alt=""
         width={2400} height={1250} sizes="(min-width: 1240px) 1200px, calc(100vw - 40px)"
         unoptimized loading="eager" fetchPriority="high" />
     );
   }
   if (slug === 'bao') {
     return (
-      <Image className="od-case-cover-image" src="/odunsi/bao-case-cover-titled.webp" alt=""
+      <Image className="od-case-cover-image" src="/showcase/bao-case-cover-titled.webp" alt=""
         width={2400} height={1250} sizes="(min-width: 1240px) 1200px, calc(100vw - 40px)"
         unoptimized loading="eager" fetchPriority="high" />
     );
   }
   if (slug === 'merchant') {
     return (
-      <Image className="od-case-cover-image" src="/odunsi/merchant-case-cover-titled.webp" alt=""
+      <Image className="od-case-cover-image" src="/showcase/merchant-case-cover-titled.webp" alt=""
         width={2400} height={1250} sizes="(min-width: 1240px) 1200px, calc(100vw - 40px)"
         unoptimized loading="eager" fetchPriority="high" />
     );
   }
   if (slug === 'b2c' || slug === 'b2b') {
     return (
-      <Image className="od-case-cover-image" src="/odunsi/b2b-case-cover-titled.webp" alt=""
+      <Image className="od-case-cover-image" src="/showcase/b2b-case-cover-titled.webp" alt=""
         width={2400} height={1250} sizes="(min-width: 1240px) 1200px, calc(100vw - 40px)"
         unoptimized loading="eager" fetchPriority="high" />
     );

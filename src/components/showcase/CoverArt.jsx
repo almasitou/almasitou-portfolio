@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ODUNSI_SCREEN_ASSETS } from '@/lib/odunsi-portfolio';
+import { SHOWCASE_SCREEN_ASSETS } from '@/lib/showcase-portfolio';
 
 const artwork = {
   'rrs-hero': { src: '/uploads/chaickout/cover-hero.jpg', width: 1024, height: 571 },
@@ -9,7 +9,7 @@ const artwork = {
 };
 
 function Crop({ asset, className = '', x = 0.5, y = 0.5, zoom = 1, eager = false }) {
-  const image = artwork[asset] || ODUNSI_SCREEN_ASSETS[asset];
+  const image = artwork[asset] || SHOWCASE_SCREEN_ASSETS[asset];
   const style = {
     '--od-source-ratio': image.width / image.height,
     '--od-focal-x': x,
@@ -55,7 +55,7 @@ function Avrora({ ru, caseCover }) {
     <Crop asset="avrora-a" className="od-art-avrora-dashboard" x={0.55} y={0.52} zoom={1.16} eager />
   </>;
 
-  return <Image className="od-art-avrora-case-screen" {...ODUNSI_SCREEN_ASSETS['avrora-b']} alt="" sizes="(max-width: 759px) 85vw, 600px" />;
+  return <Image className="od-art-avrora-case-screen" {...SHOWCASE_SCREEN_ASSETS['avrora-b']} alt="" sizes="(max-width: 759px) 85vw, 600px" />;
 }
 
 

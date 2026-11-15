@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import '../portfolio.css';
 import '../reference.css';
-import '../odunsi-art.css';
+import '../showcase-art.css';
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;

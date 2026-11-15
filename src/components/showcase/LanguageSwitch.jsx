@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import '@/app/odunsi-language-switch.css';
+import '@/app/showcase-language-switch.css';
 
 const languages = [
   { locale: 'ru', label: 'Русский', short: 'RU' },

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import IPhoneFrame from './IPhoneFrame';
 import { BookingAmount, KaspiNativeImage, TicketDetails } from './KaspiNativePreview';
 
-import '@/app/odunsi-commerce-motion.css';
+import '@/app/showcase-commerce-motion.css';
 
 const kaspiDirections = 'https://www.google.com/maps/dir/?api=1&destination=Cinemax+Dostyk+Plaza+Almaty';
 const calendarFile = 'data:text/calendar;charset=utf-8,' + encodeURIComponent([

@@ -1,4 +1,4 @@
-import '@/app/odunsi-iphone.css';
+import '@/app/showcase-iphone.css';
 
 export default function IPhoneFrame({ children, className = '' }) {
   return (

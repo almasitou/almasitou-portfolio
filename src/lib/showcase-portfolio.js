@@ -1,7 +1,7 @@
-import content from './odunsi-content.json';
-import screenAssets from './odunsi-assets.json';
+import content from './showcase-content.json';
+import screenAssets from './showcase-assets.json';
 
-export const ODUNSI_SCREEN_ASSETS = screenAssets;
+export const SHOWCASE_SCREEN_ASSETS = screenAssets;
 
 function localizeCaseSections(sections, locale) {
   return sections.map(section => ({
@@ -16,7 +16,7 @@ function localizeCaseSections(sections, locale) {
   }));
 }
 
-export function getOdunsiProjects(lang) {
+export function getShowcaseProjects(lang) {
   const locale = lang === 'ru' ? 'ru' : 'en';
 
   return content.projects.map(project => ({
@@ -36,7 +36,7 @@ export function getOdunsiProjects(lang) {
   }));
 }
 
-export function getOdunsiProfile(lang) {
+export function getShowcaseProfile(lang) {
   const { contact, whatsapp, linkedin, instagram, email, ru, en } = content.profile;
   return { ...(lang === 'ru' ? ru : en), contact, whatsapp, linkedin: linkedin || 'https://www.linkedin.com/in/almasitou', instagram, email };
 }

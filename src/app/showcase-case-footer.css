@@ -65,8 +65,8 @@
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: url('/odunsi/cover-grain.webp') repeat;
-  mask: url('/odunsi/contact-grain-mask.svg') center / 100% 100% no-repeat;
+  background: url('/showcase/cover-grain.webp') repeat;
+  mask: url('/showcase/contact-grain-mask.svg') center / 100% 100% no-repeat;
   mix-blend-mode: screen;
   filter: drop-shadow(0 0 rgb(255 255 255 / 30%));
   pointer-events: none;

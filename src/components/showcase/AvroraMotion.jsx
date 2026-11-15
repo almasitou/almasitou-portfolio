@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import TeaserCaptions from './TeaserCaptions';
-import '@/app/odunsi-operations-motion.css';
+import '@/app/showcase-operations-motion.css';
 
 const screens = [
   { file: 'gantt', focus: ['66%', '41%'], ru: ['График выпуска'], en: ['Production schedule'] },
@@ -30,7 +30,7 @@ export default function AvroraMotion({ lang }) {
           >
             <div className="od-avrora-screen">
               <Image
-                src={'/odunsi/avrora-motion/' + file + '.webp'}
+                src={'/showcase/avrora-motion/' + file + '.webp'}
                 alt=""
                 fill
                 quality={90}

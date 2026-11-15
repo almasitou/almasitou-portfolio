@@ -50,7 +50,7 @@
   position: absolute;
   width: 9.866%;
   height: 3.7%;
-  background: url('/odunsi/kaspi-native/seat.webp') center / 100% 100% no-repeat;
+  background: url('/showcase/kaspi-native/seat.webp') center / 100% 100% no-repeat;
   opacity: 0;
   animation: od-kaspi-native-show var(--od-time) linear(
     0, 0 var(--kaspi-pick-start), 1 var(--kaspi-pick-ready), 1
@@ -231,7 +231,7 @@
 .od-kaspi-native-demo :is(button,a):focus-visible { outline: 2px solid #0078bd; outline-offset: 1px; }
 .od-kaspi-native-demo .od-kaspi-native-total:disabled { background: #d3d3d3; cursor: default; }
 .od-kaspi-native-demo-seat[aria-pressed='true'] {
-  background: url('/odunsi/kaspi-native/seat.webp') center / 100% 100% no-repeat;
+  background: url('/showcase/kaspi-native/seat.webp') center / 100% 100% no-repeat;
 }
 .od-kaspi-native-demo-fare {
   position: absolute;

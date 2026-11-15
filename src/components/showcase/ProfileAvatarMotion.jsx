@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
-const clip = '/odunsi/avatar/portrait-turn.mp4';
+const clip = '/showcase/avatar/portrait-turn.mp4';
 
 export default function ProfileAvatarMotion() {
   const videoRef = useRef(null);

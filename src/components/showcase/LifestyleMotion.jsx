@@ -1,5 +1,5 @@
 import { SkiboTeaserPhone } from './SkiboPreviewScreens';
-import '@/app/odunsi-skibo-screens.css';
+import '@/app/showcase-skibo-screens.css';
 
 const skiboCopy = {
   ru: [

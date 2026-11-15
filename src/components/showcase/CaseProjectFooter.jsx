@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { getOdunsiProfile } from '@/lib/odunsi-portfolio';
+import { getShowcaseProfile } from '@/lib/showcase-portfolio';
 import CasePreviewArtwork from './CasePreviewArtwork';
 import LinkedInIcon from './LinkedInIcon';
 import ProjectPreview from './ProjectPreview';
-import '@/app/odunsi-case-footer.css';
+import '@/app/showcase-case-footer.css';
 
 const labels = {
   ru: {
@@ -38,7 +38,7 @@ function TelegramIcon() {
 
 export default function CaseProjectFooter({ projects, lang }) {
   const t = labels[lang] || labels.en;
-  const { contact, whatsapp, linkedin } = getOdunsiProfile(lang);
+  const { contact, whatsapp, linkedin } = getShowcaseProfile(lang);
 
   return (
     <footer className="od-case-footer">

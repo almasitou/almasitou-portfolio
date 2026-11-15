@@ -1,6 +1,6 @@
 {
   "rrs-start": {
-    "src": "/odunsi/rrs-start-retina.webp",
+    "src": "/showcase/rrs-start-retina.webp",
     "width": 3000,
     "height": 1688
   },
@@ -30,66 +30,66 @@
     "height": 3243
   },
   "rrs-c": {
-    "src": "/odunsi/rrs-c-retina.webp",
+    "src": "/showcase/rrs-c-retina.webp",
     "width": 3000,
     "height": 1688
   },
   "avrora-users-roles": {
-    "src": "/odunsi/avrora-users-roles.webp",
+    "src": "/showcase/avrora-users-roles.webp",
     "width": 2968,
     "height": 1816,
     "kind": "artwork"
   },
   "avrora-warehouse-requests": {
-    "src": "/odunsi/avrora-warehouse-requests.webp",
+    "src": "/showcase/avrora-warehouse-requests.webp",
     "width": 2360,
     "height": 1816,
     "kind": "artwork"
   },
   "avrora-warehouse-report": {
-    "src": "/odunsi/avrora-warehouse-report.webp",
+    "src": "/showcase/avrora-warehouse-report.webp",
     "width": 2360,
     "height": 1816,
     "kind": "artwork"
   },
   "avrora-raw-materials-monitors": {
-    "src": "/odunsi/avrora-raw-materials-monitors.webp",
+    "src": "/showcase/avrora-raw-materials-monitors.webp",
     "width": 2796,
     "height": 1816,
     "kind": "artwork"
   },
   "avrora-raw-materials-card": {
-    "src": "/odunsi/avrora-raw-materials-card.webp",
+    "src": "/showcase/avrora-raw-materials-card.webp",
     "width": 2004,
     "height": 1816,
     "kind": "artwork"
   },
   "avrora-raw-materials": {
-    "src": "/odunsi/avrora-raw-materials.webp",
+    "src": "/showcase/avrora-raw-materials.webp",
     "width": 2048,
     "height": 774,
     "kind": "artwork"
   },
   "avrora-users-monitor": {
-    "src": "/odunsi/avrora-users-monitor.webp",
+    "src": "/showcase/avrora-users-monitor.webp",
     "width": 2796,
     "height": 1816,
     "kind": "artwork"
   },
   "avrora-weeks-badges": {
-    "src": "/odunsi/avrora-weeks-badges.webp",
+    "src": "/showcase/avrora-weeks-badges.webp",
     "width": 1756,
     "height": 1816,
     "kind": "artwork"
   },
   "avrora-product-card": {
-    "src": "/odunsi/avrora-product-card.webp",
+    "src": "/showcase/avrora-product-card.webp",
     "width": 2004,
     "height": 1816,
     "kind": "artwork"
   },
   "avrora-plan-monitor": {
-    "src": "/odunsi/avrora-plan-monitor.webp",
+    "src": "/showcase/avrora-plan-monitor.webp",
     "width": 2796,
     "height": 1816,
     "kind": "artwork"
@@ -110,67 +110,67 @@
     "height": 3240
   },
   "avrora-turnover": {
-    "src": "/odunsi/avrora-turnover-retina.webp",
+    "src": "/showcase/avrora-turnover-retina.webp",
     "width": 3200,
     "height": 1813
   },
   "avrora-turnover-detail": {
-    "src": "/odunsi/avrora-turnover-detail-retina.webp",
+    "src": "/showcase/avrora-turnover-detail-retina.webp",
     "width": 3200,
     "height": 1800
   },
   "avrora-users": {
-    "src": "/odunsi/avrora-users-retina.webp",
+    "src": "/showcase/avrora-users-retina.webp",
     "width": 3200,
     "height": 1729
   },
   "merchant-a": {
-    "src": "/odunsi/merchant-a.png",
+    "src": "/showcase/merchant-a.png",
     "width": 1050,
     "height": 807
   },
   "merchant-order-actions": {
-    "src": "/odunsi/merchant-order-actions.png",
+    "src": "/showcase/merchant-order-actions.png",
     "width": 411,
     "height": 266
   },
   "merchant-b": {
-    "src": "/odunsi/merchant-b.png",
+    "src": "/showcase/merchant-b.png",
     "width": 1050,
     "height": 591
   },
   "merchant-inventory-filter": {
-    "src": "/odunsi/merchant-inventory-filter.png",
+    "src": "/showcase/merchant-inventory-filter.png",
     "width": 850,
     "height": 260
   },
   "merchant-c": {
-    "src": "/odunsi/merchant-c.png",
+    "src": "/showcase/merchant-c.png",
     "width": 1050,
     "height": 591
   },
   "merchant-upload-result": {
-    "src": "/odunsi/merchant-upload-result.png",
+    "src": "/showcase/merchant-upload-result.png",
     "width": 350,
     "height": 435
   },
   "b2c-search": {
-    "src": "/odunsi/b2c-search.png",
+    "src": "/showcase/b2c-search.png",
     "width": 1600,
     "height": 1185
   },
   "b2c-a": {
-    "src": "/odunsi/b2c-a.png",
+    "src": "/showcase/b2c-a.png",
     "width": 1050,
     "height": 783
   },
   "b2c-summary": {
-    "src": "/odunsi/b2c-summary.png",
+    "src": "/showcase/b2c-summary.png",
     "width": 710,
     "height": 342
   },
   "b2c-pay": {
-    "src": "/odunsi/b2c-pay.png",
+    "src": "/showcase/b2c-pay.png",
     "width": 1600,
     "height": 1079
   },
@@ -182,25 +182,25 @@
   },
   "skibo-cart": {
     "hasDeviceFrame": true,
-    "src": "/odunsi/skibo-cart.webp",
+    "src": "/showcase/skibo-cart.webp",
     "width": 1080,
     "height": 2202
   },
   "skibo-my-orders": {
     "hasDeviceFrame": true,
-    "src": "/odunsi/skibo-my-orders.webp",
+    "src": "/showcase/skibo-my-orders.webp",
     "width": 1080,
     "height": 2202
   },
   "skibo-inventory": {
     "hasDeviceFrame": true,
-    "src": "/odunsi/skibo-inventory.webp",
+    "src": "/showcase/skibo-inventory.webp",
     "width": 1080,
     "height": 2202
   },
   "skibo-staff": {
     "hasDeviceFrame": true,
-    "src": "/odunsi/skibo-staff.webp",
+    "src": "/showcase/skibo-staff.webp",
     "width": 1080,
     "height": 2202
   },
@@ -230,46 +230,46 @@
   },
   "skibo-admin": {
     "hasDeviceFrame": true,
-    "src": "/odunsi/skibo-admin.png",
+    "src": "/showcase/skibo-admin.png",
     "width": 1373,
     "height": 2799
   },
   "skibo-issue": {
     "hasDeviceFrame": true,
-    "src": "/odunsi/skibo-issue.png",
+    "src": "/showcase/skibo-issue.png",
     "width": 1373,
     "height": 2799
   },
   "bao-case-cover-titled": {
-    "src": "/odunsi/bao-case-cover-titled.webp",
+    "src": "/showcase/bao-case-cover-titled.webp",
     "width": 2400,
     "height": 1250,
     "kind": "artwork",
     "interactive": false
   },
   "bao-delivery-screen": {
-    "src": "/odunsi/bao-delivery-screen.webp",
+    "src": "/showcase/bao-delivery-screen.webp",
     "width": 1448,
     "height": 1816,
     "kind": "artwork",
     "interactive": false
   },
   "bao-delivery-features": {
-    "src": "/odunsi/bao-delivery-features.webp",
+    "src": "/showcase/bao-delivery-features.webp",
     "width": 1428,
     "height": 1816,
     "kind": "artwork",
     "interactive": false
   },
   "bao-promo-bonuses": {
-    "src": "/odunsi/bao-promo-bonuses.webp",
+    "src": "/showcase/bao-promo-bonuses.webp",
     "width": 2744,
     "height": 2168,
     "kind": "artwork",
     "interactive": false
   },
   "bao-order-status": {
-    "src": "/odunsi/bao-order-status.webp",
+    "src": "/showcase/bao-order-status.webp",
     "width": 2744,
     "height": 2168,
     "kind": "artwork",
@@ -291,17 +291,17 @@
     "height": 1688
   },
   "bao-delivery": {
-    "src": "/odunsi/bao-delivery.png",
+    "src": "/showcase/bao-delivery.png",
     "width": 780,
     "height": 1696
   },
   "bao-c": {
-    "src": "/odunsi/bao-c.png",
+    "src": "/showcase/bao-c.png",
     "width": 780,
     "height": 1688
   },
   "bao-orders": {
-    "src": "/odunsi/bao-orders.png",
+    "src": "/showcase/bao-orders.png",
     "width": 780,
     "height": 1688
   },
@@ -356,562 +356,562 @@
     "height": 1624
   },
   "skibo-research": {
-    "src": "/odunsi/skibo-research.webp",
+    "src": "/showcase/skibo-research.webp",
     "width": 2048,
     "height": 2048
   },
   "merchant-dashboard-full": {
-    "src": "/odunsi/eclub/desktop/merchant-dashboard-catalog.webp",
+    "src": "/showcase/eclub/desktop/merchant-dashboard-catalog.webp",
     "width": 3840,
     "height": 2160,
     "fixedNavigation": true,
     "fullScreen": {
-      "src": "/odunsi/eclub/desktop/merchant-dashboard-catalog-scroll.webp",
+      "src": "/showcase/eclub/desktop/merchant-dashboard-catalog-scroll.webp",
       "width": 3840,
       "height": 5954
     }
   },
   "merchant-products-full": {
-    "src": "/odunsi/eclub/desktop/merchant-products-full-aligned.webp",
+    "src": "/showcase/eclub/desktop/merchant-products-full-aligned.webp",
     "width": 3840,
     "height": 2160
   },
   "b2c-product-full": {
-    "src": "/odunsi/eclub/desktop/b2c-product-full-retina.webp",
+    "src": "/showcase/eclub/desktop/b2c-product-full-retina.webp",
     "width": 3840,
     "height": 2160,
     "fullScreen": {
-      "src": "/odunsi/eclub/desktop/b2c-product-full-scroll-retina.webp",
+      "src": "/showcase/eclub/desktop/b2c-product-full-scroll-retina.webp",
       "width": 3840,
       "height": 5898
     }
   },
   "b2c-cart-full": {
-    "src": "/odunsi/eclub/desktop/b2c-cart-full-retina.webp",
+    "src": "/showcase/eclub/desktop/b2c-cart-full-retina.webp",
     "width": 3840,
     "height": 2160,
     "fullScreen": {
-      "src": "/odunsi/eclub/desktop/b2c-cart-full-scroll-retina.webp",
+      "src": "/showcase/eclub/desktop/b2c-cart-full-scroll-retina.webp",
       "width": 3840,
       "height": 2858
     }
   },
   "b2c-card-full": {
-    "src": "/odunsi/eclub/desktop/b2c-card-full-retina.webp",
+    "src": "/showcase/eclub/desktop/b2c-card-full-retina.webp",
     "width": 3840,
     "height": 2160,
     "fullScreen": {
-      "src": "/odunsi/eclub/desktop/b2c-card-full-scroll-retina.webp",
+      "src": "/showcase/eclub/desktop/b2c-card-full-scroll-retina.webp",
       "width": 3840,
       "height": 2522
     }
   },
   "b2c-invoice-full": {
-    "src": "/odunsi/eclub/desktop/b2c-invoice-full-retina.webp",
+    "src": "/showcase/eclub/desktop/b2c-invoice-full-retina.webp",
     "width": 3840,
     "height": 2160,
     "fullScreen": {
-      "src": "/odunsi/eclub/desktop/b2c-invoice-full-scroll-retina.webp",
+      "src": "/showcase/eclub/desktop/b2c-invoice-full-scroll-retina.webp",
       "width": 3840,
       "height": 2646
     }
   },
   "b2c-success-full": {
-    "src": "/odunsi/eclub/desktop/b2c-success-full-retina.webp",
+    "src": "/showcase/eclub/desktop/b2c-success-full-retina.webp",
     "width": 3840,
     "height": 2160
   },
   "b2c-failure-full": {
-    "src": "/odunsi/eclub/desktop/b2c-failure-full-retina.webp",
+    "src": "/showcase/eclub/desktop/b2c-failure-full-retina.webp",
     "width": 3840,
     "height": 2160
   },
   "merchant-orders-full": {
-    "src": "/odunsi/eclub/desktop/merchant-orders-full-aligned.webp",
+    "src": "/showcase/eclub/desktop/merchant-orders-full-aligned.webp",
     "width": 3840,
     "height": 2160,
     "fullScreen": {
-      "src": "/odunsi/eclub/desktop/merchant-orders-full-scroll-aligned.webp",
+      "src": "/showcase/eclub/desktop/merchant-orders-full-scroll-aligned.webp",
       "width": 3840,
       "height": 2950
     }
   },
   "merchant-orders-history": {
-    "src": "/odunsi/eclub/desktop/merchant-orders-history-retina.webp",
+    "src": "/showcase/eclub/desktop/merchant-orders-history-retina.webp",
     "width": 3840,
     "height": 2160,
     "fullScreen": {
-      "src": "/odunsi/eclub/desktop/merchant-orders-history-scroll-retina.webp",
+      "src": "/showcase/eclub/desktop/merchant-orders-history-scroll-retina.webp",
       "width": 3840,
       "height": 3072
     }
   },
   "merchant-fulfillment-active": {
-    "src": "/odunsi/eclub/desktop/merchant-fulfillment-active-retina.webp",
+    "src": "/showcase/eclub/desktop/merchant-fulfillment-active-retina.webp",
     "width": 3840,
     "height": 2160
   },
   "merchant-fulfillment-detail": {
-    "src": "/odunsi/eclub/desktop/merchant-fulfillment-detail-retina.webp",
+    "src": "/showcase/eclub/desktop/merchant-fulfillment-detail-retina.webp",
     "width": 3840,
     "height": 2160,
     "fullScreen": {
-      "src": "/odunsi/eclub/desktop/merchant-fulfillment-detail-scroll-retina.webp",
+      "src": "/showcase/eclub/desktop/merchant-fulfillment-detail-scroll-retina.webp",
       "width": 3840,
       "height": 3414
     }
   },
   "merchant-fulfillment-history": {
-    "src": "/odunsi/eclub/desktop/merchant-fulfillment-history-retina.webp",
+    "src": "/showcase/eclub/desktop/merchant-fulfillment-history-retina.webp",
     "width": 3840,
     "height": 2160
   },
   "merchant-moderation-full": {
-    "src": "/odunsi/eclub/desktop/merchant-moderation-full-retina.webp",
+    "src": "/showcase/eclub/desktop/merchant-moderation-full-retina.webp",
     "width": 3840,
     "height": 2160
   },
   "merchant-roles-full": {
-    "src": "/odunsi/eclub/desktop/merchant-roles-full-retina.webp",
+    "src": "/showcase/eclub/desktop/merchant-roles-full-retina.webp",
     "width": 3840,
     "height": 2160
   },
   "b2c-catalog-full": {
-    "src": "/odunsi/eclub/desktop/b2c-catalog-full-retina.webp",
+    "src": "/showcase/eclub/desktop/b2c-catalog-full-retina.webp",
     "width": 3840,
     "height": 2160,
     "fullScreen": {
-      "src": "/odunsi/eclub/desktop/b2c-catalog-full-scroll-retina.webp",
+      "src": "/showcase/eclub/desktop/b2c-catalog-full-scroll-retina.webp",
       "width": 3840,
       "height": 3790
     }
   },
   "b2c-search-showcase": {
-    "src": "/odunsi/eclub/case/b2c-search-showcase.webp",
+    "src": "/showcase/eclub/case/b2c-search-showcase.webp",
     "width": 2160,
     "height": 1316,
     "kind": "artwork",
     "interactive": true
   },
   "b2c-search-full": {
-    "src": "/odunsi/eclub/desktop/b2c-search-full-retina.webp",
+    "src": "/showcase/eclub/desktop/b2c-search-full-retina.webp",
     "width": 3840,
     "height": 2160,
     "fullScreen": {
-      "src": "/odunsi/eclub/desktop/b2c-search-full-scroll-retina.webp",
+      "src": "/showcase/eclub/desktop/b2c-search-full-scroll-retina.webp",
       "width": 3840,
       "height": 3428
     }
   },
   "merchant-import-results": {
-    "src": "/odunsi/eclub/desktop/merchant-import-results-retina.webp",
+    "src": "/showcase/eclub/desktop/merchant-import-results-retina.webp",
     "width": 3840,
     "height": 2160,
     "fullScreen": {
-      "src": "/odunsi/eclub/desktop/merchant-import-results-scroll-retina.webp",
+      "src": "/showcase/eclub/desktop/merchant-import-results-scroll-retina.webp",
       "width": 3840,
       "height": 2424
     }
   },
   "qalan-library": {
-    "src": "/odunsi/qalan-english/library-retina.webp",
+    "src": "/showcase/qalan-english/library-retina.webp",
     "width": 1500,
     "height": 3248
   },
   "qalan-reels": {
-    "src": "/odunsi/qalan-english/reels-retina.webp",
+    "src": "/showcase/qalan-english/reels-retina.webp",
     "width": 1500,
     "height": 3248
   },
   "qalan-subtitles": {
-    "src": "/odunsi/qalan-english/subtitles-retina.webp",
+    "src": "/showcase/qalan-english/subtitles-retina.webp",
     "width": 1500,
     "height": 3248
   },
   "qalan-translation": {
-    "src": "/odunsi/qalan-english/translation-retina.webp",
+    "src": "/showcase/qalan-english/translation-retina.webp",
     "width": 1500,
     "height": 3248
   },
   "qalan-lesson": {
-    "src": "/odunsi/qalan-english/lesson-retina.webp",
+    "src": "/showcase/qalan-english/lesson-retina.webp",
     "width": 1500,
     "height": 3248
   },
   "qalan-exercise": {
-    "src": "/odunsi/qalan-english/exercise-retina.webp",
+    "src": "/showcase/qalan-english/exercise-retina.webp",
     "width": 1500,
     "height": 3248
   },
   "qalan-feedback": {
-    "src": "/odunsi/qalan-english/feedback-retina.webp",
+    "src": "/showcase/qalan-english/feedback-retina.webp",
     "width": 1500,
     "height": 3248
   },
   "qalan-speaking": {
-    "src": "/odunsi/qalan-english/speaking-retina.webp",
+    "src": "/showcase/qalan-english/speaking-retina.webp",
     "width": 1500,
     "height": 3248
   },
   "qalan-complete": {
-    "src": "/odunsi/qalan-english/complete-retina.webp",
+    "src": "/showcase/qalan-english/complete-retina.webp",
     "width": 1500,
     "height": 3248
   },
   "qalan-summary": {
-    "src": "/odunsi/qalan-english/summary-retina.webp",
+    "src": "/showcase/qalan-english/summary-retina.webp",
     "width": 1500,
     "height": 3248
   },
   "avrora-status-summary": {
-    "src": "/odunsi/case-components/avrora-status-summary.webp",
+    "src": "/showcase/case-components/avrora-status-summary.webp",
     "width": 3120,
     "height": 361,
     "kind": "detail",
     "surface": "light"
   },
   "avrora-material-plan": {
-    "src": "/odunsi/case-components/avrora-material-plan.webp",
+    "src": "/showcase/case-components/avrora-material-plan.webp",
     "width": 1840,
     "height": 1517,
     "kind": "detail"
   },
   "merchant-dashboard-order-row": {
-    "src": "/odunsi/case-components/merchant-dashboard-order-row.webp",
+    "src": "/showcase/case-components/merchant-dashboard-order-row.webp",
     "width": 1962,
     "height": 208,
     "kind": "detail",
     "surface": "light"
   },
   "b2c-search-card": {
-    "src": "/odunsi/case-components/b2c-search-card.webp",
+    "src": "/showcase/case-components/b2c-search-card.webp",
     "width": 945,
     "height": 1425,
     "kind": "detail",
     "surface": "light"
   },
   "b2c-checkout-order": {
-    "src": "/odunsi/case-components/b2c-checkout-order.webp",
+    "src": "/showcase/case-components/b2c-checkout-order.webp",
     "width": 1302,
     "height": 698,
     "kind": "detail",
     "surface": "light"
   },
   "qalan-translation-sheet": {
-    "src": "/odunsi/case-components/qalan-translation-sheet.webp",
+    "src": "/showcase/case-components/qalan-translation-sheet.webp",
     "width": 1125,
     "height": 615,
     "kind": "detail"
   },
   "qalan-subtitles-panel": {
-    "src": "/odunsi/case-components/qalan-subtitles-panel.webp",
+    "src": "/showcase/case-components/qalan-subtitles-panel.webp",
     "width": 1029,
     "height": 1119,
     "kind": "detail"
   },
   "rrs-review-order": {
-    "src": "/odunsi/rrs-order-flow.webp",
+    "src": "/showcase/rrs-order-flow.webp",
     "width": 2400,
     "height": 1350,
     "kind": "artwork"
   },
   "rrs-recognition-exceptions": {
-    "src": "/odunsi/rrs-recognition-exceptions.webp",
+    "src": "/showcase/rrs-recognition-exceptions.webp",
     "width": 2400,
     "height": 1700,
     "cropAspectRatio": "16 / 9",
     "kind": "artwork"
   },
   "rrs-empty-tray": {
-    "src": "/odunsi/rrs-empty-tray.webp",
+    "src": "/showcase/rrs-empty-tray.webp",
     "width": 2400,
     "height": 1700,
     "kind": "artwork"
   },
   "rrs-age-check": {
-    "src": "/odunsi/rrs-age-check.webp",
+    "src": "/showcase/rrs-age-check.webp",
     "width": 2400,
     "height": 1700,
     "kind": "artwork"
   },
   "rrs-payment-states": {
-    "src": "/odunsi/rrs-payment-states-wide.webp",
+    "src": "/showcase/rrs-payment-states-wide.webp",
     "width": 2560,
     "height": 1586,
     "kind": "artwork"
   },
   "kaspi-seat-schedule": {
-    "src": "/odunsi/kaspi-seat-schedule.webp",
+    "src": "/showcase/kaspi-seat-schedule.webp",
     "width": 1576,
     "height": 2500,
     "kind": "artwork"
   },
   "kaspi-seat-modal": {
-    "src": "/odunsi/kaspi-seat-modal.webp",
+    "src": "/showcase/kaspi-seat-modal.webp",
     "width": 1296,
     "height": 1160,
     "kind": "artwork"
   },
   "kaspi-seat-tickets": {
-    "src": "/odunsi/kaspi-seat-tickets.webp",
+    "src": "/showcase/kaspi-seat-tickets.webp",
     "width": 1296,
     "height": 1160,
     "kind": "artwork"
   },
   "kaspi-seat-hall": {
-    "src": "/odunsi/kaspi-seat-hall.webp",
+    "src": "/showcase/kaspi-seat-hall.webp",
     "width": 1576,
     "height": 2500,
     "kind": "artwork"
   },
   "kaspi-group-hall-wide": {
-    "src": "/odunsi/kaspi-group-hall-wide.webp",
+    "src": "/showcase/kaspi-group-hall-wide.webp",
     "width": 2400,
     "height": 1968,
     "kind": "artwork"
   },
   "kaspi-group-screen-detail": {
-    "src": "/odunsi/kaspi-group-screen-detail.webp",
+    "src": "/showcase/kaspi-group-screen-detail.webp",
     "width": 1576,
     "height": 2500,
     "kind": "artwork"
   },
   "kaspi-group-fares-modal": {
-    "src": "/odunsi/kaspi-group-fares-modal.webp",
+    "src": "/showcase/kaspi-group-fares-modal.webp",
     "width": 1576,
     "height": 2500,
     "kind": "artwork"
   },
   "kaspi-group-selected-wide": {
-    "src": "/odunsi/kaspi-group-selected-wide.webp",
+    "src": "/showcase/kaspi-group-selected-wide.webp",
     "width": 2400,
     "height": 1968,
     "kind": "artwork"
   },
   "kaspi-order-payment": {
-    "src": "/odunsi/kaspi-order-payment.webp",
+    "src": "/showcase/kaspi-order-payment.webp",
     "width": 2400,
     "height": 1968,
     "kind": "artwork"
   },
   "kaspi-ticket-qr": {
-    "src": "/odunsi/kaspi-ticket-qr.webp",
+    "src": "/showcase/kaspi-ticket-qr.webp",
     "width": 2400,
     "height": 1968,
     "kind": "artwork"
   },
   "skibo-case-cover-titled": {
-    "src": "/odunsi/skibo-case-cover-titled.webp",
+    "src": "/showcase/skibo-case-cover-titled.webp",
     "width": 2400,
     "height": 1250
   },
   "skibo-agreement-input": {
-    "src": "/odunsi/skibo-agreement-input.webp",
+    "src": "/showcase/skibo-agreement-input.webp",
     "width": 2612,
     "height": 2500,
     "kind": "artwork",
     "interactive": false
   },
   "skibo-agreement-terms": {
-    "src": "/odunsi/skibo-agreement-terms.webp",
+    "src": "/showcase/skibo-agreement-terms.webp",
     "width": 2024,
     "height": 2500,
     "kind": "artwork",
     "interactive": false
   },
   "skibo-booking-options": {
-    "src": "/odunsi/skibo-booking-options.webp",
+    "src": "/showcase/skibo-booking-options.webp",
     "width": 1884,
     "height": 2500,
     "kind": "artwork",
     "interactive": false
   },
   "skibo-payment-success": {
-    "src": "/odunsi/skibo-payment-success.webp",
+    "src": "/showcase/skibo-payment-success.webp",
     "width": 2744,
     "height": 2500,
     "kind": "artwork",
     "interactive": false
   },
   "skibo-gear-cart": {
-    "src": "/odunsi/skibo-gear-cart.webp",
+    "src": "/showcase/skibo-gear-cart.webp",
     "width": 2400,
     "height": 1968,
     "kind": "artwork",
     "interactive": false
   },
   "skibo-item-management": {
-    "src": "/odunsi/skibo-item-management.webp",
+    "src": "/showcase/skibo-item-management.webp",
     "width": 2400,
     "height": 1250,
     "kind": "artwork",
     "interactive": false
   },
   "skibo-order-management": {
-    "src": "/odunsi/skibo-order-management.webp",
+    "src": "/showcase/skibo-order-management.webp",
     "width": 2400,
     "height": 1987,
     "kind": "artwork",
     "interactive": false
   },
   "skibo-staff-management": {
-    "src": "/odunsi/skibo-staff-management.webp",
+    "src": "/showcase/skibo-staff-management.webp",
     "width": 2400,
     "height": 1367,
     "kind": "artwork",
     "interactive": false
   },
   "skibo-how-it-works": {
-    "src": "/odunsi/skibo-how-it-works.webp",
+    "src": "/showcase/skibo-how-it-works.webp",
     "width": 2400,
     "height": 1367,
     "kind": "artwork",
     "interactive": false
   },
   "qalan-select-cartoon": {
-    "src": "/odunsi/qalan-select-cartoon.webp",
+    "src": "/showcase/qalan-select-cartoon.webp",
     "width": 1576,
     "height": 2500,
     "kind": "artwork",
     "interactive": false
   },
   "qalan-dialog-hint": {
-    "src": "/odunsi/qalan-dialog-hint.webp",
+    "src": "/showcase/qalan-dialog-hint.webp",
     "width": 1296,
     "height": 1344,
     "kind": "artwork",
     "interactive": false
   },
   "qalan-day-streak": {
-    "src": "/odunsi/qalan-day-streak.webp",
+    "src": "/showcase/qalan-day-streak.webp",
     "width": 1296,
     "height": 1040,
     "kind": "artwork",
     "interactive": false
   },
   "qalan-video-task": {
-    "src": "/odunsi/qalan-video-task.webp",
+    "src": "/showcase/qalan-video-task.webp",
     "width": 1576,
     "height": 2500,
     "kind": "artwork",
     "interactive": false
   },
   "qalan-case-cover-titled": {
-    "src": "/odunsi/qalan-case-cover-titled.webp",
+    "src": "/showcase/qalan-case-cover-titled.webp",
     "width": 2400,
     "height": 1250
   },
   "qalan-context-iphone": {
-    "src": "/odunsi/qalan-context-iphone.webp",
+    "src": "/showcase/qalan-context-iphone.webp",
     "width": 1576,
     "height": 2500,
     "kind": "artwork",
     "interactive": false
   },
   "qalan-context-subtitles": {
-    "src": "/odunsi/qalan-context-subtitles.webp",
+    "src": "/showcase/qalan-context-subtitles.webp",
     "width": 1296,
     "height": 1040,
     "kind": "artwork",
     "interactive": false
   },
   "qalan-context-translation": {
-    "src": "/odunsi/qalan-context-translation.webp",
+    "src": "/showcase/qalan-context-translation.webp",
     "width": 1296,
     "height": 1344,
     "kind": "artwork",
     "interactive": false
   },
   "qalan-practice-1": {
-    "src": "/odunsi/qalan-practice-1.webp",
+    "src": "/showcase/qalan-practice-1.webp",
     "width": 1576,
     "height": 2500,
     "kind": "artwork",
     "interactive": false
   },
   "qalan-practice-2": {
-    "src": "/odunsi/qalan-practice-2.webp",
+    "src": "/showcase/qalan-practice-2.webp",
     "width": 1576,
     "height": 2500,
     "kind": "artwork",
     "interactive": false
   },
   "qalan-practice-3": {
-    "src": "/odunsi/qalan-practice-3.webp",
+    "src": "/showcase/qalan-practice-3.webp",
     "width": 1576,
     "height": 2500,
     "kind": "artwork",
     "interactive": false
   },
   "merchant-case-cover-titled": {
-    "src": "/odunsi/merchant-case-cover-titled.webp",
+    "src": "/showcase/merchant-case-cover-titled.webp",
     "width": 2400,
     "height": 1250,
     "kind": "artwork",
     "interactive": false
   },
   "merchant-dashboard-state": {
-    "src": "/odunsi/merchant-dashboard-state.webp",
+    "src": "/showcase/merchant-dashboard-state.webp",
     "width": 2744,
     "height": 2168,
     "kind": "artwork",
     "interactive": false
   },
   "merchant-orders-actions": {
-    "src": "/odunsi/merchant-orders-actions.webp",
+    "src": "/showcase/merchant-orders-actions.webp",
     "width": 2744,
     "height": 1576,
     "kind": "artwork",
     "interactive": false
   },
   "merchant-products-status": {
-    "src": "/odunsi/merchant-products-status.webp",
+    "src": "/showcase/merchant-products-status.webp",
     "width": 2420,
     "height": 1520,
     "kind": "artwork",
     "interactive": false
   },
   "merchant-contracts-active": {
-    "src": "/odunsi/merchant-contracts-active.webp",
+    "src": "/showcase/merchant-contracts-active.webp",
     "width": 2264,
     "height": 1456,
     "kind": "artwork",
     "interactive": false
   },
   "merchant-contracts-detail": {
-    "src": "/odunsi/merchant-contracts-detail.webp",
+    "src": "/showcase/merchant-contracts-detail.webp",
     "width": 2236,
     "height": 1456,
     "kind": "artwork",
     "interactive": false
   },
   "merchant-import-status": {
-    "src": "/odunsi/merchant-import-status.webp",
+    "src": "/showcase/merchant-import-status.webp",
     "width": 2744,
     "height": 2168,
     "kind": "artwork",
     "interactive": false
   },
   "b2b-case-cover-titled": {
-    "src": "/odunsi/b2b-case-cover-titled.webp",
+    "src": "/showcase/b2b-case-cover-titled.webp",
     "width": 2400,
     "height": 1250,
     "kind": "artwork"
   },
   "b2b-product-terms": {
-    "src": "/odunsi/b2b-product-terms.webp",
+    "src": "/showcase/b2b-product-terms.webp",
     "width": 2744,
     "height": 1672,
     "kind": "artwork"
   },
   "b2b-cart-summary": {
-    "src": "/odunsi/b2b-cart-summary.webp",
+    "src": "/showcase/b2b-cart-summary.webp",
     "width": 2744,
     "height": 1672,
     "kind": "artwork"
   },
   "b2b-checkout-order": {
-    "src": "/odunsi/b2b-checkout-order.webp",
+    "src": "/showcase/b2b-checkout-order.webp",
     "width": 2744,
     "height": 1672,
     "kind": "artwork"

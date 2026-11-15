@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Check } from 'lucide-react';
-import '@/app/odunsi-rrs-motion.css';
+import '@/app/showcase-rrs-motion.css';
 
 const dishes = [
   ['drink', 'Pepsi 0.5', 'Pepsi 0.5', '2 × 1,00 €'],
@@ -13,7 +13,7 @@ function Tray({ prompt, scanLabel }) {
   return (
     <div className="od-rrs-tray">
       <div className="od-rrs-tray-art">
-        <Image src="/odunsi/layers/rrs-tray.webp" alt="" width={960} height={520} loading="eager" unoptimized />
+        <Image src="/showcase/layers/rrs-tray.webp" alt="" width={960} height={520} loading="eager" unoptimized />
         {scanLabel && (
           <div className="od-rrs-scan-window">
             <div className="od-rrs-scan-beam od-motion-layer" />
@@ -52,7 +52,7 @@ export default function RrsMotion({ lang }) {
           <div className="od-rrs-order">
             {dishes.map(([photo, nameRu, nameEn, price], index) => (
               <div className="od-rrs-dish od-motion-layer" key={photo} style={{ '--dish-stagger': `${index * 55}ms` }}>
-                <Image src={`/odunsi/layers/rrs-${photo}.webp`} alt="" width={224} height={229}
+                <Image src={`/showcase/layers/rrs-${photo}.webp`} alt="" width={224} height={229}
                   loading="eager" unoptimized />
                 <strong className="od-rrs-dish-label od-motion-layer">{ru ? nameRu : nameEn}</strong>
                 <span className="od-rrs-dish-label od-motion-layer">{price}</span>
@@ -69,7 +69,7 @@ export default function RrsMotion({ lang }) {
                 <div className="od-rrs-total"><span>{ru ? 'К оплате' : 'To pay'}</span><strong>40,20 €</strong></div>
               </div>
               <div className="od-rrs-confirm od-rrs-after-payment od-motion-layer">
-                <Image src="/odunsi/layers/rrs-paid.webp" alt="" width={160} height={124}
+                <Image src="/showcase/layers/rrs-paid.webp" alt="" width={160} height={124}
                   loading="eager" unoptimized />
                 <strong>{ru ? 'Приятного аппетита!' : 'Enjoy your meal!'}</strong>
               </div>

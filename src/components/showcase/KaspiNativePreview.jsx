@@ -53,7 +53,7 @@ function screenTime([start, end], next) {
 }
 
 export function KaspiNativeImage({ frame }) {
-  return <Image src={`/odunsi/kaspi-native/${frame}.webp`} fill alt="" loading="eager" unoptimized />;
+  return <Image src={`/showcase/kaspi-native/${frame}.webp`} fill alt="" loading="eager" unoptimized />;
 }
 
 export function BookingAmount({ frame, total = 17000, rows = bookingRows + ' · 10 мест' }) {
@@ -156,7 +156,7 @@ export default function KaspiNativePreview() {
           </div>
         ))}
       </div>
-      <Image className="od-kaspi-phone-shell" src="/odunsi/kaspi-native/iphone-shell.webp"
+      <Image className="od-kaspi-phone-shell" src="/showcase/kaspi-native/iphone-shell.webp"
         alt="" fill loading="eager" unoptimized />
     </div>
   );

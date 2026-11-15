@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
 const shells = {
-  phone: { src: '/odunsi/case-devices/iphone-18-pro.webp', width: 389, height: 800 },
-  laptop: { src: '/odunsi/case-devices/macbook-air-m5.webp', width: 800, height: 485 },
+  phone: { src: '/showcase/case-devices/iphone-18-pro.webp', width: 389, height: 800 },
+  laptop: { src: '/showcase/case-devices/macbook-air-m5.webp', width: 800, height: 485 },
 };
 
 export function caseDeviceType(screen) {

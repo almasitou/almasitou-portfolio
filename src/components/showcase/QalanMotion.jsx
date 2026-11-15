@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import assets from '@/lib/odunsi-assets.json';
+import assets from '@/lib/showcase-assets.json';
 import IPhoneFrame from './IPhoneFrame';
 import TeaserCaptions from './TeaserCaptions';
-import '@/app/odunsi-qalan-motion.css';
+import '@/app/showcase-qalan-motion.css';
 
 const sequence = [
   { asset: 'qalan-reels', start: 0, end: 32,

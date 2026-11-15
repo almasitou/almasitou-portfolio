@@ -16,7 +16,7 @@ export function SkiboTeaserPhone() {
         <div className="od-ski-screen">
           {steps.map(step => (
             <div className={`od-ski-screen-state od-ski-screen-state--${step} od-motion-layer`} key={step}>
-              <Image src={`/odunsi/skibo-motion/${step}.webp`} alt="" fill sizes={screenWidths} loading="eager" />
+              <Image src={`/showcase/skibo-motion/${step}.webp`} alt="" fill sizes={screenWidths} loading="eager" />
               {step === 'checkout' && (
                 <>
                   <span className="od-ski-payment-method od-motion-layer" />
@@ -28,7 +28,7 @@ export function SkiboTeaserPhone() {
         </div>
         <div className="od-ski-shade od-motion-layer" />
         <div className="od-ski-sheet od-motion-layer">
-          <Image src="/odunsi/skibo-motion/sizes.webp" alt="" fill sizes={screenWidths} loading="eager" />
+          <Image src="/showcase/skibo-motion/sizes.webp" alt="" fill sizes={screenWidths} loading="eager" />
         </div>
         <span className="od-ski-tap od-motion-layer" />
         <span className="od-ski-home-indicator" />

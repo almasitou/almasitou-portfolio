@@ -1,6 +1,6 @@
-import assets from '@/lib/odunsi-assets.json';
+import assets from '@/lib/showcase-assets.json';
 import MerchantDashboardScreen from './MerchantDashboardScreen';
-import '@/app/odunsi-dashboard.css';
+import '@/app/showcase-dashboard.css';
 
 export default function DashboardPresentation({ lang }) {
   const preview = assets['merchant-dashboard-full'];

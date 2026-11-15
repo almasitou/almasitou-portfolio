@@ -4,8 +4,8 @@ import BaoMotion from './BaoMotion';
 import { AvroraMotion, MerchantMotion } from './OperationsMotion';
 import RrsMotion from './RrsMotion';
 import QalanMotion from './QalanMotion';
-import '@/app/odunsi-preview.css';
-import '@/app/odunsi-teaser.css';
+import '@/app/showcase-preview.css';
+import '@/app/showcase-teaser.css';
 
 const scenes = {
   rrs: RrsMotion,

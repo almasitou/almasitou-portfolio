@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import LanguageSwitch from './LanguageSwitch';
-import '@/app/odunsi-case-topbar.css';
+import '@/app/showcase-case-topbar.css';
 
 const labels = {
   ru: { back: 'Все проекты', language: 'Язык кейса' },

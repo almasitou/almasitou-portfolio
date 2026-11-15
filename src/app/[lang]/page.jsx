@@ -1,5 +1,5 @@
-import PortfolioHome from '@/components/odunsi/PortfolioHome';
-import { getOdunsiProfile, getOdunsiProjects } from '@/lib/odunsi-portfolio';
+import PortfolioHome from '@/components/showcase/PortfolioHome';
+import { getShowcaseProfile, getShowcaseProjects } from '@/lib/showcase-portfolio';
 
 export default async function Home({ params }) {
   const { lang } = await params;
@@ -7,8 +7,8 @@ export default async function Home({ params }) {
   return (
     <PortfolioHome
       lang={lang}
-      profile={getOdunsiProfile(lang)}
-      projects={getOdunsiProjects(lang)}
+      profile={getShowcaseProfile(lang)}
+      projects={getShowcaseProjects(lang)}
     />
   );
 }

@@ -1,7 +1,7 @@
 import EclubMotion from './EclubMotion';
 import KaspiNativePreview, { kaspiCoverPercent, kaspiCoverTiming } from './KaspiNativePreview';
 import TeaserCaptions from './TeaserCaptions';
-import '@/app/odunsi-commerce-motion.css';
+import '@/app/showcase-commerce-motion.css';
 
 export function BuyerMotion({ lang }) {
   return <EclubMotion mode="buyer" lang={lang} />;

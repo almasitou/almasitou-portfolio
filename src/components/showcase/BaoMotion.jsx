@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import IPhoneFrame from './IPhoneFrame';
 import TeaserCaptions from './TeaserCaptions';
-import '@/app/odunsi-bao-motion.css';
+import '@/app/showcase-bao-motion.css';
 
 const beats = [
   { start: 0, end: 22,
@@ -23,12 +23,12 @@ export default function BaoMotion({ lang }) {
     <div className="od-bao-teaser">
       <TeaserCaptions beats={beats} lang={lang} layout="side" />
       <div className="od-bao-tray od-motion-layer">
-        <Image src="/odunsi/bao-motion/dish.webp" alt="" fill sizes="min(54vw, 170px)" quality={90} loading="eager" />
+        <Image src="/showcase/bao-motion/dish.webp" alt="" fill sizes="min(54vw, 170px)" quality={90} loading="eager" />
       </div>
       <IPhoneFrame className="od-bao-phone od-motion-layer">
         {['menu', 'cart', 'delivery', 'paid'].map(step => (
           <div className="od-bao-shot od-motion-layer" data-step={step} key={step}>
-            <Image src={`/odunsi/bao-motion/${step}.webp`} alt="" fill sizes="(min-width: 1024px) 186px, 42vw" loading="eager" />
+            <Image src={`/showcase/bao-motion/${step}.webp`} alt="" fill sizes="(min-width: 1024px) 186px, 42vw" loading="eager" />
           </div>
         ))}
       </IPhoneFrame>
