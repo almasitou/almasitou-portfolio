@@ -7,7 +7,7 @@
     "email": "almaskazhymuratuly@gmail.com",
     "ru": {
       "intro": "Проектирую веб-сервисы, мобильные приложения и B2B-системы.",
-      "about": "Семь лет проектирую цифровые продукты. Выясняю, где и почему у людей возникают трудности, и проверяю решения на прототипах. В интерфейсах тщательно прорабатываю визуальную иерархию, компоненты и состояния.",
+      "about": "7 лет проектирую цифровые продукты. Выясняю, где и почему у людей возникают трудности, и проверяю решения на прототипах. В интерфейсах тщательно прорабатываю визуальную иерархию, компоненты и состояния.",
       "experience": [
         [
           "Retail Robotics Solutions",
@@ -69,7 +69,7 @@
     },
     "en": {
       "intro": "I design web services, mobile apps, and B2B systems.",
-      "about": "I’ve spent seven years designing digital products. I find out where people get stuck and why, then test solutions with prototypes. I pay close attention to visual hierarchy, components, and interface states.",
+      "about": "I’ve spent 7 years designing digital products. I find out where people get stuck and why, then test solutions with prototypes. I pay close attention to visual hierarchy, components, and interface states.",
       "experience": [
         [
           "Retail Robotics Solutions",
@@ -145,7 +145,7 @@
         "role": "Senior Product Designer",
         "stage": "AI-терминал самообслуживания",
         "audience": "Гости ресторанов",
-        "difficulty": "На кассе мало времени на подсказки. Гость должен справиться с первого раза, в том числе если камера пропустила блюдо или две тарелки перекрыли друг друга.",
+        "difficulty": "На кассе мало времени на подсказки. Гость должен справиться с первого раза, в том числе если камера пропустила блюдо или 2 тарелки перекрыли друг друга.",
         "metrics": [
           [
             "10–⁠15 сек.",
@@ -304,7 +304,7 @@
       "ru": {
         "headline": "ERP для производства, закупок и склада",
         "problem": "План выпуска вели в Excel, задачи — в Trello, согласования — в почте и WhatsApp. Чтобы сверить производственный план с потребностью в сырье и наличием запасов, сотрудники собирали данные из нескольких источников.",
-        "contribution": "Спроектировал основные модули ERP и руководил работой трёх дизайнеров. Вместе с командой наблюдал за работой на заводе и проверял ключевые сценарии с директором.",
+        "contribution": "Спроектировал основные модули ERP и руководил работой 3 дизайнеров. Вместе с командой наблюдал за работой на заводе и проверял ключевые сценарии с директором.",
         "tradeoff": "Разделил ERP на модули по задачам отделов. Связал план выпуска с потребностью в сырье и запасами, чтобы производство, закупки и склад могли сверять данные в своих рабочих разделах.",
         "outcome": "В одной ERP объединили работу с заказами, планирование выпуска, управление сырьём и контроль запасов. Доступ к модулям и действиям настраивается по ролям.",
         "name": "Avrora Holdings",
@@ -325,7 +325,7 @@
         "headline": "An ERP for production, purchasing, and warehousing",
         "intro": "An internal system for a household chemicals factory. Teams create orders, plan production, manage raw materials, and check stock levels.",
         "problem": "Production plans lived in Excel, tasks in Trello, and approvals in email and WhatsApp. Staff had to pull data from several sources to check the production plan against material requirements and available stock.",
-        "contribution": "I designed the main ERP modules and led three designers. With the team, I observed work on site and reviewed key scenarios with the factory director.",
+        "contribution": "I designed the main ERP modules and led 3 designers. With the team, I observed work on site and reviewed key scenarios with the factory director.",
         "tradeoff": "I organized the ERP around each department’s work. I linked the production plan to material requirements and stock levels, so production, purchasing, and warehouse teams could check the same data from their own workspaces.",
         "outcome": "The ERP brought together order management, production planning, raw materials, and inventory. Access to modules and actions is configured by role.",
         "role": "Product Designer",
@@ -1284,7 +1284,7 @@
         "problem": "Нужно было встроить покупку билетов в знакомый интерфейс Kaspi: от поиска события и выбора сеанса до оплаты и электронного билета.",
         "contribution": "Спроектировал структуру афиши, выбор сеанса, бронирование группы мест, оплату и экран билета.",
         "tradeoff": "Назначил взрослый тариф по умолчанию. Затем его можно изменить у одного места или у всей группы. На схеме остаются видны выбранные места и текущая сумма.",
-        "outcome": "В концепте десять свободных мест можно выбрать десятью нажатиями, а затем изменить тариф и завершить сценарий до билета. Это свойство прототипа.",
+        "outcome": "В концепте 10 свободных мест можно выбрать 10 нажатиями, а затем изменить тариф и завершить сценарий до билета. Это свойство прототипа.",
         "name": "Kaspi Афиша",
         "tag": "UX/UI-концепт · Билеты в кино",
         "intro": "Концепт покупки билетов внутри Kaspi. Основная задача — быстро выбрать места для группы, сохранив возможность изменить тариф.",
@@ -1301,7 +1301,7 @@
         "problem": "The assignment was to fit cinema ticketing into the familiar Kaspi interface, from finding an event and showtime through payment and the digital ticket.",
         "contribution": "I designed the event listing, showtime selection, group seat booking, checkout, and the digital ticket.",
         "tradeoff": "I set the adult fare as the default. It can then be changed for an individual seat or the whole group. Selected seats and the running total stay visible.",
-        "outcome": "In the concept, ten available seats can be selected in ten taps, followed by fare changes and checkout through to a ticket. This is a property of the prototype.",
+        "outcome": "In the concept, 10 available seats can be selected in 10 taps, followed by fare changes and checkout through to a ticket. This is a property of the prototype.",
         "role": "Product Designer",
         "stage": "Design assignment · concept",
         "audience": "Cinema ticket buyers",
@@ -1311,11 +1311,11 @@
         {
           "ru": {
             "title": "Одно нажатие на место",
-            "body": "После выбора сеанса каждое нажатие на схеме зала добавляет место со взрослым тарифом. Для десяти мест это сокращает число нажатий с 20 до 10. Тариф можно поменять позже для отдельного билета или сразу для всей группы."
+            "body": "После выбора сеанса каждое нажатие на схеме зала добавляет место со взрослым тарифом. Для 10 мест это сокращает число нажатий с 20 до 10. Тариф можно поменять позже для отдельного билета или сразу для всей группы."
           },
           "en": {
             "title": "One tap per seat",
-            "body": "Once viewers pick a showtime, tapping a seat adds it with the adult fare. That cuts seat selection from 20 taps to 10 for a group of ten. Viewers can adjust fares for individual tickets or the whole group."
+            "body": "Once viewers pick a showtime, tapping a seat adds it with the adult fare. That cuts seat selection from 20 taps to 10 for a group of 10. Viewers can adjust fares for individual tickets or the whole group."
           },
           "images": [
             {

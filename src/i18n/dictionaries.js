@@ -80,7 +80,7 @@ export const dictionaries = {
     quickSummary: {
       tag: '⚡ 30-sec TL;DR Summary',
       title: 'Senior Product Designer',
-      subtitle: '6+ years designing high-impact digital products: from 0→1 strategy to production-ready design systems.',
+      subtitle: '7+ years designing high-impact digital products: from 0→1 strategy to production-ready design systems.',
       status: 'Open for Senior / Lead Product Design roles (Full-time / Contract)',
       location: 'Almaty, Kazakhstan (Open to Remote / Relocation)',
       pillarsTitle: 'Core Competencies',
@@ -180,7 +180,7 @@ export const dictionaries = {
     quickSummary: {
       tag: '⚡ Выжимка за 30 секунд (TL;DR)',
       title: 'Старший продуктовый дизайнер',
-      subtitle: '6+ лет опыта в дизайне цифровых продуктов: от продуктовой стратегии 0→1 до масштабируемых дизайн-систем.',
+      subtitle: '7+ лет опыта в дизайне цифровых продуктов: от продуктовой стратегии 0→1 до масштабируемых дизайн-систем.',
       status: 'Открыт к предложениям: Senior / Lead Product Designer (Full-time / Контракт)',
       location: 'Алматы, Казахстан (Удаленно / Релокация)',
       pillarsTitle: 'Ключевые компетенции',

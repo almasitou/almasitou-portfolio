@@ -114,7 +114,7 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
       <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto mb-20 md:mb-32 relative z-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 md:p-12 lg:p-16">
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-8 text-white tracking-tight">
-            {isRu ? 'Когда бизнес-процессы разбросаны по пяти разным инструментам' : 'When business processes are scattered across five tools'}
+            {isRu ? 'Когда бизнес-процессы разбросаны по 5 разным инструментам' : 'When business processes are scattered across 5 tools'}
           </motion.h2>
           
           <motion.div variants={fadeInUp} className="space-y-6 text-zinc-300 text-lg leading-relaxed max-w-4xl mb-12">
@@ -250,7 +250,7 @@ export default function AvroraCaseStudy({ lang, otherProjects }) {
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[80px]"></div>
             <h3 className="text-2xl font-bold text-white mb-6 relative z-10">{isRu ? 'Координация команды дизайнеров' : 'Design Team Coordination'}</h3>
             <p className="text-zinc-400 mb-8 relative z-10">
-              {isRu ? 'В проекте участвовали ещё три дизайнера. Моя задача заключалась не только в проектировании интерфейсов, но и в организации дизайн-процесса: распределение модулей, постановка задач, дизайн-ревью, поддержание единого UX-подхода и контроль соответствия требованиям бизнеса.' : 'Three other designers participated in the project. My task was not only to design interfaces but to organize the design process: task allocation, design reviews, maintaining a unified UX approach, and ensuring business requirements were met.'}
+              {isRu ? 'В проекте участвовали ещё 3 дизайнера. Моя задача заключалась не только в проектировании интерфейсов, но и в организации дизайн-процесса: распределение модулей, постановка задач, дизайн-ревью, поддержание единого UX-подхода и контроль соответствия требованиям бизнеса.' : '3 other designers participated in the project. My task was not only to design interfaces but to organize the design process: task allocation, design reviews, maintaining a unified UX approach, and ensuring business requirements were met.'}
             </p>
             
             <div className="flex flex-col items-center gap-4 relative z-10 p-6 bg-zinc-950 rounded-2xl border border-zinc-800/50">
