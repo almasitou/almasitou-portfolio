@@ -1,0 +1,61 @@
+.od-iphone {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 390 / 818;
+  border-radius: 13% / 6.2%;
+  background: linear-gradient(118deg, #83878f, #282b32 19%, #777c85 45%, #171a20 74%, #585d65);
+  box-shadow: 0 .55em 1.6em #0b0b1160, inset 0 0 0 1px #e9edf23b;
+}
+.od-iphone::before {
+  position: absolute;
+  inset: .44% .92%;
+  border-radius: 12.5% / 6%;
+  background: #090a0d;
+  content: '';
+}
+.od-iphone-controls { position: absolute; inset: 0; z-index: -1; }
+.od-iphone-controls i {
+  position: absolute;
+  left: -.65%;
+  width: 1.25%;
+  height: 8%;
+  border-radius: 2px;
+  background: linear-gradient(#737981, #363b43 30%, #363b43 72%, #777c85);
+}
+.od-iphone-controls i:nth-child(1) { top: 25%; }
+.od-iphone-controls i:nth-child(2) { top: 34.7%; }
+.od-iphone-controls i:nth-child(3) { top: 29%; right: -.65%; left: auto; height: 11.6%; }
+.od-iphone-screen {
+  position: absolute;
+  inset: 1.25% 2.5%;
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  isolation: isolate;
+  container-type: inline-size;
+  border-radius: 10.6% / 4.94%;
+  background: #fff;
+  clip-path: inset(0 round 10.6% / 4.94%);
+}
+.od-iphone-island {
+  position: absolute;
+  z-index: 3;
+  inset: 1.36% auto auto 50%;
+  width: 29.2%;
+  height: 3.64%;
+  border-radius: 999px;
+  background: #07080a;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.od-iphone-island::after {
+  position: absolute;
+  top: 32%;
+  right: 8%;
+  width: 10%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 62% 34%, #243451, #10141d 55%, #08090a 72%);
+  content: '';
+}

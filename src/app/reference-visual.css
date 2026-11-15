@@ -1,0 +1,153 @@
+/* Shared, deterministic artwork. Layouts position the 960 × 739 canvas. */
+.rf-shape {
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+.rf-shape-grain { mix-blend-mode:soft-light; }
+.rf-shape-contours { fill:none; stroke:#463426; stroke-width:1.1; opacity:.13; }
+.rf-project-mockup {
+  position:absolute;
+  left:0;
+  top:0;
+  width:960px;
+  height:739px;
+  transform-origin:0 0;
+  transition:transform 420ms ease-in-out;
+  pointer-events:none;
+}
+.rf-project-mockup img { display:block; max-width:none; }
+.rf-phone {
+  position:absolute;
+  width:340px;
+  top:80px;
+  left:120px;
+  transform:rotate(-6deg);
+  filter:drop-shadow(0 18px 18px #30282333);
+  transform-origin:50% 50%;
+}
+.rf-phone--second { width:330px; top:190px; left:510px; transform:rotate(8deg); }
+.rf-phone img { width:100%; height:auto; }
+.rf-phone--framed {
+  box-sizing:border-box;
+  border:9px solid #121314;
+  border-radius:48px;
+  background:#121314;
+  box-shadow:inset 0 0 0 2px #ffffff52, 0 0 0 1px #080909;
+  overflow:hidden;
+}
+.rf-phone--framed img { border-radius:37px; }
+.rf-computer {
+  position:absolute;
+  top:100px;
+  left:80px;
+  width:900px;
+  transform:perspective(1400px) rotateY(-15deg) rotateZ(5deg);
+  transform-origin:50% 50%;
+  filter:drop-shadow(0 24px 22px #36251a38);
+}
+.rf-computer-display {
+  position:relative;
+  background:linear-gradient(120deg,#303235,#101113 45%,#36383b);
+  padding:14px 11px 12px;
+  border:1px solid #ffffff4d;
+  border-radius:23px 23px 9px 9px;
+  box-shadow:inset 0 0 0 2px #0b0c0e;
+}
+.rf-computer-camera {
+  position:absolute;
+  width:5px;
+  height:5px;
+  top:5px;
+  left:50%;
+  border-radius:50%;
+  background:#080a0b;
+  box-shadow:inset 0 0 0 1px #4b535e;
+}
+.rf-computer-chrome {
+  height:23px;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  padding:0 9px;
+  background:#e8e9ea;
+  border-radius:8px 8px 0 0;
+  color:#81858b;
+  font:8px/1 var(--font-medeo), Arial, sans-serif;
+}
+.rf-computer-chrome i { display:block; width:5px; height:5px; border-radius:50%; background:#c7c9cb; }
+.rf-computer-chrome span { margin-left:auto; margin-right:auto; padding-right:25px; }
+.rf-computer-screen {
+  position:relative;
+  width:100%;
+  height:500px;
+  overflow:hidden;
+  background:#fff;
+  border-radius:0 0 4px 4px;
+}
+.rf-computer-screen img { width:100%; height:auto; object-fit:contain; object-position:top; }
+.rf-computer-base {
+  position:relative;
+  height:25px;
+  width:calc(100% + 58px);
+  margin-left:-29px;
+  margin-top:-2px;
+  border-radius:2px 2px 45% 45% / 2px 2px 70% 70%;
+  background:linear-gradient(#d4d5d5 0%,#929697 18%,#d4d6d6 34%,#666a6d 79%,#34383b 100%);
+  box-shadow:0 1px 1px #090c0f70;
+}
+.rf-computer-base span {
+  position:absolute;
+  top:0;
+  left:40%;
+  width:20%;
+  height:6px;
+  background:#81878b;
+  border-radius:0 0 8px 8px;
+  box-shadow:inset 0 -1px 2px #d9dcdc;
+}
+.rf-cover-art {
+  position:absolute;
+  inset:65px 28px -40px;
+  overflow:hidden;
+  border-radius:34px;
+  box-shadow:0 22px 40px #36251a28;
+}
+.rf-cover-art img { width:100%; height:100%; object-fit:cover; }
+@media(max-width:768px) {
+  /* The small cards use a flat rounded surface; retain the same quiet texture
+     behind their copy and product artwork without changing their silhouette. */
+  .rf-project-canvas::before {
+    content:'';
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    border-radius:inherit;
+    background-image:
+      repeating-radial-gradient(ellipse at -15% 110%,transparent 0 24px,#4634260d 25px,transparent 26px 45px),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.13'/%3E%3C/svg%3E");
+    background-blend-mode:soft-light;
+    mix-blend-mode:multiply;
+    opacity:.65;
+  }
+  .rf-project-mockup { width:100%; height:100%; }
+  .rf-phone { width:35.4167%; top:10.8254%; left:12.5%; }
+  .rf-phone--second { width:34.375%; top:25.7104%; left:53.125%; }
+  .rf-phone--framed { border-width:4px; border-radius:22px; }
+  .rf-phone--framed img { border-radius:17px; }
+  .rf-computer { width:93.75%; top:13.5318%; left:8.3333%; }
+  .rf-computer-display { padding:7px 5px 6px; border-radius:11px 11px 4px 4px; }
+  .rf-computer-camera { width:3px; height:3px; top:2px; }
+  .rf-computer-chrome { height:10px; gap:3px; padding:0 5px; border-radius:4px 4px 0 0; font-size:4px; }
+  .rf-computer-chrome i { width:3px; height:3px; }
+  .rf-computer-chrome span { padding-right:13px; }
+  .rf-computer-screen { height:auto; aspect-ratio:876/500; }
+  .rf-computer-base { width:calc(100% + 24px); margin-left:-12px; height:12px; }
+  .rf-computer-base span { height:3px; }
+  .rf-cover-art { inset:8.8% 2.9167% -5.4127%; border-radius:22px; }
+}
+@media(prefers-reduced-motion:reduce) { .rf-project-mockup { transition:none; } }

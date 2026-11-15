@@ -1,18 +1,7 @@
-import { Archivo, Space_Grotesk } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/react';
-import '../globals.css';
-
-const archivo = Archivo({
-  subsets: ['latin', 'cyrillic'], 
-  variable: '--font-archivo',
-  display: 'swap',
-});
-
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ['latin'], 
-  variable: '--font-space',
-  display: 'swap',
-});
+import { notFound } from 'next/navigation';
+import '../portfolio.css';
+import '../reference.css';
+import '../odunsi-art.css';
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
@@ -21,8 +10,8 @@ export async function generateMetadata({ params }) {
   return {
     title: isRu ? 'Алмас Кажымуратулы | Product Designer' : 'Almas Qajymuratuly | Product Designer',
     description: isRu 
-      ? 'Портфолио Алмаса Кажымуратулы, Product Designer. Проектирование Fintech, EdTech и AI-продуктов. UX/UI дизайн мирового уровня.'
-      : 'Portfolio of Almas Qajymuratuly, Product Designer specializing in Fintech, EdTech, and AI-driven products. World-class UX/UI design.',
+      ? 'Портфолио Алмаса Кажымуратулы, Product Designer. Проектирование Fintech, EdTech и AI-продуктов. Исследования, пользовательские сценарии и дизайн-системы.'
+      : 'Portfolio of Almas Qajymuratuly, Product Designer specializing in Fintech, EdTech, and AI-driven products. Research, interaction design, and design systems.',
     keywords: ['Product Designer', 'UX/UI', 'Fintech Design', 'EdTech', 'AI Interface', 'Алмас Кажымуратулы', 'Дизайнер интерфейсов'],
     openGraph: {
       title: isRu ? 'Алмас Кажымуратулы | Product Designer' : 'Almas Qajymuratuly | Product Designer',
@@ -48,10 +37,11 @@ export async function generateStaticParams() {
 
 export default async function RootLayout({ children, params }) {
   const { lang } = await params;
+  if (!['ru', 'en'].includes(lang)) notFound();
   return (
-    <div lang={lang} className={`${archivo.variable} ${spaceGrotesk.variable} scroll-smooth antialiased bg-black text-white selection:bg-blue-600 min-h-screen`}>
+    <div lang={lang} className="scroll-smooth antialiased min-h-screen">
       {children}
-      <Analytics />
+
     </div>
   );
 }

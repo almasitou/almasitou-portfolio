@@ -1,0 +1,1695 @@
+{
+  "profile": {
+    "contact": "https://t.me/almasitou",
+    "whatsapp": "https://wa.me/77772212434",
+    "linkedin": "https://www.linkedin.com/in/almasitou",
+    "instagram": "https://www.instagram.com/almasitou.design/",
+    "email": "almaskazhymuratuly@gmail.com",
+    "ru": {
+      "intro": "Проектирую веб-сервисы, мобильные приложения и B2B-системы.",
+      "about": "Семь лет проектирую цифровые продукты. Выясняю, где и почему у людей возникают трудности, и проверяю решения на прототипах. В интерфейсах тщательно прорабатываю визуальную иерархию, компоненты и состояния.",
+      "experience": [
+        [
+          "Retail Robotics Solutions",
+          "Senior Product Designer",
+          "03.2023 — 01.2026",
+          "Спроектировал интерфейс AI-терминала самообслуживания для ресторанов."
+        ],
+        [
+          "Qalan.kz",
+          "Product Designer",
+          "06.2024 — 01.2025",
+          "Переработал учебный интерфейс и собрал дизайн-систему платформы."
+        ],
+        [
+          "Avrora Holdings",
+          "Product Designer",
+          "05.2022 — 12.2022",
+          "Изучил работу цехов и спроектировал единую ERP-платформу."
+        ],
+        [
+          "Europharma Tech",
+          "Product Designer",
+          "08.2021 — 05.2022",
+          "Спроектировал первую версию маркетплейса и панель администратора."
+        ],
+        [
+          "КБТУ / ИНИИТ",
+          "UX/UI Designer",
+          "03.2021 — 08.2021",
+          "Проектировал CRM для повседневных задач агросектора."
+        ],
+        [
+          "Hickmet Travel",
+          "UX/UI Designer",
+          "09.2020 — 01.2021",
+          "Работал над клиентским сайтом и внутренними интерфейсами."
+        ],
+        [
+          "inLab",
+          "Web Designer",
+          "11.2019 — 11.2020",
+          "Проектировал сайты и промоматериалы для клиентских проектов."
+        ]
+      ],
+      "approach": [
+        [
+          "Понять контекст",
+          "Изучаю, как люди решают задачу сегодня и где теряют время."
+        ],
+        [
+          "Проверить сценарий",
+          "Собираю прототип и уточняю решения по обратной связи."
+        ],
+        [
+          "Подготовить к разработке",
+          "Описываю состояния, собираю компоненты и проверяю реализацию."
+        ]
+      ]
+    },
+    "en": {
+      "intro": "I design web services, mobile apps, and B2B systems.",
+      "about": "I’ve spent seven years designing digital products. I find out where people get stuck and why, then test solutions with prototypes. I pay close attention to visual hierarchy, components, and interface states.",
+      "experience": [
+        [
+          "Retail Robotics Solutions",
+          "Senior Product Designer",
+          "03.2023 — 01.2026",
+          "Designed an AI self-checkout interface for restaurants."
+        ],
+        [
+          "Qalan.kz",
+          "Product Designer",
+          "06.2024 — 01.2025",
+          "Redesigned the learning interface and built the platform’s design system."
+        ],
+        [
+          "Avrora Holdings",
+          "Product Designer",
+          "05.2022 — 12.2022",
+          "Researched shop-floor workflows and designed a unified ERP platform."
+        ],
+        [
+          "Europharma Tech",
+          "Product Designer",
+          "08.2021 — 05.2022",
+          "Designed the first version of the marketplace and its admin panel."
+        ],
+        [
+          "KBTU / IINIT",
+          "UX/UI Designer",
+          "03.2021 — 08.2021",
+          "Designed CRM workflows for everyday agricultural operations."
+        ],
+        [
+          "Hickmet Travel",
+          "UX/UI Designer",
+          "09.2020 — 01.2021",
+          "Worked on the customer website and internal tools."
+        ],
+        [
+          "inLab",
+          "Web Designer",
+          "11.2019 — 11.2020",
+          "Designed websites and promotional materials for clients."
+        ]
+      ],
+      "approach": [
+        [
+          "Understand the context",
+          "I look at how people solve the problem today and where they lose time."
+        ],
+        [
+          "Test the flow",
+          "I build a prototype and refine the design based on feedback."
+        ],
+        [
+          "Prepare for development",
+          "I document states, build components, and review the implementation."
+        ]
+      ]
+    }
+  },
+  "projects": [
+    {
+      "slug": "rrs",
+      "ru": {
+        "headline": "С минуты до 10–⁠15 секунд на кассе",
+        "problem": "В обеденный пик кассир вручную вводил блюда с каждого подноса. Чем дольше занимал ввод, тем медленнее двигалась очередь.",
+        "contribution": "Спроектировал сенсорный сценарий терминала: запуск распознавания, проверку заказа, исправление ошибок и оплату.",
+        "tradeoff": "В основной сценарий поставил распознавание камерой. Перед оплатой оставил явную проверку заказа, а уточнение блюда и ручной поиск сделал доступными только там, где они нужны. Так обычный заказ остаётся коротким, а нестандартный можно довести до оплаты.",
+        "outcome": "Показатели взяты из данных проекта и относятся к работе терминала в целом.",
+        "name": "Retail Robotics Solutions",
+        "tag": "FoodTech · AI-терминал",
+        "intro": "Касса самообслуживания для ресторанов. Распознавание блюд камерой ускоряет оформление заказов в обеденный пик.",
+        "role": "Senior Product Designer",
+        "stage": "AI-терминал самообслуживания",
+        "audience": "Гости ресторанов",
+        "difficulty": "На кассе мало времени на подсказки. Гость должен справиться с первого раза, в том числе если камера пропустила блюдо или две тарелки перекрыли друг друга.",
+        "metrics": [
+          [
+            "10–⁠15 сек.",
+            "на оформление заказа вместо минуты"
+          ],
+          [
+            "В 3–4 раза",
+            "снизились расходы по данным проекта"
+          ]
+        ]
+      },
+      "en": {
+        "name": "Retail Robotics Solutions",
+        "tag": "FoodTech · AI self-checkout",
+        "headline": "From a minute to 10–⁠15 seconds at checkout",
+        "intro": "A restaurant self-checkout kiosk that recognizes dishes and speeds up checkout during the lunch rush.",
+        "problem": "At the lunch rush, cashiers entered each dish from every tray by hand. The longer entry took, the slower the line moved.",
+        "contribution": "I designed the kiosk flow for touch, from starting recognition to reviewing the order, recovering from errors, and paying.",
+        "tradeoff": "I made camera recognition the default and kept an explicit review before payment. Dish clarification and manual search appear where guests need them. The usual path stays short, and exceptions can still reach payment.",
+        "outcome": "The figures come from project data and describe the performance of the kiosk as a whole.",
+        "role": "Senior Product Designer",
+        "stage": "AI self-checkout kiosk",
+        "audience": "Restaurant guests",
+        "difficulty": "Guests have little time for instructions and need to get through checkout on their first try, including when the camera misses a dish or plates overlap.",
+        "metrics": [
+          [
+            "10–⁠15 sec",
+            "to check out, down from a minute"
+          ],
+          [
+            "3–4× lower",
+            "costs, according to project figures"
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "ru": {
+            "title": "От подноса до оплаты",
+            "body": "Гость ставит поднос и одним касанием запускает распознавание. Терминал собирает заказ из найденных блюд. Гость сверяет позиции и итоговую сумму, при необходимости уточняет блюдо и оплачивает заказ."
+          },
+          "en": {
+            "title": "From tray to payment",
+            "body": "The guest places the tray and starts recognition with a tap. The kiosk builds the order from the dishes it recognizes. The guest checks the items and total, confirms any uncertain dishes, and pays."
+          },
+          "images": [
+            {
+              "asset": "rrs-review-order",
+              "ru": {
+                "title": "Распознавание блюд и проверка заказа"
+              },
+              "en": {
+                "title": "Dish recognition and order review"
+              }
+            }
+          ],
+          "composition": "joined"
+        },
+        {
+          "ru": {
+            "title": "Ошибки распознавания",
+            "body": "Если тарелки перекрывают друг друга, терминал отмечает проблемные зоны на снимке и просит раздвинуть тарелки перед повторным сканированием. Если камера не распознаёт блюдо, гость выбирает подходящий вариант или находит его в меню."
+          },
+          "en": {
+            "title": "Dish recognition errors",
+            "body": "When plates overlap, the kiosk highlights the problem areas in the photo and asks the guest to separate the plates before scanning again. If the camera can’t identify a dish, the guest can pick a suggested match or find it in the menu."
+          },
+          "images": [
+            {
+              "asset": "rrs-recognition-exceptions",
+              "ru": {
+                "title": "Неопознанное блюдо и перекрытие тарелок"
+              },
+              "en": {
+                "title": "Unrecognized dish and overlapping plates"
+              }
+            }
+          ],
+          "composition": "joined",
+          "mediaFirst": true
+        },
+        {
+          "ru": {
+            "title": "Пустой поднос",
+            "body": "Если на подносе нет блюд, терминал сообщает об этом и предлагает повторить распознавание или отменить заказ."
+          },
+          "en": {
+            "title": "Empty tray",
+            "body": "When no dishes are detected, the kiosk tells the guest the tray is empty and offers to scan again or cancel the order."
+          },
+          "images": [
+            {
+              "asset": "rrs-empty-tray",
+              "ru": {
+                "title": "Сообщение о пустом подносе"
+              },
+              "en": {
+                "title": "Empty tray message"
+              }
+            }
+          ],
+          "composition": "stacked"
+        },
+        {
+          "ru": {
+            "title": "Проверка возраста при покупке алкоголя",
+            "body": "Терминал блокирует покупку алкоголя и предлагает вызвать администратора. Администратор разблокирует позицию после подтверждения, что гость совершеннолетний."
+          },
+          "en": {
+            "title": "Age verification for alcohol purchases",
+            "body": "The kiosk blocks the alcohol purchase and prompts the guest to call a staff member. Staff can unlock the item after verifying the guest’s age."
+          },
+          "images": [
+            {
+              "asset": "rrs-age-check",
+              "ru": {
+                "title": "Блокировка алкоголя до проверки возраста"
+              },
+              "en": {
+                "title": "Alcohol purchase blocked pending an age check"
+              }
+            }
+          ],
+          "composition": "stacked",
+          "mediaFirst": true
+        },
+        {
+          "ru": {
+            "title": "Подсказка и подтверждение оплаты",
+            "body": "На шаге оплаты интерфейс показывает, куда приложить карту. После операции отдельное состояние подтверждает, что заказ оплачен."
+          },
+          "en": {
+            "title": "Payment guidance and confirmation",
+            "body": "The payment screen shows where to tap the card. A separate confirmation makes it clear when the order has been paid for."
+          },
+          "images": [
+            {
+              "asset": "rrs-payment-states",
+              "ru": {
+                "title": "Оплата картой, её результат и вызов администратора"
+              },
+              "en": {
+                "title": "Card payment, payment outcomes and staff assistance"
+              }
+            }
+          ],
+          "composition": "joined-wide"
+        }
+      ],
+      "cover": [
+        "rrs-a"
+      ]
+    },
+    {
+      "slug": "avrora",
+      "ru": {
+        "headline": "ERP для производства, закупок и склада",
+        "problem": "План выпуска вели в Excel, задачи — в Trello, согласования — в почте и WhatsApp. Чтобы сверить производственный план с потребностью в сырье и наличием запасов, сотрудники собирали данные из нескольких источников.",
+        "contribution": "Спроектировал основные модули ERP и руководил работой трёх дизайнеров. Вместе с командой наблюдал за работой на заводе и проверял ключевые сценарии с директором.",
+        "tradeoff": "Разделил ERP на модули по задачам отделов. Связал план выпуска с потребностью в сырье и запасами, чтобы производство, закупки и склад могли сверять данные в своих рабочих разделах.",
+        "outcome": "В одной ERP объединили работу с заказами, планирование выпуска, управление сырьём и контроль запасов. Доступ к модулям и действиям настраивается по ролям.",
+        "name": "Avrora Holdings",
+        "tag": "Enterprise · ERP",
+        "intro": "Внутренняя система завода бытовой химии. В ней создают заказы, планируют выпуск, управляют сырьём и проверяют складские остатки.",
+        "role": "Product Designer",
+        "stage": "Внутренняя ERP",
+        "audience": "Производство, склад и закупки",
+        "difficulty": "У цеха, закупок и склада разные задачи. План выпуска зависит от наличия сырья, а сверка запасов — от актуальности данных из 1С.",
+        "research": {
+          "title": "Что выяснили на заводе",
+          "body": "Наблюдали за сотрудниками, проводили интервью и составили карту взаимодействий отделов. Стало видно, где между отделами теряются данные. Ключевые сценарии проверили с директором предприятия."
+        }
+      },
+      "en": {
+        "name": "Avrora Holdings",
+        "tag": "Enterprise · ERP",
+        "headline": "An ERP for production, purchasing, and warehousing",
+        "intro": "An internal system for a household chemicals factory. Teams create orders, plan production, manage raw materials, and check stock levels.",
+        "problem": "Production plans lived in Excel, tasks in Trello, and approvals in email and WhatsApp. Staff had to pull data from several sources to check the production plan against material requirements and available stock.",
+        "contribution": "I designed the main ERP modules and led three designers. With the team, I observed work on site and reviewed key scenarios with the factory director.",
+        "tradeoff": "I organized the ERP around each department’s work. I linked the production plan to material requirements and stock levels, so production, purchasing, and warehouse teams could check the same data from their own workspaces.",
+        "outcome": "The ERP brought together order management, production planning, raw materials, and inventory. Access to modules and actions is configured by role.",
+        "role": "Product Designer",
+        "stage": "Internal ERP",
+        "audience": "Production, warehouse, and purchasing",
+        "difficulty": "Production, purchasing, and warehouse teams have different jobs. The production plan depends on material availability, and stock checks depend on up-to-date data from 1C.",
+        "research": {
+          "title": "What we learned on the factory floor",
+          "body": "We observed staff, interviewed employees, and mapped handoffs between departments. That showed where information was lost. We reviewed key workflows with the factory director."
+        }
+      },
+      "sections": [
+        {
+          "ru": {
+            "title": "Работа завода в одной ERP",
+            "body": "Менеджеры создают заказы и планируют выпуск, а начальники цехов следят за выполнением. Закупки сверяют потребность в сырье с запасами, склад проверяет остатки и резервы. Администраторы настраивают доступ к модулям по ролям."
+          },
+          "en": {
+            "title": "Factory operations in one ERP",
+            "body": "Managers create orders and plan production, while floor supervisors track progress. Buyers check material requirements against available stock, and warehouse teams check stock levels and reserved quantities. Administrators configure access to modules by role."
+          },
+          "images": [
+            {
+              "asset": "avrora-users-monitor",
+              "ru": {
+                "title": "Управление доступом и сотрудники"
+              },
+              "en": {
+                "title": "Access management and users"
+              }
+            },
+            {
+              "asset": "avrora-weeks-badges",
+              "ru": {
+                "title": "Статусы и периоды выполнения"
+              },
+              "en": {
+                "title": "Execution periods and statuses"
+              }
+            },
+            {
+              "asset": "avrora-product-card",
+              "ru": {
+                "title": "Данные о продукте и сырье"
+              },
+              "en": {
+                "title": "Product and material specifications"
+              }
+            },
+            {
+              "asset": "avrora-plan-monitor",
+              "ru": {
+                "title": "План производства"
+              },
+              "en": {
+                "title": "Production plan"
+              }
+            }
+          ],
+          "composition": "quad"
+        },
+        {
+          "ru": {
+            "title": "Управление сырьём",
+            "body": "Технолог проверяет потребность в сырье по каждому продукту и уточняет состав по спецификации. Закупщик сверяет потребность с доступным сырьём и связанными заявками."
+          },
+          "en": {
+            "title": "Raw material management",
+            "body": "Process engineers check how much material each product requires and refer to its bill of materials. Buyers compare those requirements with available quantities and related requests."
+          },
+          "images": [
+            {
+              "asset": "avrora-raw-materials-monitors",
+              "ru": {
+                "title": "Потребность в сырье и рецептура"
+              },
+              "en": {
+                "title": "Raw material requirements and bill of materials"
+              }
+            },
+            {
+              "asset": "avrora-raw-materials-card",
+              "ru": {
+                "title": "Проверка обеспеченности сырьём"
+              },
+              "en": {
+                "title": "Raw material availability check"
+              }
+            }
+          ],
+          "composition": "stacked-split"
+        },
+        {
+          "ru": {
+            "title": "Склад и остатки",
+            "body": "Складская команда видит остатки по городам, резерв и норму запаса. При сбое обмена с 1С предупреждение рядом с датой последнего обновления помогает понять, актуальны ли данные."
+          },
+          "en": {
+            "title": "Warehouse and stock levels",
+            "body": "Warehouse staff can see stock by city, reserved quantities, and target stock levels. If syncing with 1C fails, a warning next to the last update tells staff the data may be out of date."
+          },
+          "images": [
+            {
+              "asset": "avrora-warehouse-report",
+              "ru": {
+                "title": "Отчёт по остаткам сырья"
+              },
+              "en": {
+                "title": "Raw material stock report"
+              }
+            },
+            {
+              "asset": "avrora-warehouse-requests",
+              "ru": {
+                "title": "Заявки и предупреждение о синхронизации"
+              },
+              "en": {
+                "title": "Requests and synchronization alert"
+              }
+            }
+          ],
+          "composition": "stacked-pair"
+        },
+        {
+          "ru": {
+            "title": "Отдельный модуль для ролей",
+            "body": "Администратор настраивает роли и права доступа к ERP. В рабочих разделах сотрудники видят действия, доступные их роли."
+          },
+          "en": {
+            "title": "A dedicated module for roles",
+            "body": "Administrators configure roles and permissions in a dedicated module. Staff see the actions their role allows in their own workspaces."
+          },
+          "images": [
+            {
+              "asset": "avrora-users-roles",
+              "ru": {
+                "title": "Управление сотрудниками и ролями"
+              },
+              "en": {
+                "title": "Staff and role management"
+              }
+            }
+          ],
+          "composition": "joined-wide"
+        }
+      ],
+      "cover": [
+        "avrora-a"
+      ]
+    },
+    {
+      "slug": "merchant",
+      "ru": {
+        "headline": "Заказы и ассортимент в кабинете продавца",
+        "problem": "В заказах продавцу важно сразу увидеть срок и способ вручения. В каталоге ему нужно быстро понять, где товар доступен и какие позиции ещё обрабатываются.",
+        "contribution": "Спроектировал дашборд, обработку заказов, работу с договорами реализации, каталог с остатками по городам и пакетную загрузку.",
+        "tradeoff": "На дашборде продавец видит общую картину. Для действий предусмотрел отдельные рабочие разделы со своими статусами и фильтрами.",
+        "outcome": "В макетах продавец может проверить состояние магазина, обработать заказ, сверить условия договора и обновить ассортимент. Цены и остатки приведены как демонстрационные данные.",
+        "name": "Eclub Merchant",
+        "tag": "Маркетплейс · Кабинет продавца",
+        "intro": "Кабинет Eclub объединяет показатели магазина, обработку заказов и управление товарами на маркетплейсе.",
+        "role": "UX/UI Designer",
+        "stage": "Веб-интерфейс продавца",
+        "audience": "Продавцы маркетплейса",
+        "difficulty": "У каждого процесса свой приоритет. Заказ нужно обработать вовремя, остатки различаются по городам, а в одном файле могут быть и успешные позиции, и ошибки."
+      },
+      "en": {
+        "name": "Eclub Merchant",
+        "tag": "Marketplace · Seller dashboard",
+        "headline": "Orders and inventory in one place",
+        "intro": "Eclub brings store performance, order handling, and marketplace inventory into one seller workspace.",
+        "problem": "For an order, sellers need its deadline and handover method immediately. For a product, they need to know where it is available and whether it is still being processed.",
+        "contribution": "I designed the dashboard, order handling, consignment agreements, inventory by city, and bulk upload.",
+        "tradeoff": "The dashboard provides an overview. Dedicated workspaces give each task its own statuses, filters, and actions.",
+        "outcome": "The designs let sellers review store activity, handle orders, check agreement terms, and update inventory. Prices and stock counts are illustrative.",
+        "role": "UX/UI Designer",
+        "stage": "Seller web interface",
+        "audience": "Marketplace sellers",
+        "difficulty": "Each workflow has different priorities. Orders are time-sensitive, stock varies by city, and a single file can contain both valid and invalid entries."
+      },
+      "sections": [
+        {
+          "ru": {
+            "title": "Состояние магазина на дашборде",
+            "body": "Собрал продажи, заказы и товары на одном экране. Показатели дают обзор за выбранный период, а списки показывают конкретные позиции, к которым стоит вернуться."
+          },
+          "en": {
+            "title": "Store activity at a glance",
+            "body": "I brought sales, orders, and products together on one page. Metrics summarize the selected period, and lists show which items may need a closer look."
+          },
+          "images": [
+            {
+              "asset": "merchant-dashboard-state",
+              "ru": {
+                "title": "Состояние магазина на дашборде"
+              },
+              "en": {
+                "title": "Store activity at a glance"
+              }
+            }
+          ],
+          "composition": "merchant-dashboard-joined"
+        },
+        {
+          "ru": {
+            "title": "Сроки и действия в списке заказов",
+            "body": "Вывел срок обработки и доступное действие в список. Продавец видит приоритет, проверяет способ вручения и может принять или отклонить заказ из той же строки."
+          },
+          "en": {
+            "title": "Deadlines and actions in the order list",
+            "body": "The list shows processing deadlines and available actions. Sellers can prioritize an order, check handover details, and accept or reject it from its row."
+          },
+          "images": [
+            {
+              "asset": "merchant-orders-actions",
+              "ru": {
+                "title": "Сроки и действия в списке заказов"
+              },
+              "en": {
+                "title": "Deadlines and actions in orders"
+              }
+            }
+          ],
+          "composition": "merchant-orders-joined"
+        },
+        {
+          "ru": {
+            "title": "Группировка товаров по статусу",
+            "body": "Все товары разбиты по вкладкам: активные, архивные, на модерации и черновики. В каждой строке видны цена, количество, региональные остатки и статус публикации."
+          },
+          "en": {
+            "title": "Inventory grouped by status",
+            "body": "Products are divided into tabs: active, archived, under review, and drafts. Each row shows price, quantity, regional availability, and listing status."
+          },
+          "images": [
+            {
+              "asset": "merchant-products-status",
+              "ru": {
+                "title": "Группировка товаров по статусу"
+              },
+              "en": {
+                "title": "Inventory grouped by status"
+              }
+            }
+          ],
+          "composition": "merchant-products-stacked"
+        },
+        {
+          "ru": {
+            "title": "Отдельный раздел для договоров",
+            "body": "В списке продавец видит контрагента, срок и статус договора. В карточке можно сверить товары, согласовать срок и приложить документы."
+          },
+          "en": {
+            "title": "A workspace for agreements",
+            "body": "Sellers can see the counterparty, term, and agreement status in the list. In the agreement, they can review items, confirm the term, and attach documents."
+          },
+          "images": [
+            {
+              "asset": "merchant-contracts-active",
+              "ru": {
+                "title": "Активные договоры реализации"
+              },
+              "en": {
+                "title": "Active consignment agreements"
+              }
+            },
+            {
+              "asset": "merchant-contracts-detail",
+              "ru": {
+                "title": "Карточка договора"
+              },
+              "en": {
+                "title": "Consignment agreement details"
+              }
+            }
+          ],
+          "composition": "merchant-contracts-glued"
+        },
+        {
+          "ru": {
+            "title": "Результат загрузки прайс-листа",
+            "body": "После импорта у каждой позиции виден статус. Нераспознанные товары можно заполнить вручную, сохранив результат загрузки остальных позиций."
+          },
+          "en": {
+            "title": "Product import results",
+            "body": "The import reports a status for every entry. Sellers can fill in unrecognized items manually while retaining the rest of the upload results."
+          },
+          "images": [
+            {
+              "asset": "merchant-import-status",
+              "ru": {
+                "title": "Результат загрузки прайс-листа"
+              },
+              "en": {
+                "title": "Product import results"
+              }
+            }
+          ],
+          "composition": "merchant-import-joined"
+        }
+      ],
+      "cover": [
+        "merchant-case-cover-titled"
+      ],
+      "gallery": [
+        {
+          "asset": "merchant-dashboard-full",
+          "ru": {
+            "title": "Дашборд продавца"
+          },
+          "en": {
+            "title": "Seller dashboard"
+          }
+        },
+        {
+          "asset": "merchant-orders-full",
+          "ru": {
+            "title": "Активные заказы",
+            "caption": "Срок обработки и доступное действие видны в строке заказа."
+          },
+          "en": {
+            "title": "Active orders",
+            "caption": "The order row shows the processing deadline and the available action."
+          }
+        },
+        {
+          "asset": "merchant-orders-history",
+          "ru": {
+            "title": "История заказов"
+          },
+          "en": {
+            "title": "Order history"
+          }
+        },
+        {
+          "asset": "merchant-products-full",
+          "ru": {
+            "title": "Активные товары",
+            "caption": "В строке видны цена, количество, региональные остатки и статус публикации."
+          },
+          "en": {
+            "title": "Active products",
+            "caption": "Each row shows price, quantity, regional availability, and listing status."
+          }
+        },
+        {
+          "asset": "merchant-moderation-full",
+          "ru": {
+            "title": "Товары на модерации"
+          },
+          "en": {
+            "title": "Listings under review"
+          }
+        },
+        {
+          "asset": "merchant-fulfillment-active",
+          "ru": {
+            "title": "Активные договоры реализации",
+            "caption": "В списке видны контрагент, сумма, срок и статус договора."
+          },
+          "en": {
+            "title": "Active consignment agreements",
+            "caption": "The list shows the counterparty, amount, term, and agreement status."
+          }
+        },
+        {
+          "asset": "merchant-fulfillment-detail",
+          "ru": {
+            "title": "Карточка договора",
+            "caption": "Документы, условия и позиции доступны в одном рабочем экране."
+          },
+          "en": {
+            "title": "Consignment agreement details",
+            "caption": "Documents, terms, and order items are available on one screen."
+          }
+        },
+        {
+          "asset": "merchant-fulfillment-history",
+          "ru": {
+            "title": "История договоров реализации"
+          },
+          "en": {
+            "title": "Consignment agreement history"
+          }
+        },
+        {
+          "asset": "merchant-import-results",
+          "ru": {
+            "title": "Результат загрузки прайс-листа",
+            "caption": "У каждой строки свой статус. Нераспознанную позицию можно заполнить вручную."
+          },
+          "en": {
+            "title": "Price list import results",
+            "caption": "Each row has its own status. Unrecognized items can be entered manually."
+          }
+        },
+        {
+          "asset": "merchant-roles-full",
+          "ru": {
+            "title": "Пользователи и роли"
+          },
+          "en": {
+            "title": "Users and roles"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "b2c",
+      "ru": {
+        "headline": "Как довести покупателя от каталога до оплаты",
+        "problem": "Одну модель могут продавать разные магазины. Покупателю нужно сравнить варианты, а затем сверить количество, состав и сумму своего заказа.",
+        "contribution": "Спроектировал поисковую выдачу, корзину с редактированием количества и пошаговое оформление.",
+        "tradeoff": "В корзине поставил товары и итог рядом, чтобы изменения количества можно было сразу сверить. В оформлении разделил доставку, оплату и подтверждение на шаги, сохранив сводку заказа.",
+        "outcome": "Прототип охватывает путь от поиска до подтверждения покупки. В оформлении предусмотрены оплата картой, выставление счёта и повторная попытка при ошибке.",
+        "name": "Eclub B2B",
+        "tag": "Маркетплейс · Веб",
+        "intro": "Покупательская часть Eclub. Пользователь сравнивает варианты товара, проверяет корзину и оформляет заказ у продавцов маркетплейса.",
+        "role": "UX/UI Designer",
+        "stage": "Веб-прототип",
+        "audience": "Покупатели маркетплейса",
+        "difficulty": "На этапе покупки меняется главный вопрос. Сначала нужно выбрать вариант, затем проверить заказ, а при оплате — сохранить доступ к составу и сумме."
+      },
+      "en": {
+        "name": "Eclub B2B",
+        "tag": "Marketplace · Web",
+        "headline": "From browsing the catalog to paying for an order",
+        "intro": "The buyer side of Eclub. Shoppers compare product variants, review their cart, and order from marketplace sellers.",
+        "problem": "Several stores can sell the same model. Shoppers need to compare variants and then check quantities, contents, and the order total.",
+        "contribution": "I designed the search results, the editable cart, and the step-by-step checkout.",
+        "tradeoff": "I kept the items and total side by side in the cart so shoppers can verify quantity changes immediately. Checkout separates delivery, payment, and confirmation while retaining the order summary.",
+        "outcome": "The prototype covers the journey from search to purchase confirmation. Checkout supports card payment, invoicing, and retrying after a failed payment.",
+        "role": "UX/UI Designer",
+        "stage": "Web prototype",
+        "audience": "Marketplace shoppers",
+        "difficulty": "The shopper’s main question changes at each stage. They first choose a variant, then review the order, and still need the items and total when paying."
+      },
+      "sections": [
+        {
+          "ru": {
+            "title": "Характеристики уже в выдаче",
+            "body": "В карточках указал модель, комплектацию и цену. Поиск и фильтры помогают сузить выбор до нужной категории, бренда и бюджета."
+          },
+          "en": {
+            "title": "Key specs in search results",
+            "body": "Each card shows the model, configuration, and price. Search and filters help shoppers narrow results by category, brand, and budget."
+          },
+          "images": [
+            {
+              "asset": "b2c-search-showcase",
+              "ru": {
+                "title": "Поисковая выдача",
+                "caption": "В выдаче видны модель, комплектация, отзывы и цена."
+              },
+              "en": {
+                "title": "Search results",
+                "caption": "Search results show the model, configuration, reviews, and price."
+              }
+            }
+          ],
+          "composition": "joined-wide"
+        },
+        {
+          "ru": {
+            "title": "Условия покупки в карточке",
+            "body": "В карточке собрал фотографии, характеристики и варианты комплектации. У предложения покупатель может сверить цену и условия покупки."
+          },
+          "en": {
+            "title": "Purchase terms on the product page",
+            "body": "The product page combines photos, specifications, and variants. Shoppers can check the price and purchase terms beside the offer."
+          },
+          "images": [
+            {
+              "asset": "b2b-product-terms",
+              "ru": {
+                "title": "Условия покупки в карточке"
+              },
+              "en": {
+                "title": "Purchase terms on the product page"
+              }
+            }
+          ],
+          "composition": "b2b-terms-joined"
+        },
+        {
+          "ru": {
+            "title": "Количество и итог в корзине",
+            "body": "Редактирование количества находится рядом с каждой позицией. Сводка и кнопка перехода к оформлению остаются в отдельной колонке."
+          },
+          "en": {
+            "title": "Quantities and totals in the cart",
+            "body": "Each item has its own quantity control. The summary and checkout action stay together in a separate column."
+          },
+          "images": [
+            {
+              "asset": "b2b-cart-summary",
+              "ru": {
+                "title": "Количество и итог в корзине"
+              },
+              "en": {
+                "title": "Quantities and totals in the cart"
+              }
+            }
+          ],
+          "composition": "b2b-cart-joined",
+          "mediaFirst": true
+        },
+        {
+          "ru": {
+            "title": "Состав заказа рядом с оплатой",
+            "body": "Доставку и оплату можно пройти последовательно. На шаге выбора способа оплаты покупатель видит список товаров справа и может сверить заказ."
+          },
+          "en": {
+            "title": "Order summary alongside payment",
+            "body": "Delivery and payment are separate steps. When choosing a payment method, shoppers still see their items and can verify the order."
+          },
+          "images": [
+            {
+              "asset": "b2b-checkout-order",
+              "ru": {
+                "title": "Состав заказа рядом с оплатой"
+              },
+              "en": {
+                "title": "Order summary alongside payment"
+              }
+            }
+          ],
+          "composition": "b2b-checkout-joined"
+        }
+      ],
+      "cover": [
+        "b2b-case-cover-titled"
+      ],
+      "gallery": [
+        {
+          "asset": "b2c-catalog-full",
+          "ru": {
+            "title": "Каталог с фильтрами"
+          },
+          "en": {
+            "title": "Catalog with filters"
+          }
+        },
+        {
+          "asset": "b2c-search-full",
+          "ru": {
+            "title": "Поисковая выдача",
+            "caption": "В выдаче видны модель, комплектация, отзывы и цена."
+          },
+          "en": {
+            "title": "Search results",
+            "caption": "Search results show the model, configuration, reviews, and price."
+          }
+        },
+        {
+          "asset": "b2c-product-full",
+          "ru": {
+            "title": "Карточка товара",
+            "caption": "Фото и характеристики помогают выбрать комплектацию. Цены и условия покупки видны рядом с предложением."
+          },
+          "en": {
+            "title": "Product details",
+            "caption": "Photos and specifications help shoppers choose a variant. Price and purchase terms sit next to the offer."
+          }
+        },
+        {
+          "asset": "b2c-cart-full",
+          "ru": {
+            "title": "Корзина"
+          },
+          "en": {
+            "title": "Cart"
+          }
+        },
+        {
+          "asset": "b2c-card-full",
+          "ru": {
+            "title": "Оплата картой"
+          },
+          "en": {
+            "title": "Card payment"
+          }
+        },
+        {
+          "asset": "b2c-invoice-full",
+          "ru": {
+            "title": "Выставление счёта"
+          },
+          "en": {
+            "title": "Invoice payment"
+          }
+        },
+        {
+          "asset": "b2c-success-full",
+          "ru": {
+            "title": "Оплата прошла"
+          },
+          "en": {
+            "title": "Payment succeeded"
+          }
+        },
+        {
+          "asset": "b2c-failure-full",
+          "ru": {
+            "title": "Оплата не прошла"
+          },
+          "en": {
+            "title": "Payment failed"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "skibo",
+      "ru": {
+        "headline": "Аренда экипировки до приезда на склон",
+        "problem": "В высокий сезон очередь росла, пока сотрудники подбирали размеры и оформляли документы. Клиент узнавал, есть ли подходящий комплект, только на месте.",
+        "contribution": "Изучил похожие сервисы, спроектировал приложение и кабинет сотрудника. Проверил путь бронирования на интерактивном прототипе с потенциальными клиентами.",
+        "tradeoff": "Разделил подбор экипировки и оформление аренды. В админ-панели связал заказ с филиалом и остатками, чтобы сотрудник мог проверить комплект до подтверждения.",
+        "outcome": "Прототип показывает путь аренды для клиента и работу проката с инвентарём, заказами и сменами. Проект завершился на стадии дизайна.",
+        "name": "Skibo",
+        "tag": "Аренда · Мобильное приложение и CRM",
+        "intro": "Приложение для клиентов и CRM для сотрудников проката. Клиент бронирует комплект заранее, а прокат видит заказ и готовит его к выдаче.",
+        "role": "Product Designer",
+        "stage": "Прототип до разработки",
+        "audience": "Клиенты и сотрудники проката",
+        "difficulty": "У экипировки разные размеры, сеансы и филиалы. Выбранный комплект должен одновременно быть понятен клиенту и проверяем сотрудником проката.",
+        "research": {
+          "title": "Как проверял бронирование",
+          "body": "Сравнил сервисы аренды и маркетплейсы. На интерактивном прототипе проверил, могут ли потенциальные клиенты самостоятельно подобрать снаряжение и пройти бронирование. По обратной связи уточнил структуру экранов и шаги аренды.",
+          "image": "skibo-research",
+          "alt": "Материал из исследования SkiBo"
+        },
+        "clientSectionTitle": "Приложение клиента"
+      },
+      "en": {
+        "name": "Skibo",
+        "tag": "Rental · Mobile app and CRM",
+        "headline": "Renting ski gear before arriving at the slopes",
+        "intro": "A customer app and a staff CRM. Riders book gear in advance, and rental staff can review the booking and prepare it for pickup.",
+        "problem": "At peak season, lines grew while staff fitted equipment and handled paperwork. Riders only learned at the shop whether their gear was available.",
+        "contribution": "I studied similar services, designed the customer app and staff workspace, and tested the booking flow with prospective customers using an interactive prototype.",
+        "tradeoff": "I separated gear selection from checkout. In the admin panel, I linked each order to a branch and its inventory so staff could check the gear before approving the order.",
+        "outcome": "The prototype covers the rental journey for customers and shows how rental staff work with inventory, orders, and shifts. The project ended at the design stage.",
+        "role": "Product Designer",
+        "stage": "Pre-development prototype",
+        "audience": "Rental customers and staff",
+        "difficulty": "Gear availability depends on size, time, and branch. The order has to make sense to the rider and give staff enough information to verify the equipment.",
+        "research": {
+          "title": "How I checked the booking flow",
+          "body": "I compared rental services and marketplaces, then used an interactive prototype to see whether prospective customers could choose their gear and complete a booking independently. Their feedback informed the screen structure and rental steps.",
+          "image": "skibo-research",
+          "alt": "Material from the SkiBo research"
+        },
+        "clientSectionTitle": "Customer app"
+      },
+      "sections": [
+        {
+          "ru": {
+            "title": "Как устроен прокат Skibo",
+            "body": "Клиент подбирает экипировку, оформляет аренду и следит за заказом в приложении. Команда проката работает с инвентарём, заказами и сменами в админ-панели."
+          },
+          "en": {
+            "title": "How Skibo rentals work",
+            "body": "Customers choose gear, book a rental, and track their order in the app. Rental staff use the admin panel to manage inventory, process orders, and check shifts."
+          },
+          "images": [
+            {
+              "asset": "skibo-how-it-works",
+              "ru": {
+                "title": "Как устроен прокат Skibo"
+              },
+              "en": {
+                "title": "How Skibo rentals work"
+              }
+            }
+          ],
+          "composition": "joined-wide"
+        },
+        {
+          "ru": {
+            "title": "Выбор экипировки и корзина",
+            "body": "Клиент выбирает комплект или отдельную позицию. Для комплекта он указывает размеры куртки и обуви, рост и время аренды, затем добавляет его в корзину. В корзине можно сверить размеры, количество и итоговую сумму."
+          },
+          "en": {
+            "title": "Choosing gear and adding it to the cart",
+            "body": "Customers choose a set or an individual item. For a set, they enter jacket and boot sizes, height, and rental time before adding it to the cart. The cart shows the selected sizes, quantities, and total."
+          },
+          "images": [
+            {
+              "asset": "skibo-gear-cart",
+              "ru": {
+                "title": "Выбор экипировки и корзина"
+              },
+              "en": {
+                "title": "Choosing gear and adding it to the cart"
+              }
+            }
+          ],
+          "composition": "joined-wide"
+        },
+        {
+          "ru": {
+            "title": "Договор и оплата в приложении",
+            "body": "Оформление собрано в одном сценарии: ввод данных, подписание договора, выбор филиала и даты, а также оплата. После оплаты клиент видит, что заказ отправлен на рассмотрение, и понимает его текущий статус."
+          },
+          "en": {
+            "title": "In-app agreement and payment",
+            "body": "The steps stay in one flow: personal data, signing the rental agreement, choosing branch and date, and payment. After payment, the app shows that the booking is under review so riders know its current status."
+          },
+          "images": [
+            {
+              "asset": "skibo-agreement-input",
+              "ru": {
+                "title": "Ввод данных для договора",
+                "caption": "Выбор гражданства и ввод ИИН для формирования договора"
+              },
+              "en": {
+                "title": "Contract details",
+                "caption": "Citizenship selection and national ID input for agreement generation"
+              }
+            },
+            {
+              "asset": "skibo-agreement-terms",
+              "ru": {
+                "title": "Подписание договора",
+                "caption": "Текст договора проката снаряжения и подтверждение согласия"
+              },
+              "en": {
+                "title": "Sign the contract",
+                "caption": "Equipment rental terms and agreement confirmation"
+              }
+            },
+            {
+              "asset": "skibo-booking-options",
+              "ru": {
+                "title": "Параметры бронирования",
+                "caption": "Выбор филиала проката, даты, времени и способа оплаты"
+              },
+              "en": {
+                "title": "Booking details",
+                "caption": "Selection of branch, date, time slot, and payment method"
+              }
+            },
+            {
+              "asset": "skibo-payment-success",
+              "ru": {
+                "title": "Оплата прошла успешно",
+                "caption": "Подтверждение оплаты и переход к статусу рассмотрения заказа"
+              },
+              "en": {
+                "title": "Payment confirmed",
+                "caption": "Payment confirmation and link to order review status"
+              }
+            }
+          ],
+          "composition": "skibo-bento"
+        },
+        {
+          "ru": {
+            "title": "Управление товарами",
+            "body": "В CRM сотрудник видит список инвентаря, доступность экипировки по филиалам и параметры каждого комплекта. По статусу позиций можно быстро проверить наличие перед выдачей клиенту."
+          },
+          "en": {
+            "title": "Item management",
+            "body": "In the CRM, staff can view inventory lists, equipment availability across branches, and parameters for each set to quickly verify availability before handing items to riders."
+          },
+          "images": [
+            {
+              "asset": "skibo-item-management",
+              "ru": {
+                "title": "Управление товарами в CRM"
+              },
+              "en": {
+                "title": "Item management in CRM"
+              }
+            }
+          ],
+          "composition": "stacked"
+        },
+        {
+          "ru": {
+            "title": "Управление заказами",
+            "body": "В CRM сотрудник отслеживает заказы по статусам: новые, одобренные и выданные. В карточке заказа можно проверить состав комплекта, готовность снаряжения к выдаче и при необходимости связаться с клиентом в чате."
+          },
+          "en": {
+            "title": "Order management",
+            "body": "In the CRM, staff track orders by status: new, approved, and fulfilled. The order card allows checking gear set readiness before pickup and messaging the customer via integrated chat."
+          },
+          "images": [
+            {
+              "asset": "skibo-order-management",
+              "ru": {
+                "title": "Управление заказами в CRM"
+              },
+              "en": {
+                "title": "Order management in CRM"
+              }
+            }
+          ],
+          "composition": "joined-wide"
+        },
+        {
+          "ru": {
+            "title": "Управление персоналом",
+            "body": "Администратор распределяет сотрудников по филиалам проката, настраивает роли и права доступа, а также ведёт учёт рабочих смен и расписания команды."
+          },
+          "en": {
+            "title": "Staff management",
+            "body": "Administrators assign staff to rental branches, configure roles and access permissions, and manage work shifts and team schedules."
+          },
+          "images": [
+            {
+              "asset": "skibo-staff-management",
+              "ru": {
+                "title": "Управление персоналом в CRM"
+              },
+              "en": {
+                "title": "Staff management in CRM"
+              }
+            }
+          ],
+          "composition": "joined-wide"
+        }
+      ],
+      "cover": [
+        "skibo-case-cover-titled"
+      ]
+    },
+    {
+      "slug": "bao",
+      "ru": {
+        "headline": "Доставка напрямую из BAO",
+        "problem": "Сделать прямой заказ удобным для новых и постоянных гостей BAO. Тем, кто заказывает впервые, нужно легко разобраться в меню. Тем, кто возвращается, важно быстро найти любимые блюда и воспользоваться бонусами.",
+        "contribution": "Спроектировал меню и поиск, корзину с промокодами, оформление доставки со списанием бонусов и историю заказов.",
+        "tradeoff": "В карточке блюда оставил фото, состав, цену и кнопку добавления в корзину. Адрес, время доставки и способ оплаты собрал на одном экране, чтобы гость мог проверить всё перед оплатой.",
+        "outcome": "Спроектировал собственный канал доставки для BAO. Гость заранее видит сумму к оплате, проверяет статус в профиле и может использовать накопленные бонусы, когда заказывает снова.",
+        "name": "BAO",
+        "tag": "Доставка еды · Мобильное приложение",
+        "intro": "В приложении BAO гости выбирают блюда, заказывают доставку и следят за статусом заказа.",
+        "role": "Product Designer",
+        "stage": "Мобильное приложение",
+        "audience": "Гости BAO",
+        "difficulty": "Промокод или списание бонусов меняют итоговую сумму. Перед оплатой гостю нужно понять, из чего она сложилась, и проверить адрес, время доставки и способ оплаты."
+      },
+      "en": {
+        "name": "BAO",
+        "tag": "Food delivery · Mobile app",
+        "headline": "Delivery directly from BAO",
+        "intro": "In the BAO app, guests can browse the menu, order delivery, and check their order status.",
+        "problem": "Make ordering directly from BAO easy for new and returning guests. First-time customers need a menu they can browse. Returning guests need to find their favourites quickly and use their rewards.",
+        "contribution": "I designed the menu and search, promo codes in the cart, reward redemption at checkout, and order history.",
+        "tradeoff": "I kept each dish’s photo, ingredients, price, and add-to-cart button together in the menu. Checkout brings the address, delivery time, and payment method together so guests can review the details before paying.",
+        "outcome": "The design gives BAO its own delivery channel. Guests can see what they’ll pay upfront, check their order status in their profile, and use their rewards on a later order.",
+        "role": "Product Designer",
+        "stage": "Mobile app",
+        "audience": "BAO guests",
+        "difficulty": "A promo code or redeemed reward changes the total. Before paying, guests need to see how the price adds up and confirm the address, delivery time, and payment method."
+      },
+      "storeLinks": [
+        {
+          "label": "App Store",
+          "href": "https://apps.apple.com/kz/app/bao-noodles-sushi-bar/id6753782905"
+        },
+        {
+          "label": "Google Play",
+          "href": "https://play.google.com/store/apps/details?id=kz.osu.bao"
+        }
+      ],
+      "sections": [
+        {
+          "ru": {
+            "title": "Собственная доставка и повторные заказы",
+            "body": "BAO развивало собственную доставку, чтобы принимать заказы напрямую. В приложении гости могут посмотреть меню и действующие акции, воспользоваться предложением при заказе и накопить бонусы на следующую покупку."
+          },
+          "en": {
+            "title": "Direct delivery and repeat orders",
+            "body": "BAO developed its own delivery service to take orders directly. In the app, guests can browse the menu, see and use current offers, and earn rewards for future orders."
+          },
+          "images": [
+            {
+              "asset": "bao-delivery-screen",
+              "ru": {
+                "title": "Главный экран BAO"
+              },
+              "en": {
+                "title": "BAO home screen"
+              }
+            },
+            {
+              "asset": "bao-delivery-features",
+              "ru": {
+                "title": "Карточка блюда и история заказов"
+              },
+              "en": {
+                "title": "Dish details and order history"
+              }
+            }
+          ],
+          "composition": "bao-delivery-triad"
+        },
+        {
+          "ru": {
+            "title": "Промокоды, бонусы и итог заказа",
+            "body": "Гость вводит промокод в корзине, а при оформлении доставки видит баланс бонусов и решает, списывать ли их. Стоимость блюд и доставки, скидка и списанные бонусы показаны отдельными строками до оплаты."
+          },
+          "en": {
+            "title": "Promo codes, rewards, and the order total",
+            "body": "Guests enter a promo code in the cart, then see their rewards balance at checkout and choose whether to use it. The price breakdown shows food, delivery, discounts, and redeemed rewards before payment."
+          },
+          "images": [
+            {
+              "asset": "bao-promo-bonuses",
+              "ru": {
+                "title": "Промокоды и списание бонусов"
+              },
+              "en": {
+                "title": "Promo codes and rewards"
+              }
+            }
+          ],
+          "composition": "bao-promo-joined"
+        },
+        {
+          "ru": {
+            "title": "Подтверждение и статус заказа",
+            "body": "После оплаты гость может проверить детали заказа и отправить чек на почту. В разделе «Мои заказы» видны блюда, сумма и текущий статус."
+          },
+          "en": {
+            "title": "Order confirmation and status",
+            "body": "After payment, guests can review their order details and email the receipt. My Orders shows the dishes, total, and current status."
+          },
+          "images": [
+            {
+              "asset": "bao-order-status",
+              "ru": {
+                "title": "Подтверждение и статус заказа"
+              },
+              "en": {
+                "title": "Order confirmation and status"
+              }
+            }
+          ],
+          "mediaFirst": true,
+          "composition": "bao-status-joined"
+        }
+      ],
+      "cover": [
+        "bao-case-cover-titled"
+      ]
+    },
+    {
+      "slug": "kaspi",
+      "ru": {
+        "headline": "10 мест в кино за 10 нажатий",
+        "problem": "Нужно было встроить покупку билетов в знакомый интерфейс Kaspi: от поиска события и выбора сеанса до оплаты и электронного билета.",
+        "contribution": "Спроектировал структуру афиши, выбор сеанса, бронирование группы мест, оплату и экран билета.",
+        "tradeoff": "Назначил взрослый тариф по умолчанию. Затем его можно изменить у одного места или у всей группы. На схеме остаются видны выбранные места и текущая сумма.",
+        "outcome": "В концепте десять свободных мест можно выбрать десятью нажатиями, а затем изменить тариф и завершить сценарий до билета. Это свойство прототипа.",
+        "name": "Kaspi Афиша",
+        "tag": "UX/UI-концепт · Билеты в кино",
+        "intro": "Концепт покупки билетов внутри Kaspi. Основная задача — быстро выбрать места для группы, сохранив возможность изменить тариф.",
+        "role": "Product Designer",
+        "stage": "Тестовое задание · концепт",
+        "audience": "Зрители, покупающие билеты",
+        "difficulty": "На схеме зала нужно быстро набрать места, но у зрителей могут быть разные тарифы. Выбор тарифа после каждого нажатия добавил бы отдельный шаг для каждого места."
+      },
+      "en": {
+        "name": "Kaspi Afisha",
+        "tag": "UX/UI concept · Cinema tickets",
+        "headline": "10 cinema seats in 10 taps",
+        "intro": "A concept for buying cinema tickets within Kaspi. The main challenge is to select seats quickly for a group while keeping fares editable.",
+        "problem": "The assignment was to fit cinema ticketing into the familiar Kaspi interface, from finding an event and showtime through payment and the digital ticket.",
+        "contribution": "I designed the event listing, showtime selection, group seat booking, checkout, and the digital ticket.",
+        "tradeoff": "I set the adult fare as the default. It can then be changed for an individual seat or the whole group. Selected seats and the running total stay visible.",
+        "outcome": "In the concept, ten available seats can be selected in ten taps, followed by fare changes and checkout through to a ticket. This is a property of the prototype.",
+        "role": "Product Designer",
+        "stage": "Design assignment · concept",
+        "audience": "Cinema ticket buyers",
+        "difficulty": "Groups need to select seats quickly, but different viewers may need different fares. Asking for a fare after every tap would add a step for every seat."
+      },
+      "sections": [
+        {
+          "ru": {
+            "title": "Одно нажатие на место",
+            "body": "После выбора сеанса каждое нажатие на схеме зала добавляет место со взрослым тарифом. Для десяти мест это сокращает число нажатий с 20 до 10. Тариф можно поменять позже для отдельного билета или сразу для всей группы."
+          },
+          "en": {
+            "title": "One tap per seat",
+            "body": "Once viewers pick a showtime, tapping a seat adds it with the adult fare. That cuts seat selection from 20 taps to 10 for a group of ten. Viewers can adjust fares for individual tickets or the whole group."
+          },
+          "images": [
+            {
+              "asset": "kaspi-seat-schedule",
+              "ru": {
+                "title": "Сеансы фильма",
+                "caption": "Выбор фильма и сеанса"
+              },
+              "en": {
+                "title": "Film showtimes",
+                "caption": "Movie selection and showtime"
+              }
+            },
+            {
+              "asset": "kaspi-seat-modal",
+              "ru": {
+                "title": "Смена тарифа",
+                "caption": "Быстрое изменение тарифа для выбранных мест"
+              },
+              "en": {
+                "title": "Fare adjustment",
+                "caption": "Quickly change fare category for selected seats"
+              }
+            },
+            {
+              "asset": "kaspi-seat-tickets",
+              "ru": {
+                "title": "Билеты",
+                "caption": "Список забронированных билетов"
+              },
+              "en": {
+                "title": "Booked tickets",
+                "caption": "List of booked tickets"
+              }
+            },
+            {
+              "asset": "kaspi-seat-hall",
+              "ru": {
+                "title": "Схема зала",
+                "caption": "Выбор мест в зале кинотеатра"
+              },
+              "en": {
+                "title": "Seat selection",
+                "caption": "Seat selection in the theater hall"
+              }
+            }
+          ],
+          "composition": "kaspi-seat-bento"
+        },
+        {
+          "ru": {
+            "title": "Групповой выбор мест и тарифа",
+            "body": "Свободное место сразу добавляется со взрослым тарифом. Тариф можно сменить для одного билета или применить ко всей группе. Сумма обновляется сразу."
+          },
+          "en": {
+            "title": "Group seat selection and fares",
+            "body": "Tapping a free seat adds an adult ticket. Shoppers can change one fare or apply a fare to the group. The total updates immediately."
+          },
+          "images": [
+            {
+              "asset": "kaspi-group-hall-wide",
+              "ru": {
+                "title": "Схема зала",
+                "caption": "Выбор мест в зале до добавления тарифа"
+              },
+              "en": {
+                "title": "Seat map",
+                "caption": "Seat map overview before selection"
+              }
+            },
+            {
+              "asset": "kaspi-group-screen-detail",
+              "ru": {
+                "title": "Выбранные места",
+                "caption": "Выделение нескольких мест в зале"
+              },
+              "en": {
+                "title": "Selected seats",
+                "caption": "Highlighting multiple seats on the map"
+              }
+            },
+            {
+              "asset": "kaspi-group-fares-modal",
+              "ru": {
+                "title": "Смена тарифа билета",
+                "caption": "Настройка тарифа для конкретного места"
+              },
+              "en": {
+                "title": "Fare selection",
+                "caption": "Adjusting fare for a specific ticket"
+              }
+            },
+            {
+              "asset": "kaspi-group-selected-wide",
+              "ru": {
+                "title": "Групповая панель тарифов",
+                "caption": "Применение тарифов ко всей группе и переход к оплате"
+              },
+              "en": {
+                "title": "Group fare controls",
+                "caption": "Applying fares to the group and proceeding to checkout"
+              }
+            }
+          ],
+          "composition": "kaspi-group-bento"
+        },
+        {
+          "ru": {
+            "title": "Оплата и подтверждение заказа",
+            "body": "Перед оплатой зритель сверяет сеанс, места и сумму. После оплаты экран подтверждения ведёт прямо к электронному билету."
+          },
+          "en": {
+            "title": "Payment and booking confirmation",
+            "body": "Before paying, viewers check the showtime, seats, and total. The confirmation screen then links directly to the digital ticket."
+          },
+          "images": [
+            {
+              "asset": "kaspi-order-payment",
+              "ru": {
+                "title": "Оплата и подтверждение покупки",
+                "caption": "Способы оплаты и подтверждение с деталями билета"
+              },
+              "en": {
+                "title": "Payment and order confirmation",
+                "caption": "Payment methods and confirmation with ticket details"
+              }
+            }
+          ],
+          "composition": "joined-wide"
+        },
+        {
+          "ru": {
+            "title": "Билет, маршрут и календарь",
+            "body": "После оплаты билет сохраняется в приложении. В деталях видны время, кинотеатр, ряд и места. Оттуда можно построить маршрут или добавить событие в календарь."
+          },
+          "en": {
+            "title": "Ticket, directions, and calendar",
+            "body": "The app keeps the ticket after payment. Its details show the time, cinema, row, and seats, with actions for directions and adding the event to a calendar."
+          },
+          "images": [
+            {
+              "asset": "kaspi-ticket-qr",
+              "ru": {
+                "title": "Электронный билет и QR-код",
+                "caption": "Детали сеанса, добавление в календарь, маршрут и QR-код для прохода в зал"
+              },
+              "en": {
+                "title": "Digital ticket and QR code",
+                "caption": "Showtime details, add to calendar, route directions, and entrance QR code"
+              }
+            }
+          ],
+          "composition": "joined-wide",
+          "mediaFirst": true
+        }
+      ],
+      "cover": [
+        "kaspi-time",
+        "kaspi-b",
+        "kaspi-c"
+      ]
+    },
+    {
+      "slug": "qalan-english",
+      "ru": {
+        "name": "Qalan English",
+        "tag": "EdTech · Мобильное приложение",
+        "headline": "Английский через реплики из мультфильмов",
+        "intro": "Qalan English помогает детям учить язык на знакомых мультфильмах. Ребёнок слышит реплику, видит перевод на казахский и сразу пробует применить фразу.",
+        "role": "Product Designer",
+        "audience": "Казахоязычные дети, изучающие английский",
+        "stage": "Мобильное приложение · iOS и Android",
+        "problem": "Когда смысл реплики ускользает, нужно поставить видео на паузу, найти перевод и вернуться к нужному моменту. Даже после этого легко понять фразу в сцене и забыть её за пределами видео.",
+        "difficulty": "Ребёнку нужно одновременно следить за сценой, читать субтитры и слушать речь. Если показывать все подсказки сразу, они начинают конкурировать с видео.",
+        "contribution": "Спроектировал интерфейс приложения для Qalan: выбор мультфильма, плеер с субтитрами, перевод по нажатию, упражнения на порядок слов и произношение.",
+        "tradeoff": "Связал просмотр и практику одной репликой. В плеере в фокусе текущая строка, а подсказка открывается по запросу. В задании остаются тот же кадр и та же фраза, поэтому ребёнку не нужно заново разбираться в контексте.",
+        "outcome": "В выпущенном приложении мультфильмы с казахским переводом дополняют упражнения на лексику, грамматику, аудирование и произношение."
+      },
+      "en": {
+        "name": "Qalan English",
+        "tag": "EdTech · Mobile app",
+        "headline": "From a cartoon line to speaking English",
+        "intro": "Qalan English helps children learn through familiar cartoons. They hear a line, see its Kazakh translation, and then try using it themselves.",
+        "role": "Product Designer",
+        "audience": "Kazakh-speaking children learning English",
+        "stage": "Mobile app · iOS and Android",
+        "problem": "When a line is hard to follow, learners have to pause the video, look it up, and find their place again. Even when they understand it in the scene, they may not remember it away from the video.",
+        "difficulty": "Children are following the story, reading subtitles, and listening at the same time. Showing every hint at once competes with the video.",
+        "contribution": "I designed the app for Qalan, including cartoon selection, the subtitle player, tap-to-translate, and word-order and speaking exercises.",
+        "tradeoff": "I used one line to connect watching and practice. The player highlights the current line and opens help on demand. The same scene and phrase carry into the exercises so learners keep their context.",
+        "outcome": "The released app combines cartoons with Kazakh translations and exercises in vocabulary, grammar, listening, and pronunciation."
+      },
+      "storeLinks": [
+        {
+          "label": "App Store",
+          "href": "https://apps.apple.com/kz/app/qalan-english/id6503223729"
+        },
+        {
+          "label": "Google Play",
+          "href": "https://play.google.com/store/apps/details?id=com.qalan.english"
+        }
+      ],
+      "sections": [
+        {
+          "ru": {
+            "title": "Начать со знакомого мультфильма",
+            "body": "Знакомые персонажи помогают выбрать мультфильм. Во время просмотра ребёнок может открыть подсказку к реплике и перейти к заданию прямо из сцены."
+          },
+          "en": {
+            "title": "Start with a familiar cartoon",
+            "body": "Familiar characters help children pick a cartoon. While watching, learners can open a hint for the current line and jump from the scene into an exercise."
+          },
+          "images": [
+            {
+              "asset": "qalan-select-cartoon",
+              "ru": {
+                "title": "Выбор мультфильма"
+              },
+              "en": {
+                "title": "Choose cartoons"
+              }
+            },
+            {
+              "asset": "qalan-dialog-hint",
+              "ru": {
+                "title": "Подсказка и перевод реплики"
+              },
+              "en": {
+                "title": "Dialogue hint and Kazakh translation"
+              }
+            },
+            {
+              "asset": "qalan-day-streak",
+              "ru": {
+                "title": "Серия занятий"
+              },
+              "en": {
+                "title": "Learning streak"
+              }
+            },
+            {
+              "asset": "qalan-video-task",
+              "ru": {
+                "title": "Просмотр и переход к заданию"
+              },
+              "en": {
+                "title": "Watching and exercise entry"
+              }
+            }
+          ],
+          "composition": "qalan-bento"
+        },
+        {
+          "ru": {
+            "title": "Понять реплику в контексте",
+            "body": "Активная строка выделена среди соседних реплик. Нажатие открывает перевод и озвучку рядом с фразой, сохраняя сцену на экране."
+          },
+          "en": {
+            "title": "Understand the line in context",
+            "body": "The current line stands out from the surrounding dialogue. Tapping opens translation and audio next to the phrase while keeping the scene visible."
+          },
+          "images": [
+            {
+              "asset": "qalan-context-iphone",
+              "ru": {
+                "title": "Сцена с репликой на экране"
+              },
+              "en": {
+                "title": "Scene with active line"
+              }
+            },
+            {
+              "asset": "qalan-context-translation",
+              "ru": {
+                "title": "Перевод и добавление в словарь"
+              },
+              "en": {
+                "title": "Translation and dictionary save"
+              }
+            },
+            {
+              "asset": "qalan-context-subtitles",
+              "ru": {
+                "title": "Субтитры и соседние реплики"
+              },
+              "en": {
+                "title": "Dialogue and surrounding lines"
+              }
+            }
+          ],
+          "composition": "qalan-context-joined"
+        },
+        {
+          "ru": {
+            "title": "Перейти от просмотра к практике",
+            "body": "Ребёнок собирает знакомую фразу из слов, произносит её вслух и сразу получает обратную связь. В режиме Role Play он выбирает персонажа из разобранного диалога и озвучивает только его реплики. Стрик показывает, сколько дней подряд ребёнок занимался, и мотивирует возвращаться к практике."
+          },
+          "en": {
+            "title": "Move from watching to practice",
+            "body": "Learners put the words in order, say the line aloud, and get immediate feedback. In Role Play, they choose a character from a dialogue they’ve already worked through and speak only that character’s lines. A streak tracks how many days in a row they’ve practiced and encourages them to keep going."
+          },
+          "images": [
+            {
+              "asset": "qalan-practice-1",
+              "ru": {
+                "title": "Сборка фразы из слов"
+              },
+              "en": {
+                "title": "Word-order exercise"
+              }
+            },
+            {
+              "asset": "qalan-practice-2",
+              "ru": {
+                "title": "Диалог и режим Role Play"
+              },
+              "en": {
+                "title": "Dialogue and Role Play"
+              }
+            },
+            {
+              "asset": "qalan-practice-3",
+              "ru": {
+                "title": "Тренировка произношения"
+              },
+              "en": {
+                "title": "Pronunciation training"
+              }
+            }
+          ],
+          "composition": "qalan-practice-joined"
+        }
+      ],
+      "gallery": [
+        {
+          "asset": "qalan-summary",
+          "ru": {
+            "title": "Завершение упражнения"
+          },
+          "en": {
+            "title": "Exercise completion"
+          }
+        },
+        {
+          "asset": "qalan-complete",
+          "ru": {
+            "title": "Серия занятий"
+          },
+          "en": {
+            "title": "Learning streak"
+          }
+        },
+        {
+          "asset": "qalan-translation",
+          "ru": {
+            "title": "Разбор выбранной фразы"
+          },
+          "en": {
+            "title": "Translation for a selected phrase"
+          }
+        },
+        {
+          "asset": "qalan-lesson",
+          "ru": {
+            "title": "Урок по фрагменту"
+          },
+          "en": {
+            "title": "A lesson built around the clip"
+          }
+        }
+      ],
+      "cover": [
+        "qalan-case-cover-titled"
+      ]
+    }
+  ]
+}

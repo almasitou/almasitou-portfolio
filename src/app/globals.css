@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+:root {
+  --od-qalan-purple: #9d3fd7;
+}
+
+@theme inline {
+  --font-sans: var(--font-medeo), Arial, sans-serif;
+  --font-heading: var(--font-medeo), Arial, sans-serif;
+  --font-mono: var(--font-medeo), Arial, sans-serif;
+  --font-serif: var(--font-medeo), Arial, sans-serif;
+}
+
 @theme {
-  --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
   --animate-marquee: marquee 30s linear infinite;
   --animate-float: float 6s ease-in-out infinite;
   --animate-shimmer: shimmer 6.5s linear infinite;
@@ -54,7 +63,7 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-medeo), Arial, sans-serif;
   overflow-x: hidden;
 }
 
@@ -136,4 +145,3 @@ body {
     left: 200%;
   }
 }
-

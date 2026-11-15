@@ -1,0 +1,186 @@
+{
+  "rrs": {
+    "node": "35:369",
+    "slug": "rrs",
+    "name": "Retail Robotics Solutions",
+    "images": [
+      "/presentation-v2/case-rrs-0.png",
+      "/presentation-v2/case-rrs-1.png"
+    ],
+    "solutionImages": [
+      "/presentation-v2/case-rrs-1.png",
+      "/presentation-v2/case-rrs-0.png"
+    ],
+    "ru": {
+      "category": "FOODTECH / AI CHECKOUT / B2B & B2C",
+      "headline": [
+        "Самообслуживание,",
+        "которому можно доверять."
+      ],
+      "summary": "Интерфейс роботизированной кассы: от распознавания блюда до понятной оплаты.",
+      "role": "Product Designer · единственный дизайнер",
+      "scope": "Исследование рынков США и Европы · UX-сценарии · интерфейс терминала · дизайн-система · B2B-интерфейсы",
+      "stage": "Продукт для ресторанов Европы",
+      "challenge": "Касса распознаёт блюда с помощью ИИ. Пользователю нужно понимать, что происходит, как уточнить результат и что делать, если система ошиблась.",
+      "solutions": [
+        [
+          "Когда ИИ не уверен",
+          "Показываю снимок блюда и вероятные варианты рядом. Человек уточняет распознавание, сохраняя контекст заказа."
+        ],
+        [
+          "Контроль перед оплатой",
+          "Состав заказа, количество и стоимость видны на одном экране. Ошибку можно заметить и исправить до оплаты."
+        ]
+      ],
+      "outcomeTitle": "~1 мин → 10–15 сек",
+      "outcome": "Время чекаута продукта. Мой вклад — сценарии взаимодействия с ИИ, обратная связь и единый интерфейс терминала и веб-продуктов."
+    },
+    "en": {
+      "headline": [
+        "Self-service",
+        "people can trust."
+      ],
+      "summary": "A robotic checkout interface: from meal recognition to a clear payment flow.",
+      "role": "Product Designer · sole designer",
+      "scope": "US and EU market research · UX flows · kiosk UI · design system · B2B interfaces",
+      "stage": "A product for restaurants in Europe",
+      "challenge": "AI recognizes the food. Customers need to understand what is happening, clarify the result, and recover when the system makes a mistake.",
+      "solutions": [
+        [
+          "When AI is uncertain",
+          "The meal photo and likely matches appear together. Customers clarify recognition while keeping the order in context."
+        ],
+        [
+          "Control before payment",
+          "Order contents, quantities, and prices share one screen. Customers can spot and correct mistakes before paying."
+        ]
+      ],
+      "outcomeTitle": "~1 min → 10–15 sec",
+      "outcome": "Product checkout time. My contribution covers AI interaction flows, feedback, and a consistent interface across the kiosk and web products.",
+      "category": "FOODTECH / AI CHECKOUT / B2B & B2C"
+    }
+  },
+  "avrora": {
+    "node": "35:370",
+    "slug": "avrora",
+    "name": "Aurora BPM",
+    "images": [
+      "/presentation-v2/case-aurora-0.png",
+      "/presentation-v2/case-aurora-1.png"
+    ],
+    "solutionImages": [
+      "/presentation-v2/case-aurora-0.png",
+      "/presentation-v2/case-aurora-1.png"
+    ],
+    "ru": {
+      "category": "ENTERPRISE / B2B / WEB",
+      "headline": [
+        "Сложное производство.",
+        "Понятные действия."
+      ],
+      "summary": "Рабочие интерфейсы для планирования производства и управления операциями.",
+      "role": "Senior UX/UI Designer · команда из 4 дизайнеров",
+      "scope": "Интервью с пользователями · архитектура сценариев · дизайн-система · рабочие таблицы · статусы и управление",
+      "stage": "Внутренний корпоративный продукт",
+      "challenge": "Производственные процессы объединяют много данных, ролей и состояний. Сотрудникам важно быстро видеть текущий статус и понимать следующий шаг.",
+      "solutions": [
+        [
+          "Планирование без потери контекста",
+          "Рабочая таблица объединяет продукты, сроки и параметры. Сотрудник остаётся в контексте планирования и видит связанные данные."
+        ],
+        [
+          "Статусы, которые помогают действовать",
+          "Состояние каждой операции считывается в общем списке. Изменение статуса доступно там, где сотрудник работает с задачей."
+        ]
+      ],
+      "outcomeTitle": "Единая логика сложного продукта",
+      "outcome": "Согласованные компоненты и сценарии для внутренних процессов: планирование, работа с данными и управление статусами в едином интерфейсе."
+    },
+    "en": {
+      "headline": [
+        "Complex manufacturing.",
+        "Clear actions."
+      ],
+      "summary": "Working interfaces for production planning and operations management.",
+      "role": "Senior UX/UI Designer · a team of four designers",
+      "scope": "User interviews · journey architecture · design system · working tables · statuses and management",
+      "stage": "An internal enterprise product",
+      "challenge": "Production brings together large amounts of data, roles, and states. Employees need to see the current status and understand the next step.",
+      "solutions": [
+        [
+          "Planning without losing context",
+          "Products, deadlines, and parameters share one working table. Employees see related data while staying in the planning context."
+        ],
+        [
+          "Statuses that support action",
+          "Each operation’s state is visible in the shared list. Status changes happen where employees work on the task."
+        ]
+      ],
+      "outcomeTitle": "One logic for a complex product",
+      "outcome": "Consistent components and workflows for planning, data, and status management in one interface.",
+      "category": "ENTERPRISE / B2B / WEB"
+    }
+  },
+  "skibo": {
+    "node": "35:371",
+    "slug": "skibo",
+    "name": "Skibo",
+    "images": [
+      "/presentation-v2/case-skibo-0.png",
+      "/presentation-v2/case-skibo-1.png",
+      "/presentation-v2/case-skibo-2.png"
+    ],
+    "solutionImages": [
+      "/presentation-v2/case-skibo-0.png",
+      "/presentation-v2/case-skibo-1.png"
+    ],
+    "ru": {
+      "category": "MOBILE / АРЕНДА СНАРЯЖЕНИЯ / UX & UI",
+      "headline": [
+        "На склон —",
+        "с готовым снаряжением."
+      ],
+      "summary": "Мобильный сервис предварительного бронирования, оформления договора и оплаты аренды.",
+      "role": "UX/UI Designer",
+      "scope": "Клиентское приложение · каталог и бронирование · оформление договора · оплата · интерфейс администратора",
+      "stage": "Дизайн-проект · остановлен до запуска",
+      "challenge": "Выбор оборудования, оформление аренды и работа администратора связаны в один процесс. Нужно заранее подготовить заказ и уменьшить ручное оформление на месте.",
+      "solutions": [
+        [
+          "От выбора к бронированию",
+          "Пользователь выбирает снаряжение и параметры заказа в приложении. Информация о бронировании остаётся в одном сценарии."
+        ],
+        [
+          "Договор в пользовательском сценарии",
+          "Подписание договора встроено в подготовку аренды. Пользователю не нужно заново собирать данные на отдельном этапе."
+        ]
+      ],
+      "outcomeTitle": "Клиент и администратор — в одном процессе",
+      "outcome": "Спроектированы клиентская часть и рабочие сценарии администратора. Проект был остановлен заказчиком до запуска, поэтому продуктовые метрики не заявлены."
+    },
+    "en": {
+      "headline": [
+        "Head for the slopes —",
+        "with your gear ready."
+      ],
+      "summary": "A mobile service for advance booking, rental agreements, and payment.",
+      "role": "UX/UI Designer",
+      "scope": "Customer app · catalog and booking · rental agreements · payment · administrator interface",
+      "stage": "Design project · stopped before launch",
+      "challenge": "Equipment selection, rental paperwork, and administration form one process. The goal is to prepare the order in advance and reduce manual work on site.",
+      "solutions": [
+        [
+          "From selection to booking",
+          "Customers select equipment and order parameters in the app. Booking details remain in one connected journey."
+        ],
+        [
+          "An agreement within the journey",
+          "Signing the rental agreement is part of preparation. Customers do not have to enter their information again in a separate step."
+        ]
+      ],
+      "outcomeTitle": "Customer and administrator in one process",
+      "outcome": "Customer and administrator workflows were designed. The client stopped the project before launch, so no product metrics are claimed.",
+      "category": "MOBILE / АРЕНДА СНАРЯЖЕНИЯ / UX & UI"
+    }
+  }
+}

@@ -23,7 +23,7 @@ export default function OtherProjects({ projects, lang }) {
             {isRu ? 'Понравился этот кейс?' : 'Enjoyed this case study?'}
           </h2>
           <p className="text-zinc-400 text-lg md:text-2xl mb-12 max-w-2xl relative z-10">
-            {isRu ? 'Открыт к новым вызовам и готов обсудить ваш следующий проект.' : 'I am open to new challenges and ready to discuss your next project.'}
+            {isRu ? 'Открыт к новым вызовам и готов обсудить ваш проект.' : 'I am open to new challenges and ready to discuss your project.'}
           </p>
           
           <SparklesButton 

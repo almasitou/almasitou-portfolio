@@ -1,0 +1,285 @@
+.od-rrs-motion {
+  --rrs-time: 11.749s;
+  --rrs-ease: cubic-bezier(.44, 0, .26, 1);
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  color: #fff;
+  background: #2346df;
+}
+:where(.od-rrs-motion) .od-motion-layer {
+  animation-duration: var(--rrs-time);
+  animation-timing-function: var(--rrs-ease);
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.od-rrs-scenes { position: absolute; inset: 0; }
+.od-rrs-scene {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.od-rrs-scene--start { animation-name: od-rrs-start; }
+.od-rrs-scene--order { transform: translateY(100%); animation-name: od-rrs-order; }
+.od-rrs-scene--payment { transform: translateX(-100%); animation-name: od-rrs-payment, od-rrs-payment-visibility; }
+.od-rrs-result { transform: translateY(-100%); animation-name: od-rrs-result, od-rrs-result-visibility; }
+.od-rrs-scene--return { transform: translateX(100%); animation-name: od-rrs-return; }
+
+.od-rrs-tray {
+  display: grid;
+  justify-items: center;
+  gap: clamp(4px, 2cqh, 16px);
+  width: min(76cqw, 123cqh, 550px);
+}
+.od-rrs-tray-art { position: relative; width: 100%; }
+.od-rrs-tray img { display: block; width: 100%; height: auto; }
+.od-rrs-scan-window {
+  position: absolute;
+  inset: 9% 2% 8%;
+  overflow: hidden;
+  border-radius: 8%;
+}
+.od-rrs-scan-beam {
+  position: absolute;
+  inset: 0;
+  transform: translateY(-12%);
+  animation-name: od-rrs-scan-beam;
+}
+.od-rrs-scan-beam::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: #edfcff;
+  content: '';
+}
+.od-rrs-tray-caption {
+  display: grid;
+  font-size: clamp(11px, min(3cqw, 4cqh), 23px);
+  font-weight: 650;
+}
+.od-rrs-scene--start .od-rrs-tray-caption { animation-name: od-rrs-tray-start-copy; }
+.od-rrs-scene--return .od-rrs-tray-caption { animation-name: od-rrs-tray-return-copy; }
+.od-rrs-tray-line {
+  display: flex;
+  grid-area: 1 / 1;
+  min-height: 1.55em;
+  align-items: center;
+  justify-content: center;
+  gap: .55em;
+  white-space: nowrap;
+}
+.od-rrs-tray-prompt { animation-name: od-rrs-tray-prompt; }
+.od-rrs-scan-caption { opacity: 0; animation-name: od-rrs-scan-caption; }
+.od-rrs-scan-progress {
+  display: flex;
+  align-items: center;
+  gap: .25em;
+}
+.od-rrs-scan-dot {
+  width: .36em;
+  height: .36em;
+  border-radius: 50%;
+  background: #bde9ff;
+  animation-name: od-rrs-scan-dot;
+  animation-delay: var(--scan-step);
+}
+
+.od-rrs-order {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.8%;
+  width: min(92cqw, 151cqh, 640px);
+}
+.od-rrs-dish {
+  display: grid;
+  align-content: start;
+  gap: .3em;
+  padding: .4em;
+  border: 1px solid #e9edf1;
+  border-radius: .7em;
+  background: #fff;
+  color: #15171a;
+  font-size: clamp(8px, min(2.35cqw, 3.5cqh), 16px);
+  line-height: 1.2;
+  min-width: 0;
+  animation-name: od-rrs-dish;
+  animation-delay: var(--dish-stagger);
+}
+.od-rrs-dish img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: .34em;
+}
+.od-rrs-dish-label { animation-name: od-rrs-dish-copy; }
+.od-rrs-dish strong { min-height: 2lh; font-weight: 650; }
+.od-rrs-dish > span { color: #526071; font-variant-numeric: tabular-nums; }
+
+.od-rrs-checkout {
+  display: grid;
+  gap: .55em;
+  width: min(76cqw, 106cqh, 410px);
+  padding: .85em;
+  border-radius: .9em;
+  background: #fdfdfd;
+  box-shadow: 0 16px 28px -14px #1119365c;
+  color: #171b19;
+  font-size: clamp(13px, min(4.7cqw, 7cqh), 26px);
+  line-height: 1.18;
+}
+.od-rrs-content-window {
+  display: grid;
+  min-height: 4.1em;
+}
+.od-rrs-content-window > div,
+.od-rrs-action > span { grid-area: 1 / 1; }
+.od-rrs-before-payment { animation-name: od-rrs-before-payment; }
+.od-rrs-after-payment { opacity: 0; animation-name: od-rrs-after-payment; }
+.od-rrs-amount { display: grid; align-content: center; gap: .32em; }
+.od-rrs-subtotal, .od-rrs-total { display: flex; justify-content: space-between; gap: .6em; }
+.od-rrs-subtotal { color: #47566e; font-size: .68em; }
+.od-rrs-total { margin-top: .24em; padding-top: .38em; border-top: 1px solid #e4e9f0; }
+.od-rrs-confirm { display: flex; align-items: center; justify-content: center; gap: .42em; }
+.od-rrs-confirm img { width: 2.45em; height: auto; }
+.od-rrs-action {
+  display: grid;
+  min-height: 2.7em;
+  align-items: center;
+  padding: .55em;
+  border-radius: .5em;
+  background: #207c36;
+  color: #fff;
+  font-size: .92em;
+  font-weight: 700;
+  animation-name: od-rrs-action;
+}
+.od-rrs-action > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .42em;
+  white-space: nowrap;
+}
+.od-rrs-action svg { width: 1em; height: 1em; flex: none; }
+
+.od-rrs-metric {
+  display: grid;
+  justify-items: center;
+  gap: .35em;
+  max-width: 93%;
+  text-align: center;
+  line-height: 1.12;
+  font-size: clamp(13px, min(5cqw, 8cqh), 28px);
+}
+.od-rrs-metric strong {
+  font-size: clamp(27px, min(12cqw, 18cqh), 86px);
+  line-height: 1.02;
+  letter-spacing: -.065em;
+  font-weight: 800;
+}
+.od-rrs-metric small { font-size: .72em; color: #e4ebff; }
+.od-rrs-metric-detail { margin-top: .52em; }
+.od-rrs-metric-reveal {
+  display: block;
+  opacity: 0;
+  animation-name: od-rrs-metric-reveal;
+}
+.od-rrs-metric-row:nth-child(2) .od-rrs-metric-reveal { animation-delay: 100ms; }
+.od-rrs-metric-row:nth-child(3) .od-rrs-metric-reveal { animation-delay: 200ms; }
+
+/* Each push shares the same keyframes on both scenes. The duplicate tray closes the loop. */
+@keyframes od-rrs-start {
+  0%, 15.62686% { transform: translateY(0); }
+  22.52107%, 100% { transform: translateY(-100%); }
+}
+/* The last dish settles at 3.297s. Checkout begins one second later. */
+@keyframes od-rrs-order {
+  0%, 15.62686% { transform: translateY(100%); }
+  22.52107%, 36.57333% { transform: translate(0, 0); }
+  44.38676%, 100% { transform: translateX(100%); }
+}
+@keyframes od-rrs-payment {
+  0%, 36.57333% { transform: translateX(-100%); }
+  44.38676%, 66.90782% { transform: translate(0, 0); }
+  74.26164%, 100% { transform: translateY(100%); }
+}
+@keyframes od-rrs-result {
+  0%, 66.90782% { transform: translateY(-100%); }
+  74.26164%, 85.29237% { transform: translate(0, 0); }
+  97.24232%, 100% { transform: translateX(-100%); }
+}
+@keyframes od-rrs-return {
+  0%, 85.29237% { transform: translateX(100%); }
+  97.24232%, 100% { transform: translateX(0); }
+}
+/* Keep labels visible only while they are inside the moving cover. */
+@keyframes od-rrs-tray-start-copy {
+  0%, 17.4% { opacity: 1; }
+  19.3%, 100% { opacity: 0; }
+}
+@keyframes od-rrs-tray-return-copy {
+  0%, 92.5% { opacity: 0; }
+  95%, 100% { opacity: 1; }
+}
+@keyframes od-rrs-dish-copy {
+  0%, 23.5%, 100% { opacity: 0; }
+  26.1%, 36.35% { opacity: 1; }
+  37.6% { opacity: 0; }
+}
+@keyframes od-rrs-payment-visibility {
+  0%, 40%, 100% { opacity: 0; }
+  42.1%, 67.3% { opacity: 1; }
+  69.25% { opacity: 0; }
+}
+@keyframes od-rrs-result-visibility {
+  0%, 85.7% { opacity: 1; }
+  87.5%, 100% { opacity: 0; }
+}
+@keyframes od-rrs-tray-prompt {
+  0%, 6.0669% { opacity: 1; }
+  7.44574%, 100% { opacity: 0; }
+}
+@keyframes od-rrs-scan-caption {
+  0%, 7.44574% { opacity: 0; }
+  9.46804%, 100% { opacity: 1; }
+}
+@keyframes od-rrs-scan-beam {
+  0%, 7.81343% { transform: translateY(-12%); }
+  17.28147%, 100% { transform: translateY(112%); }
+}
+@keyframes od-rrs-scan-dot {
+  0%, 8.27304% { transform: scale(.5); }
+  11.03073% { transform: scale(1.3); }
+  13.78841%, 100% { transform: scale(1); }
+}
+@keyframes od-rrs-dish {
+  0%, 22.52107% { transform: translateY(calc(50cqh + 50% + 1px)); }
+  26.65759%, 100% { transform: translateY(0); }
+}
+@keyframes od-rrs-before-payment {
+  0%, 51.74057% { opacity: 1; }
+  53.67095%, 100% { opacity: 0; }
+}
+@keyframes od-rrs-after-payment {
+  0%, 53.67095% { opacity: 0; }
+  56.79632%, 100% { opacity: 1; }
+}
+@keyframes od-rrs-action {
+  0%, 50.36173%, 56.61248%, 100% { transform: scale(1); }
+  51.74057% { transform: scale(.95); }
+  0%, 51.74057% { background-color: #207c36; color: #fff; }
+  56.61248%, 100% { background-color: #e3f4e7; color: #165b2b; }
+}
+@keyframes od-rrs-metric-reveal {
+  0%, 74.26164% { opacity: 0; }
+  78.39816%, 100% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .od-rrs-motion .od-motion-layer { animation-name: none; }
+  .od-rrs-scene:not(.od-rrs-result) { display: none; }
+  .od-rrs-result { transform: none; }
+  .od-rrs-metric-reveal { opacity: 1; }
+}

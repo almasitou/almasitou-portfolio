@@ -1,0 +1,582 @@
+{
+  "/uploads/chaickout/cover-hero.jpg": {
+    "width": 1024,
+    "height": 571
+  },
+  "/uploads/chaickout/tap-to-recognize.png": {
+    "width": 5760,
+    "height": 3240
+  },
+  "/uploads/chaickout/specify-dish.png": {
+    "width": 3843,
+    "height": 2170
+  },
+  "/uploads/chaickout/bring-card.png": {
+    "width": 5765,
+    "height": 3243
+  },
+  "/uploads/chaickout/my-order.png": {
+    "width": 5765,
+    "height": 3245
+  },
+  "/uploads/chaickout/menu-search.png": {
+    "width": 5760,
+    "height": 3240
+  },
+  "/uploads/chaickout/empty-tray.png": {
+    "width": 5765,
+    "height": 3243
+  },
+  "/uploads/chaickout/success.png": {
+    "width": 5765,
+    "height": 3243
+  },
+  "/uploads/skibo/cover-main.png": {
+    "width": 1024,
+    "height": 768
+  },
+  "/uploads/skibo/combo_page.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/booking.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/admin_orders.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/main_page.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/cart.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/admin_items_manage_page.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/payment_success.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/ux_test.jpeg": {
+    "width": 2048,
+    "height": 2048
+  },
+  "/uploads/avrora/avrora_cover.png": {
+    "width": 1024,
+    "height": 768
+  },
+  "/uploads/avrora/production_plan_1.png": {
+    "width": 5760,
+    "height": 3321
+  },
+  "/uploads/avrora/status_tracking.png": {
+    "width": 5760,
+    "height": 3240
+  },
+  "/uploads/avrora/raw_materials.png": {
+    "width": 5760,
+    "height": 3240
+  },
+  "/uploads/avrora/turnover_1.png": {
+    "width": 5760,
+    "height": 3264
+  },
+  "/uploads/avrora/users_1.png": {
+    "width": 7620,
+    "height": 4116
+  },
+  "/uploads/avrora/turnover_2.png": {
+    "width": 5760,
+    "height": 3240
+  },
+  "/uploads/kaspi/cover-main.jpg": {
+    "width": 1024,
+    "height": 768
+  },
+  "/uploads/kaspi/Main page of Afisha.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/Choose place.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/My ticket.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/Search in main page.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/Buy.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/My tickets.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/idol/cover-main.png": {
+    "width": 1024,
+    "height": 768
+  },
+  "/uploads/idol/Dashboard.png": {
+    "width": 3456,
+    "height": 2234
+  },
+  "/uploads/idol/content_planner.png": {
+    "width": 1024,
+    "height": 1024
+  },
+  "/uploads/idol/creator_marketplace.png": {
+    "width": 1024,
+    "height": 1024
+  },
+  "/uploads/idol/Studio -_ Explore.png": {
+    "width": 3456,
+    "height": 2234
+  },
+  "/uploads/idol/Talent Roster.png": {
+    "width": 3456,
+    "height": 2234
+  },
+  "/uploads/bao/cover-main.jpg": {
+    "width": 1024,
+    "height": 768
+  },
+  "/uploads/bao/main.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/cart.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/orders.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/foods page.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/check out - delivery.png": {
+    "width": 780,
+    "height": 1696
+  },
+  "/uploads/bao/profile.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/taza/cover-main.png": {
+    "width": 1024,
+    "height": 768
+  },
+  "/uploads/taza/Главная.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/Мои счета.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/Страница заказа.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/Корзина.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/Оформление заказа.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/Профиль.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/chaickout/dishes-overlapped.png": {
+    "width": 5765,
+    "height": 3243
+  },
+  "/uploads/chaickout/alcoholic-drink.png": {
+    "width": 5765,
+    "height": 3245
+  },
+  "/uploads/chaickout/menu-fallback.png": {
+    "width": 5760,
+    "height": 3240
+  },
+  "/uploads/chaickout/specify-soup-search.png": {
+    "width": 5760,
+    "height": 3240
+  },
+  "/uploads/chaickout/specify-soup.png": {
+    "width": 5765,
+    "height": 3255
+  },
+  "/uploads/skibo/combo_page_selecting_size.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/pre_booking.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/payment.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/my_orders.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/admin_order_info_able_to_give.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/admin_order_info_no_items_to_give.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/admin_chat_with_clients.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/skibo/admin_profile_page.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/uploads/avrora/turnover_3.png": {
+    "width": 5760,
+    "height": 3240
+  },
+  "/uploads/avrora/users_2.png": {
+    "width": 7620,
+    "height": 4116
+  },
+  "/uploads/kaspi/Services.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/Loader.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/Search results.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/Movie's page_ tickets_ sort time.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/Movie's page_ tickets_ sort time-1.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/Movie's page_ feadback.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/Choose place-1.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/Choose place-2.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/Success.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/kaspi/My ticket-1.png": {
+    "width": 750,
+    "height": 1624
+  },
+  "/uploads/idol/Studio -_ Explore -_ Image -_ AI Chat.png": {
+    "width": 3456,
+    "height": 2234
+  },
+  "/uploads/idol/Studio -_ Explore -_ Image.png": {
+    "width": 3456,
+    "height": 2234
+  },
+  "/uploads/bao/search.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/order modal.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/seccsess.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/profile edit.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/my addresses.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/adsresses.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/My cards.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/enter number.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/enter code.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/code is entered.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/bao/enter name.png": {
+    "width": 780,
+    "height": 1688
+  },
+  "/uploads/taza/onboard.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/onboard-1.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/onboard-2.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/onboard-3.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/Главная — Ауцион.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/Главная — Ауцион модалка.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/Главная — Ауцион модалка аукцион завершен.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/Страница заказа модалка заказа.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/Мои аукционы.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/Отложанные товары.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/uploads/taza/Модалка товара.png": {
+    "width": 1125,
+    "height": 2436
+  },
+  "/presentation/admin-skibo.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/presentation/card-aurora.png": {
+    "width": 4096,
+    "height": 2362
+  },
+  "/presentation/card-skibo.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/presentation/card-rrs.png": {
+    "width": 4096,
+    "height": 2306
+  },
+  "/presentation/contract-skibo.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/presentation/detail-aurora.png": {
+    "width": 4096,
+    "height": 2304
+  },
+  "/presentation/detail-rrs.png": {
+    "width": 3843,
+    "height": 2170
+  },
+  "/presentation/detail-skibo.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/presentation/hero-aurora.png": {
+    "width": 4096,
+    "height": 2362
+  },
+  "/presentation/hero-skibo.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/presentation/hero-rrs.png": {
+    "width": 4096,
+    "height": 2306
+  },
+  "/presentation/mobile-card-aurora.png": {
+    "width": 4096,
+    "height": 2362
+  },
+  "/presentation/mobile-card-rrs.png": {
+    "width": 4096,
+    "height": 2306
+  },
+  "/presentation/mobile-card-skibo.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/presentation/portrait-mobile.png": {
+    "width": 1254,
+    "height": 1254
+  },
+  "/presentation/portrait.png": {
+    "width": 1254,
+    "height": 1254
+  },
+  "/presentation/support-aurora.png": {
+    "width": 4096,
+    "height": 2304
+  },
+  "/presentation/support-rrs.png": {
+    "width": 3843,
+    "height": 2170
+  },
+  "/presentation-v2/mobile-skibo.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/presentation-v2/kaspi-background.png": {
+    "width": 470,
+    "height": 411
+  },
+  "/presentation-v2/case-aurora-1.png": {
+    "width": 4096,
+    "height": 2304
+  },
+  "/presentation-v2/skibo-foreground.png": {
+    "width": 380,
+    "height": 386
+  },
+  "/presentation-v2/case-aurora-0.png": {
+    "width": 4096,
+    "height": 2362
+  },
+  "/presentation-v2/rrs-background.png": {
+    "width": 589,
+    "height": 453
+  },
+  "/presentation-v2/skibo-background.png": {
+    "width": 577,
+    "height": 470
+  },
+  "/presentation-v2/taza-background.png": {
+    "width": 577,
+    "height": 286
+  },
+  "/presentation-v2/rrs-foreground.png": {
+    "width": 359,
+    "height": 322
+  },
+  "/presentation-v2/case-skibo-0.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/presentation-v2/portrait-mobile.png": {
+    "width": 1254,
+    "height": 1254
+  },
+  "/presentation-v2/aurora-background.png": {
+    "width": 470,
+    "height": 345
+  },
+  "/presentation-v2/kaspi-foreground.png": {
+    "width": 403,
+    "height": 329
+  },
+  "/presentation-v2/case-skibo-1.png": {
+    "width": 1373,
+    "height": 2799
+  },
+  "/presentation-v2/case-rrs-1.png": {
+    "width": 3843,
+    "height": 2170
+  },
+  "/presentation-v2/rrs-device.png": {
+    "width": 3589,
+    "height": 3364
+  },
+  "/presentation-v2/mobile-aurora.png": {
+    "width": 4096,
+    "height": 2362
+  },
+  "/presentation-v2/aurora-foreground.png": {
+    "width": 418,
+    "height": 345
+  },
+  "/presentation-v2/mobile-rrs.png": {
+    "width": 4096,
+    "height": 2306
+  },
+  "/presentation-v2/idol-background.png": {
+    "width": 589,
+    "height": 303
+  },
+  "/presentation-v2/portrait.png": {
+    "width": 1254,
+    "height": 1254
+  },
+  "/presentation-v2/case-rrs-0.png": {
+    "width": 4096,
+    "height": 2306
+  },
+  "/presentation-v2/rrs-screen.png": {
+    "width": 3454,
+    "height": 3232
+  },
+  "/presentation-v2/rrs-hand.png": {
+    "width": 1917,
+    "height": 1292
+  },
+  "/presentation-v2/idol-foreground.png": {
+    "width": 589,
+    "height": 272
+  },
+  "/presentation-v2/taza-foreground.png": {
+    "width": 175,
+    "height": 264
+  },
+  "/presentation-v2/case-skibo-2.png": {
+    "width": 1373,
+    "height": 2799
+  }
+}

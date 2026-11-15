@@ -1,0 +1,87 @@
+.od-dashboard-presentation {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 1200 / 625;
+  overflow: hidden;
+  background: var(--od-case-cover-bg);
+  color: #301b16;
+}
+.od-dashboard-title {
+  position: absolute;
+  z-index: 1;
+  inset-inline-start: 6%;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(1rem, 5.45cqw, 4.8rem);
+  font-weight: 650;
+  letter-spacing: -.06em;
+  line-height: 1;
+}
+.od-dashboard-laptop {
+  position: absolute;
+  inset: 17.6% 6.9% auto 40.6%;
+  filter: drop-shadow(0 2cqw 2.5cqw rgb(95 44 24 / .2));
+}
+.od-dashboard-lid {
+  position: relative;
+  padding: 1.9%;
+  border: 1px solid #55575c;
+  border-radius: 3.1% / 5%;
+  background: #15171d;
+  box-shadow: inset 0 0 0 1px #090a0c;
+}
+.od-dashboard-lid::after {
+  position: absolute;
+  inset: 1.4% 46.6% auto;
+  height: 3.7%;
+  border-radius: 0 0 32% 32%;
+  background: #15171d;
+  content: '';
+}
+.od-dashboard-screen {
+  position: relative;
+  container-type: size;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 1.5% / 2%;
+  background: #f4f5f7;
+}
+.od-dashboard-scroll {
+  animation: od-dashboard-pan var(--dashboard-cycle, 12s)
+    linear(0, 0 8%, .11 13%, .87 29%, 1 34%, 1 39%, .87 44%, .11 57%, 0 62%, 0)
+    infinite;
+}
+@keyframes od-dashboard-pan {
+  from { transform: translateY(0); }
+  to { transform: translateY(calc(100cqh - var(--merchant-header) - 100%)); }
+}
+.od-dashboard-base {
+  position: relative;
+  width: 112%;
+  margin-inline: -6%;
+  aspect-ratio: 40 / 1;
+  border-radius: 3px 3px 12% 12% / 3px 3px 95% 95%;
+  background: #a4a8b0;
+  box-shadow: inset 0 2px #e4e6e9, inset 0 -2px #717780;
+}
+.od-dashboard-base::before {
+  position: absolute;
+  inset: 0 44.8% 67%;
+  border-radius: 0 0 25% 25%;
+  background: #9398a2;
+  content: '';
+}
+.od-case-dashboard { overflow: hidden; border-radius: var(--od-case-media-radius); }
+
+@media (max-width: 680px) {
+  .od-dashboard-presentation { aspect-ratio: 1.35; }
+  .od-dashboard-title { inset-block-start: 15%; }
+  .od-dashboard-laptop { inset: 29% 13% auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .od-dashboard-scroll { animation: none; }
+}

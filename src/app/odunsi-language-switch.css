@@ -1,0 +1,27 @@
+.od-language-switch {
+  display: flex;
+  flex: none;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid #f4efe633;
+  border-radius: 99px;
+  background: #191b1ee8;
+  color: #f4efe6;
+}
+
+.od-language-switch a {
+  display: grid;
+  min-inline-size: 36px;
+  min-block-size: 36px;
+  place-items: center;
+  border-radius: 99px;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.od-language-switch a:hover { background: #ffffff1f; }
+.od-language-switch a[aria-current='page'] { background: #f4efe6; color: #1a1a1a; }
+.od-language-switch a:focus-visible { outline: 2px solid #b7caff; outline-offset: 1px; }

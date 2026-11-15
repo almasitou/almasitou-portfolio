@@ -1,0 +1,101 @@
+.od-avrora {
+  --stack-time: 10s;
+  --teaser-loop: var(--stack-time);
+  --teaser-ink: #fff;
+  --teaser-title-size: clamp(19px, min(5.3cqw, 8.4cqh), 32px);
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #ed4039;
+}
+
+.od-avrora-deck {
+  --front: translate(0, 0);
+  --next: translate(1.8%, -7.4%) rotate(2.8deg) scale(.982);
+  --middle: translate(-2%, -12%) rotate(-3.5deg) scale(.948);
+  --back: translate(2.5%, -15.5%) rotate(4.1deg) scale(.916);
+  --out: translate(3%, -42%) rotate(6deg) scale(.885);
+  --in: translate(3%, 122%) rotate(8deg) scale(1.025);
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  width: min(81cqw, 117cqh);
+  aspect-ratio: 1.66;
+  transform: translate(-50%, -50%);
+  isolation: isolate;
+}
+
+.od-avrora-sheet {
+  position: absolute;
+  inset: 0;
+  padding: 1.42cqh;
+  border: 1px solid #fff9;
+  border-radius: 1.7cqh;
+  background: #fbfaf8;
+  box-shadow: 0 2.8cqh 5cqh #710b1937, 0 .5cqh 1.2cqh #67101222;
+  animation:
+    od-avrora-deck-travel var(--stack-time) cubic-bezier(.31, .78, .25, 1) var(--sheet-phase) infinite both,
+    od-avrora-deck-order var(--stack-time) steps(1, end) var(--sheet-phase) infinite both;
+}
+
+.od-avrora-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: .7cqh;
+  overflow: hidden;
+  background: #fff;
+}
+
+.od-avrora-screen img {
+  object-fit: contain;
+}
+
+.od-avrora-focus {
+  position: absolute;
+  left: var(--focus-x);
+  top: var(--focus-y);
+  width: 3.8cqh;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: max(1px, .32cqh) solid #5744efb0;
+  box-shadow: 0 0 0 .25cqh #fff8;
+  opacity: 0;
+  animation: od-avrora-focus var(--stack-time) cubic-bezier(.26, .69, .28, 1) var(--sheet-phase) infinite both;
+}
+
+/* Each sheet arrives in front, recedes three places, and resets while invisible. */
+@keyframes od-avrora-deck-travel {
+  0%, 17.2%, 99%, 100% { transform: var(--front); opacity: 1; }
+  25% { transform: var(--next); opacity: 1; }
+  42.2% { transform: translate(2.1%, -8.05%) rotate(3deg) scale(.978); opacity: 1; }
+  50% { transform: var(--middle); opacity: 1; }
+  67.2% { transform: translate(-2.25%, -12.65%) rotate(-3.7deg) scale(.944); opacity: 1; }
+  75% { transform: var(--back); opacity: 1; }
+  91.1% { transform: translate(2.7%, -16.1%) rotate(4.2deg) scale(.913); opacity: 1; }
+  94.1% { transform: var(--out); opacity: 0; }
+  94.15% { transform: var(--in); opacity: 0; }
+  94.2% { transform: var(--in); opacity: 1; }
+}
+
+@keyframes od-avrora-deck-order {
+  0%, 100% { z-index: 4; }
+  25% { z-index: 3; }
+  50% { z-index: 2; }
+  75% { z-index: 1; }
+  94.2% { z-index: 5; }
+}
+
+@keyframes od-avrora-focus {
+  0%, 4.5% { opacity: 0; transform: translate(calc(-50% + 2cqh), calc(-50% + 1.1cqh)) scale(.74); }
+  8.5% { opacity: .88; transform: translate(-50%, -50%) scale(1); }
+  13% { opacity: .56; transform: translate(-50%, -50%) scale(1.23); }
+  17.5%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.55); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .od-avrora-sheet:nth-child(1) { z-index: 4; transform: var(--front); }
+  .od-avrora-sheet:nth-child(2) { z-index: 1; transform: var(--back); }
+  .od-avrora-sheet:nth-child(3) { z-index: 2; transform: var(--middle); }
+  .od-avrora-sheet:nth-child(4) { z-index: 3; transform: var(--next); }
+}

@@ -1,0 +1,268 @@
+.od-ski {
+  --ski-loop: 11s;
+  --ski-ease: cubic-bezier(.22, .7, .2, 1);
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #3596f1;
+  color: #fff;
+}
+
+.od-ski-copy {
+  position: absolute;
+  z-index: 1;
+  inset: 0 auto 0 7%;
+  display: flex;
+  width: 49%;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(6px, 2.55cqh, 14px);
+  opacity: 0;
+  animation: var(--ski-copy-animation) var(--ski-loop) var(--ski-ease) infinite both paused;
+}
+
+.od-ski-copy--queue {
+  --ski-copy-animation: od-ski-copy-queue;
+  inset-inline: 0;
+  width: auto;
+  align-items: center;
+  padding-inline: 7%;
+  text-align: center;
+}
+.od-ski-copy--gear {
+  --ski-copy-animation: od-ski-copy-gear;
+  --beat-start: calc(var(--ski-loop) * .209);
+}
+.od-ski-copy--booking {
+  --ski-copy-animation: od-ski-copy-booking;
+  --beat-start: calc(var(--ski-loop) * .509);
+}
+.od-ski-copy--finish {
+  --ski-copy-animation: od-ski-copy-finish;
+  --beat-start: calc(var(--ski-loop) * .765);
+}
+
+.od-ski-headline {
+  margin: 0;
+  font-size: min(7.5cqw, 10.8cqh, 52px);
+  font-weight: 680;
+  letter-spacing: -.054em;
+  line-height: 1.14;
+}
+
+.od-ski-copy--queue .od-ski-headline { font-size: min(9cqw, 13cqh, 62px); }
+.od-ski-copy--booking .od-ski-headline,
+.od-ski-copy--finish .od-ski-headline { font-size: min(6.9cqw, 10cqh, 47px); }
+
+.od-ski-headline-line {
+  display: flex;
+  align-items: baseline;
+  gap: .225em;
+  white-space: nowrap;
+}
+.od-ski-copy--queue .od-ski-headline-line { justify-content: center; }
+
+.od-ski-word { display: block; }
+.od-ski-word-reveal {
+  display: block;
+  animation: od-ski-word var(--ski-loop) var(--ski-ease) infinite both paused;
+  animation-delay: calc(var(--beat-start, 0s) + 90ms * var(--word-index));
+}
+.od-ski-copy--queue .od-ski-word-reveal { animation: none; }
+
+.od-ski-detail {
+  max-width: 22ch;
+  margin: 0;
+  font-size: clamp(12px, min(3.25cqw, 4.65cqh), 21px);
+  font-weight: 490;
+  letter-spacing: -.012em;
+  line-height: 1.29;
+  text-wrap: pretty;
+}
+.od-ski-phone {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  width: min(38cqw, 41cqh, 258px);
+  box-shadow: 0 3.4cqh 7cqh #060e3880, inset 0 0 0 1px #e9edf258;
+  opacity: 0;
+  transform: translateY(-50%);
+  animation: od-ski-phone var(--ski-loop) var(--ski-ease) infinite both paused;
+}
+
+.od-ski-app {
+  position: absolute;
+  inset: 0;
+  background: #c8daff;
+  color: #171a21;
+  animation: od-ski-app var(--ski-loop) steps(1, end) infinite both paused;
+}
+
+.od-ski-status {
+  position: absolute;
+  z-index: 1;
+  inset: 0 0 auto;
+  display: flex;
+  height: 5.7%;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 10.5% 7.5%;
+  font: 700 4.05cqw / 1 var(--font-medeo), Arial, sans-serif;
+}
+.od-ski-status span { display: flex; gap: 1cqw; }
+.od-ski-status svg { width: 4cqw; height: 4cqw; stroke-width: 2.3; }
+
+.od-ski-screen { position: absolute; inset: 5.7% 0 2%; overflow: hidden; }
+.od-ski-screen-state { position: absolute; inset: 0; background: #fff; }
+.od-ski-screen-state img, .od-ski-sheet img { object-fit: fill; }
+.od-ski-screen-state--agreement,
+.od-ski-screen-state--checkout,
+.od-ski-screen-state--paid {
+  transform: translateX(101%);
+  animation: var(--ski-screen-animation) var(--ski-loop) var(--ski-ease) infinite both paused;
+}
+.od-ski-screen-state--agreement { --ski-screen-animation: od-ski-agreement; }
+.od-ski-screen-state--checkout { --ski-screen-animation: od-ski-checkout; }
+.od-ski-screen-state--paid { --ski-screen-animation: od-ski-paid; }
+
+.od-ski-payment-method {
+  position: absolute;
+  inset: 69.85% 20.7% 20.9% 42.75%;
+  border: max(1px, .6cqw) solid #2970ff;
+  border-radius: 1.8cqw;
+  background-color: #2970ff0d;
+  opacity: 0;
+  animation: od-ski-payment-ready var(--ski-loop) var(--ski-ease) infinite both paused;
+}
+
+.od-ski-payment-button {
+  position: absolute;
+  inset: 91.8% 3.75% 2.45%;
+  display: grid;
+  place-items: center;
+  border-radius: 2.15cqw;
+  background: #2970ff;
+  color: #fff;
+  font: 500 3.6cqw / 1 var(--font-medeo), Arial, sans-serif;
+  opacity: 0;
+  animation: od-ski-payment-ready var(--ski-loop) var(--ski-ease) infinite both paused;
+}
+
+.od-ski-shade {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: #0c111add;
+  opacity: 0;
+  animation: od-ski-shade var(--ski-loop) var(--ski-ease) infinite both paused;
+}
+.od-ski-sheet {
+  position: absolute;
+  z-index: 2;
+  inset: 30% 0 2%;
+  overflow: hidden;
+  border-radius: 4.2cqw 4.2cqw 0 0;
+  background: #fff;
+  transform: translateY(110%);
+  animation: od-ski-sizes var(--ski-loop) var(--ski-ease) infinite both paused;
+}
+.od-ski-tap {
+  position: absolute;
+  z-index: 2;
+  top: 92%;
+  left: 50%;
+  width: 10cqw;
+  aspect-ratio: 1;
+  border: max(1px, .7cqw) solid #fff;
+  border-radius: 50%;
+  background: #f2f6ff30;
+  opacity: 0;
+  animation: od-ski-tap var(--ski-loop) var(--ski-ease) infinite both paused;
+}
+.od-ski-home-indicator {
+  position: absolute;
+  z-index: 2;
+  bottom: 1%;
+  left: 34%;
+  width: 32%;
+  height: .52%;
+  border-radius: 99px;
+  background: #1d1e20;
+}
+
+@keyframes od-ski-copy-queue {
+  0%, 16%, 100% { opacity: 1; transform: none; }
+  20% { opacity: 0; transform: translateY(-9px); }
+  21%, 97% { opacity: 0; transform: translateY(5px); }
+}
+@keyframes od-ski-copy-gear {
+  0%, 20%, 100% { opacity: 0; transform: translateY(5px); }
+  24%, 46% { opacity: 1; transform: none; }
+  50% { opacity: 0; transform: translateY(-9px); }
+  51%, 99% { opacity: 0; }
+}
+@keyframes od-ski-copy-booking {
+  0%, 50%, 100% { opacity: 0; transform: translateY(5px); }
+  54%, 72% { opacity: 1; transform: none; }
+  76% { opacity: 0; transform: translateY(-9px); }
+  77%, 99% { opacity: 0; }
+}
+@keyframes od-ski-copy-finish {
+  0%, 76%, 100% { opacity: 0; transform: translateY(5px); }
+  80%, 94% { opacity: 1; transform: none; }
+  98% { opacity: 0; transform: translateY(-9px); }
+}
+@keyframes od-ski-word {
+  0%, 100% { opacity: 0; transform: translateY(.65em); }
+  4%, 98% { opacity: 1; transform: translateY(0); }
+}
+@keyframes od-ski-phone {
+  0%, 17%, 100% { opacity: 0; transform: translate(29%, -23%) rotate(12deg) scale(.9); }
+  25% { opacity: 1; transform: translate(0, -49%) rotate(-4deg) scale(1.02); }
+  42% { opacity: 1; transform: translate(0, -52%) rotate(1deg) scale(1.05); }
+  55%, 72% { opacity: 1; transform: translate(0, -50%) rotate(-1deg); }
+  84%, 92% { opacity: 1; transform: translate(0, -49%) rotate(3deg) scale(.98); }
+  99% { opacity: 0; transform: translate(23%, -55%) rotate(9deg) scale(.92); }
+}
+@keyframes od-ski-app {
+  0% { background: #c8daff; }
+  55%, 99% { background: #fff; }
+  100% { background: #c8daff; }
+}
+@keyframes od-ski-shade {
+  0%, 34%, 55%, 100% { opacity: 0; }
+  38%, 49% { opacity: 1; }
+}
+@keyframes od-ski-sizes {
+  0%, 34%, 55%, 100% { transform: translateY(110%); }
+  40%, 49% { transform: translateY(0); }
+}
+@keyframes od-ski-agreement {
+  0%, 50%, 100% { transform: translateX(101%); }
+  55%, 99% { transform: translateX(0); }
+}
+@keyframes od-ski-checkout {
+  0%, 61%, 100% { transform: translateX(101%); }
+  65%, 99% { transform: translateX(0); }
+}
+@keyframes od-ski-paid {
+  0%, 75%, 100% { transform: translateX(101%); }
+  80%, 99% { transform: translateX(0); }
+}
+@keyframes od-ski-payment-ready {
+  0%, 67%, 100% { opacity: 0; }
+  69%, 98% { opacity: 1; }
+  99% { opacity: 0; }
+}
+@keyframes od-ski-tap {
+  0%, 32%, 47%, 60%, 73.5%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(.5); }
+  33%, 47.8%, 60.6%, 74.2% { opacity: .84; transform: translate(-50%, -50%) scale(1); }
+  36%, 50%, 62.6%, 76.2% { opacity: 0; transform: translate(-50%, -50%) scale(1.55); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .od-ski-copy--gear, .od-ski-phone { opacity: 1; }
+  .od-ski-phone { transform: translateY(-50%) rotate(-3deg); }
+}

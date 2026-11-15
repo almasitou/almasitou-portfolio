@@ -1,0 +1,287 @@
+.od-kaspi-scene {
+  --teaser-loop: var(--od-time);
+  --teaser-title-size: clamp(14px, min(6cqw, 8.15cqh), 47px);
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: #c91c39;
+}
+.od-kaspi-stage {
+  position: absolute;
+  inset: 3% 5.5% 3% 49%;
+  display: grid;
+  place-items: center;
+}
+.od-kaspi-phone {
+  position: relative;
+  width: min(100%, 40cqh, 245px);
+  aspect-ratio: 1325 / 2681;
+  filter: drop-shadow(0 3cqh 4cqh #570c2a58);
+  animation: od-kaspi-camera var(--od-time) cubic-bezier(.22, .72, .22, 1) infinite both paused;
+}
+.od-kaspi-phone-screen {
+  position: absolute;
+  inset: 2.24% 5.25% 2.35% 5.45%;
+  overflow: hidden;
+  isolation: isolate;
+  container-type: inline-size;
+  border-radius: 14.35% / 6.25%;
+  background: #fff;
+}
+.od-kaspi-phone-shell { z-index: 1; pointer-events: none; }
+.od-kaspi-preview-page {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  visibility: hidden;
+  animation:
+    od-kaspi-screen-slide var(--od-time)
+      linear(0, 0 var(--kaspi-frame-in), .32 var(--kaspi-frame-move), .86 var(--kaspi-frame-slow), 1 var(--kaspi-frame-ready), 1) infinite both paused,
+    od-kaspi-screen-parallax var(--od-time)
+      linear(0, 0 var(--kaspi-frame-exit), 1 var(--kaspi-frame-exited), 1) infinite both paused,
+    od-kaspi-screen-visible var(--od-time)
+      linear(0, 0 var(--kaspi-frame-in), 1 var(--kaspi-frame-in), 1 var(--kaspi-frame-exited), 0 var(--kaspi-frame-exited), 0) infinite both paused;
+}
+.od-kaspi-preview-page img { object-fit: fill; }
+.od-kaspi-preview-page[data-step='event'] { visibility: visible; }
+
+.od-kaspi-native-seat {
+  position: absolute;
+  width: 9.866%;
+  height: 3.7%;
+  background: url('/odunsi/kaspi-native/seat.webp') center / 100% 100% no-repeat;
+  opacity: 0;
+  animation: od-kaspi-native-show var(--od-time) linear(
+    0, 0 var(--kaspi-pick-start), 1 var(--kaspi-pick-ready), 1
+  ) infinite both paused;
+}
+.od-kaspi-native-tag,
+.od-kaspi-native-details,
+.od-kaspi-native-amount,
+.od-kaspi-native-ticket-details,
+.od-kaspi-native-total {
+  position: absolute;
+  box-sizing: border-box;
+  font-family: var(--font-medeo), Arial, sans-serif;
+  letter-spacing: -.01em;
+}
+.od-kaspi-native-tag {
+  top: 69.7%;
+  display: grid;
+  height: 3%;
+  place-items: center;
+  border-radius: 1em;
+  font-size: 4.05cqw;
+}
+.od-kaspi-native-adult { left: 57.3%; width: 10.8%; border: 1px solid #555; background: #fff; color: #444; }
+.od-kaspi-native-group { left: 83%; width: 12.7%; background: #f14635; color: #fff; }
+.od-kaspi-cover-tickets {
+  position: absolute;
+  inset: 74.9% 0 13.6%;
+  overflow: hidden;
+  background: #fff;
+}
+.od-kaspi-cover-ticket-rail {
+  display: flex;
+  height: 100%;
+  padding-inline-start: 4.25cqw;
+  gap: 2cqw;
+  animation: od-kaspi-cover-rail var(--od-time)
+    linear(0, var(--kaspi-rail-stops), 1) infinite both paused;
+}
+.od-kaspi-cover-ticket {
+  display: grid;
+  flex: 0 0 54.6cqw;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: center;
+  align-items: center;
+  gap: .75em .15em;
+  height: 91%;
+  margin-block: auto;
+  padding: .55em 1em;
+  border-radius: 3.2cqw;
+  background: #eee;
+  color: #171717;
+  font: 400 3.55cqw / 1.08 var(--font-medeo), Arial, sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  animation: od-kaspi-cover-ticket var(--od-time)
+    linear(0, 0 var(--kaspi-pick-start), 1 var(--kaspi-ticket-ready), 1) infinite both paused;
+}
+.od-kaspi-cover-ticket strong { font-weight: 650; }
+.od-kaspi-cover-ticket svg { justify-self: end; stroke-width: 1.7; }
+.od-kaspi-cover-ticket-fare { display: grid; color: #666; font-size: .88em; }
+.od-kaspi-cover-ticket-fare > span { grid-area: 1 / 1; }
+.od-kaspi-cover-ticket-student {
+  position: relative;
+  background: #eee;
+  opacity: 0;
+  animation: od-kaspi-native-show var(--od-time) linear(0, 0 var(--kaspi-group-fare), 1 var(--kaspi-group-fare), 1) infinite both paused;
+}
+.od-kaspi-cover-ticket-edit { color: #1677ff; font-size: .88em; text-align: end; }
+.od-kaspi-native-total {
+  inset: 89% 4.4% 5.72%;
+  display: grid;
+  place-items: center;
+  border-radius: 2cqw;
+  background: #0089d0;
+  color: white;
+  font-size: 4.12cqw;
+  font-weight: 600;
+}
+.od-kaspi-native-total--count {
+  opacity: 0;
+  animation: od-kaspi-native-show var(--od-time) linear(
+    0, 0 var(--count-start), 1 var(--count-start), 1 var(--count-end), 0 var(--count-end), 0
+  ) infinite both paused;
+}
+.od-kaspi-native-tag,
+.od-kaspi-native-total--changed {
+  opacity: 0;
+  animation: od-kaspi-native-show var(--od-time) linear(0, 0 var(--kaspi-group-fare), 1 var(--kaspi-group-fare), 1) infinite both paused;
+}
+.od-kaspi-cover-empty {
+  background: #d2d2d2;
+  animation: od-kaspi-native-show var(--od-time) linear(1, 1 var(--kaspi-first-pick), 0 var(--kaspi-first-pick), 0) infinite both paused;
+}
+.od-kaspi-preview-page[data-step='checkout'] .od-kaspi-native-total { inset-block: 88% 6.64%; }
+.od-kaspi-native-details,
+.od-kaspi-native-amount {
+  display: flex;
+  align-items: center;
+  color: #212121;
+  background: #fff;
+  font-size: 4.22cqw;
+  line-height: 1;
+}
+.od-kaspi-native-details { inset: 27.1% 5% 69.8% 4.15%; }
+.od-kaspi-native-amount { inset: 40.42% 4.15% 57.4% auto; width: 26%; justify-content: end; font-weight: 700; }
+.od-kaspi-preview-page[data-step='success'] .od-kaspi-native-details { inset: 29.5% 5% 67.3% 27.6%; }
+.od-kaspi-preview-page[data-step='success'] .od-kaspi-native-amount { top: 38.45%; bottom: 58.8%; }
+.od-kaspi-native-ticket-details {
+  inset: 67.8% 10% 6.5%;
+  display: flex;
+  padding-top: .22em;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: #fff;
+  color: #121212;
+  font-size: 3.7cqw;
+  line-height: 1.12;
+}
+.od-kaspi-native-ticket-details--barcode { inset-block: 31% 44.6%; }
+.od-kaspi-native-ticket-details > .od-kaspi-native-ticket-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding-bottom: .62em;
+  border-bottom: max(.4px, .18cqw) solid #d8d8d8;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.od-kaspi-native-ticket-details b { font-weight: 400; }
+.od-kaspi-native-ticket-details span { color: #666; font-size: .88em; }
+
+@keyframes od-kaspi-camera {
+  0%, 100% { transform: translateX(2%) rotate(4deg) scale(.965); }
+  18% { transform: translateX(0) rotate(-2deg); }
+  27%, 54% { transform: translateX(0) rotate(0) scale(1.045); }
+  63% { transform: translateY(1%) rotate(2deg); }
+  82%, 92% { transform: translateY(-1%) rotate(-3deg); }
+}
+@keyframes od-kaspi-screen-slide {
+  from { transform: translateX(102%); }
+  to { transform: none; }
+}
+@keyframes od-kaspi-screen-parallax {
+  from { translate: 0; }
+  to { translate: -26%; }
+}
+@keyframes od-kaspi-screen-visible {
+  from { visibility: hidden; }
+  to { visibility: visible; }
+}
+@keyframes od-kaspi-native-show { from { opacity: 0; } to { opacity: 1; } }
+@keyframes od-kaspi-cover-rail { to { transform: translateX(var(--kaspi-rail-distance)); } }
+@keyframes od-kaspi-cover-ticket {
+  from { opacity: 0; transform: translateY(17%); }
+  to { opacity: 1; transform: none; }
+}
+
+.od-kaspi-native-demo {
+  width: min(100%, 287px);
+  aspect-ratio: 390 / 850;
+}
+@media (max-width: 680px) and (min-resolution: 3dppx) {
+  .od-kaspi-native-demo { width: min(100%, 262px); }
+}
+.od-kaspi-native-demo .od-iphone-island { display: none; }
+.od-kaspi-native-demo-page, .od-kaspi-native-hit { position: absolute; }
+.od-kaspi-native-demo-page { inset: 0; }
+.od-kaspi-native-demo-page img { object-fit: fill; }
+.od-kaspi-native-hit,
+.od-kaspi-native-demo button {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.od-kaspi-native-hit { background: transparent; border-radius: 1cqw; }
+.od-kaspi-native-demo :is(button,a):focus-visible { outline: 2px solid #0078bd; outline-offset: 1px; }
+.od-kaspi-native-demo .od-kaspi-native-total:disabled { background: #d3d3d3; cursor: default; }
+.od-kaspi-native-demo-seat[aria-pressed='true'] {
+  background: url('/odunsi/kaspi-native/seat.webp') center / 100% 100% no-repeat;
+}
+.od-kaspi-native-demo-fare {
+  position: absolute;
+  display: grid;
+  padding: .48cqw;
+  background: #fff;
+}
+.od-kaspi-native-demo-fare button {
+  border: 1px solid #555;
+  border-radius: 99px;
+  background: #fff;
+  color: #444;
+  font: 400 4.05cqw / 1 var(--font-medeo), Arial, sans-serif;
+}
+.od-kaspi-native-demo-fare [aria-pressed='true'] { border-color: #f14635; background: #f14635; color: white; }
+.od-kaspi-native-demo-tickets {
+  position: absolute;
+  display: flex;
+  gap: 2cqw;
+  overflow: auto hidden;
+  background: #fff;
+  scrollbar-width: none;
+}
+.od-kaspi-native-demo-selected {
+  flex: 0 0 56.8%;
+  position: absolute;
+  display: grid;
+  align-content: center;
+  gap: .65em;
+  padding: 1em;
+  border-radius: 3.2cqw;
+  background: #eee;
+  color: #222;
+  font: 400 3.2cqw / 1 var(--font-medeo), Arial, sans-serif;
+}
+.od-kaspi-native-demo-tickets .od-kaspi-native-demo-selected { position: relative; }
+.od-kaspi-native-demo-selected small { color: #666; font-size: .94em; }
+.od-kaspi-native-demo-selected button {
+  position: absolute;
+  border-radius: .3em;
+  background: transparent;
+  font: inherit;
+}
+.od-kaspi-native-demo-remove { inset: .6em .4em auto auto; width: 2em; height: 2em; color: #444; }
+.od-kaspi-native-demo-edit { inset: auto .7em .85em auto; color: #1677ff; }
+.od-kaspi-native-demo-sheet-title {
+  position: absolute;
+  display: grid;
+  align-items: center;
+  background: #fff;
+  color: #141414;
+  font: 700 5cqw / 1 var(--font-medeo), Arial, sans-serif;
+}

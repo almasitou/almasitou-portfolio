@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 
 const Sparkle = ({ size, color, style }) => {
   return (
@@ -31,11 +31,19 @@ const Sparkle = ({ size, color, style }) => {
   );
 };
 
-export default function SparklesButton({ children, href, className, target }) {
+export default function SparklesButton({ children, href, className, target, rel }) {
   const [sparkles, setSparkles] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
+  const reduced=useReducedMotion();
+  const sparkleTimeouts=useRef(new Set());
 
   useEffect(() => {
+    const pending=sparkleTimeouts.current;
+    return () => {pending.forEach(clearTimeout);pending.clear();};
+  }, []);
+
+  useEffect(() => {
+    if(reduced)return;
     const currentInterval = isHovered ? 50 : 250;
     const interval = setInterval(() => {
       const sparkle = {
@@ -48,23 +56,28 @@ export default function SparklesButton({ children, href, className, target }) {
       
       setSparkles(s => [...s, sparkle]);
 
-      setTimeout(() => {
+      const timeout=setTimeout(() => {
         setSparkles(s => s.filter(sp => sp.id !== sparkle.id));
+        sparkleTimeouts.current.delete(timeout);
       }, 800);
+      sparkleTimeouts.current.add(timeout);
     }, currentInterval);
 
     return () => clearInterval(interval);
-  }, [isHovered]);
+  }, [isHovered,reduced]);
 
   return (
     <a 
       href={href} 
       target={target}
+      rel={rel || (target==='_blank'?'noreferrer':undefined)}
       className={`relative group/sparkles ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onFocus={() => setIsHovered(true)}
+      onBlur={() => setIsHovered(false)}
     >
-      <div className="absolute inset-0 pointer-events-none z-0">
+      <div className="absolute inset-0 pointer-events-none z-0 motion-reduce:hidden" aria-hidden="true">
         <AnimatePresence>
           {sparkles.map(sp => (
             <Sparkle 

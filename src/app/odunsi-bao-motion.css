@@ -1,0 +1,75 @@
+.od-bao-teaser {
+  --teaser-loop: 11s;
+  --teaser-ink: #223008;
+  --teaser-detail: #2e3a15;
+  --teaser-title-size: clamp(15px, min(6.25cqw, 8.5cqh), 49px);
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+  overflow: hidden;
+  background: #c1e64f;
+}
+.od-bao-teaser .od-teaser-captions { inset-inline-end: 54%; }
+.od-bao-tray {
+  position: absolute;
+  top: 51%;
+  right: 7%;
+  width: min(62cqw, 111cqh, 170px);
+  aspect-ratio: 340 / 253;
+  transform-origin: 57% 62%;
+  transform: translateY(-50%) rotate(-10deg);
+  animation: od-bao-tray-motion var(--teaser-loop) cubic-bezier(.23, .66, .26, 1) infinite both paused;
+}
+.od-bao-tray img {
+  object-fit: contain;
+  filter: drop-shadow(0 4cqh 3cqh #29360755);
+}
+.od-bao-phone {
+  position: absolute;
+  top: 50%;
+  right: 9%;
+  width: min(41cqh, 40cqw, 230px);
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: od-bao-phone-motion var(--teaser-loop) cubic-bezier(.24, .69, .22, 1) infinite both paused;
+}
+.od-bao-shot {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+}
+.od-bao-shot img { object-fit: fill; }
+.od-bao-phone .od-iphone-island { display: none; }
+.od-bao-shot:not([data-step='menu']) {
+  opacity: 0;
+  animation: var(--bao-page) var(--teaser-loop) cubic-bezier(.23, .7, .22, 1) infinite both paused;
+}
+.od-bao-shot[data-step='cart'] { --bao-page: od-bao-cart; }
+.od-bao-shot[data-step='delivery'] { --bao-page: od-bao-delivery; }
+.od-bao-shot[data-step='paid'] { --bao-page: od-bao-paid; }
+
+@keyframes od-bao-tray-motion {
+  0%, 100% { opacity: 1; transform: translateY(-50%) rotate(-10deg); }
+  15% { opacity: 1; transform: translateY(-48%) rotate(2deg) scale(1.08); }
+  27%, 86% { opacity: 0; transform: translate(29%, -34%) rotate(18deg) scale(.75); }
+  87% { opacity: 0; transform: translate(23%, -33%) rotate(-20deg) scale(.83); }
+}
+@keyframes od-bao-phone-motion {
+  0%, 17%, 100% { opacity: 0; transform: translate(37%, -26%) rotate(13deg) scale(.9); }
+  28% { opacity: 1; transform: translate(0, -50%) rotate(-4deg); }
+  53% { opacity: 1; transform: translate(0, -52%) rotate(1deg) scale(1.02); }
+  77%, 89% { opacity: 1; transform: translate(0, -48%) rotate(3deg) scale(.99); }
+  98% { opacity: 0; transform: translate(28%, -63%) rotate(12deg) scale(.89); }
+}
+@keyframes od-bao-cart {
+  0%, 44%, 100% { opacity: 0; transform: translateY(100%); }
+  49%, 97% { opacity: 1; transform: none; }
+}
+@keyframes od-bao-delivery {
+  0%, 62%, 100% { opacity: 0; transform: translateY(100%); }
+  67%, 97% { opacity: 1; transform: none; }
+}
+@keyframes od-bao-paid {
+  0%, 77%, 100% { opacity: 0; transform: translateY(100%); }
+  82%, 97% { opacity: 1; transform: none; }
+}

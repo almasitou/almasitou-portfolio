@@ -1,0 +1,42 @@
+.od-qalan-preview {
+  --teaser-loop: 10.8s;
+  --teaser-ink: #fff;
+  --teaser-detail: #faf5ff;
+  --teaser-title-size: clamp(15px, min(6cqw, 8cqh), 41px);
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--od-qalan-purple);
+}
+.od-qalan-preview .od-teaser-captions { inset-block-start: 7.5%; }
+.od-qalan-turntable { position: absolute; inset: 23% 0 3%; }
+.od-qalan-phone {
+  --qalan-clock: 0s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(36cqw, 31cqh, 186px);
+  background: linear-gradient(120deg, #9b868c, #2d202a 23%, #291b23 67%, #6b5255);
+  transform: translate(-50%, -50%);
+  animation: od-qalan-turntable var(--teaser-loop) cubic-bezier(.22, .74, .21, 1) var(--qalan-clock) infinite both paused;
+}
+.od-qalan-phone--2 { --qalan-clock: -7.344s; z-index: -1; transform: translate(-116%, -48%) rotate(-13deg) scale(.77); }
+.od-qalan-phone--3 { --qalan-clock: -3.888s; z-index: -1; transform: translate(16%, -47%) rotate(13deg) scale(.77); }
+.od-qalan-phone .od-iphone-screen { background: #242424; }
+.od-qalan-phone .od-iphone-island { display: none; }
+.od-qalan-screen { position: absolute; inset: 0; }
+.od-qalan-screen img { object-fit: fill; }
+
+@keyframes od-qalan-turntable {
+  0%, 100% { z-index: 2; transform: translate(-50%, -50%) rotate(-3deg); }
+  15% { z-index: 2; transform: translate(-50%, -50%) rotate(0); }
+  26% { z-index: 2; transform: translate(-50%, -50%) rotate(2deg); }
+  32% { z-index: 1; transform: translate(-118%, -48%) rotate(-14deg) scale(.77); }
+  49% { z-index: 0; transform: translate(-121%, -47%) rotate(-14deg) scale(.74); }
+  64% { z-index: 0; transform: translate(-50%, -44%) rotate(-2deg) scale(.65); }
+  79%, 93% { z-index: 1; transform: translate(16%, -48%) rotate(12deg) scale(.76); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .od-qalan-phone--1 { z-index: 2; }
+}

@@ -1,0 +1,19 @@
+.od-preview {
+  --od-cover-grain: url('/odunsi/cover-grain.webp');
+  position: relative;
+  width: 100%;
+  height: 100%;
+  isolation: isolate;
+  overflow: hidden;
+  container-type: size;
+}
+
+.od-preview > :first-child {
+  background-image: var(--od-cover-grain);
+}
+
+.od-preview .od-motion-layer { animation-play-state: var(--od-preview-play-state, running); }
+
+@media (prefers-reduced-motion: reduce) {
+  .od-preview .od-motion-layer { animation: none; }
+}
