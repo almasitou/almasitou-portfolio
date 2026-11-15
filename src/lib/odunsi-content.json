@@ -134,11 +134,11 @@
     {
       "slug": "rrs",
       "ru": {
-        "headline": "С минуты до 10–⁠15 секунд на кассе",
+        "headline": "С 45–60 до 10–15 секунд на кассе",
         "problem": "В обеденный пик кассир вручную вводил блюда с каждого подноса. Чем дольше занимал ввод, тем медленнее двигалась очередь.",
         "contribution": "Спроектировал сенсорный сценарий терминала: запуск распознавания, проверку заказа, исправление ошибок и оплату.",
         "tradeoff": "В основной сценарий поставил распознавание камерой. Перед оплатой оставил явную проверку заказа, а уточнение блюда и ручной поиск сделал доступными только там, где они нужны. Так обычный заказ остаётся коротким, а нестандартный можно довести до оплаты.",
-        "outcome": "Показатели взяты из данных проекта и относятся к работе терминала в целом.",
+        "outcome": "По данным проекта, зарплата одного кассира составляла 3 000–4 000 €, а подписка на терминал стоила 1 000 €.",
         "name": "Retail Robotics Solutions",
         "tag": "FoodTech · AI-терминал",
         "intro": "Касса самообслуживания для ресторанов. Распознавание блюд камерой ускоряет оформление заказов в обеденный пик.",
@@ -148,36 +148,36 @@
         "difficulty": "На кассе мало времени на подсказки. Гость должен справиться с первого раза, в том числе если камера пропустила блюдо или 2 тарелки перекрыли друг друга.",
         "metrics": [
           [
-            "10–⁠15 сек.",
-            "на оформление заказа вместо минуты"
+            "10–15 сек.",
+            "на оформление заказа на терминале"
           ],
           [
             "В 3–4 раза",
-            "снизились расходы по данным проекта"
+            "подписка дешевле зарплаты одного кассира"
           ]
         ]
       },
       "en": {
         "name": "Retail Robotics Solutions",
         "tag": "FoodTech · AI self-checkout",
-        "headline": "From a minute to 10–⁠15 seconds at checkout",
+        "headline": "From 45–60 to 10–15 seconds at checkout",
         "intro": "A restaurant self-checkout kiosk that recognizes dishes and speeds up checkout during the lunch rush.",
         "problem": "At the lunch rush, cashiers entered each dish from every tray by hand. The longer entry took, the slower the line moved.",
         "contribution": "I designed the kiosk flow for touch, from starting recognition to reviewing the order, recovering from errors, and paying.",
         "tradeoff": "I made camera recognition the default and kept an explicit review before payment. Dish clarification and manual search appear where guests need them. The usual path stays short, and exceptions can still reach payment.",
-        "outcome": "The figures come from project data and describe the performance of the kiosk as a whole.",
+        "outcome": "Project figures put one cashier’s salary at €3,000–€4,000 and the kiosk subscription at €1,000.",
         "role": "Senior Product Designer",
         "stage": "AI self-checkout kiosk",
         "audience": "Restaurant guests",
         "difficulty": "Guests have little time for instructions and need to get through checkout on their first try, including when the camera misses a dish or plates overlap.",
         "metrics": [
           [
-            "10–⁠15 sec",
-            "to check out, down from a minute"
+            "10–15 sec",
+            "to check out at the kiosk"
           ],
           [
             "3–4× lower",
-            "costs, according to project figures"
+            "subscription cost compared with one cashier’s salary"
           ]
         ]
       },
@@ -305,7 +305,7 @@
         "headline": "ERP для производства, закупок и склада",
         "problem": "План выпуска вели в Excel, задачи — в Trello, согласования — в почте и WhatsApp. Чтобы сверить производственный план с потребностью в сырье и наличием запасов, сотрудники собирали данные из нескольких источников.",
         "contribution": "Спроектировал основные модули ERP и руководил работой 3 дизайнеров. Вместе с командой наблюдал за работой на заводе и проверял ключевые сценарии с директором.",
-        "tradeoff": "Разделил ERP на модули по задачам отделов. Связал план выпуска с потребностью в сырье и запасами, чтобы производство, закупки и склад могли сверять данные в своих рабочих разделах.",
+        "tradeoff": "Связал план выпуска с потребностью в сырье и складскими остатками. У каждого отдела остался свой рабочий раздел с доступом к этим данным.",
         "outcome": "В одной ERP объединили работу с заказами, планирование выпуска, управление сырьём и контроль запасов. Доступ к модулям и действиям настраивается по ролям.",
         "name": "Avrora Holdings",
         "tag": "Enterprise · ERP",
@@ -316,7 +316,7 @@
         "difficulty": "У цеха, закупок и склада разные задачи. План выпуска зависит от наличия сырья, а сверка запасов — от актуальности данных из 1С.",
         "research": {
           "title": "Что выяснили на заводе",
-          "body": "Наблюдали за сотрудниками, проводили интервью и составили карту взаимодействий отделов. Стало видно, где между отделами теряются данные. Ключевые сценарии проверили с директором предприятия."
+          "body": "На заводе наблюдали за сотрудниками, проводили интервью и составили карту взаимодействий отделов. Проследили, как цех, закупки и склад сверяли план выпуска, потребность в сырье и остатки. Ключевые сценарии ERP проверили с директором предприятия."
         }
       },
       "en": {
@@ -326,7 +326,7 @@
         "intro": "An internal system for a household chemicals factory. Teams create orders, plan production, manage raw materials, and check stock levels.",
         "problem": "Production plans lived in Excel, tasks in Trello, and approvals in email and WhatsApp. Staff had to pull data from several sources to check the production plan against material requirements and available stock.",
         "contribution": "I designed the main ERP modules and led 3 designers. With the team, I observed work on site and reviewed key scenarios with the factory director.",
-        "tradeoff": "I organized the ERP around each department’s work. I linked the production plan to material requirements and stock levels, so production, purchasing, and warehouse teams could check the same data from their own workspaces.",
+        "tradeoff": "I linked the production plan to material requirements and stock levels. Each department could access that data from its own workspace.",
         "outcome": "The ERP brought together order management, production planning, raw materials, and inventory. Access to modules and actions is configured by role.",
         "role": "Product Designer",
         "stage": "Internal ERP",
@@ -334,7 +334,7 @@
         "difficulty": "Production, purchasing, and warehouse teams have different jobs. The production plan depends on material availability, and stock checks depend on up-to-date data from 1C.",
         "research": {
           "title": "What we learned on the factory floor",
-          "body": "We observed staff, interviewed employees, and mapped handoffs between departments. That showed where information was lost. We reviewed key workflows with the factory director."
+          "body": "On site, we observed and interviewed staff and mapped handoffs between departments. We traced how production, purchasing, and warehouse teams reconciled production plans with material requirements and stock levels. We reviewed key ERP workflows with the factory director."
         }
       },
       "sections": [
@@ -482,7 +482,7 @@
         "headline": "Заказы и ассортимент в кабинете продавца",
         "problem": "В заказах продавцу важно сразу увидеть срок и способ вручения. В каталоге ему нужно быстро понять, где товар доступен и какие позиции ещё обрабатываются.",
         "contribution": "Спроектировал дашборд, обработку заказов, работу с договорами реализации, каталог с остатками по городам и пакетную загрузку.",
-        "tradeoff": "На дашборде продавец видит общую картину. Для действий предусмотрел отдельные рабочие разделы со своими статусами и фильтрами.",
+        "tradeoff": "Разделил обзор магазина и обработку заказов. На дашборде продавец видит продажи и заказы за выбранный период. В списке заказов он видит срок обработки и способ вручения и может принять или отклонить заказ из той же строки.",
         "outcome": "В макетах продавец может проверить состояние магазина, обработать заказ, сверить условия договора и обновить ассортимент. Цены и остатки приведены как демонстрационные данные.",
         "name": "Eclub Merchant",
         "tag": "Маркетплейс · Кабинет продавца",
@@ -499,7 +499,7 @@
         "intro": "Eclub brings store performance, order handling, and marketplace inventory into one seller workspace.",
         "problem": "For an order, sellers need its deadline and handover method immediately. For a product, they need to know where it is available and whether it is still being processed.",
         "contribution": "I designed the dashboard, order handling, consignment agreements, inventory by city, and bulk upload.",
-        "tradeoff": "The dashboard provides an overview. Dedicated workspaces give each task its own statuses, filters, and actions.",
+        "tradeoff": "I separated store performance from order handling. The dashboard shows sales and orders for the selected period. In the order list, sellers can check the processing deadline and handover method, then accept or reject an order from the same row.",
         "outcome": "The designs let sellers review store activity, handle orders, check agreement terms, and update inventory. Prices and stock counts are illustrative.",
         "role": "UX/UI Designer",
         "stage": "Seller web interface",
@@ -736,7 +736,7 @@
     {
       "slug": "b2c",
       "ru": {
-        "headline": "Как довести покупателя от каталога до оплаты",
+        "headline": "Выбор продавца и оформление заказа на маркетплейсе",
         "problem": "Одну модель могут продавать разные магазины. Покупателю нужно сравнить варианты, а затем сверить количество, состав и сумму своего заказа.",
         "contribution": "Спроектировал поисковую выдачу, корзину с редактированием количества и пошаговое оформление.",
         "tradeoff": "В корзине поставил товары и итог рядом, чтобы изменения количества можно было сразу сверить. В оформлении разделил доставку, оплату и подтверждение на шаги, сохранив сводку заказа.",
@@ -747,12 +747,12 @@
         "role": "UX/UI Designer",
         "stage": "Веб-прототип",
         "audience": "Покупатели маркетплейса",
-        "difficulty": "На этапе покупки меняется главный вопрос. Сначала нужно выбрать вариант, затем проверить заказ, а при оплате — сохранить доступ к составу и сумме."
+        "difficulty": "В выдаче покупатель сравнивает предложения, в корзине сразу видит, как количество меняет сумму, а при выборе способа оплаты может сверить состав и итог заказа."
       },
       "en": {
         "name": "Eclub B2B",
         "tag": "Marketplace · Web",
-        "headline": "From browsing the catalog to paying for an order",
+        "headline": "Choosing a seller and checking out on the marketplace",
         "intro": "The buyer side of Eclub. Shoppers compare product variants, review their cart, and order from marketplace sellers.",
         "problem": "Several stores can sell the same model. Shoppers need to compare variants and then check quantities, contents, and the order total.",
         "contribution": "I designed the search results, the editable cart, and the step-by-step checkout.",
@@ -761,7 +761,7 @@
         "role": "UX/UI Designer",
         "stage": "Web prototype",
         "audience": "Marketplace shoppers",
-        "difficulty": "The shopper’s main question changes at each stage. They first choose a variant, then review the order, and still need the items and total when paying."
+        "difficulty": "Buyers compare offers in search results, see how quantity changes affect the total in the cart, and review the items and total when choosing a payment method."
       },
       "sections": [
         {
@@ -1159,10 +1159,10 @@
       "slug": "bao",
       "ru": {
         "headline": "Доставка напрямую из BAO",
-        "problem": "Сделать прямой заказ удобным для новых и постоянных гостей BAO. Тем, кто заказывает впервые, нужно легко разобраться в меню. Тем, кто возвращается, важно быстро найти любимые блюда и воспользоваться бонусами.",
+        "problem": "BAO развивал собственную доставку. Для первого заказа гостю нужно быстро разобраться в меню. При повторном заказе он может воспользоваться акциями и накопленными бонусами.",
         "contribution": "Спроектировал меню и поиск, корзину с промокодами, оформление доставки со списанием бонусов и историю заказов.",
         "tradeoff": "В карточке блюда оставил фото, состав, цену и кнопку добавления в корзину. Адрес, время доставки и способ оплаты собрал на одном экране, чтобы гость мог проверить всё перед оплатой.",
-        "outcome": "Спроектировал собственный канал доставки для BAO. Гость заранее видит сумму к оплате, проверяет статус в профиле и может использовать накопленные бонусы, когда заказывает снова.",
+        "outcome": "Спроектировал сценарий прямого заказа в приложении BAO и связал его с программой лояльности. До оплаты гость видит, как промокод и списание бонусов меняют итог.",
         "name": "BAO",
         "tag": "Доставка еды · Мобильное приложение",
         "intro": "В приложении BAO гости выбирают блюда, заказывают доставку и следят за статусом заказа.",
@@ -1176,10 +1176,10 @@
         "tag": "Food delivery · Mobile app",
         "headline": "Delivery directly from BAO",
         "intro": "In the BAO app, guests can browse the menu, order delivery, and check their order status.",
-        "problem": "Make ordering directly from BAO easy for new and returning guests. First-time customers need a menu they can browse. Returning guests need to find their favourites quickly and use their rewards.",
+        "problem": "BAO was developing its own delivery service. First-time guests needed a menu they could navigate quickly. For repeat orders, the app offered promotions and rewards earned on earlier purchases.",
         "contribution": "I designed the menu and search, promo codes in the cart, reward redemption at checkout, and order history.",
         "tradeoff": "I kept each dish’s photo, ingredients, price, and add-to-cart button together in the menu. Checkout brings the address, delivery time, and payment method together so guests can review the details before paying.",
-        "outcome": "The design gives BAO its own delivery channel. Guests can see what they’ll pay upfront, check their order status in their profile, and use their rewards on a later order.",
+        "outcome": "I designed the direct ordering flow in the BAO app and integrated the loyalty program into checkout. Guests can see how promo codes and redeemed rewards affect the total before paying.",
         "role": "Product Designer",
         "stage": "Mobile app",
         "audience": "BAO guests",
@@ -1311,11 +1311,11 @@
         {
           "ru": {
             "title": "Одно нажатие на место",
-            "body": "После выбора сеанса каждое нажатие на схеме зала добавляет место со взрослым тарифом. Для 10 мест это сокращает число нажатий с 20 до 10. Тариф можно поменять позже для отдельного билета или сразу для всей группы."
+            "body": "После выбора сеанса одно нажатие добавляет место со взрослым тарифом. На выбор 10 мест уходит 10 нажатий. Сценарий с отдельным подтверждением тарифа для каждого места потребовал бы 20. Тариф можно изменить позже для одного билета или всей группы."
           },
           "en": {
             "title": "One tap per seat",
-            "body": "Once viewers pick a showtime, tapping a seat adds it with the adult fare. That cuts seat selection from 20 taps to 10 for a group of 10. Viewers can adjust fares for individual tickets or the whole group."
+            "body": "After choosing a showtime, one tap adds a seat at the adult fare. Selecting 10 seats takes 10 taps. A flow that asks viewers to confirm the fare for every seat would take 20. Viewers can adjust the fare later for one ticket or the whole group."
           },
           "images": [
             {
@@ -1372,7 +1372,7 @@
           },
           "en": {
             "title": "Group seat selection and fares",
-            "body": "Tapping a free seat adds an adult ticket. Shoppers can change one fare or apply a fare to the group. The total updates immediately."
+            "body": "Tapping a free seat adds an adult ticket. Moviegoers can change the fare for one ticket or apply it to the whole group. The total updates immediately."
           },
           "images": [
             {
@@ -1611,11 +1611,11 @@
         {
           "ru": {
             "title": "Перейти от просмотра к практике",
-            "body": "Ребёнок собирает знакомую фразу из слов, произносит её вслух и сразу получает обратную связь. В режиме Role Play он выбирает персонажа из разобранного диалога и озвучивает только его реплики. Стрик показывает, сколько дней подряд ребёнок занимался, и мотивирует возвращаться к практике."
+            "body": "Ребёнок собирает знакомую фразу из слов, произносит её вслух и сразу получает обратную связь. В режиме Role Play он выбирает персонажа из разобранного диалога и озвучивает только его реплики. Стрик показывает, сколько дней подряд ребёнок занимался, и помогает следить за регулярностью практики."
           },
           "en": {
             "title": "Move from watching to practice",
-            "body": "Learners put the words in order, say the line aloud, and get immediate feedback. In Role Play, they choose a character from a dialogue they’ve already worked through and speak only that character’s lines. A streak tracks how many days in a row they’ve practiced and encourages them to keep going."
+            "body": "Learners put the words in order, say the line aloud, and get immediate feedback. In Role Play, they choose a character from a dialogue they’ve already worked through and speak only that character’s lines. A streak tracks how many days in a row they’ve practiced so they can see how consistently they’ve practiced."
           },
           "images": [
             {

@@ -86,10 +86,10 @@ export default function RrsMotion({ lang }) {
               <strong className="od-rrs-metric-reveal od-motion-layer">{ru ? '10–15 секунд' : '10–15 seconds'}</strong>
             </div>
             <div className="od-rrs-metric-row">
-              <span className="od-rrs-metric-reveal od-motion-layer">{ru ? 'на кассе вместо минуты' : 'to check out, down from a minute'}</span>
+              <span className="od-rrs-metric-reveal od-motion-layer">{ru ? '45–60 секунд с кассиром' : '45–60 seconds with a cashier'}</span>
             </div>
             <div className="od-rrs-metric-row od-rrs-metric-detail">
-              <small className="od-rrs-metric-reveal od-motion-layer">{ru ? 'Расходы в 3–4 раза ниже' : 'Costs fell to 25–33% of the original level'}</small>
+              <small className="od-rrs-metric-reveal od-motion-layer">{ru ? 'Подписка в 3–4 раза дешевле зарплаты кассира' : 'Subscription at ¼–⅓ of a cashier’s salary'}</small>
             </div>
           </div>
         </div>

@@ -61,7 +61,7 @@ export const caseStudies = [
   },
   {
     slug: 'idol', ids: ['cmqjeal060003vxlt80svpske'], name: 'IDOL', year: '2026', category: 'AI · SaaS concept', kind: 'concept', type: p('Продуктовая инициатива · концепт', 'Product initiative · concept'), role: 'Product Designer', platform: 'Web · SaaS', color: '#c5c6ec', cover: '/uploads/idol/cover-main.png',
-    headline: p('Рабочее пространство нового поколения креаторов', 'A workspace for the next generation of creators'),
+    headline: p('Рабочее пространство для создания и планирования контента', 'A workspace for creating and scheduling content'),
     summary: p('Концепция AI-платформы: создание контента, библиотека знаний и планирование публикаций.', 'An AI platform concept for content creation, a knowledge library, and publication planning.'),
     challenge: p('Контент создаётся в генераторах, заметках, календарях и соцсетях. При переходе между ними теряются контекст проекта и история решений.', 'Content creation is spread across generators, notes, calendars, and social platforms. Switching tools breaks project context and decision history.'),
     contribution: p('Сформировал продуктовую концепцию и спроектировал архитектуру: AI-студию, библиотеку промптов, планировщик и пространство взаимодействия креаторов.', 'Defined the product concept and designed the architecture: an AI studio, prompt library, planner, and creator collaboration space.'),
@@ -70,7 +70,7 @@ export const caseStudies = [
       { title: p('От генерации до публикации', 'From generation to publication'), text: p('Планировщик продолжает сценарий создания контента. Подготовка и расписание публикаций находятся в одном продуктовом контуре.', 'The planner extends content creation into scheduling. Preparation and publication planning share the same product context.'), image: '/uploads/idol/content_planner.png' },
       { title: p('Пространство для сотрудничества', 'A space for collaboration'), text: p('Маркетплейс дополняет инструменты производства возможностью взаимодействия между авторами и заказчиками.', 'The marketplace adds collaboration between creators and clients to the production toolkit.'), image: '/uploads/idol/creator_marketplace.png' },
     ],
-    outcome: p('Разработана архитектура и визуальная концепция платформы с нуля. Проект исследует продуктовую гипотезу; метрики использования и коммерческие результаты не заявляются.', 'Developed the platform architecture and visual concept from scratch. The project explores a hypothesis; no usage metrics or commercial outcomes are claimed.'),
+    outcome: p('В концепте объединил материалы, промпты, историю и план публикаций внутри одного проекта.', 'In the concept, I brought assets, prompts, work history, and the publishing schedule together within each project.'),
     gallery: ['/uploads/idol/Studio -_ Explore.png', '/uploads/idol/Talent Roster.png'],
   },
   {
@@ -89,7 +89,7 @@ export const caseStudies = [
   },
   {
     slug: 'taza', ids: ['cmqjeal510004vxlt8hmvmcr6'], name: 'Taza Store', year: '2022', category: 'B2B · Commerce', kind: 'product', type: p('Коммерческий продукт', 'Commercial product'), role: 'Product Designer', platform: 'Mobile · B2B', color: '#dbe8c9', cover: '/uploads/taza/cover-main.png',
-    headline: p('Регулярные закупки без лишней рутины', 'Everyday procurement with less routine'),
+    headline: p('Закупка расходных материалов, счета и статус поставки', 'Purchasing supplies, managing invoices, and tracking deliveries'),
     summary: p('B2B-сервис для закупки расходных материалов: каталог, счета и прозрачный статус поставки.', 'A B2B purchasing service for consumables: catalog, invoices, and clear delivery status.'),
     challenge: p('Для бизнеса закупка — повторяющаяся рабочая задача. Важны скорость оформления, документы и прозрачность заказа, а не механики импульсной покупки.', 'For businesses, procurement is a recurring job. Fast checkout, documentation, and order visibility matter more than impulse purchases.'),
     contribution: p('Проектировал мобильный B2B-сервис: структуру каталога, оформление заказа, счета, отслеживание и личный кабинет.', 'Designed the mobile B2B service: catalog structure, checkout, invoices, tracking, and the customer account.'),
@@ -98,7 +98,7 @@ export const caseStudies = [
       { title: p('Документы рядом с заказом', 'Documents alongside orders'), text: p('Выделил счета в отдельный раздел. К финансовой части закупки можно вернуться без поиска в переписках.', 'Gave invoices a dedicated section. Customers can return to purchasing documents without searching messages.'), image: '/uploads/taza/Мои счета.png' },
       { title: p('Поставка остаётся видимой', 'Keep the delivery visible'), text: p('Экран заказа показывает состав и состояние. Он сохраняет контекст после оформления и помогает следить за выполнением.', 'The order screen shows contents and status. It retains context after checkout and helps track progress.'), image: '/uploads/taza/Страница заказа.png' },
     ],
-    outcome: p('Разработан мобильный интерфейс для регулярных B2B-закупок. Каталог, оформление, документы и отслеживание объединены в один сценарий.', 'Developed a mobile interface for recurring B2B purchases, connecting catalog, checkout, documentation, and tracking.'),
+    outcome: p('Спроектировал путь закупщика от каталога до отслеживания поставки. После оформления счета доступны в отдельном разделе, а состав и статус поставки видны в карточке заказа.', 'I designed the purchasing flow from browsing the catalog to tracking delivery. After checkout, buyers can find invoices in a dedicated section and see what they ordered and its delivery status on the order page.'),
     gallery: ['/uploads/taza/Корзина.png', '/uploads/taza/Оформление заказа.png', '/uploads/taza/Профиль.png'],
   },
 ];

@@ -26,7 +26,7 @@ function CaseCover({ images, slug }) {
     return (
       <Image className="od-case-cover-image" src="/odunsi/rrs-case-cover-titled.webp" alt=""
         width={2400} height={1250} sizes="(min-width: 1240px) 1200px, calc(100vw - 40px)"
-        quality={90} loading="eager" fetchPriority="high" />
+        unoptimized loading="eager" fetchPriority="high" />
     );
   }
   if (slug === 'avrora') {

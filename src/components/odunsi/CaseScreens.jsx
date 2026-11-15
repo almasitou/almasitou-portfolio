@@ -92,7 +92,7 @@ export default function CaseScreens({ sections = [], lang, opening = false }) {
                     <CaseDevice screen={screen} sizes={sizes} />
                   ) : (
                     <Image src={screen.src} width={screen.width} height={screen.height} alt=""
-                      unoptimized={!interactive} quality={interactive ? 90 : 100} sizes={sizes}
+                      unoptimized sizes={sizes}
                       style={screen.cropAspectRatio ? { aspectRatio: screen.cropAspectRatio, objectFit: 'cover' } : undefined} />
                   );
 
@@ -144,7 +144,7 @@ export default function CaseScreens({ sections = [], lang, opening = false }) {
               <MerchantDashboardScreen screen={fullScreen} sizes={viewerSizes} scrollLabel={labels.scroll} />
             ) : (
               <Image src={fullScreen.src} width={fullScreen.width} height={fullScreen.height} alt=""
-                sizes={viewerSizes} quality={90} loading="eager" />
+                sizes={viewerSizes} unoptimized loading="eager" />
             )}
           </div>
         )}
