@@ -105,6 +105,41 @@ function CaseCover({ images, slug }) {
   );
 }
 
+function renderHeadline(headline) {
+  if (typeof headline !== 'string') return headline;
+  if (!headline.includes('\n')) {
+    const parts = headline.split(/(\d+[–-]\d+)/g);
+    if (parts.length === 1) return headline;
+    return parts.map((part, pi) =>
+      /^\d+[–-]\d+$/.test(part) ? (
+        <span key={pi} style={{ whiteSpace: 'nowrap' }}>
+          {part}
+        </span>
+      ) : (
+        part
+      )
+    );
+  }
+
+  const lines = headline.split('\n');
+  return lines.map((line, i) => {
+    const parts = line.split(/(\d+[–-]\d+)/g);
+    return (
+      <span key={i} style={{ display: 'block' }}>
+        {parts.map((part, pi) =>
+          /^\d+[–-]\d+$/.test(part) ? (
+            <span key={pi} style={{ whiteSpace: 'nowrap' }}>
+              {part}
+            </span>
+          ) : (
+            part
+          )
+        )}
+      </span>
+    );
+  });
+}
+
 export default function PortfolioCase({ lang, project, relatedProjects }) {
   const t = labels[lang] || labels.en;
   const cover = <CaseCover images={project.cover} slug={project.slug} />;
@@ -118,7 +153,7 @@ export default function PortfolioCase({ lang, project, relatedProjects }) {
           <div className="od-case-hero-copy">
             <div className="od-case-copy-card od-case-summary">
               <p className="od-case-name">{project.name} <span>{project.tag}</span></p>
-              <h1>{project.headline}</h1>
+              <h1>{renderHeadline(project.headline)}</h1>
               <p className="od-case-intro"><CaseText>{project.intro}</CaseText></p>
             </div>
             <dl className="od-case-copy-card od-case-facts">

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Blocks, Download, ScanSearch, Workflow } from 'lucide-react';
+import { Blocks, Download, Paintbrush, ScanSearch, Workflow } from 'lucide-react';
 import { siInstagram, siTelegram, siWhatsapp } from 'simple-icons';
 import HomeCoverGallery from './HomeCoverGallery';
 import LanguageSwitch from './LanguageSwitch';
@@ -41,7 +41,7 @@ const COPY = {
   },
 };
 
-const APPROACH_ICONS = [ScanSearch, Workflow, Blocks];
+const APPROACH_ICONS = [ScanSearch, Paintbrush, Blocks];
 
 const COLUMN_WIDTHS = [520, 444];
 const TOTAL_COLUMN_WIDTH = COLUMN_WIDTHS[0] + COLUMN_WIDTHS[1];
@@ -196,7 +196,7 @@ function Gallery({ copy, lang, projects, profile }) {
               className={isKaspi || project.slug === 'qalan-english' ? 'od-home-card od-home-card--custom-aspect' : 'od-home-card'}
               style={style}
               aria-label={project.name}
-              aria-description={project.headline}
+              aria-description={project.headline ? project.headline.replace(/\n/g, ' ') : undefined}
             >
               <div className="od-home-card-art" aria-hidden="true">
                 <ProjectPreview slug={project.slug} lang={lang} />

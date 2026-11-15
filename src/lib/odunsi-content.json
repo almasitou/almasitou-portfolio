@@ -134,7 +134,7 @@
     {
       "slug": "rrs",
       "ru": {
-        "headline": "С 45–60 до 10–15 секунд на кассе",
+        "headline": "С 45–60 до\n10–15 секунд на кассе",
         "problem": "В обеденный пик кассир вручную вводил блюда с каждого подноса. Чем дольше занимал ввод, тем медленнее двигалась очередь.",
         "contribution": "Спроектировал сенсорный сценарий терминала: запуск распознавания, проверку заказа, исправление ошибок и оплату.",
         "tradeoff": "В основной сценарий поставил распознавание камерой. Перед оплатой оставил явную проверку заказа, а уточнение блюда и ручной поиск сделал доступными только там, где они нужны. Так обычный заказ остаётся коротким, а нестандартный можно довести до оплаты.",
@@ -160,7 +160,7 @@
       "en": {
         "name": "Retail Robotics Solutions",
         "tag": "FoodTech · AI self-checkout",
-        "headline": "From 45–60 to 10–15 seconds at checkout",
+        "headline": "From 45–60 to\n10–15 seconds at checkout",
         "intro": "A restaurant self-checkout kiosk that recognizes dishes and speeds up checkout during the lunch rush.",
         "problem": "At the lunch rush, cashiers entered each dish from every tray by hand. The longer entry took, the slower the line moved.",
         "contribution": "I designed the kiosk flow for touch, from starting recognition to reviewing the order, recovering from errors, and paying.",
